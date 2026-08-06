@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- favicon aqui -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria | Roteiro de Paris personalizado, feito do zero para a sua viagem</title>
+<meta name="description" content="Roteiro de Paris 100% personalizado, montado do zero para as suas datas, o seu grupo e o seu orçamento. Entrega em até 5 dias úteis, com mapas prontos no Google Maps e suporte no WhatsApp durante a produção.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Marcellus&family=Mulish:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1554564679673251');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1554564679673251&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+  :root{
+    --cream:#F5EEE0; --cream-2:#EFE5D2; --cream-3:#E8DBC2;
+    --navy:#1E2A47; --navy-2:#16203a; --navy-deep:#0E1730;
+    --gold:#D7A94B; --gold-2:#E9C46A; --gold-deep:#B4862E;
+    --wine:#7C3B3B; --wine-deep:#5A2828;
+    --brown:#4B3232; --ink:#2A2418; --muted:#6B5F4D;
+    --muted-cream:rgba(245,238,224,.78);
+    --line:rgba(255,255,255,.10);
+    --shadow-gold:0 9px 0 -1px #9c721f, 0 16px 26px -10px rgba(20,16,5,.5);
+    --shadow-gold-hover:0 5px 0 -1px #9c721f, 0 12px 22px -10px rgba(20,16,5,.5);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mulish',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08}
+  .num-font{font-family:'Playfair Display',serif}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;position:relative}
+
+  .grain::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+
+  .glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;pointer-events:none;animation:float 14s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-26px) scale(1.12)}}
+  .glow.g2{animation-duration:18s;animation-direction:reverse}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#3a2a08;font-family:'Mulish';font-weight:800;font-size:18px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;padding:21px 38px;border-radius:16px;border:none;cursor:pointer;box-shadow:var(--shadow-gold);transform:translateY(0);transition:transform .12s ease, box-shadow .12s ease}
+  .btn:hover{transform:translateY(4px);box-shadow:var(--shadow-gold-hover)}
+  .btn:active{transform:translateY(8px);box-shadow:0 2px 0 -1px #9c721f}
+  .btn.lg{font-size:20px;padding:24px 46px}
+  .btn.sm{font-size:12px;padding:11px 20px;border-radius:10px;gap:6px}
+  .btn.sm .arrow{font-size:14px}
+  .btn .arrow{font-size:20px;transition:transform .2s}
+  .btn:hover .arrow{transform:translateX(4px)}
+  .btn-note{font-size:13px;color:var(--muted);margin-top:14px}
+  .on-navy .btn-note{color:var(--muted-cream)}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px;border-top:1px solid rgba(217,169,75,.2);padding-top:22px}
+  .hero-stats .stat{text-align:center;padding:0 10px;border-right:1px solid rgba(217,169,75,.2)}
+  .hero-stats .stat:last-child{border-right:none}
+  .hero-stats .n{font-family:'Playfair Display',serif;font-weight:700;font-size:40px;background:linear-gradient(160deg,#E9C46A,#D7A94B 60%,#B4862E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.18;padding-bottom:4px}
+  .hero-stats .t{font-size:12.5px;color:var(--muted-cream);margin-top:6px;line-height:1.4}
+
+  section{position:relative;overflow:hidden}
+  .layer{position:relative;z-index:3}
+
+  .paris-bg{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+  .paris-bg img{position:absolute;width:110px;height:auto;opacity:.16}
+  .on-navy .paris-bg img{opacity:.20}
+  @media(max-width:880px){.paris-bg img{width:70px;opacity:.13}.on-navy .paris-bg img{opacity:.16}}
+
+  /* HERO */
+  .hero{background:linear-gradient(157deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--cream);padding:0 0 70px}
+  .hero .glow{background:radial-gradient(circle,#3a4f86,transparent 70%);width:560px;height:560px;top:-160px;left:50%;transform:translateX(-50%)}
+  .topbar-band{background:linear-gradient(90deg,#0a1124,#0d1730);border-bottom:1px solid rgba(217,169,75,.28);position:relative;z-index:4}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:1120px;margin:0 auto;padding:2px 24px}
+  .brand-logo{height:118px;width:auto;display:block;margin:-18px 0;filter:drop-shadow(0 2px 8px rgba(0,0,0,.4))}
+  .topnav{display:flex;align-items:center;gap:26px}
+  .topnav-link{color:var(--muted-cream);font-family:'Mulish',sans-serif;font-weight:700;font-size:13px;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:color .15s}
+  .topnav-link:hover{color:var(--gold-2)}
+  .topnav-link.is-active{color:var(--gold-2);border-bottom:2px solid var(--gold);padding-bottom:2px}
+  .hero-inner{padding-top:54px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+  .eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-bottom:18px}
+  .hero h1{font-size:62px;font-weight:600;margin-bottom:22px;line-height:1.04}
+  .hero h1 em{font-style:italic;color:var(--gold-2)}
+  .hero .sub{font-size:18px;color:var(--muted-cream);max-width:520px;margin-bottom:32px;line-height:1.65}
+  .hero .sub b{color:var(--cream);font-weight:700}
+  .hero-photo{position:relative;width:100%;max-width:440px;margin:0 auto;filter:drop-shadow(0 10px 14px rgba(0,0,0,.4))}
+  .hero-photo img{width:100%;display:block}
+
+  /* seções */
+  .light{background:var(--cream);color:var(--ink);padding:92px 0}
+  .light.alt{background:var(--cream-2)}
+  .light .glow{background:radial-gradient(circle,rgba(217,169,75,.5),transparent 70%);width:420px;height:420px;top:-120px;left:50%;transform:translateX(-50%);opacity:.32}
+  .center{text-align:center}
+  .kicker{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px}
+  .light h2{font-size:46px;color:var(--navy);margin-bottom:16px}
+  .light h2 em{font-style:italic;color:var(--gold-deep)}
+  .lead{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto 12px}
+  .grad-text{background:linear-gradient(100deg,var(--gold-deep),var(--gold-2) 50%,var(--wine));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+  .dark{background:linear-gradient(157deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--cream);padding:92px 0}
+  .dark .glow{background:radial-gradient(circle,#3a4f86,transparent 70%);width:480px;height:480px;opacity:.4}
+  .dark .glow.g1{top:-140px;right:-100px} .dark .glow.g2{bottom:-160px;left:-120px}
+  .dark h2{font-size:46px;margin-bottom:16px;color:var(--cream)}
+  .dark h2 em{font-style:italic;color:var(--gold-2)}
+  .dark .lead{color:var(--muted-cream)}
+  .cta-strip{text-align:center;margin-top:50px}
+
+  /* SITUAÇÕES */
+  .doubts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  .doubt{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:var(--cream);border-radius:18px;padding:34px 26px;text-align:center;box-shadow:0 14px 30px -16px rgba(15,24,48,.6);transition:transform .18s, box-shadow .18s}
+  .doubt:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(15,24,48,.7)}
+  .doubt .q{width:46px;height:46px;border-radius:50%;background:var(--gold);color:#3a2a08;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:24px;margin:0 auto 16px}
+  .doubt p{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;line-height:1.2}
+
+  /* ETAPAS */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+  .step{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:18px;padding:32px 28px;backdrop-filter:blur(3px);transition:transform .18s}
+  .step:hover{transform:translateY(-5px)}
+  .step .sn{font-family:'Playfair Display',serif;font-weight:700;font-size:34px;background:linear-gradient(160deg,#E9C46A,#D7A94B 60%,#B4862E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.3;padding-bottom:4px;margin-bottom:8px}
+  .step h4{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:23px;color:var(--gold-2);margin-bottom:8px}
+  .step p{font-size:15px;color:var(--muted-cream);line-height:1.6}
+  .step-note{margin-top:34px;background:linear-gradient(120deg,#243a63,#1a2c4d);border-radius:20px;padding:30px 34px;text-align:center;box-shadow:0 20px 44px -22px rgba(0,0,0,.5)}
+  .step-note p{font-size:18px;color:var(--muted-cream);line-height:1.6;max-width:780px;margin:0 auto}
+  .step-note b{color:#fff}
+
+  /* ENTREGA */
+  .deliver{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+  .dcard{background:#fff;border-radius:16px;padding:26px 24px;border:1px solid rgba(75,50,50,.1);box-shadow:0 10px 22px -16px rgba(0,0,0,.35);transition:transform .15s, box-shadow .15s}
+  .dcard:hover{transform:translateY(-6px);box-shadow:0 20px 34px -18px rgba(0,0,0,.4)}
+  .dcard.feat{background:linear-gradient(150deg,#fffdf8,#f7edda);border:1.5px solid var(--gold)}
+  .dcard .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#3a2a08;background:var(--gold-2);border-radius:6px;padding:3px 8px;margin-bottom:10px}
+  .dcard .ic{width:48px;height:48px;margin-bottom:14px}
+  .dcard .ic svg{width:100%;height:100%;stroke:var(--gold-deep);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+  .dcard h3{font-size:23px;color:var(--navy);margin-bottom:6px;font-weight:700}
+  .dcard p{font-size:14.5px;color:var(--muted);line-height:1.55}
+
+  /* INCLUI / NÃO INCLUI */
+  .forwho{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .fw-col{border-radius:18px;padding:34px;transition:transform .18s}
+  .fw-col:hover{transform:translateY(-4px)}
+  .fw-col.yes{background:#fff;border:1px solid rgba(75,50,50,.1)}
+  .fw-col.no{background:linear-gradient(150deg,var(--wine),var(--wine-deep));color:var(--cream)}
+  .fw-col h3{font-size:26px;margin-bottom:20px;font-weight:700}
+  .fw-col.yes h3{color:var(--navy)} .fw-col.no h3{color:#fff}
+  .fw-li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:16px;line-height:1.5}
+  .fw-col.yes .fw-li{color:var(--ink)} .fw-col.no .fw-li{color:rgba(245,238,224,.92)}
+  .fw-li .mk{flex:none;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-weight:800;font-size:14px;margin-top:2px}
+  .fw-col.yes .mk{background:#dff0e4;color:#2f7d4f}
+  .fw-col.no .mk{background:rgba(255,255,255,.16);color:#ffd9d4}
+  .fw-foot{margin-top:22px;padding-top:18px;border-top:1px solid rgba(75,50,50,.12);font-size:14px;color:var(--muted);line-height:1.55}
+  .fw-col.no .fw-foot{border-top-color:rgba(255,255,255,.18);color:rgba(245,238,224,.8)}
+
+  /* PRAZOS */
+  .terms{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  .tcard{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:16px;padding:28px 24px;text-align:center}
+  .tcard .tn{font-family:'Playfair Display',serif;font-weight:700;font-size:42px;background:linear-gradient(160deg,#E9C46A,#D7A94B 60%,#B4862E);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+  .tcard .tu{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);margin-bottom:10px}
+  .tcard p{font-size:14.5px;color:var(--muted-cream);line-height:1.55}
+  .clause{margin-top:26px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:14px;padding:26px 30px}
+  .clause h4{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold-2);font-weight:700;margin-bottom:10px}
+  .clause p{font-size:15.5px;color:var(--muted-cream);line-height:1.6;margin-bottom:10px}
+  .clause p:last-child{margin-bottom:0}
+  .clause em{color:#fff;font-style:italic}
+
+  /* CONFIANÇA */
+  .founder-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+  .founder-card{background:#fff;border-radius:18px;padding:30px 26px;border:1px solid rgba(75,50,50,.1);box-shadow:0 14px 30px -20px rgba(0,0,0,.4);text-align:center;transition:transform .18s,box-shadow .18s}
+  .founder-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px -22px rgba(0,0,0,.45)}
+  .fc-ic{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,rgba(217,169,75,.18),rgba(233,196,102,.1));display:grid;place-items:center;margin:0 auto 16px}
+  .fc-ic svg{width:27px;height:27px;stroke:var(--gold-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .founder-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--navy);font-weight:700;margin-bottom:8px}
+  .founder-card p{font-size:14.5px;color:var(--muted);line-height:1.55}
+
+  /* OFERTA */
+  .offer{background:linear-gradient(157deg,var(--navy) 0%,var(--navy-deep) 100%);color:var(--cream);padding:92px 0}
+  .offer .glow{background:radial-gradient(circle,#3a4f86,transparent 70%);width:520px;height:520px;top:-160px;left:50%;transform:translateX(-50%);opacity:.4}
+  .offer h2{font-size:46px;color:var(--cream)}
+  .offer .lead{color:var(--muted-cream)}
+  .price-card{max-width:560px;margin:42px auto 0;background:var(--cream);color:var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -24px rgba(0,0,0,.6);border:2px solid var(--gold)}
+  .price-head{background:linear-gradient(150deg,var(--navy),var(--navy-deep));color:var(--cream);padding:28px;text-align:center}
+  .price-head h3{font-size:30px;color:#fff;margin-bottom:2px;font-weight:700}
+  .price-head .de{color:var(--muted-cream);font-size:15px}
+  .price-body{padding:34px 40px 40px}
+  .price-now{font-family:'Playfair Display',serif;font-weight:800;font-size:64px;color:var(--navy);line-height:1;text-align:center}
+  .price-now small{font-size:26px;vertical-align:super;margin-right:4px}
+  .price-parc{text-align:center;color:var(--muted);font-size:16px;margin-bottom:8px}
+  .price-up{text-align:center;font-size:14px;font-weight:700;color:var(--wine);background:rgba(124,59,59,.08);border-radius:10px;padding:10px 14px;margin-bottom:22px;line-height:1.45}
+  .inc{text-align:left;margin:0 auto 26px}
+  .inc .li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid rgba(75,50,50,.1);font-size:15.5px;line-height:1.5}
+  .inc .li:last-child{border-bottom:none}
+  .inc .ic{flex:none;width:24px;height:24px;margin-top:2px}
+  .inc .ic svg{width:100%;height:100%;stroke:var(--gold-deep);fill:none;stroke-width:1.6}
+  .guarantee{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;max-width:620px;margin:36px auto 0;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:20px;padding:28px 32px;backdrop-filter:blur(3px)}
+  .seal{width:110px;height:110px;flex:none}
+  .seal svg{width:100%;height:100%}
+  .guarantee .gtext h3{font-size:26px;color:var(--gold-2);margin-bottom:8px;font-weight:700;line-height:1.25}
+  .guarantee .gtext p{font-size:14.5px;color:var(--muted-cream);line-height:1.55}
+  .guarantee .gtext b{color:var(--cream)}
+
+  /* FAQ */
+  .faq{max-width:780px;margin:46px auto 0}
+  .qa{background:#fff;border:1px solid rgba(75,50,50,.12);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .qa summary{cursor:pointer;padding:22px 24px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .pl{flex:none;width:26px;height:26px;border-radius:50%;background:var(--cream-2);color:var(--gold-deep);display:grid;place-items:center;font-weight:800;transition:transform .2s}
+  .qa[open] summary .pl{transform:rotate(45deg)}
+  .qa .ans{padding:0 24px 22px;color:var(--muted);font-size:15.5px;line-height:1.6}
+
+  /* CONTATO E RODAPÉ */
+  .contact{background:var(--cream-2);padding:70px 0;text-align:center}
+  .contact h2{font-size:38px;color:var(--navy);margin-bottom:10px}
+  .contact p{color:var(--muted);font-size:17px;max-width:560px;margin:0 auto 26px}
+  .wpp{display:inline-flex;align-items:center;gap:12px;background:#1f7a4d;color:#fff;text-decoration:none;font-weight:800;font-size:17px;padding:18px 32px;border-radius:14px;box-shadow:0 8px 0 -1px #155c39, 0 14px 22px -10px rgba(0,0,0,.4);transition:transform .12s, box-shadow .12s}
+  .wpp:hover{transform:translateY(3px);box-shadow:0 5px 0 -1px #155c39, 0 10px 18px -10px rgba(0,0,0,.4)}
+  .socials{margin-top:26px;display:flex;gap:18px;justify-content:center}
+  .socials a{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold-deep);transition:transform .15s,background .15s}
+  .socials a:hover{transform:translateY(-3px);background:rgba(217,169,75,.12)}
+  .socials svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6}
+  .email-context{margin-top:20px;font-size:15px;color:var(--muted)}
+  .email-line{color:var(--gold-deep);font-weight:700;text-decoration:none;transition:color .15s}
+  .email-line:hover{color:var(--gold);text-decoration:underline}
+  .foot{background:var(--navy-deep);color:var(--muted-cream);padding:42px 0;text-align:center;font-size:13px}
+  .foot img{height:78px;margin-bottom:12px}
+  .foot a{color:var(--gold-2);text-decoration:none}
+
+  @media(max-width:880px){
+    .hero h1{font-size:40px}
+    .hero-grid,.forwho{grid-template-columns:1fr}
+    .doubts,.steps,.deliver,.founder-grid{grid-template-columns:1fr}
+    .terms{grid-template-columns:repeat(2,1fr)}
+    .light h2,.dark h2,.offer h2{font-size:32px}
+    .topbar{justify-content:center}
+    .topnav{gap:16px;flex-wrap:wrap;justify-content:center}
+    .topnav-link{font-size:11px}
+    .brand-logo{height:112px}
+    .guarantee{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .price-body{padding:28px 24px 32px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero on-navy grain">
+  <div class="glow"></div>
+  <div class="paris-bg"><img src="__IMG_01__" alt="" style="top:8%;right:6%"><img src="__IMG_02__" alt="" style="top:40%;left:4%;transform:rotate(-8deg)"><img src="__IMG_03__" alt="" style="bottom:12%;right:14%;transform:rotate(6deg)"><img src="__IMG_04__" alt="" style="top:18%;left:18%"></div>
+
+  <div class="topbar-band">
+    <div class="topbar">
+      <a href="index.html"><img src="__IMG_05__" alt="Paris Sem Segredos" class="brand-logo"></a>
+      <nav class="topnav">
+        <a href="index.html#o-guia" class="topnav-link">O guia</a>
+        <a href="consultoria.html" class="topnav-link is-active">Consultoria</a>
+        <a href="index.html#quem-sou" class="topnav-link">Quem sou</a>
+        <a href="#investimento" class="btn sm cta-consultoria">Quero meu roteiro <span class="arrow">→</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap layer hero-inner">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Consultoria Paris Sem Segredos</span>
+        <h1>Um roteiro de Paris feito <em>exclusivamente para a sua viagem</em></h1>
+        <p class="sub"><b>Como seria a sua viagem dos sonhos em Paris?</b> Você me conta, e eu monto o roteiro do zero, <b>dia por dia, com endereços, mapas prontos no Google Maps, onde comer e como chegar em cada lugar.</b> Nada de modelo pronto adaptado às pressas.</p>
+        <a href="#investimento" class="btn cta-consultoria">Quero meu roteiro personalizado <span class="arrow">→</span></a>
+      </div>
+      <div><div class="hero-photo"><img src="__IMG_06__" alt="Gabriela em frente à Tour Eiffel, em Paris"></div></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n num-font">100%</div><div class="t">montado do zero para você</div></div>
+      <div class="stat"><div class="n num-font">5</div><div class="t">dias úteis para receber</div></div>
+      <div class="stat"><div class="n num-font">1</div><div class="t">rodada de ajustes inclusa</div></div>
+      <div class="stat"><div class="n num-font">247</div><div class="t">reais, valor único pela viagem</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SITUAÇÕES ===== -->
+<section class="light on-cream grain">
+  <div class="glow"></div>
+  <div class="paris-bg"><img loading="lazy" src="__IMG_07__" alt="" style="top:10%;left:6%;transform:rotate(-8deg)"><img loading="lazy" src="__IMG_08__" alt="" style="bottom:12%;right:8%"><img loading="lazy" src="__IMG_09__" alt="" style="top:48%;right:18%;transform:rotate(6deg)"></div>
+  <div class="wrap layer center">
+    <div class="kicker">Quando o roteiro pronto não dá conta</div>
+    <h2>Tem viagem que precisa de <span class="grad-text">um plano só dela</span></h2>
+    <p class="lead">Roteiro bom não é o mais bonito, é o que cabe nas suas datas, no seu ritmo e no seu bolso. Se a sua viagem se encaixa em alguma dessas situações, a consultoria existe exatamente para isso:</p>
+    <div class="doubts">
+      <div class="doubt"><div class="q num-font">1</div><p>Você está começando do zero e não sabe nem por onde abrir a pesquisa</p></div>
+      <div class="doubt"><div class="q num-font">2</div><p>Você já fechou voo e hotel e agora precisa encaixar tudo em volta disso</p></div>
+      <div class="doubt"><div class="q num-font">3</div><p>São poucos dias e cada hora precisa render</p></div>
+      <div class="doubt"><div class="q num-font">4</div><p>O grupo tem gostos e ritmos bem diferentes</p></div>
+      <div class="doubt"><div class="q num-font">5</div><p>Tem criança, restrição alimentar ou mobilidade reduzida</p></div>
+      <div class="doubt"><div class="q num-font">6</div><p>Você não quer planejar nada, quer receber pronto</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<section class="dark on-navy grain" id="como-funciona">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="paris-bg"><img loading="lazy" src="__IMG_11__" alt="" style="top:12%;left:8%"><img loading="lazy" src="__IMG_12__" alt="" style="bottom:18%;right:8%;transform:rotate(-10deg)"><img loading="lazy" src="__IMG_13__" alt="" style="top:55%;right:20%;transform:rotate(8deg)"></div>
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker" style="color:var(--gold-2)">Passo a passo</div>
+      <h2>Como funciona <em>na prática</em></h2>
+      <p class="lead">Do primeiro contato ao roteiro na sua mão, em três etapas.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="sn">01</div>
+        <h4>Você preenche o formulário</h4>
+        <p>Datas, quem vai, o que você gosta, o que prioriza, comida, orçamento e os sonhos dessa viagem. Quanto mais detalhe, mais o roteiro fica com a sua cara. E se travar em alguma pergunta, é só me chamar.</p>
+      </div>
+      <div class="step">
+        <div class="sn">02</div>
+        <h4>Eu monto o roteiro do zero</h4>
+        <p>Pesquiso horários, preços e trajetos em fontes oficiais e monto a viagem inteira, parada a parada, na melhor ordem possível. Você recebe em até 5 dias úteis.</p>
+      </div>
+      <div class="step">
+        <div class="sn">03</div>
+        <h4>Você lê e eu ajusto</h4>
+        <p>Depois de receber, você me manda o feedback e eu faço uma rodada de ajustes para deixar o roteiro exatamente do jeito que você quer.</p>
+      </div>
+    </div>
+    <div class="step-note">
+      <p>Enquanto estamos construindo o seu roteiro, <b>estou disponível no WhatsApp para o que você precisar</b>, por mensagem ou áudio, do preenchimento do formulário até a entrega da versão ajustada.</p>
+    </div>
+    <div class="cta-strip"><a href="#investimento" class="btn cta-consultoria">Quero começar agora <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- ===== DO EMBARQUE À VOLTA ===== -->
+<section class="light on-cream alt grain" id="do-embarque-a-volta">
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker">Do embarque à volta pra casa</div>
+      <h2>É como se eu <em>estivesse com você</em> na viagem inteira</h2>
+      <p class="lead">O trabalho vai muito além dos dias em Paris. Eu cuido de cada etapa da sua viagem: da preparação ainda no Brasil, passando pela chegada e pelos dias na cidade, até o que resolver na volta para casa.</p>
+    </div>
+    <div class="steps" style="grid-template-columns:repeat(4,1fr)">
+      <div class="step" style="background:#fff;border-color:rgba(75,50,50,.1)">
+        <div class="sn">Antes</div>
+        <h4 style="color:var(--gold-deep)">Preparação, ainda no Brasil</h4>
+        <p style="color:var(--muted)">Documentação, o que levar na mala pela estação certa, e checklist do que resolver antes de fechar a porta de casa.</p>
+      </div>
+      <div class="step" style="background:#fff;border-color:rgba(75,50,50,.1)">
+        <div class="sn">Chegada</div>
+        <h4 style="color:var(--gold-deep)">Do aeroporto até o centro</h4>
+        <p style="color:var(--muted)">Como sair do aeroporto e chegar até a sua hospedagem, com a opção mais prática para o seu horário de pouso.</p>
+      </div>
+      <div class="step" style="background:#fff;border-color:rgba(75,50,50,.1)">
+        <div class="sn">Durante</div>
+        <h4 style="color:var(--gold-deep)">Cada dia em Paris</h4>
+        <p style="color:var(--muted)">O roteiro dia a dia guiando cada passo, com tudo já resolvido antes de você embarcar.</p>
+      </div>
+      <div class="step" style="background:#fff;border-color:rgba(75,50,50,.1)">
+        <div class="sn">Volta</div>
+        <h4 style="color:var(--gold-deep)">De volta pro Brasil</h4>
+        <p style="color:var(--muted)">O que resolver antes de embarcar de volta, como o tax free, para você não deixar nada pendente na saída.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE VOCÊ RECEBE ===== -->
+<section class="light on-cream alt grain">
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker">O entregável</div>
+      <h2>O que você <em>vai receber</em></h2>
+      <p class="lead">Um site interativo e um PDF, feitos para consultar pelo celular durante a viagem, com tudo resolvido antes de você embarcar.</p>
+    </div>
+    <div class="deliver">
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 011 1v15l-4-3-4 3-4-3-4 3V5a1 1 0 011-1zM9 9h6M9 13h6"/></svg></div>
+        <h3>Roteiro dia a dia</h3>
+        <p>Cada dia montado parada a parada, na ordem que economiza tempo, com quanto tempo ficar em cada lugar e o horário sugerido de chegada.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h3>Endereços e mapas prontos</h3>
+        <p>Todo ponto do roteiro com endereço completo e link direto para abrir no Google Maps. Basta tocar e seguir.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 4h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2zM7 16l-2 4M17 16l2 4M9 8h6"/></svg></div>
+        <h3>Como chegar em cada lugar</h3>
+        <p>Qual linha de metrô ou RER pegar, onde descer e quanto tempo leva a pé entre uma parada e outra.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3v7a3 3 0 006 0V3M9 3v6M18 3c-1.5 0-2.5 2-2.5 5s1 4 2.5 4v4"/></svg></div>
+        <h3>Onde comer, por dia</h3>
+        <p>Sugestões de almoço e jantar perto de cada parada, com endereço e estilo de comida, escolhidas para o gosto e o orçamento que você me contar.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 8h16v11a1 1 0 01-1 1H5a1 1 0 01-1-1zM9 8V5a1 1 0 011-1h4a1 1 0 011 1v3M4 13h16"/></svg></div>
+        <h3>Mala, documentação e checklist</h3>
+        <p>O que levar considerando o clima real das suas datas, o que é exigido para entrar na Europa e o que resolver antes de embarcar.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18v12H3zM3 11h18M7 15h4M16 4l-2 3M8 4l2 3"/></svg></div>
+        <h3>Ingressos na hora certa</h3>
+        <p>Quais atrações precisam de compra antecipada, com quantos dias de antecedência e o link do site oficial de cada uma.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 16a4 4 0 010-8 5.5 5.5 0 0110.6-1.5A3.5 3.5 0 0118 16zM9 19l-1 2M13 19l-1 2M17 19l-1 2"/></svg></div>
+        <h3>Plano B para dias de chuva</h3>
+        <p>Alternativas cobertas próximas a cada trecho do roteiro, para o dia ruim não derrubar a programação inteira.</p>
+      </div>
+      <div class="dcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></div>
+        <h3>Avisos de segurança do trecho</h3>
+        <p>Os pontos do roteiro que pedem atenção redobrada com bolsa e celular, sem alarmismo e sem drama.</p>
+      </div>
+      <div class="dcard feat">
+        <span class="tag">Vai junto</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h6v18H6a2 2 0 01-2-2zM20 5a2 2 0 00-2-2h-6v18h6a2 2 0 002-2z"/></svg></div>
+        <h3>Material de consulta, mais de 100 páginas</h3>
+        <p>Um complemento autoral com museus, pontes, praças e ruas de Paris reunidos em um só lugar. Você não precisa dele para seguir o roteiro, ele existe para quando bater a curiosidade de saber mais sobre algum lugar.</p>
+      </div>
+      <div class="dcard feat">
+        <span class="tag">Vai junto</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16M9 9v11"/></svg></div>
+        <h3>Site interativo, feito só para a sua viagem</h3>
+        <p>Além do PDF, um site com o mesmo roteiro em formato de consulta rápida pelo celular, do embarque de ida até a volta, com um link só seu, privado e feito sob medida para a sua viagem. Quando você comprar o voo ou fechar a hospedagem depois de receber o roteiro, é só me avisar: eu atualizo essa página pra você, sem custo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESCOPO ===== -->
+<section class="light on-cream grain" id="escopo">
+  <div class="glow"></div>
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker">Combinado desde o começo</div>
+      <h2>O que está incluído <em>e o que não está</em></h2>
+      <p class="lead">Deixo tudo claro antes de você contratar, para não existir nenhuma surpresa depois.</p>
+    </div>
+    <div class="forwho">
+      <div class="fw-col yes">
+        <h3>Está incluído</h3>
+        <div class="fw-li"><span class="mk">✓</span> Roteiro completo montado do zero para as suas datas e para o seu grupo</div>
+        <div class="fw-li"><span class="mk">✓</span> Todos os deslocamentos explicados, com linha, estação e tempo estimado</div>
+        <div class="fw-li"><span class="mk">✓</span> Sugestões de restaurantes com endereço, estilo de comida e faixa de preço</div>
+        <div class="fw-li"><span class="mk">✓</span> Orientação sobre documentação, mala e checklist de embarque</div>
+        <div class="fw-li"><span class="mk">✓</span> Material de consulta autoral com mais de 100 páginas sobre Paris</div>
+        <div class="fw-li"><span class="mk">✓</span> Site interativo com o roteiro, do embarque até a volta</div>
+        <div class="fw-li"><span class="mk">✓</span> Uma rodada de ajustes depois da entrega</div>
+        <div class="fw-li"><span class="mk">✓</span> Atualização do roteiro quando você fechar voo e hospedagem, uma vez, sem custo, em até 3 dias úteis</div>
+        <div class="fw-li"><span class="mk">✓</span> Suporte no WhatsApp, por mensagem ou áudio, durante a produção do roteiro</div>
+        <div class="fw-foot">Ajuste é refinar o que foi entregue: trocar um restaurante, mudar o ritmo de um dia, inverter a ordem de duas visitas.</div>
+      </div>
+      <div class="fw-col no">
+        <h3>Não está incluído</h3>
+        <div class="fw-li"><span class="mk">✕</span> Compra de ingressos, passagens ou qualquer pagamento em seu nome</div>
+        <div class="fw-li"><span class="mk">✕</span> Reserva de hotel, restaurante ou passeio</div>
+        <div class="fw-li"><span class="mk">✕</span> Emissão de documento, visto, ETIAS ou seguro viagem</div>
+        <div class="fw-li"><span class="mk">✕</span> Acompanhamento presencial durante a viagem</div>
+        <div class="fw-li"><span class="mk">✕</span> Garantia de disponibilidade de ingressos ou mesas, que dependem de cada estabelecimento</div>
+        <div class="fw-li"><span class="mk">✕</span> Roteiro de outras cidades. A consultoria cobre Paris e os bate-voltas que saem de Paris</div>
+        <div class="fw-foot">Mudança de datas, de destino ou de número de pessoas depois da entrega significa refazer o roteiro do zero, e isso é um novo serviço.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRAZOS E CONDIÇÕES ===== -->
+<section class="dark on-navy grain" id="prazos">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker" style="color:var(--gold-2)">Prazos e condições</div>
+      <h2>Tudo com data <em>e nada no escuro</em></h2>
+      <p class="lead">Estes são os prazos que valem para os dois lados, escritos aqui para você consultar quando quiser.</p>
+    </div>
+    <div class="terms">
+      <div class="tcard">
+        <div class="tn num-font">5</div>
+        <div class="tu">dias úteis</div>
+        <p>Para eu entregar o roteiro, contados a partir do momento em que recebo o seu formulário completo, e não da data da compra.</p>
+      </div>
+      <div class="tcard">
+        <div class="tn num-font">10</div>
+        <div class="tu">dias corridos</div>
+        <p>Para você ler com calma e me enviar o pedido de ajustes, em uma única mensagem, com tudo o que quiser mudar.</p>
+      </div>
+      <div class="tcard">
+        <div class="tn num-font">3</div>
+        <div class="tu">dias úteis</div>
+        <p>Para eu devolver o roteiro já ajustado, com as alterações que você pediu.</p>
+      </div>
+      <div class="tcard">
+        <div class="tn num-font">7</div>
+        <div class="tu">dias de garantia</div>
+        <p>Prazo de arrependimento a partir da compra, conforme o Código de Defesa do Consumidor.</p>
+      </div>
+    </div>
+    <div class="clause">
+      <h4>Duas observações importantes</h4>
+      <p>Passados os 10 dias sem nenhum pedido de ajuste, o roteiro é considerado aceito e a rodada de ajustes inclusa expira.</p>
+      <p>Como o roteiro é produzido sob medida, ao contratar você declara: <em>"estou ciente de que o roteiro é produzido sob medida e que a desistência deve ser comunicada antes do início da produção".</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR QUE CONFIAR ===== -->
+<section class="light on-cream alt grain">
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker">Por que confiar em mim</div>
+      <h2>Paris de quem foi <em>e andou esses trajetos</em></h2>
+      <p class="lead">A consultoria não é um serviço improvisado. É o mesmo cuidado do guia Paris Sem Segredos, aplicado a uma viagem só.</p>
+    </div>
+    <div class="founder-grid">
+      <div class="founder-card">
+        <div class="fc-ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <h4>Testado na prática, não no mapa</h4>
+        <p>Eu já andei esses trajetos, já errei de estação, já entrei em restaurante ruim e já descobri os bons. O que entra no seu roteiro passou pela prova da rua.</p>
+      </div>
+      <div class="founder-card">
+        <div class="fc-ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></div>
+        <h4>Informação checada na fonte</h4>
+        <p>Horários, preços e regras vêm dos sites oficiais dos museus, da RATP e da Île-de-France Mobilités. Também consulto a alfândega francesa e outros sites oficiais do governo da França. Se algo não puder ser confirmado, não entra no roteiro.</p>
+      </div>
+      <div class="founder-card">
+        <div class="fc-ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="3"/></svg></div>
+        <h4>Escopo e preço fechados</h4>
+        <p>Você sabe exatamente o que vai receber, em quanto tempo e por quanto, antes de pagar. Sem cobrança extra no meio do caminho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVESTIMENTO ===== -->
+<section class="offer on-navy grain" id="investimento">
+  <div class="glow"></div>
+  <div class="paris-bg"><img loading="lazy" src="__IMG_14__" alt="" style="top:14%;left:8%"><img loading="lazy" src="__IMG_10__" alt="" style="bottom:16%;right:10%;transform:rotate(-8deg)"></div>
+  <div class="wrap layer center">
+    <div class="kicker" style="color:var(--gold-2)">Investimento</div>
+    <h2>Um valor único, <em>pela viagem inteira</em></h2>
+    <p class="lead">Não importa se a viagem é para duas ou para seis pessoas. O preço é o mesmo e cobre todos os dias em Paris.</p>
+
+    <div class="price-card">
+      <div class="price-head">
+        <h3>Roteiro Personalizado de Paris</h3>
+        <div class="de">Feito do zero para as suas datas</div>
+      </div>
+      <div class="price-body">
+        <div class="price-now"><small>R$</small>247</div>
+        <div class="price-parc">à vista no Pix ou parcelado no cartão</div>
+        <div class="price-up">Preço promocional por tempo limitado</div>
+        <div class="inc">
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Roteiro completo dia a dia, do primeiro ao último dia da viagem</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Endereços, trajetos e links prontos do Google Maps</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Sugestões de onde comer perto de cada parada</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Mala, documentação e checklist de embarque</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Material de consulta autoral com mais de 100 páginas sobre Paris</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Site interativo com o roteiro, do embarque até a volta</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Entrega em até 5 dias úteis e uma rodada de ajustes</div>
+          <div class="li"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7"/></svg></span> Suporte no WhatsApp durante a produção do roteiro</div>
+        </div>
+        <div style="text-align:center">
+          <a href="#investimento" class="btn lg cta-consultoria">Quero meu roteiro personalizado <span class="arrow">→</span></a>
+          <div class="btn-note">Depois da compra, você recebe o formulário e a produção começa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="guarantee">
+      <div class="seal">
+        <svg viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="60" r="52" stroke="#E9C46A" stroke-width="2"/>
+          <circle cx="60" cy="60" r="44" stroke="#D7A94B" stroke-width="1" stroke-dasharray="4 5"/>
+          <path d="M44 60l11 11 22-24" stroke="#E9C46A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="gtext">
+        <h3>Agenda limitada</h3>
+        <p>Aceito <b>poucas consultorias por mês</b>, porque cada roteiro é pesquisado e escrito individualmente. Se a sua viagem tem data marcada, garanta seu lugar com pelo menos 30 dias de antecedência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="light on-cream grain">
+  <div class="wrap layer">
+    <div class="center">
+      <div class="kicker">Ainda com dúvida?</div>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq">
+      <details class="qa" open><summary>Ainda não comprei voo nem hotel. Funciona assim mesmo? <span class="pl">+</span></summary><div class="ans">Funciona, e é ótimo começar por aí. O formulário tem um caminho para quem está do zero, e nesse caso o roteiro já vem com a indicação de em qual região se hospedar, quantos dias fazem sentido e como distribuir a viagem. Quem já tem voo e hotel fechados segue outro caminho no formulário, e o roteiro é montado a partir da localização do hotel e dos horários reais de chegada e saída. E quando você fechar essas informações, é só me mandar que eu atualizo o site e o PDF com os dados reais, sem custo, dentro de uma rodada de atualização inclusa no serviço.</div></details>
+      <details class="qa"><summary>Com quanta antecedência preciso contratar? <span class="pl">+</span></summary><div class="ans">O ideal é pelo menos 30 dias antes da viagem. Assim dá tempo de você receber o roteiro, pedir os ajustes e ainda comprar com calma os ingressos que precisam de reserva antecipada.</div></details>
+      <details class="qa"><summary>O preço muda se formos mais pessoas ou mais dias? <span class="pl">+</span></summary><div class="ans">Não. O valor é único e cobre o grupo inteiro e todos os dias da viagem em Paris.</div></details>
+      <details class="qa"><summary>Serve para outras cidades da França ou da Europa? <span class="pl">+</span></summary><div class="ans">A consultoria cobre Paris e os bate-voltas que saem de Paris, como Versailles, Giverny, Disneyland Paris e Mont-Saint-Michel. Outras cidades não entram no escopo.</div></details>
+      <details class="qa"><summary>Como recebo o roteiro? <span class="pl">+</span></summary><div class="ans">Em um site interativo feito só para a sua viagem e também em PDF, enviados por e-mail e por WhatsApp. O PDF funciona offline no celular, então você consegue consultar em Paris mesmo sem internet.</div></details>
+      <details class="qa"><summary>Preciso comprar o guia Paris Sem Segredos também? <span class="pl">+</span></summary><div class="ans">Não. A consultoria é um serviço independente e completo por si só. O guia é a escolha para quem prefere planejar sozinho e pagar menos.</div></details>
+      <details class="qa"><summary>E se eu mudar de ideia depois de comprar? <span class="pl">+</span></summary><div class="ans">Você tem 7 dias de arrependimento a partir da compra, e a desistência precisa ser comunicada antes de a produção do roteiro começar, já que ele é feito sob medida. Depois da entrega, a rodada de ajustes inclusa é o caminho para deixar tudo do jeito que você quer.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section class="contact grain">
+  <div class="wrap layer">
+    <h2>Ficou com alguma dúvida?</h2>
+    <p>Se quiser conversar antes de contratar, me chame no WhatsApp. Pode mandar mensagem ou áudio. Respondo pessoalmente e sem compromisso.</p>
+    <a href="https://wa.me/5511945208458?text=Ol%C3%A1%2C%20Gabriela!%20Quero%20saber%20mais%20sobre%20a%20consultoria%20de%20roteiro%20personalizado%20de%20Paris." class="wpp" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a3 3 0 00-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <div class="socials">
+      <a href="https://www.instagram.com/parissemsegredos/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.tiktok.com/@paris.sem.segredos" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4c.5 2.5 2 4 4.5 4.3v3C16.8 11.2 15.3 10.6 14 9.7V15a5 5 0 11-5-5c.3 0 .7 0 1 .1v3.1A2 2 0 1012 15V4h2z"/></svg></a>
+    </div>
+    <p class="email-context">Prefere e-mail? Escreva para <a href="mailto:parissemsegredos@gmail.com" class="email-line">parissemsegredos@gmail.com</a></p>
+  </div>
+</section>
+
+<footer class="foot grain">
+  <div class="wrap layer">
+    <img loading="lazy" src="__IMG_05B__" alt="Paris Sem Segredos">
+    <p>© 2026 Paris Sem Segredos · Todos os direitos reservados · <a href="https://parissemsegredos.com.br/">Voltar para o guia</a></p>
+  </div>
+</footer>
+
+<script>
+  /* ==========================================================
+     LINK DE CHECKOUT DA CONSULTORIA
+     Depois de criar o produto no Hotmart, cole o link abaixo,
+     entre as aspas. Todos os botões passam a apontar para lá
+     automaticamente. Enquanto estiver vazio, os botões levam
+     para o WhatsApp.
+     ========================================================== */
+  const CHECKOUT_CONSULTORIA = "https://pay.hotmart.com/M107032068L";
+
+  const FALLBACK_WPP = "https://wa.me/5511945208458?text=Ol%C3%A1%2C%20Gabriela!%20Quero%20contratar%20a%20consultoria%20de%20roteiro%20personalizado%20de%20Paris.";
+  const destino = CHECKOUT_CONSULTORIA.trim() !== "" ? CHECKOUT_CONSULTORIA.trim() : FALLBACK_WPP;
+
+  document.querySelectorAll('.cta-consultoria').forEach(function(el){
+    el.setAttribute('href', destino);
+    if (destino === FALLBACK_WPP) {
+      el.setAttribute('target','_blank');
+      el.setAttribute('rel','noopener');
+    }
+    el.addEventListener('click', function(){
+      if (typeof fbq === 'function') { fbq('track', 'InitiateCheckout', {content_name: 'Consultoria Paris'}); }
+    });
+  });
+</script>
+</body>
+</html>
