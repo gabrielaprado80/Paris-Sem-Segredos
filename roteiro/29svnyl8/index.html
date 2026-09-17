@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Roteiro personalizado | Paris Sem Segredos</title>
@@ -417,653 +418,541 @@ svg.i{flex:none;vertical-align:-.16em}
 const ROTEIRO = {
 
 capa: {
-  saudacao: "Jeferson e Erika, essa é a lua de mel de vocês em",
+  saudacao: "Raquel e Maria Clara, essa é a viagem que vocês tanto sonharam.",
   titulo: "Paris",
-  subtitulo: "Nove dias entre Paris e a Disneyland, do jeito que vocês dois imaginaram.",
-  chegada: "28 SET 2026",
-  saida: "06 OUT 2026",
-  dataChegadaISO: "2026-09-28",
+  subtitulo: "Seis dias entre os ícones da cidade, Versalhes e um bate e volta a Amsterdã, no ritmo de vocês.",
+  chegada: "17 DEZ 2026",
+  saida: "22 DEZ 2026",
+  dataChegadaISO: "2026-12-17",
   chips: [
-    { i:"coracao", t:"Lua de mel" },
-    { i:"pessoas", t:"2 adultos, 31 e 28 anos" },
-    { i:"calendario", t:"6 dias em Paris e 3 na Disney" },
-    { i:"termometro", t:"Outono, 11°C a 19°C" }
+    { i:"pessoas", t:"Raquel e Maria Clara, 50 e 19 anos" },
+    { i:"coracao", t:"Primeira vez das duas em Paris" },
+    { i:"calendario", t:"6 dias, com um dia em Amsterdã" },
+    { i:"termometro", t:"Inverno, entre 3°C e 8°C" }
   ]
 },
 
 carta: [
-  "Jeferson e Erika, antes de qualquer coisa: parabéns pelo casamento. Montar a lua de mel de vocês foi um prazer.",
-  "O roteiro prioriza os pontos mais famosos e as fotos, com museus e arquitetura logo atrás, num ritmo equilibrado e com pausa no meio do dia. A manhã de sábado está reservada para a sessão de fotos, em Trocadéro, o cenário mais usado por fotógrafos de casal na cidade.",
-  "Tem uma coisa que precisa ser dita logo de cara, porque ela definiu o roteiro inteiro. Versalhes fecha todas as segundas e o Louvre fecha todas as terças. A viagem de vocês começa numa segunda e termina numa terça, e os dois estavam na sua lista de prioridades inegociáveis. A solução foi cruzar os dois: Versalhes na terça, dia 29, e o Louvre na segunda, dia 5. Assim nenhum dos dois se perde e nenhum dia fica vazio.",
-  "Também respondi ali dentro a dúvida que você deixou no final do formulário, sobre como sair do hotel com as malas no dia da Disney e como voltar no dia 2. Está tudo no dia correspondente, com horário e preço, já ajustado para vocês saírem bem cedo no dia 30, antes do parque abrir.",
-  "A única noite com passeio programado é a do cruzeiro no Sena. O resto fica livre, e nenhum trajeto noturno exige caminhada longa."
+  "Raquel, que carta gostosa de escrever. Uma viagem que a Maria Clara sonha desde criança tem um peso diferente, e isso deu o tom de cada escolha que fiz aqui: nada de correria, nada de deixar passar o que vocês duas mais quiseram ver. Muito obrigada pelo carinho nas suas mensagens, elas realmente tornam esse trabalho mais bonito de fazer.",
+  "Duas coisas pautaram o roteiro inteiro. A primeira é Versalhes: ficou na sexta-feira, o dia seguinte à chegada, porque o palácio fecha todas as segundas e essa prioridade não podia correr risco. A segunda são as Catacumbas: também fecham às segundas, então entraram já no primeiro dia, à tarde, num horário reservado. Sobre visitar de dia ou de noite, vale saber que é tudo subterrâneo: a experiência é igual em qualquer horário, então ficou marcado num horário à tarde, fora da noite.",
+  "O jantar de verdade, sem ser todas as noites, ficou marcado para a noite de domingo, em Montmartre, depois de um dia inteiro por lá. Nos outros dias deixei o jantar livre, para comprarem no mercado perto do hotel e comerem com calma.",
+  "Um dia foge do ritmo mais tranquilo do resto da viagem: o bate e volta a Amsterdã, no sábado, com saída de madrugada e volta já de noite, sem a pausa de meio-dia que está nos outros dias. Vale saber disso antes de embarcar, para chegarem descansadas nesse dia em especial."
 ],
 
 assinaturaCarta: "Boa viagem, Gabriela",
 
 voos: {
   ida: {
-    tag: "Ida · 27 de setembro", cia: "Air France · AF415",
-    saidaHora:"19:55", saidaCod:"FOR", saidaCidade:"Fortaleza",
-    chegadaHora:"09:35", chegadaCod:"CDG", chegadaCidade:"Paris",
-    duracao:"pouso na segunda-feira, dia 28"
+    cia: "Air France · AF 459",
+    tag: "IDA · 16 DE DEZEMBRO",
+    saidaHora: "20h40",
+    saidaCod: "GRU",
+    saidaCidade: "São Paulo (GRU)",
+    chegadaHora: "11h50",
+    chegadaCod: "CDG",
+    chegadaCidade: "Paris",
+    duracao: "11h10 · durante a noite"
   },
   volta: {
-    tag: "Volta · 6 de outubro", cia: "Air France · AF416",
-    saidaHora:"13:40", saidaCod:"CDG", saidaCidade:"Paris",
-    chegadaHora:"17:45", chegadaCod:"FOR", chegadaCidade:"Fortaleza",
-    duracao:"9h05 de voo, direto"
+    cia: "Air France · AF 460",
+    tag: "VOLTA · 22 DE DEZEMBRO",
+    saidaHora: "10h25",
+    saidaCod: "CDG",
+    saidaCidade: "Paris",
+    chegadaHora: "18h25",
+    chegadaCod: "GRU",
+    chegadaCidade: "São Paulo (GRU)",
+    duracao: "12h"
   },
-  observacao: "Vocês embarcam ainda domingo à noite e pousam em Paris segunda de manhã, às 9h35. Dá tempo de sobra para o primeiro dia inteiro, mesmo com o cansaço do voo. Na volta, o voo sai às 13h40 de terça: contando 3 horas de aeroporto e cerca de 1 hora de trajeto até o CDG, vocês devem sair do hotel por volta das 9h30."
+  observacao: "Vocês embarcam ainda quarta à noite, às 20h40 de Guarulhos, e pousam em Paris na quinta de manhã, às 11h50. O hotel guarda as malas até o check-in das 14h: dá tempo de sobra para o primeiro dia inteiro. Na volta, o voo sai às 10h25 da terça: contando 3 horas de aeroporto e cerca de 50 minutos de RER B até o CDG, saiam do hotel por volta das 6h."
 },
 
 aeroportos: [
   {
     sigla: "CDG",
     nome: "Charles de Gaulle",
-    nota: "Vocês chegam e saem pelo CDG. Com duas malas grandes e chegando de manhã depois de um voo longo, o táxi compensa: é porta a porta, tem preço fixo e evita escada de metrô com bagagem.",
+    nota: "Vocês chegam e saem pelo CDG. Com duas malas grandes e sem limitação física, o RER B sai bem mais em conta que o táxi para os dois trajetos, e é essa a recomendação.",
     opcoes: [
-      { nome:"Táxi oficial", icone:"taxi", rec:true, selo:"Recomendado na chegada",
-        preco:"€ 56", precoNota:"corrida fixa até a margem direita (11º)", tempo:"40 a 60 min",
+      { nome:"RER B", icone:"trem", rec:true, selo:"Recomendado",
+        preco:"€ 14", precoNota:"por pessoa, bilhete de aeroporto", tempo:"cerca de 50 min até o hotel",
         itens:[
-          ["Preço","€ 56 para a margem direita do Sena, onde fica o hotel de vocês. É tarifa fixa oficial, não muda com trânsito nem com bagagem, e cobre até 4 pessoas."],
-          ["Onde pegar, passo a passo","Depois de retirar as malas, sigam as placas TAXI. Elas levam até a fila oficial, onde um funcionário do aeroporto encaminha vocês ao carro. No chão também há círculos azuis marcando o caminho."],
-          ["Ponto exato por terminal","Terminal 1: porta 24. Terminal 2A: porta 6. Terminal 2C: porta 14. Terminal 2D: porta 7. Terminal 2E: porta 10. Terminal 2B: nível de desembarque. Confiram o terminal no cartão de embarque."],
-          ["O golpe mais comum","Quem aborda vocês dentro do terminal oferecendo corrida é irregular e chega a cobrar três vezes mais. O táxi parisiense oficial tem uma placa luminosa branca, acesa, escrito TAXI PARISIEN no teto, e taxímetro visível. Só se pega na fila sinalizada."]
-        ]},
-      { nome:"RER B", icone:"trem", selo:"Mais barato",
-        preco:"€ 14", precoNota:"por pessoa, bilhete de aeroporto", tempo:"cerca de 60 min até o hotel",
-        itens:[
-          ["Onde pegar","O Terminal 2 tem estação própria de RER B, com acesso a pé dos subterminais 2A a 2G. Os Terminais 1 e 3 usam a estação CDG 1, alcançada pelo CDGVAL, o trenzinho automático gratuito do aeroporto."],
-          ["O caminho até o hotel","RER B até Châtelet-Les Halles, depois metrô linha 11 até République, e 6 minutos a pé. São duas trocas com mala grande."],
-          ["O melhor custo-benefício","€ 14 por pessoa é quase metade do preço do táxi (€ 56). Para quem viaja mais leve, é a opção mais inteligente. A única ressalva de verdade é a escada: Châtelet é uma das estações mais movimentadas de Paris, sem trajeto 100% livre de degrau, e com duas malas grandes depois de um voo longo isso pesa."]
+          ["Onde pegar","O Terminal 2 tem estação própria de RER B. Os Terminais 1 e 3 usam a estação CDG 1, alcançada pelo CDGVAL, o trenzinho automático gratuito do aeroporto."],
+          ["O caminho até o hotel","RER B direção Paris até a estação Denfert-Rochereau, depois metrô linha 6 direção Charles de Gaulle-Étoile até a estação Cambronne. Uma única troca, cerca de 50 minutos no total."],
+          ["Comprem antes","Pelo aplicativo Île-de-France Mobilités, ainda no Brasil. É o mesmo bilhete de € 14 que vale para qualquer estação da região, dentro de 2 horas após a primeira validação."]
         ],
-        rota:"https://www.google.com/maps/dir/?api=1&origin=A%C3%A9roport%20Charles%20de%20Gaulle%202%20TGV%20RER%20station&destination=13%20Rue%20de%20Malte%2C%2075011%20Paris&travelmode=transit" },
-      { nome:"Táxi na volta", icone:"carro", selo:"Dia 6 de outubro",
-        preco:"€ 56", precoNota:"mesma tarifa fixa", tempo:"40 a 60 min",
+        rota:"https://www.google.com/maps/dir/?api=1&origin=A%C3%A9roport%20Charles%20de%20Gaulle%202%20TGV%20RER%20station&destination=2%20Rue%20Cambronne%2C%2075015%20Paris&travelmode=transit" },
+      { nome:"Táxi oficial", icone:"taxi", selo:"Mais confortável",
+        preco:"€ 65", precoNota:"tarifa fixa até a margem esquerda (15º)", tempo:"40 a 60 min",
         itens:[
-          ["Como pedir","O hotel chama para vocês, ou usem o aplicativo G7, a maior central de táxi de Paris e a mais confiável. Por regulamento da prefeitura, todo táxi parisiense oficial (G7 incluído) cobra a mesma tarifa fixa de € 56 ou € 65 num trajeto para o aeroporto, nos dois sentidos. A diferença é que, reservando pelo aplicativo, soma-se uma pequena taxa de chamada, de € 4 a € 7."],
-          ["Quando sair","Saiam do hotel com 4 horas de antecedência do voo. Voo internacional pede 3 horas de aeroporto, mais o trajeto."]
+          ["Preço","€ 65 até o hotel, que fica na margem esquerda do Sena. É tarifa fixa oficial, cobre até 4 pessoas e as malas."],
+          ["Onde pegar, passo a passo","Depois de retirar as malas, sigam as placas TAXI até a fila oficial sinalizada."],
+          ["Quando vale a pena","Se o voo atrasar, chegar tarde da noite ou vocês estiverem muito cansadas, o táxi compensa o conforto mesmo custando mais que o RER B."]
         ]}
     ]
   }
 ],
 
 hospedagem: {
-  nome: "Hotel Alhambra e Mary's Hotel République",
-  endereco: "13 e 15 Rue de Malte, 75011 Paris",
-  metro: "Oberkampf (linhas 5 e 9) é a estação mais próxima, a 3 minutos a pé. É a que uso como referência em todos os trajetos deste roteiro.",
-  checkin: "Alhambra de 28 a 30 de setembro",
-  checkout: "Mary's Hotel de 2 a 6 de outubro",
-  nota: "Vocês reservaram dois hotéis que ficam praticamente lado a lado, na mesma rua, os dois a 3 minutos de Oberkampf. A mudança do dia 2 de outubro é literalmente atravessar a calçada, e todos os trajetos deste roteiro partem daqui.",
+  nome: "ibis Paris Tour Eiffel Cambronne",
+  endereco: "2 Rue Cambronne, 75015 Paris",
+  metro: "Cambronne (linha 6) fica a 2 minutos a pé. É a estação que uso como referência em todos os trajetos deste roteiro.",
+  checkin: "A partir das 14h",
+  checkout: "Até o meio-dia",
+  nota: "O hotel fica no 15º arrondissement, um bairro residencial e tranquilo, a 3 estações de metrô da Torre Eiffel.",
   porPerto: [
-    { i:"pao", t:"Padaria", d:"Graine, 54 Rue Oberkampf, 4,4 estrelas com 444 avaliações, 5 min a pé. Aberta desde 7h todos os dias." },
-    { i:"mercado", t:"Mercado", d:"Franprix, 92 Bd Richard-Lenoir, 7 min a pé, aberto até 21h30 (9h30 aos domingos)." },
-    { i:"farmacia", t:"Farmácia", d:"Pharmacy of 58, 58 Rue Oberkampf, 4,4 estrelas, equipe fala inglês, 6 min a pé. Aberta das 8h30 às 20h, fechada aos domingos." },
-    { i:"metro", t:"Metrô", d:"Oberkampf fica a 3 minutos, com as linhas 5 e 9. Uso essa estação sempre que ela resolve o trajeto sem troca de linha, e só indico République (a 7 minutos, com 5 linhas) nos dias em que ela evita uma baldeação." },
-    { i:"onibus", t:"Ponto de ônibus", d:"Parada Oberkampf - Saint-Maur, linhas 96 e 102, a 3 minutos a pé, praticamente na porta do hotel." },
-    { i:"euro", t:"Caixa eletrônico", d:"Qualquer caixa eletrônico com o símbolo Visa/Plus ou Mastercard/Cirrus no visor aceita cartão internacional, de qualquer bandeira ou banco, sem precisar ser um banco específico. Tem várias máquinas na Avenue de la République, a 6 minutos a pé, funcionando 24h." },
-    { i:"alerta", t:"Sobre o bairro", d:"O 11º é residencial, jovem e movimentado à noite, principalmente na Rue Oberkampf. É seguro, mas como em qualquer cidade grande, fiquem atentos aos seus pertences ao se locomover, em qualquer horário." }
+    { i:"pao", t:"Padaria", d:"La Boulange de Cambronne, 22 Rue Cambronne, 4,7 estrelas com 326 avaliações, a 2 minutos a pé. Aberta de segunda a sexta, das 6h30 às 20h30 (fechada aos fins de semana)." },
+    { i:"pao", t:"Padaria e confeitaria (macarons e éclairs)", d:"Maison Landemaine Cambronne, 7 Place Cambronne, 3,9 estrelas com 628 avaliações, a 1 minuto a pé. Aberta todos os dias, das 7h às 20h30, boa opção para éclair no dia a dia (o macaron mais especial fica reservado para o dia 5, na loja histórica da Champs-Élysées)." },
+    { i:"mercado", t:"Mercado", d:"Carrefour City, 33 Rue Frémicourt, 7 minutos a pé, aberto até 22h (13h aos domingos). É o mais perto para as compras de mercado dos jantares livres." },
+    { i:"mercado", t:"Congelados (Picard)", d:"Picard, bem ao lado do hotel, no mesmo endereço (2 Rue Cambronne), 4,4 estrelas com 175 avaliações. Rede francesa de congelados de qualidade: pratos prontos, sopas e massas para esquentar no micro-ondas do hotel, uma boa opção para as noites de jantar livre." },
+    { i:"metro", t:"Metrô", d:"Cambronne, linha 6, a 2 minutos a pé. Uso essa estação em todos os trajetos deste roteiro." },
+    { i:"euro", t:"Caixa eletrônico", d:"Qualquer caixa com o símbolo Visa/Plus ou Mastercard/Cirrus aceita cartão internacional. Há máquinas na Rue de la Croix Nivert e na Place Cambronne, a poucos passos do hotel." },
+    { i:"pin", t:"Torre Eiffel a pé, quando quiserem", d:"A torre fica a uns 15 minutos a pé do hotel, seguindo pela Avenue de Suffren. Em qualquer noite que sobrar energia (não precisa ser um dia programado), dá para caminhar até lá, sentar num pano no Champ de Mars com um vinho e uns petiscos comprados no mercado do caminho, e ver o show de luzes da torre, que brilha por 5 minutos a cada hora cheia depois de escurecer." },
+    { i:"alerta", t:"Sobre o bairro", d:"O 15º é residencial e tranquilo, um dos mais seguros de Paris. Mesmo assim, fiquem atentas aos pertences no metrô em qualquer horário." }
   ]
 },
 
 transporte: {
-  recomendacao: "Fiz a conta trajeto por trajeto, considerando que vocês vão de táxi para o aeroporto nos dois sentidos e de transfer particular para a Disney nos dois sentidos. Como essas duas pernas, que são justamente as mais caras de zona, não passam pelo metrô nem pelo RER, o Navigo Semaine perde a maior parte da vantagem dele. Sobra só o uso comum dentro de Paris e o dia de Versalhes. Desde janeiro de 2025 o bilhete avulso de metrô e RER é único para toda a Île-de-France: custa o mesmo valor em qualquer trajeto dentro da região, inclusive até Versalhes, com uma única exceção, que são as linhas específicas de aeroporto (RER B para o CDG), que continuam com tarifa própria. Contando as viagens de metrô dos dias em Paris mais a ida e volta de Versalhes, o total em bilhete avulso fica em torno de € 38 por pessoa na viagem inteira. Um Navigo Semaine sairia por € 32,40 mais os bilhetes avulsos da segunda e terça finais, ficando perto de € 40. Ou seja, não compensa: o bilhete avulso pelo celular é mais barato e não exige tirar nenhum cartão físico.",
+  recomendacao: "Fiz a conta com os trajetos reais desta viagem: a ida e a volta do CDG de RER B, os deslocamentos dentro de Paris todos os dias, e o dia de Versalhes, que desde a reforma de janeiro de 2025 usa o mesmo bilhete único da região (com exceção só das linhas de aeroporto). A viagem de vocês atravessa a virada de uma semana Navigo, que vai de segunda a domingo. Para os primeiros quatro dias, de quinta a domingo (17 a 20/12), o Navigo Semaine todas as zonas sai mais em conta e mais prático: € 32,40 por pessoa, com o RER B do aeroporto incluído de graça, cobrindo Catacumbas, Versalhes e o trajeto até a estação para o trem de Amsterdã. Para os dois últimos dias (21 e 22/12), que já caem na semana seguinte, o bilhete avulso pelo celular sai mais barato do que comprar um Navigo inteiro só para dois dias: cerca de € 10 em bilhetes dentro de Paris, mais € 14 do RER B na despedida. No total, essa combinação fica em torno de € 56 por pessoa na viagem inteira, contra cerca de € 61 se fossem só bilhetes avulsos do início ao fim, e evita ficar comprando bilhete a cada trajeto na maior parte da viagem.",
   bilhetes: [
-    { nome:"Bilhete de metrô e RER (unificado)", preco:"€ 2,55", nota:"por pessoa e por trajeto, com correspondências incluídas. Vale para o metrô, o ônibus e o RER dentro da região, inclusive até Versalhes", ideal:"todos os dias em Paris e o dia de Versalhes" },
-    { nome:"Bilhete de aeroporto (RER B)", preco:"€ 14", nota:"por pessoa. É a única linha que ainda tem tarifa própria, fora do bilhete único. Só se optarem por trem em vez de táxi", ideal:"alternativa ao táxi, se decidirem economizar" }
+    { nome:"Navigo Semaine (todas as zonas)", preco:"€ 32,40", nota:"por pessoa, válido de segunda a domingo, inclui o RER B do aeroporto sem custo extra. Comprem para a semana de 14 a 20/12, que cobre a chegada e os quatro primeiros dias de vocês", ideal:"quinta a domingo (17 a 20/12): Catacumbas, Versalhes e Amsterdã" },
+    { nome:"Bilhete de metrô e RER (unificado)", preco:"€ 2,55", nota:"por pessoa e por trajeto, com correspondências incluídas. Vale para o metrô, o ônibus e o RER dentro da região", ideal:"segunda e terça finais (21 e 22/12)" },
+    { nome:"Bilhete de aeroporto (RER B)", preco:"€ 14", nota:"por pessoa. Única linha com tarifa própria fora do bilhete único, exceto para quem já está com Navigo Semaine", ideal:"chegada (com Navigo) e despedida (avulso)" }
   ],
   celular: [
-    ["Onde comprar","Aplicativo Île-de-France Mobilités, que tem versão em português, ou Bonjour RATP. Instalem ainda no Brasil."],
-    ["Sem cartão físico","Não precisam tirar Navigo Découverte nem nenhum cartão com foto. Pelo aplicativo, o bilhete fica dematerializado direto no celular, comprado e validado ali mesmo."],
-    ["Como usar","Abram o bilhete no aplicativo antes de entrar na catraca, aproximem o celular do validador e esperem o sinal verde. Cada pessoa precisa do próprio bilhete, no próprio celular."],
-    ["Por que pelo celular","Vocês não falam francês, e a máquina física da estação é o ponto onde mais gente trava. Pelo aplicativo, o processo inteiro fica em português."]
+    ["Onde comprar","Aplicativo Île-de-France Mobilités, com versão em português. Instalem ainda no Brasil."],
+    ["Quando comprar o Navigo","O Navigo Semaine de 14 a 20/12 já pode ser comprado a partir da sexta-feira anterior, dia 11/12. Comprem nesse dia ou depois, antes de embarcar, para chegar em Paris com tudo pronto no celular."],
+    ["Sem cartão físico","Não precisam de nenhum cartão com foto. O bilhete e o passe ficam dematerializados no celular, comprados e validados ali mesmo."],
+    ["Como usar","Abram o bilhete ou o Navigo no aplicativo antes de entrar na catraca, aproximem o celular do validador e esperem o sinal verde. Cada pessoa precisa do próprio bilhete no próprio celular."]
   ],
   avisos: [
-    "O bilhete de papelão (cartão) não existe mais, foi descontinuado. Hoje tudo é pelo celular ou por um cartão sem contato chamado Navigo Easy, que vocês não vão precisar.",
-    "Mesmo assim, sempre validem o bilhete no totem ao entrar, mesmo em estações que não têm mais catraca física. Sem validação, a fiscalização multa na hora, mesmo com o bilhete comprado.",
-    "Em boa parte das linhas, principalmente nos trens mais antigos, a porta não abre sozinha. Levantem a alavanca ou apertem o botão verde.",
-    "Uber e Bolt funcionam bem em Paris e valem principalmente à noite, para evitar caminhada longa depois de escurecer."
+    "O bilhete de papelão não existe mais. Hoje tudo é pelo celular ou por um cartão sem contato chamado Navigo Easy, que vocês não vão precisar.",
+    "Sempre validem o bilhete no totem ao entrar, mesmo em estações sem catraca física. Sem validação, a fiscalização multa na hora.",
+    "Em boa parte das linhas, a porta do trem não abre sozinha. Levantem a alavanca ou apertem o botão para abertura.",
+    "Uber e Bolt funcionam bem em Paris e valem à noite, para evitar caminhada longa depois de escurecer."
   ]
 },
-
 
 preparacao: {
   texto: "Cada item aqui é para resolver ainda no Brasil, com o passo a passo.",
   blocos: [
     { titulo:"Bagagem de mão", icone:"passaporte", itens:[
-      ["Documentos","Passaporte com validade mínima de 3 meses após a saída da Europa, apólice do seguro viagem, cartão de embarque, comprovante das duas hospedagens e comprovante da passagem de volta."],
-      ["Por que impresso","Levem tudo impresso além do digital. Se a imigração pedir e o celular estiver sem bateria depois do voo, vocês não ficam na mão. O controle de fronteira pode perguntar onde vocês vão ficar e como pretendem se manter na viagem: reserva de hotel e passagem de volta na mão resolvem em segundos."],
+      ["Documentos","Passaporte com validade mínima de 3 meses após a saída da Europa, apólice do seguro viagem, cartão de embarque, comprovante da hospedagem (ibis Paris Tour Eiffel Cambronne) e os comprovantes dos ingressos já comprados (Versalhes, Catacumbas, Torre Eiffel, trem para Amsterdã)."],
+      ["Por que impresso","Levem tudo impresso além do digital. O controle de fronteira pode perguntar onde vocês vão ficar, como pretendem se manter na viagem e o que já está reservado: ter tudo isso na mão resolve em segundos, mesmo sem falar francês ou inglês."],
       ["Dinheiro e cartão","Cartões e euro em espécie, separados em lugares diferentes da bagagem. Nunca despachem dinheiro na mala."],
       ["Eletrônicos","Celular e carregador, fones de ouvido e power bank. O power bank é obrigatório na bagagem de mão, não pode ir despachado."],
-      ["Kit conforto de voo","Almofada de pescoço, meias de compressão e uma muda de roupa completa dentro da mala de mão, para o caso de extravio da despachada."]
+      ["Remédios","Remédios de uso pessoal, na embalagem original, com a receita em mãos se for algo controlado."],
+      ["Muda de roupa","Uma troca de roupa completa dentro da mala de mão, para o caso de a mala despachada atrasar ou se perder."]
+    ]},
+    { titulo:"Líquidos na bagagem de mão", icone:"mala", itens:[
+      ["A regra","Cada líquido, gel ou creme precisa estar em embalagem de até 100 ml. Não é sobre quanto sobra no frasco, é sobre a capacidade do frasco em si."],
+      ["O saquinho transparente","Todos os frascos de até 100 ml juntos, dentro de um único saco plástico transparente e resealável, de até 1 litro no total. É esse saquinho que passa pelo raio-x separado das outras coisas."],
+      ["O que entra nessa regra","Perfume, hidratante, protetor solar, pasta de dente, e qualquer líquido, gel, creme ou pastoso, incluindo os de cabelo."],
+      ["Exceções","Remédios líquidos de uso pessoal, com receita, podem passar em quantidade maior, mas vale declarar na esteira de segurança."],
+      ["Vale saber","Comprem o saquinho transparente antes de viajar (encontra-se em qualquer papelaria ou farmácia) e já arrumem tudo assim na mala de mão, para não perder tempo separando na fila do aeroporto."]
     ]},
     { titulo:"Documentação para a Europa", icone:"escudo", itens:[
-      ["Passaporte","Confiram a validade hoje. A emissão leva semanas e a viagem é logo."],
-      ["EES, o que é e como funciona","Sistema de entrada e saída em vigor desde outubro de 2025, que troca o carimbo no passaporte por um registro digital com biometria. É gratuito e acontece direto no balcão de imigração: vocês escaneiam o passaporte e fornecem foto e digitais, só na primeira vez. Para agilizar, dá para baixar o app Travel to Europe e fazer o pré-registro antes de embarcar."],
-      ["ETIAS, atenção aqui","Ainda NÃO está em vigor. A previsão oficial é início de 2027, depois da viagem de vocês. Qualquer site ou pessoa cobrando por ETIAS agora é golpe: não paguem nada por isso."],
-      ["Prova de meios na imigração","O controle de fronteira pode exigir prova de que vocês conseguem se manter na viagem. O valor de referência é € 65 por dia por pessoa com hospedagem já paga, ou € 120 por dia sem hospedagem paga. Como vocês têm hotel reservado, o valor menor se aplica. Tenham parte disso em espécie e visível, junto com extrato ou cartão internacional."],
-      ["Seguro viagem, o que precisa ter","Cobertura mínima de € 30.000 para despesas médicas, hospitalares e de repatriação, válida em todo o Espaço Schengen durante o período inteiro da viagem. Cobertura de bagagem extraviada e cancelamento de voo são extras, não obrigatórios, mas valem a pena comparar."],
-      ["Onde contratar","Confiram primeiro se o cartão de crédito já inclui: Visa Infinite e Mastercard Black costumam ter, geralmente ativado quando a passagem é paga com o cartão. Se não tiver, sites como Seguros Promo comparam várias seguradoras de uma vez, contratação 100% online."],
-      ["Se precisar usar","Contatem a seguradora antes de pagar qualquer coisa do próprio bolso: a maioria aciona o hospital direto. Cartão de crédito costuma exigir pagar e pedir reembolso depois. Guardem e fotografem todos os recibos, laudos e receitas. Salvem o número da apólice e o telefone de emergência 24h antes de embarcar."]
+      ["Passaporte","Confiram a validade hoje. A emissão leva semanas."],
+      ["EES, o que acontece no aeroporto","Sistema de entrada e saída em vigor desde outubro de 2025, que troca o carimbo no passaporte por um registro digital com biometria. Acontece direto no balcão de imigração do CDG: vocês escaneiam o passaporte e fazem o registro da digital e da foto, só na primeira vez que entram no Espaço Schengen. É gratuito e leva poucos minutos."],
+      ["ETIAS, atenção aqui","Ainda NÃO está em vigor. A previsão oficial é 2027, depois da viagem de vocês. Qualquer site ou pessoa cobrando por ETIAS agora é golpe: não paguem nada por isso. Reconferir esse status é sempre o primeiro passo antes de qualquer instrução sobre entrada na Europa, porque muda com frequência."],
+      ["Prova de meios na imigração","O controle de fronteira pode exigir prova de que vocês conseguem se manter na viagem. O valor de referência é € 65 por dia por pessoa com hospedagem já paga. Como vocês já têm hotel reservado, o valor menor se aplica. Tenham parte disso em espécie e visível, junto com extrato ou cartão internacional."],
+      ["Seguro viagem, o que precisa ter","Cobertura mínima de € 30.000 para despesas médicas, hospitalares e de repatriação, válida em todo o Espaço Schengen durante o período inteiro da viagem, incluindo o dia em Amsterdã."],
+      ["Se precisar usar","Contatem a seguradora antes de pagar qualquer coisa do próprio bolso. Guardem e fotografem todos os recibos, laudos e receitas."]
     ]},
     { titulo:"Dinheiro e cartão", icone:"euro", itens:[
-      ["Sobre o imposto (IOF)","Existe uma taxa de 3,5% cobrada pelo governo em qualquer compra ou saque internacional, seja no cartão de crédito, no débito ou comprando euro em espécie. Ela é igual em todo lugar, então não é isso que faz um jeito de pagar ser mais barato que outro."],
-      ["O que realmente muda de preço","O que varia é a cotação do euro que cada banco ou cartão usa para converter. Um cartão comum costuma usar uma cotação pior (mais cara). Contas como Wise e Nomad usam a cotação comercial, mais próxima da real, o que faz diferença no total gasto."],
-      ["Estratégia","Abram uma conta global (Wise ou Nomad são as mais usadas) antes de viajar, convertam euros com antecedência e usem esse cartão na maioria dos pagamentos. Cartões e carteiras digitais (Apple Pay, Google Pay) são amplamente aceitos em Paris."],
-      ["Espécie","Entre 150 e 200 euros por pessoa como reserva, incluindo o valor que serve como prova de meios na imigração. Caixas eletrônicos (ATM) funcionam 24h para saque, se precisarem complementar."],
-      ["Na maquininha","Recusem sempre a cobrança em reais (a chamada conversão dinâmica). Escolher euro sai mais barato."],
-      ["Antes de embarcar","Avisem o banco da viagem internacional para evitar bloqueio do cartão logo no primeiro dia."]
+      ["Sobre o imposto (IOF)","Existe uma taxa de 3,5% cobrada pelo governo em qualquer compra ou saque internacional, seja no cartão de crédito, no débito ou comprando euro em espécie. Ela é igual em todo lugar."],
+      ["O que realmente muda de preço","A cotação do euro que cada banco ou cartão usa para converter. Contas como Wise e Nomad usam a cotação comercial, mais próxima da real."],
+      ["Estratégia","Abram uma conta global (Wise ou Nomad) antes de viajar, convertam euros com antecedência e usem esse cartão na maioria dos pagamentos."],
+      ["Espécie","Entre 150 e 200 euros por pessoa como reserva, incluindo o valor que serve como prova de meios na imigração."],
+      ["Na maquininha","Recusem sempre a cobrança em reais (conversão dinâmica). Escolher euro sai mais barato."],
+      ["Antes de embarcar","Avisem o banco da viagem internacional, incluindo a passagem por Amsterdã, para evitar bloqueio do cartão."]
     ]},
     { titulo:"Internet e idioma", icone:"wifi", itens:[
-      ["Antes de comprar o eSIM","Confirmem se o celular de vocês é compatível com eSIM. A maioria dos aparelhos dos últimos anos é, mas alguns modelos, principalmente versões vendidas só no Brasil, não têm essa função. Testem em Ajustes/Configurações se existe a opção \"Adicionar eSIM\" antes de comprar."],
-      ["Opções recomendadas","Holafly (dados ilimitados, planos por dias) ou AmericaChip (suporte em português, tem opção de chip físico também). Comprem antes da viagem e já cheguem conectados, mas só ativem o pacote de dados ao pousar em Paris."],
-      ["Se o celular não for compatível","Chip físico Orange Holiday é a alternativa mais confiável na Europa, com loja disponível no próprio aeroporto Charles de Gaulle."],
-      ["Tradutor","Baixem o Google Tradutor com o pacote de francês offline. Ele traduz cardápio e placa por foto, mesmo sem internet. Como vocês falam pouco inglês, esse é o item mais importante da lista."],
+      ["Antes de comprar o eSIM","Confirmem se o celular de vocês é compatível com eSIM em Ajustes/Configurações, procurando \"Adicionar eSIM\"."],
+      ["Opções recomendadas","Holafly (dados ilimitados, planos por dias) ou AmericaChip (suporte em português). Comprem antes da viagem e só ativem o pacote ao pousar em Paris. Os planos europeus cobrem a Holanda também, então funciona sem trocar nada no dia de Amsterdã."],
+      ["Tradutor","Baixem o Google Tradutor com o pacote de francês offline. Como a língua é a maior preocupação de vocês para essa viagem, esse é o item mais importante da lista: ele traduz cardápio e placa pela câmera do celular, mesmo sem internet."],
       ["Mapa offline","Baixem o mapa de Paris no Google Maps antes de viajar."],
-      ["Vale saber","Parisiense recebe muito melhor quem tenta dizer bonjour, mesmo com sotaque, do que quem já chega falando inglês. Deixei as frases essenciais mais adiante neste roteiro."]
+      ["Vale saber","Parisiense recebe muito melhor quem tenta dizer bonjour, mesmo com sotaque, do que quem já chega apontando o celular. Deixei bastante frase pronta mais adiante neste roteiro, em francês e em inglês, para cobrir do aeroporto ao restaurante."]
     ]},
     { titulo:"Apps essenciais, para instalar antes", icone:"celular", itens:[
-      ["Transporte","Île-de-France Mobilités (compra de bilhete) e Bonjour RATP (rotas e horários em tempo real)"],
-      ["Corrida","Uber e Bolt para carro por aplicativo. G7 é a maior central de táxi de Paris: cobra a mesma tarifa fixa de qualquer táxi oficial para o aeroporto, mais uma pequena taxa de chamada de € 4 a € 7 quando reservado pelo app."],
-      ["Mapas","Google Maps para rotas, e Citymapper como alternativa que combina metrô, ônibus e caminhada em tempo real"],
-      ["Documentação","Travel to Europe, para o pré-registro do EES antes de embarcar"]
+      ["Transporte","Île-de-France Mobilités (compra de bilhete e do Navigo) e Bonjour RATP (rotas em tempo real)"],
+      ["Corrida","Uber e Bolt para carro por aplicativo"],
+      ["Mapas","Google Maps para rotas, e Citymapper como alternativa"]
     ]},
-    { titulo:"Mala de outubro", icone:"mala", itens:[
-      ["Temperatura","Entre 11°C e 19°C, com chuva fina frequente. Não é frio de neve, mas venta e esfria à noite."],
-      ["A lógica","O segredo não é levar mais roupa, é levar peça versátil que combine com tudo. Cores neutras (preto, bege, cinza, branco, azul-marinho) multiplicam as combinações sem aumentar o volume da mala."],
-      ["Camadas","Casaco médio impermeável, blusa de manga longa e um lenço ou cachecol fino, que ocupa pouco espaço e muda o visual."],
-      ["Pés","Tênis confortável e à prova d'água. Mesmo preferindo transporte, vocês vão caminhar dentro de Versalhes, da Disney e dos museus."],
-      ["Capa de chuva","Uma para cada, na mochila, todos os dias."],
-      ["Vale saber","Muitas hospedagens já oferecem secador e shampoo, vale conferir antes de levar os próprios."]
+    { titulo:"Mala de dezembro", icone:"mala", itens:[
+      ["Temperatura","Entre 3°C e 8°C, com chance real de chuva fina. É o inverno europeu, o mais frio da viagem de vocês até aqui."],
+      ["A lógica","Peça versátil em cores neutras multiplica as combinações sem aumentar o volume da mala."],
+      ["Camadas","Casaco de inverno pesado (não só corta-vento), blusa de manga longa, cachecol, gorro e luvas. Dezembro em Paris pede isso de verdade."],
+      ["Pés","Tênis ou bota confortável e à prova d'água. Vocês vão caminhar em Versalhes, em Montmartre e em Amsterdã."],
+      ["Vale saber","Muitas hospedagens oferecem secador e shampoo, vale conferir antes de levar os próprios."]
     ]},
-    { titulo:"Tax free, para as compras", icone:"etiqueta", itens:[
-      ["Quando vale","A partir de € 100 gastos na mesma rede de lojas, em até 3 dias. O reembolso vai até 15%."],
-      ["Como fazer","Peçam o formulário de détaxe na loja, com o passaporte na mão, no momento da compra."],
-      ["Onde validar","No totem do aeroporto, antes de despachar as malas, no último país de saída da União Europeia. Reservem tempo, a fila costuma ser longa."]
+    { titulo:"Tax free, passo a passo completo", icone:"etiqueta", itens:[
+      ["Quando vale a pena","A partir de € 100,01 em compras, na mesma rede de lojas, feitas em até 3 dias. O reembolso vai de 12% a 15% do valor."],
+      ["No momento da compra, na loja","Avisem antes de pagar que querem o \"formulário de détaxe\". A loja pede o passaporte (por isso vale andar com ele, ou uma cópia, nos dias de compra) e emite um recibo de tax free junto com a nota fiscal normal. Guardem os dois juntos."],
+      ["O que NÃO fazer","Não despachem os produtos comprados na mala, nem usem antes de sair da União Europeia. No totem do aeroporto, pode ser pedido para mostrar o item ainda lacrado."],
+      ["No aeroporto, antes do check-in","Cheguem com folga extra, o processo de tax free tem fila própria. Procurem o totem PABLO (as letras aparecem bem grandes, é fácil de achar), que fica antes da área de despacho de bagagem."],
+      ["Como usar o totem PABLO","Ele lê o código de barras do formulário de détaxe. Se der certo, aparece uma tela verde e está validado, não precisa de mais nada. Se der luz vermelha ou pedir atendimento, sigam para o guichê da alfândega ao lado, com o recibo, o passaporte e o produto em mãos."],
+      ["Depois de validado","Só então despachem a mala, se o produto estiver dentro dela. O reembolso cai no cartão usado na compra (ou em espécie, dependendo da loja) em até algumas semanas."],
+      ["Vale saber","Esse processo é só para quem sai da União Europeia no último aeroporto da viagem. Como Paris é a última parada antes do Brasil, é no CDG que ele acontece."]
     ]}
   ],
   checklist: [
-    "Passaporte conferido","Seguro viagem contratado","Celular compatível com eSIM conferido","eSIM comprado",
+    "Passaporte conferido","Seguro viagem contratado (cobrindo França e Holanda)","Celular compatível com eSIM conferido","eSIM comprado",
     "Google Tradutor com francês offline baixado","Conta global aberta e euros convertidos",
-    "Banco avisado da viagem","Ingresso do Louvre comprado com horário","Ingresso de Versalhes comprado com horário",
-    "Ingresso da Disney conferido","Cruzeiro no Sena reservado","Ingresso do Panteão comprado",
-    "Comprovantes impressos na bagagem de mão","Reserva em espécie separada (prova de meios)",
-    "Mapa de Paris baixado offline","Roteiro salvo em PDF","Adaptador de tomada na mala"
+    "Banco avisado da viagem internacional","Navigo Semaine de 14 a 20/12 comprado no app a partir de 11/12",
+    "Ingresso de Versalhes comprado com horário","Ingresso das Catacumbas comprado com horário",
+    "Ingresso da Torre Eiffel comprado com horário","Passagem de trem Paris-Amsterdã comprada",
+    "Comprovantes de hospedagem e ingressos impressos na bagagem de mão","Reserva em espécie separada (prova de meios)",
+    "Saquinho transparente para os líquidos de até 100 ml separado","Mapa de Paris baixado offline",
+    "Roteiro salvo em PDF","Adaptador de tomada na mala","Número e companhia do voo enviados para atualizar o roteiro"
   ]
 },
 
 dias: [
 {
-  data:"Segunda, 28 de setembro",
-  titulo:"Chegada e o primeiro gostinho de Paris",
-  bairro:"11º, 4º e 5º arrondissement",
-  saida:"Dia leve, montado em volta do cansaço do voo",
+  data:"Quinta, 17 de dezembro",
+  titulo:"Chegada, Notre-Dame e as Catacumbas",
+  bairro:"15º, 4º e 14º arrondissement",
+  saida:"Dia leve, montado em volta do cansaço da viagem",
   paradas:[
-    { tipo:"passeio", hora:"manhã", titulo:"Desembarque no CDG e táxi até o hotel", mapa:"Hotel Alhambra, 13 Rue de Malte, 75011 Paris",
-      texto:"A imigração no CDG costuma levar de 40 a 70 minutos, e vocês ainda passam pelo registro biométrico. Depois da esteira de bagagem, sigam as placas TAXI e peguem a corrida de tarifa fixa até o hotel.",
-      dica:"<b>O check-in do Alhambra é só à tarde</b>, mas o hotel guarda as malas sem custo desde a manhã. Deixem tudo lá, tomem um café na Rue Oberkampf e comecem o dia leves.",
-      trajeto:{ modo:"taxi", texto:"CDG até 13 Rue de Malte. € 56 de tarifa fixa, 40 a 60 minutos." } },
+    { tipo:"passeio", hora:"manhã", titulo:"Desembarque no CDG e RER B até o hotel", mapa:"ibis Paris Tour Eiffel Cambronne, 2 Rue Cambronne, 75015 Paris",
+      texto:"A imigração no CDG costuma levar de 40 a 70 minutos, incluindo o registro biométrico do EES. Depois da esteira de bagagem, sigam as placas RER B.",
+      dica:"Vocês pousam às 11h50 e o check-in só abre às 14h, mas o hotel guarda as malas sem custo desde a chegada. Deixem tudo lá e saiam para o primeiro passeio ainda leves, sem as malas.",
+      trajeto:{ modo:"rer", linha:"B", texto:"RER B direção Paris até Denfert-Rochereau, depois metrô linha 6 direção Charles de Gaulle-Étoile até Cambronne. Uma troca, cerca de 50 minutos, € 14 por pessoa (incluído no Navigo Semaine)." } },
 
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço perto do hotel",
-      nota:"O almoço é a refeição principal do dia, e reservei tempo de verdade para ele em todos os dias. Hoje, algo simples e perto, para não gastar energia.",
-      opcoes:[
-        { nome:"La Brigade Oberkampf", detalhe:"103 Rue Oberkampf · 4,6 estrelas com 2.776 avaliações · carnes e opção vegetariana, 10 min a pé", preco:"18 a 26 €" },
-        { nome:"Café Charbon", detalhe:"109 Rue Oberkampf · 4,2 estrelas com 2.181 avaliações · bistrô clássico de bairro, aberto o dia todo", preco:"20 a 28 €" },
-        { nome:"Melt Oberkampf", detalhe:"74 Rue de la Folie Méricourt · 4,7 estrelas com 8.410 avaliações · churrasco e hambúrguer, o mais avaliado da região, 8 min a pé", preco:"20 a 30 €" }
-      ],
-      trajeto:{ modo:"metro", linha:"5", texto:"Estação Oberkampf, linha 5 direção Place d'Italie, até a estação Bastille. Sem baldeação. Depois 10 minutos a pé até a Place des Vosges. Ou 20 minutos a pé direto, se estiverem dispostos." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Le Marais e Place des Vosges", mapa:"Place des Vosges, 75004 Paris",
-      texto:"O bairro mais bonito para uma primeira caminhada em Paris, e o mais perto do hotel de vocês. A Place des Vosges é a praça planejada mais antiga da cidade, de 1612, cercada por arcadas de tijolo vermelho.",
+    { tipo:"passeio", hora:"13h30", titulo:"Notre-Dame e Île de la Cité", mapa:"Parvis Notre-Dame, 75004 Paris",
+      texto:"A ilha onde Paris nasceu, e a catedral mais famosa da cidade. A Notre-Dame reabriu em dezembro de 2024, depois do incêndio, e ver a fachada restaurada de perto é um momento à parte.",
       imperdivel:[
-        "A Place des Vosges vista de dentro das arcadas, que é onde saem as melhores fotos",
-        "As ruas estreitas da Rue des Rosiers e da Rue des Francs-Bourgeois",
-        "O Hôtel de Sully, um palacete do século 17 com pátio aberto ao público, a 2 minutos da praça"
-      ],
-      dica:"Esse é um bom primeiro dia de fotos: luz boa à tarde, arquitetura em todo canto e nenhuma fila. Fotos são prioridade nesta viagem, e o Marais entrega isso sem esforço.",
-      trajeto:{ modo:"pe", texto:"Descendo pela Rue de Rivoli até o rio e atravessando para a Île de la Cité. 15 minutos, caminho plano." } },
-
-    { tipo:"passeio", hora:"17h00", titulo:"Île de la Cité e Notre-Dame", mapa:"Parvis Notre-Dame, 75004 Paris",
-      texto:"A ilha onde Paris nasceu. A Notre-Dame reabriu em dezembro de 2024, depois do incêndio, e ver a fachada restaurada de perto é um momento à parte.",
-      imperdivel:[
-        "A fachada da Notre-Dame vista da praça em frente, no fim da tarde",
-        "A Pont Neuf, a ponte mais antiga de Paris apesar do nome, de 1607",
+        "A fachada da Notre-Dame vista da praça em frente",
+        "A Pont Neuf, a ponte mais antiga de Paris apesar do nome",
         "O Square du Vert-Galant, o jardinzinho na ponta da ilha, quase no nível da água"
       ],
-      dica:"<b>Entrar na Notre-Dame é gratuito</b>, mas a fila costuma ser longa e anda melhor no começo da manhã. Hoje, com o cansaço do voo, vale ver por fora e voltar outro dia se der vontade. Um adendo sobre a data: o Papa Leão XIV visita Paris nos dias 25 e 26 de setembro, com a Notre-Dame fechada ao público nesse período. Vocês chegam depois, na segunda 28, quando tudo já deve ter voltado ao normal, mas pode haver algum resquício de esquema de segurança neste primeiro dia.",
-      trajeto:{ modo:"metro", linha:"5", texto:"Estação Bastille ou Bréguet-Sabin, linha 5 direção Bobigny-Pablo Picasso, até a estação Oberkampf. Sem baldeação, 10 minutos." } },
+      dica:"A entrada na nave é gratuita. A fila costuma andar rápido fora do fim de semana e dos horários de missa.",
+      trajeto:{ modo:"pe", texto:"Do Parvis Notre-Dame até a região de Les Halles, para o almoço. 10 minutos a pé." } },
 
-    { tipo:"refeicao", hora:"20h00", titulo:"Jantar perto do hotel",
-      nota:"Primeira noite, sem deslocamento longo. O Bouillon République é uma instituição parisiense de mais de cem anos, com preço de bistrô e fila que costuma andar rápido.",
+    { tipo:"refeicao", hora:"14h30", titulo:"Almoço perto de Notre-Dame",
+      nota:"Comida de verdade, sem sair muito da região da catedral.",
       opcoes:[
-        { nome:"Bouillon République", detalhe:"39 Bd du Temple · 4,6 estrelas com 39.756 avaliações · clássico francês a preço justo, 12 min a pé · não aceita reserva, chegar cedo evita fila", preco:"15 a 25 €" },
-        { nome:"La Brigade Oberkampf", detalhe:"103 Rue Oberkampf · 4,6 estrelas com 2.776 avaliações · mais perto do hotel, 10 min a pé", preco:"18 a 26 €" },
-        { nome:"MUSA Oberkampf", detalhe:"117 Rue Saint-Maur · 4,9 estrelas com 2.026 avaliações · tapas e coquetelaria, clima de primeira noite especial, 10 min a pé", preco:"25 a 38 €" }
-      ]}
+        { nome:"La Crème de Paris Notre-Dame", detalhe:"1 Quai Saint-Michel · 4,8 estrelas com 20.404 avaliações · crepes e waffles com vista para a catedral, 3 min a pé", preco:"12 a 20 €" },
+        { nome:"Le Petit Bouillon Pharamond", detalhe:"24 Rue de la Grande Truanderie · 4,0 estrelas com 9.570 avaliações · bouillon clássico em Les Halles, 12 min a pé", preco:"15 a 25 €" },
+        { nome:"Les Deux Colombes", detalhe:"4 Rue de la Colombe · 4,7 estrelas com 1.588 avaliações · bistrô acolhedor na própria ilha, sopa de cebola e confit, 3 min a pé", preco:"18 a 28 €" }
+      ],
+      trajeto:{ modo:"rer", linha:"B", texto:"Estação Châtelet-Les Halles ou Saint-Michel-Notre-Dame, RER B direção Aéroport CDG até Denfert-Rochereau. Sem baldeação, 10 minutos." } },
+
+    { tipo:"passeio", hora:"16h00", titulo:"Catacumbas de Paris", mapa:"1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris",
+      texto:"O maior ossuário subterrâneo do mundo, reaberto em abril de 2026 com um percurso todo renovado e capacete de áudio incluído no ingresso.",
+      imperdivel:[
+        "As galerias de ossos dispostos em padrões, o cartão-postal do lugar",
+        "O trecho da antiga pedreira que abastecia as construções de Paris"
+      ],
+      imperdivelTitulo:"Vale reservar tempo para",
+      dica:"Sobre visitar de dia ou de noite: como é tudo subterrâneo, não existe diferença real, a experiência é igual em qualquer horário. O que importa é entrar com o horário reservado, para não pegar fila. Contem de 45 minutos a 1 hora de percurso, com 131 degraus na descida.",
+      ingresso:{ texto:"Reservar horário no site oficial das Catacumbas", url:"https://catacombes.paris.fr" },
+      trajeto:{ modo:"metro", linha:"6", texto:"Estação Denfert-Rochereau, linha 6 direção Charles de Gaulle-Étoile, até Cambronne. Sem baldeação, 10 minutos." } }
   ],
-  seChover:"O Marais tem galerias e lojas cobertas na Rue des Francs-Bourgeois, e o Hôtel de Sully tem pátio protegido. Se a chuva apertar, troquem a Île de la Cité pelo Musée Carnavalet, que conta a história de Paris, tem entrada gratuita e fica dentro do Marais.",
-  seSobrarEnergia:"Nada programado hoje de propósito. Se ainda sobrar disposição, a Rue Oberkampf tem bares e cafés animados na porta do hotel, sem precisar andar.",
+  seChover:"A Notre-Dame e as Catacumbas são cobertas o tempo todo, então a chuva não atrapalha quase nada do dia. Só os trajetos a pé pegam chuva.",
+  seSobrarEnergia:"Nada programado à noite de propósito, para respeitar o cansaço da viagem. Fazendo o check-in de volta ao hotel, o jantar pode ser simples, no mercado da Rue Frémicourt ou no Picard, bem ao lado do hotel.",
   mapa:""
 },
 {
-  data:"Terça, 29 de setembro",
+  data:"Sexta, 18 de dezembro",
   titulo:"Versalhes, o dia mais grandioso da viagem",
   bairro:"Versailles",
-  saida:"Sair às 7h45",
+  saida:"Sair às 8h",
   paradas:[
-    { tipo:"passeio", hora:"07h45", titulo:"Saída para Versalhes", mapa:"Gare de Versailles Château Rive Gauche, 78000 Versailles",
-      texto:"Hoje é o dia de sair cedo de verdade. Versalhes abre às 9h, e a primeira hora é a mais tranquila do dia inteiro, antes dos grupos grandes chegarem.",
-      dica:"<b>Por que hoje e não outro dia:</b> Versalhes fecha todas as segundas, e o Louvre fecha todas as terças. Colocando Versalhes na terça, vocês não perdem nenhum dos dois. O lado ruim é que muita gente faz a mesma conta, então chegar no horário de abertura faz diferença real.",
+    { tipo:"passeio", hora:"08h00", titulo:"Saída para Versalhes", mapa:"Gare de Versailles Château Rive Gauche, 78000 Versailles",
+      texto:"O palácio abre às 9h em dezembro (horário de baixa temporada), e a primeira hora costuma ser a mais tranquila do dia.",
+      dica:"Por que hoje: Versalhes fecha todas as segundas, e a viagem de vocês só tem uma segunda-feira (21/12), já reservada para os ícones de Paris. Colocando Versalhes na sexta, essa prioridade fica garantida sem depender de mais nada.",
       ingresso:{ texto:"Comprar o Passeport no site oficial de Versalhes", url:"https://en.chateauversailles.fr" },
-      trajeto:{ modo:"rer", linha:"C", texto:"Da estação Oberkampf, metrô linha 9 direção Pont de Sèvres até Alma-Marceau, ou linha 8 até Invalides. Na estação Invalides ou Champ de Mars-Tour Eiffel, entrem no RER C direção Versailles Château Rive Gauche (última parada, sem erro de sentido). Cerca de 1 hora no total, bilhete único de € 2,55 por pessoa." } },
+      trajeto:{ modo:"rer", linha:"C", texto:"Estação Cambronne, linha 6 direção Charles de Gaulle-Étoile até La Motte-Picquet-Grenelle, depois RER C direção Versailles Château Rive Gauche (última parada, sem erro de sentido). Cerca de 50 minutos, bilhete único de € 2,55 por pessoa (incluído no Navigo)." } },
 
     { tipo:"passeio", hora:"09h00", titulo:"Palácio de Versalhes", mapa:"Place d'Armes, 78000 Versailles",
-      texto:"O maior símbolo da monarquia francesa, e o passeio mais impressionante da viagem de vocês. O ingresso Passeport dá acesso ao palácio, aos jardins e ao domínio de Trianon.",
+      texto:"O maior símbolo da monarquia francesa. O ingresso Passeport dá acesso ao palácio, aos jardins e ao domínio de Trianon.",
       imperdivel:[
-        "A Galeria dos Espelhos, com 73 metros de comprimento e 357 espelhos, onde foi assinado o Tratado de Versalhes",
+        "A Galeria dos Espelhos, com 73 metros de comprimento e 357 espelhos",
         "Os Aposentos Reais e a Capela Real",
-        "Os jardins de André Le Nôtre vistos do terraço do palácio, com a perspectiva que se perde no horizonte",
-        "O Hameau de la Reine, o vilarejo que Maria Antonieta mandou construir para fugir da corte"
+        "Os jardins vistos do terraço do palácio"
       ],
-      dica:"<b>A reserva de horário é obrigatória e o ingresso tem que ser comprado antes.</b> Como brasileiros, vocês pagam a tarifa de fora do Espaço Econômico Europeu: € 35 por pessoa na alta temporada, que vai até 31 de outubro. Escolham o horário mais cedo disponível.",
-      trajeto:{ modo:"pe", texto:"Do palácio até o restaurante dentro do próprio domínio, à beira do Grande Canal. 15 minutos a pé pelos jardins." } },
+      dica:"A reserva de horário é obrigatória. Como brasileiras, vocês pagam a tarifa de fora do Espaço Econômico Europeu, que em dezembro (baixa temporada) é de € 25 por pessoa para as duas, sem diferença por idade nessa tarifa específica. Escolham o horário mais cedo disponível.",
+      trajeto:{ modo:"pe", texto:"Do palácio até os jardins e o domínio de Trianon, todos dentro do mesmo ingresso. Caminhada livre, sem pressa." } },
 
     { tipo:"refeicao", hora:"13h00", titulo:"Almoço dentro do domínio",
-      nota:"Sair de Versalhes para almoçar e voltar não compensa. Estas duas opções resolvem sem perder tempo.",
+      nota:"Sair de Versalhes para almoçar e voltar não compensa. Estas opções resolvem sem perder tempo.",
       opcoes:[
-        { nome:"La Flottille", detalhe:"dentro do parque, à beira do Grande Canal · 4,2 estrelas com 7.692 avaliações · vale reservar antes, enche rápido", preco:"22 a 32 €" },
-        { nome:"Maison Satory", detalhe:"22 Rue de Satory, no centro de Versalhes · 4,8 estrelas com 433 avaliações · a 10 min a pé do palácio, mais em conta", preco:"18 a 26 €" },
-        { nome:"AZULI", detalhe:"6 Rue de la Chancellerie, centro de Versalhes · 4,6 estrelas com 2.012 avaliações · mediterrâneo, 15 min a pé do palácio", preco:"28 a 40 €" }
-      ]},
+        { nome:"La Flottille", detalhe:"dentro do parque, à beira do Grande Canal · 4,2 estrelas com 7.692 avaliações · vale chegar cedo, enche rápido", preco:"18 a 28 €" },
+        { nome:"Maison Satory", detalhe:"22 Rue de Satory, no centro de Versalhes · 4,8 estrelas com 433 avaliações · 10 min a pé do palácio, mais em conta", preco:"16 a 24 €" },
+        { nome:"Aux Pains de la Ferme", detalhe:"9 Rue Royale · 4,7 estrelas com 1.150 avaliações · baguetes e sanduíches para levar aos jardins, 8 min a pé do palácio", preco:"6 a 11 €" }
+      ] },
 
     { tipo:"passeio", hora:"14h30", titulo:"Jardins e domínio de Trianon", mapa:"Domaine de Trianon, 78000 Versailles",
-      texto:"Depois do palácio, os jardins. É aqui que Versalhes fica realmente bonito para fotos, e onde dá para andar sem multidão. Na alta temporada, as terças costumam ter os Jardins Musicais, com música barroca tocando entre os bosques e as fontes.",
+      texto:"O Grand Trianon, o Petit Trianon e o Hameau de la Reine, o vilarejo que Maria Antonieta mandou construir. Abrem ao meio-dia.",
       imperdivel:[
-        "O Grande Canal, onde dá para alugar barquinho a remo se estiver bom tempo",
-        "O Grand Trianon, em mármore rosa",
-        "O Petit Trianon e o Hameau de la Reine, com o lago e as casinhas de campo"
+        "O Hameau de la Reine, com suas casinhas de fazenda"
       ],
-      dica:"O domínio inteiro pede de 5 a 6 horas. Se cansarem, o trenzinho interno liga o palácio ao Trianon e cobra à parte. Sentar à beira do Grande Canal é a melhor pausa possível aqui.",
-      trajeto:{ modo:"rer", linha:"C", texto:"Estação Versailles Château Rive Gauche, RER C direção Paris (qualquer trem, todos passam por Paris), desçam em Invalides ou Champ de Mars-Tour Eiffel. Depois metrô linha 8 ou 9 até Oberkampf, com baldeação em République se necessário. Cerca de 1 hora no total." } },
-
-    { tipo:"refeicao", hora:"20h30", titulo:"Jantar perto do hotel",
-      nota:"Depois de um dia longo, dá para escolher entre algo especial ou algo rápido e famoso, ambos a poucos minutos do hotel.",
-      opcoes:[
-        { nome:"Picotte", detalhe:"42 Rue de Malte · 4,7 estrelas com 968 avaliações · cozinha francesa autoral, na mesma rua do hotel · reservem antes", preco:"30 a 42 €" },
-        { nome:"Bouillon République", detalhe:"39 Bd du Temple · 4,6 estrelas com 39.756 avaliações · clássico francês a preço justo, 12 min a pé", preco:"15 a 25 €" },
-        { nome:"Melt Oberkampf", detalhe:"74 Rue de la Folie Méricourt · 4,7 estrelas com 8.410 avaliações · churrasco e hambúrguer, 8 min a pé", preco:"20 a 30 €" }
-      ]}
+      dica:"Em dezembro os jardins fecham às 18h e não têm o show das fontes, que é só de abril a outubro. Mesmo assim, o domínio inteiro vale a caminhada, com bem menos gente que na alta temporada.",
+      trajeto:{ modo:"rer", linha:"C", texto:"Gare de Versailles Château Rive Gauche, RER C direção Paris até Javel, depois metrô linha 6 direção Charles de Gaulle-Étoile até Cambronne. Cerca de 50 minutos." } }
   ],
-  seChover:"O palácio é todo coberto e resolve boa parte do dia. Se chover forte, invertam: comecem pelo interior do palácio, façam o almoço mais longo e vejam os jardins só se abrir. O Passeport vale para tudo no mesmo dia.",
-  seSobrarEnergia:"Difícil sobrar depois de Versalhes, e por isso não programei nada. A noite está livre.",
+  seChover:"O palácio, o Trianon e a galeria são todos cobertos. Só a caminhada entre eles pega chuva, e vale levar guarda-chuva.",
+  seSobrarEnergia:"Nada programado à noite, de propósito, depois de um dia inteiro de pé. Jantar livre, no mercado perto do hotel.",
   mapa:""
 },
 {
-  data:"Quarta, 30 de setembro",
-  titulo:"Saída cedo para a Disney",
-  bairro:"11º arrondissement e Marne-la-Vallée",
-  saida:"Sair do hotel antes das 7h30",
+  data:"Sábado, 19 de dezembro",
+  titulo:"Bate e volta a Amsterdã",
+  bairro:"Amsterdam, Holanda",
+  saida:"Sair bem cedo para a Gare du Nord",
   paradas:[
-    { tipo:"passeio", hora:"06h30", titulo:"Malas prontas e check-out", mapa:"Hotel Alhambra, 13 Rue de Malte, 75011 Paris",
-      texto:"A ideia é chegar à Disney antes do parque abrir, o que muda a manhã: nada de café com calma hoje. Deixem as malas prontas na noite anterior, tomem café rápido e façam o check-out cedo.",
-      dica:"Com duas malas grandes, o trajeto de metrô até Nation e troca para o RER A tem escada e cerca de 50 minutos, o que atrasa a entrada no parque. As três opções de deslocamento até a Disney, com preço e comparação, estão logo abaixo." },
+    { tipo:"passeio", hora:"06h30", titulo:"Trem para Amsterdã", mapa:"Gare du Nord, 75010 Paris",
+      texto:"O trem direto Paris-Amsterdã leva cerca de 3h20, sem troca, de centro a centro: sai da Gare du Nord e chega direto na Amsterdam Centraal.",
+      dica:"Este é o único dia da viagem com um ritmo bem mais puxado que o resto do roteiro: saída de madrugada e volta já de noite, sem a pausa de meio-dia que está nos outros dias. Comprem a passagem com a maior antecedência possível: os preços sobem conforme a data se aproxima, e em dezembro os trens enchem rápido. Cheguem à Gare du Nord com uns 30 minutos de folga: os trens internacionais franceses são pontuais de verdade, e encontrar a plataforma e o vagão certos leva um tempinho, principalmente na primeira vez.",
+      ingresso:{ texto:"Comprar a passagem no site oficial", url:"https://www.eurostar.com" },
+      trajeto:{ modo:"metro", linha:"6", texto:"Estação Cambronne, linha 6 direção Charles de Gaulle-Étoile até Montparnasse-Bienvenüe, depois linha 4 direção Porte de Clignancourt até Gare du Nord. Cerca de 30 minutos." } },
 
-    { tipo:"passeio", hora:"07h30", titulo:"Traslado até a Disneyland Paris", mapa:"Disneyland Paris, Boulevard de Parc, 77700 Coupvray",
-      texto:"São cerca de 35 km, saindo do 11º arrondissement até o complexo da Disney. Saindo às 7h30, vocês chegam por volta das 8h30, antes do parque abrir.",
-      imperdivelTitulo:"Como ir para a Disney",
+    { tipo:"passeio", hora:"10h00", titulo:"Amsterdam Centraal e centro histórico", mapa:"Amsterdam Centraal, Stationsplein, Amsterdam",
+      texto:"A estação já deixa vocês no coração da cidade. Dá para caminhar até o Dam Square, a Basílica de São Nicolau e as primeiras vielas com canais, tudo a pé e sem pressa.",
       imperdivel:[
-        "RER A, a opção mais barata: metrô linha 9 (direção Mairie de Montreuil) de Oberkampf até Nation, baldeação para o RER A direção Marne-la-Vallée-Chessy (é o fim da linha, não tem erro), cerca de 50 minutos com baldeação e escada. Incluído no Navigo Semaine todas as zonas, sem custo extra",
-        "Uber ou Bolt, o equilíbrio entre preço e conforto: porta a porta, sem escada, 45 a 60 minutos conforme o trânsito. Faixa média de € 60 a € 80 a corrida para as duas pessoas, com bagagem no porta-malas. Funciona normalmente com conta brasileira, desde que tenha cartão internacional cadastrado",
-        "Transfer privado contratado com antecedência: motorista busca na porta do hotel, 2 horas antes do horário combinado, com tolerância de até 30 minutos. Bagagem limitada a 2 malas grandes e 2 pequenas por veículo. Preço de R$ 1.582,70 para os dois, ida e volta. É a opção mais cara, mas resolve tudo sem precisar abrir aplicativo ou carregar mala em escada"
+        "O Dam Square e o Palácio Real",
+        "Os canais do centro histórico, Patrimônio da UNESCO"
       ],
-      dica:"<b>O hotel da Disney guarda as malas mesmo antes do quarto ficar pronto.</b> Cheguem, deixem a bagagem na recepção e vão direto para a fila de entrada. Assim vocês não perdem a manhã esperando o check-in. Se optarem pelo transfer privado, atenção na volta: não há tolerância de atraso nesse sentido, é preciso estar no ponto de encontro dentro do parque com 15 minutos de antecedência, e o horário de busca é agendado conforme o fechamento do parque, para dar tempo de ver a queima de fogos.",
-      trajeto:{ modo:"taxi", texto:"Uber, Bolt ou táxi do hotel até a Disney. Cerca de 45 a 60 minutos, conforme o trânsito." } },
+      dica:"Sem reservas feitas por aqui: é um dia livre para caminhar e fotografar. Como quase ninguém em Amsterdã fala francês no dia a dia, o inglês funciona melhor aqui do que em Paris: deixei frases de inglês básico mais adiante neste roteiro. Com o frio de dezembro, um casaco bem fechado faz diferença." },
 
-    { tipo:"passeio", hora:"09h30", titulo:"Primeiro dia no parque", mapa:"Disneyland Park, 77700 Chessy",
-      texto:"Vocês têm três dias de acesso: este dia quase inteiro (chegando às 9h30), o dia 1 de outubro completo e a manhã do dia 2. Com dois parques, a divisão que funciona melhor é dedicar cada dia principal a um deles e aproveitar este primeiro dia, que já começa cedo, para o que estiver mais perto e menos cheio.",
-      imperdivel:[
-        "O Château de la Belle au Bois Dormant, o castelo da Bela Adormecida, símbolo do parque",
-        "A Main Street U.S.A. no fim da tarde, quando as luzes acendem",
-        "O show noturno de projeções no castelo, que costuma fechar o dia"
-      ],
-      dica:"O castelo rende as melhores fotos no fim da tarde, quando o sol cai e a iluminação começa, e não no meio do dia com sol a pino.",
-      ingresso:{ texto:"Conferir o ingresso no site oficial da Disneyland Paris", url:"https://www.disneylandparis.com" } }
+    { tipo:"refeicao", hora:"13h00", titulo:"Almoço em Amsterdã",
+      nota:"Perto da estação central, fácil de encaixar entre as caminhadas.",
+      opcoes:[
+        { nome:"WE ARE EDN", detalhe:"Oosterdoksstraat 4 · 4,7 estrelas com 741 avaliações · brasserie com vista de canal, ao lado da Amsterdam Centraal", preco:"15 a 25 €" },
+        { nome:"Loetje", detalhe:"Stationsplein 10 · 4,1 estrelas com 7.107 avaliações · clássico holandês, mesa na beira do canal", preco:"14 a 24 €" },
+        { nome:"Sandwichshop Amsterdam Rokin", detalhe:"Langebrugsteeg 11 · 4,7 estrelas com 5.013 avaliações · sanduíches quentes, rápido e mais em conta", preco:"7 a 12 €" }
+      ] },
+
+    { tipo:"passeio", hora:"14h30", titulo:"Tarde livre em Amsterdã", mapa:"Jordaan, Amsterdam",
+      texto:"O bairro do Jordaan, com suas casinhas estreitas e canais menores, é o passeio mais tranquilo e fotogênico da cidade para fechar a tarde.",
+      dica:"Fiquem de olho no horário do trem de volta e saiam da região central com folga. A estação Amsterdam Centraal costuma pedir chegada com 20 minutos de antecedência." },
+
+    { tipo:"passeio", hora:"19h00", titulo:"Trem de volta a Paris", mapa:"Amsterdam Centraal, Stationsplein, Amsterdam",
+      texto:"Mais 3h20 de trem direto, chegando em Paris já perto das 22h30.",
+      dica:"Aproveitem o trem para descansar depois de um dia inteiro de pé. Ao chegar na Gare du Nord, o metrô até o hotel ainda estará funcionando, mas se estiverem muito cansadas, um Uber resolve sem mais baldeação.",
+      trajeto:{ modo:"metro", linha:"4", texto:"Gare du Nord, linha 4 direção Mairie de Montrouge até Montparnasse-Bienvenüe, depois linha 6 direção Charles de Gaulle-Étoile até Cambronne. Cerca de 30 minutos." } }
   ],
-  seChover:"A maior parte das atrações da Disney é coberta e continua funcionando na chuva. Levem capa de chuva em vez de guarda-chuva, que atrapalha nas filas.",
-  seSobrarEnergia:"O Disney Village fica fora dos parques, é aberto até tarde e não precisa de ingresso. Bom para jantar sem pressa no primeiro dia.",
+  seChover:"O centro de Amsterdã se caminha bem mesmo com chuva fina, mas vale um guarda-chuva compacto na bolsa.",
+  seSobrarEnergia:"",
   mapa:""
 },
 {
-  data:"Quinta, 1 de outubro",
-  titulo:"Disneyland, dia inteiro",
-  bairro:"Marne-la-Vallée",
-  saida:"Aproveitem a entrada antecipada do hotel",
+  data:"Domingo, 20 de dezembro",
+  titulo:"Galeries Lafayette de manhã, Montmartre a tarde toda",
+  bairro:"9º e 18º arrondissement",
+  saida:"Sair às 9h",
   paradas:[
-    { tipo:"passeio", hora:"08h30", titulo:"Dia completo nos parques", mapa:"Disneyland Paris, Boulevard de Parc, 77700 Coupvray",
-      texto:"O dia inteiro, sem compromisso de horário e sem deslocamento. Como vocês estão hospedados dentro do complexo, aproveitem a entrada antecipada, que costuma abrir os parques antes do público geral para quem está nos hotéis Disney.",
+    { tipo:"passeio", hora:"09h30", titulo:"Galeries Lafayette e Ópera Garnier", mapa:"40 Boulevard Haussmann, 75009 Paris",
+      texto:"A loja de departamento mais famosa do mundo, com a cúpula Art Déco e a decoração de Natal montada até o começo de janeiro. A Ópera Garnier fica a poucos passos, para ver por fora antes do bairro encher.",
       imperdivel:[
-        "Ratatouille: L'Aventure, uma das atrações mais concorridas e exclusiva de Paris",
-        "Phantom Manor, a versão parisiense da Mansão Assombrada",
-        "O World of Frozen, no Disney Adventure World, inaugurado recentemente",
-        "O desfile da tarde na Main Street"
+        "A cúpula de vidro da Coupole, no térreo da loja",
+        "As vitrines de Natal na fachada da Boulevard Haussmann",
+        "A fachada da Ópera Garnier, ainda tranquila de manhã"
       ],
-      dica:"<b>Voltem ao hotel no meio do dia.</b> Essa é a maior vantagem de estar hospedado dentro do complexo: dá para descansar de verdade e voltar inteiro para a noite." }
+      dica:"Aberta aos domingos das 11h às 20h. Vale chegar antes das 11h para ver a Ópera sem multidão e esperar a loja abrir. É só entrar para ver, sem obrigação de comprar nada.",
+      trajeto:{ modo:"metro", linha:"9", texto:"Estação Cambronne, linha 6 direção Charles de Gaulle-Étoile até Chaussée d'Antin-La Fayette, direto, sem baldeação. Cerca de 20 minutos." } },
+
+    { tipo:"refeicao", hora:"12h00", titulo:"Almoço perto da Ópera",
+      nota:"Antes de subir para Montmartre, um almoço rápido na região.",
+      opcoes:[
+        { nome:"Bouillon Chartier", detalhe:"7 Rue du Faubourg Montmartre · 4,1 estrelas com 48.284 avaliações · o bouillon histórico de Paris, a pé das Galeries Lafayette, cardápio clássico e fila rápida", preco:"14 a 22 €" },
+        { nome:"L'Ardoise du Marais", detalhe:"21 Rue Pierre Fontaine · 4,5 estrelas com 1.122 avaliações · bistrô simples, 12 min a pé", preco:"16 a 24 €" },
+        { nome:"Café de la Paix", detalhe:"5 Place de l'Opéra · 4,0 estrelas com 9.837 avaliações · terraço em frente à Ópera, o mais histórico da área", preco:"22 a 34 €" }
+      ],
+      trajeto:{ modo:"metro", linha:"2", texto:"Estação Pigalle (mais próxima de Montmartre), linha 2 a partir de Barbes-Rochechouart ou metrô até Pigalle pela linha 12. Cerca de 15 minutos." } },
+
+    { tipo:"passeio", hora:"13h30", titulo:"Basílica de Sacré-Cœur", mapa:"Sacré-Cœur, 75018 Paris",
+      texto:"No ponto mais alto de Paris, com uma das vistas mais bonitas da cidade lá de cima, ainda mais bonita com o friozinho de dezembro.",
+      imperdivel:[
+        "A vista da escadaria em frente à basílica",
+        "O interior da igreja, com o mosaico do teto, entrada gratuita"
+      ],
+      dica:"A entrada na basílica é gratuita. Subir até a cúpula é pago à parte e não entra no roteiro, porque é mais escada e fila do que o combinado de vocês para essa viagem.",
+      trajeto:{ modo:"pe", texto:"Da estação Pigalle, subindo a pé pela Rue Foyatier (com escada rolante em parte do caminho). 15 minutos a pé." } },
+
+    { tipo:"refeicao", hora:"14h30", titulo:"Café des Deux Moulins",
+      nota:"O bistrô onde a Amélie Poulain trabalhava, na Rue Lepic, a 5 minutos a pé depois de descer do Sacré-Cœur. É um café de bairro de verdade, não um cenário turístico: a clientela é local, a decoração é exatamente como no filme. O crème brûlée está no cardápio e esse é o momento certo para pedir um.",
+      opcoes:[
+        { nome:"Café des Deux Moulins", detalhe:"15 Rue Lepic · 4,2 estrelas com 5.214 avaliações · o bistrô da Amélie, com crème brûlée no cardápio e decoração original do filme", preco:"12 a 20 €" }
+      ] },
+
+    { tipo:"passeio", hora:"15h30", titulo:"O Muro do Te Amo, a vinha e as ruas de Montmartre", mapa:"Square Jehan Rictus, 14 Place des Abbesses, 75018 Paris",
+      texto:"O Mur des Je t'aime, um jardim com a frase \"eu te amo\" escrita em mais de 300 idiomas, a última vinha ativa de Paris e a Place du Tertre com os pintores de rua, tudo a pé pelas ruelas mais charmosas do bairro.",
+      imperdivel:[
+        "O Mur des Je t'aime, um dos cantos mais fotografados de Montmartre",
+        "A Vigne du Clos Montmartre, na Rue des Saules, vista por trás do portão",
+        "A Place du Tertre, com os pintores de rua",
+        "A fachada do Moulin Rouge, na descida pela Place Blanche"
+      ],
+      dica:"Tempo livre aqui para lojinhas, mais fotos e um café da tarde, no ritmo de vocês. Montmartre tem lojas de artesanato e cartões-postais em quase toda esquina." },
+
+    { tipo:"refeicao", hora:"20h00", titulo:"Jantar especial",
+      nota:"É o único jantar de verdade da viagem, num bistrô clássico e acessível, sem ser alta gastronomia. Faz sentido ficar em Montmartre mesmo, onde vocês já estarão.",
+      opcoes:[
+        { nome:"Bouillon Pigalle", detalhe:"22 Boulevard de Clichy · 4,6 estrelas com 57.262 avaliações · a instituição parisiense dos bouillons, a 5 min a pé da Place Blanche", preco:"15 a 25 €" },
+        { nome:"Chez Marie", detalhe:"22 Rue Lepic · 4,8 estrelas com 2.188 avaliações · tartare, sopa de cebola e tarte tatin, clima intimista em Montmartre", preco:"22 a 32 €" },
+        { nome:"La Taverne de Montmartre", detalhe:"25 Rue Gabrielle · 4,6 estrelas com 2.566 avaliações · sopa de cebola e confit de canard", preco:"24 a 34 €" }
+      ],
+      trajeto:{ modo:"metro", linha:"6", texto:"Estação Pigalle, linha 2 direção Nation até Barbès-Rochechouart, depois linha 4 direção Porte d'Orléans até Montparnasse-Bienvenüe, depois linha 6 direção Charles de Gaulle-Étoile até Cambronne. Cerca de 35 minutos." } }
   ],
-  seChover:"Igual ao dia anterior: capa de chuva e foco nas atrações internas. O parque não fecha por chuva.",
-  seSobrarEnergia:"O show noturno no castelo é o melhor fechamento possível, e vocês estão a poucos minutos a pé da cama depois dele.",
+  seChover:"As Galeries Lafayette são todas cobertas, o interior da basílica é uma boa pausa, e a Place du Tertre tem cafés cobertos ao redor.",
+  seSobrarEnergia:"",
   mapa:""
 },
 {
-  data:"Sexta, 2 de outubro",
-  titulo:"Volta a Paris, Tour Eiffel e o cruzeiro no Sena",
-  bairro:"Marne-la-Vallée e 7º arrondissement",
-  saida:"Manhã na Disney, saída depois do almoço, sem hora fixa ainda",
+  data:"Segunda, 21 de dezembro",
+  titulo:"Torre Eiffel, Arco do Triunfo e os grandes ícones",
+  bairro:"7º, 8º e 1º arrondissement",
+  saida:"Sair às 9h",
   paradas:[
-    { tipo:"passeio", hora:"09h00", titulo:"Última manhã na Disney", mapa:"Disneyland Paris, Boulevard de Parc, 77700 Coupvray",
-      texto:"A saída fica para depois do almoço, sem hora certa ainda, para aproveitar a sexta-feira em Paris. Façam o check-out pela manhã, deixem as malas na recepção e aproveitem o parque até a hora do almoço, sem carregar nada.",
-      dica:"Deixem para comprar as lembrancinhas da Disney nesta manhã, e não no primeiro dia, para não carregar sacola pelo parque por três dias. Para a volta, as mesmas três opções do dia 30 valem: RER A (mais barato), Uber ou Bolt (€ 60 a € 80, porta a porta) ou o transfer privado já contratado, cujo horário de busca é agendado conforme o fechamento do parque, sem tolerância de atraso.",
-      trajeto:{ modo:"taxi", texto:"Uber, Bolt ou táxi da Disney até 15 Rue de Malte, no 11º. Cerca de 45 a 60 minutos, com as malas." } },
-
-    { tipo:"passeio", hora:"14h30", titulo:"Check-in no Mary's Hotel République", mapa:"Mary's Hotel République, 15 Rue de Malte, 75011 Paris",
-      texto:"O segundo hotel fica literalmente ao lado do primeiro, na mesma rua. Deixem as malas e sigam direto para a parte boa da tarde. Se estiverem cansados da Disney, uma hora de pausa aqui não atrapalha o resto do dia.",
-      dica:"<b>Sobre o horário de saída da Disney:</b> este roteiro assume saída por volta do meio-dia. Se a saída for mais tarde, é só cortar o próximo passeio (Champ de Mars) e ir direto para o jantar, sem perder o cruzeiro.",
-      trajeto:{ modo:"metro", linha:"9", texto:"Estação Oberkampf, linha 9 direção Pont de Sèvres, até a estação Trocadéro. Sem baldeação. Depois 10 minutos a pé descendo até o rio. Cerca de 30 minutos no total." } },
-
-    { tipo:"passeio", hora:"16h00", titulo:"Tour Eiffel e Champ de Mars, ao pôr do sol", mapa:"Champ de Mars, 5 Av. Anatole France, 75007 Paris",
-      texto:"Coloquei esta parada aqui de propósito: é a mesma região de onde sai o cruzeiro à noite, então não sobra deslocamento extra. Vocês chegam aos pés da torre com luz de fim de tarde, que é quando ela fica mais bonita para foto, e ainda sobra tempo de andar pelo gramado antes do jantar.",
+    { tipo:"passeio", hora:"09h00", titulo:"Trocadéro", mapa:"Place du Trocadéro, 75016 Paris",
+      texto:"A vista mais famosa da Torre Eiffel, e o ponto que uso de referência para a foto do dia.",
       imperdivel:[
-        "A base da torre vista de baixo, entre os quatro pilares",
-        "O gramado do Champ de Mars, com a torre inteira na foto"
+        "A Torre Eiffel vista de frente, do alto da esplanada do Trocadéro"
       ],
-      dica:"Essa também pode ser a hora da sessão de fotos de vocês, já que a luz e o cenário são exatamente os que casais costumam escolher. Deixei um espaço próprio para isso no dia de sábado, mas se preferirem fazer aqui ao pôr do sol, funciona igual ou melhor." },
+      dica:"Qualquer noite da viagem, incluindo hoje, dá para voltar aqui a pé desde o hotel para ver a torre iluminada. Aproveitem a manhã para as fotos com luz de dia.",
+      trajeto:{ modo:"metro", linha:"6", texto:"Estação Cambronne, linha 6 direção Charles de Gaulle-Étoile até Trocadéro. Sem baldeação, 15 minutos." } },
 
-    { tipo:"refeicao", hora:"18h30", titulo:"Jantar antes do cruzeiro",
-      nota:"Comam antes de embarcar, perto do ponto de saída do barco. Assim vocês fazem o cruzeiro com calma, já jantados, e voltam direto para o hotel.",
+    { tipo:"passeio", hora:"10h00", titulo:"Torre Eiffel", mapa:"Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+      texto:"O maior símbolo de Paris, e o item mais esperado da lista de vocês.",
+      imperdivel:[
+        "A vista do 2º andar, a mais nítida da cidade"
+      ],
+      dica:"O 2º andar de elevador já dá a melhor vista de Paris, sem precisar pagar o topo, que costuma ter fila maior e visibilidade parecida em dia nublado. O preço muda por idade: € 23,50 para a Raquel (tarifa adulto, 25 anos ou mais) e € 11,80 para a Maria Clara (tarifa jovem, 12 a 24 anos). A reserva de horário é obrigatória e libera com até 60 dias de antecedência.",
+      ingresso:{ texto:"Reservar horário no site oficial da Torre Eiffel", url:"https://www.toureiffel.paris" } },
+
+    { tipo:"refeicao", hora:"13h00", titulo:"Almoço perto da Torre Eiffel",
+      nota:"Com vista para a torre, sem sair da área.",
       opcoes:[
-        { nome:"Le Campanella", detalhe:"18 Av. Bosquet · 4,5 estrelas com 3.371 avaliações · a 10 min a pé do embarque, bom custo-benefício", preco:"20 a 28 €" },
-        { nome:"Bistro Saint Dominique", detalhe:"131 Rue Saint-Dominique · 4,0 estrelas com 2.699 avaliações · bistrô com clima parisiense clássico", preco:"22 a 30 €" },
-        { nome:"La Fontaine de Mars", detalhe:"129 Rue Saint-Dominique · 4,4 estrelas com 2.536 avaliações · o clássico da região, confit de pato premiado, ideal para uma noite mais especial", preco:"30 a 42 €" }
-      ]},
+        { nome:"Café du Trocadéro", detalhe:"8 Place du Trocadéro · 4,0 estrelas com 7.792 avaliações · terraço com vista para a torre", preco:"18 a 28 €" },
+        { nome:"Le Wilson", detalhe:"2 Place du Trocadéro · 3,7 estrelas com 2.263 avaliações · bistrô francês simples, 2 min a pé da torre, sem reserva", preco:"16 a 24 €" },
+        { nome:"Boulangerie du Champ de Mars", detalhe:"16 Avenue Rapp · 4,4 estrelas com 876 avaliações · sanduíches e macarons, 5 min a pé da torre", preco:"6 a 11 €" }
+      ] },
 
-    { tipo:"passeio", hora:"20h30", titulo:"Cruzeiro no Sena, o sonho da viagem", mapa:"Port de la Bourdonnais, 75007 Paris",
-      texto:"Você escreveu no formulário que sonha com o vídeo famoso do passeio no rio Sena. Reservei essa noite para isso, e escolhi o horário de propósito: em outubro, escurece por volta das 19h30, então às 20h30 a cidade já está inteira iluminada e a Tour Eiffel cintila.",
+    { tipo:"passeio", hora:"15h00", titulo:"Arco do Triunfo, Champs-Élysées e Ladurée", mapa:"Place Charles de Gaulle, 75008 Paris",
+      texto:"O monumento que celebra as vitórias militares francesas, com a avenida mais famosa de Paris descendo dali até a Concorde. No meio do caminho, a Ladurée, a casa de macarons mais tradicional de Paris, com loja histórica desde 1862.",
       imperdivel:[
-        "A Tour Eiffel vista do rio no início e no fim do trajeto, o ponto exato de onde sai o vídeo que viralizou nas redes: casal na parte de cima do barco, filmando no momento em que passa sob a ponte perto da torre",
-        "A Pont Alexandre III, a ponte mais ornamentada de Paris, toda dourada e iluminada",
-        "A Notre-Dame vista da água, no ponto mais distante do percurso"
+        "A vista do topo do Arco, com os 12 bulevares se espalhando em estrela",
+        "A avenida Champs-Élysées, decorada para o Natal em dezembro",
+        "A Ladurée, para levar uma caixinha de macarons, o pedido de vocês para essa viagem"
       ],
-      dica:"<b>O trajeto é circular</b>, sai e volta no Port de la Bourdonnais, aos pés da Tour Eiffel, e dura cerca de 1 hora. Fiquem no convés aberto, na parte de cima da embarcação, que é de onde sai o vídeo que viraliza. A cada hora cheia depois do anoitecer, a torre pisca por 5 minutos: embarcando às 20h30, vocês pegam o show das 21h de dentro do barco.",
-      ingresso:{ texto:"Reservar o cruzeiro com antecedência", url:"https://www.bateauxparisiens.com" },
-      trajeto:{ modo:"taxi", texto:"Uber ou Bolt de volta ao hotel. Cerca de 20 minutos, sem caminhada noturna." } }
+      dica:"O ingresso do Arco custa € 17 por pessoa em dezembro, sem diferença por idade nessa tarifa. São 284 degraus até o topo, sem elevador para quem não tem mobilidade reduzida: se preferirem economizar essa subida, dá para aproveitar só a avenida e as vitrines. A Ladurée fica na Champs-Élysées, número 75, com a decoração de Natal deixando a loja ainda mais bonita.",
+      ingresso:{ texto:"Comprar no site oficial do Arco do Triunfo", url:"https://www.paris-arc-de-triomphe.fr" },
+      trajeto:{ modo:"metro", linha:"9", texto:"Estação Trocadéro, linha 9 direção Mairie de Montreuil até Franklin D. Roosevelt, depois caminhada de 10 minutos pela Avenue Winston Churchill." } },
+
+    { tipo:"passeio", hora:"17h00", titulo:"Petit Palais, Grand Palais e Pont Alexandre III", mapa:"Avenue Winston Churchill, 75008 Paris",
+      texto:"Três dos pontos mais fotogênicos de Paris, um do lado do outro: o Petit Palais, com entrada gratuita, o Grand Palais, visto por fora, e a Pont Alexandre III, a ponte mais ornamentada da cidade.",
+      imperdivel:[
+        "O pátio interno do Petit Palais, com jardim, entrada gratuita na coleção permanente",
+        "A cúpula de vidro do Grand Palais, vista de fora (fecha às segundas para exposições)",
+        "A Pont Alexandre III, com suas estátuas douradas e vista para a Torre Eiffel ao fundo"
+      ],
+      dica:"Os três ficam literalmente vizinhos, então é uma parada só, sem gastar tempo de deslocamento. O Petit Palais fecha às 18h.",
+      trajeto:{ modo:"pe", texto:"Pela Avenue Winston Churchill e pela Place de la Concorde até o Jardin des Tuileries. 15 minutos a pé." } },
+
+    { tipo:"passeio", hora:"18h00", titulo:"Jardim das Tulherias e a pirâmide do Louvre", mapa:"Cour Napoléon, 75001 Paris",
+      texto:"O jardim mais elegante de Paris, ligando a Concorde ao Louvre, terminando na pirâmide de vidro, um dos cartões-postais mais fotografados da cidade.",
+      imperdivel:[
+        "A pirâmide do Louvre iluminada, especialmente bonita ao anoitecer"
+      ],
+      dica:"Vocês não entram no museu, só param para a foto no Pátio Napoleão, onde fica a pirâmide. Um fechamento e tanto para o dia mais cheio da viagem." }
   ],
-  seChover:"Os barcos têm parte coberta envidraçada e navegam com chuva. Se estiver muito ruim, dá para remarcar: os bilhetes flexíveis valem por vários meses.",
-  seSobrarEnergia:"Depois do cruzeiro, o Trocadéro fica a 10 minutos e tem a vista frontal da torre iluminada. Só vale se estiverem dispostos, porque exige caminhada noturna.",
+  seChover:"O Petit Palais é coberto, e a passagem pela pirâmide do Louvre tem arcos cobertos ao redor do pátio. Levem guarda-chuva para o resto do trajeto.",
+  seSobrarEnergia:"Se as pernas aguentarem, a volta a pé até o hotel pela Avenue de Suffren passa de novo pela Torre Eiffel iluminada, já com o dia de hoje deixando vocês íntimas do caminho.",
   mapa:""
 },
 {
-  data:"Sábado, 3 de outubro",
-  titulo:"O dia dos cartões-postais e a sessão de fotos",
-  bairro:"16º, 7º e 8º arrondissement",
-  saida:"Sair às 7h45",
-  paradas:[
-    { tipo:"passeio", hora:"08h30", titulo:"Sessão de fotos em Trocadéro", mapa:"Place du Trocadéro et du 11 Novembre, 75016 Paris",
-      texto:"Esta é a manhã reservada para a sessão de fotos. Trocadéro é o cenário mais usado por fotógrafos de casal em Paris, e por um motivo simples: dá para ver a Tour Eiffel inteira, de frente, sem precisar entrar em nenhum lugar pago. Subindo a escada do metrô e virando à esquerda, a torre já aparece de uma vez só.",
-      imperdivel:[
-        "A esplanada do Palais de Chaillot, de onde sai a foto clássica com a torre inteira atrás",
-        "Os jardins do Trocadéro descendo em direção ao rio, com os espelhos d'água"
-      ],
-      dica:"<b>Se quiserem um fotógrafo profissional</b>, Paris tem vários especializados em ensaio de casal e lua de mel, a maioria encontrados no Instagram buscando algo como 'Paris couple photographer'. Reservem com pelo menos 2 a 3 semanas de antecedência, e priorizem os que oferecem horário de nascer do sol: às 8h30 de sábado a esplanada já enche rápido, e quanto mais cedo, mais livre o cenário fica para as fotos.",
-      trajeto:{ modo:"pe", texto:"Descer a esplanada e atravessar a Pont d'Iéna. 12 minutos a pé, com a torre crescendo de frente." } },
-
-    { tipo:"passeio", hora:"10h00", titulo:"Tour Eiffel e Champ de Mars", mapa:"Champ de Mars, 5 Av. Anatole France, 75007 Paris",
-      texto:"Chegar aos pés da torre e olhar para cima é o momento que nenhuma foto entrega. Vocês não marcaram medo de altura, então a subida está liberada, mas ela não é obrigatória para o dia funcionar.",
-      imperdivel:[
-        "A base da torre vista de baixo, entre os quatro pilares",
-        "O gramado do Champ de Mars, onde a torre cabe inteira na foto e dá para sentar sem pressa"
-      ],
-      dica:"<b>Sobre subir:</b> o ingresso mais caro é o do topo, e ele só compensa em dia de céu limpo. Como vocês estão em outubro, com chance de tempo fechado, minha recomendação é decidir na hora, olhando o céu. Se estiver nublado, o segundo andar já entrega a vista e sai bem mais barato.",
-      ingresso:{ texto:"Site oficial da Tour Eiffel", url:"https://www.toureiffel.paris" },
-      trajeto:{ modo:"pe", texto:"Pela Avenue de la Bourdonnais até a Rue Saint-Dominique. 10 minutos." } },
-
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço na Rue Saint-Dominique",
-      nota:"Essa rua é a exceção da região: fica a poucos minutos da torre mas não tem preço de armadilha turística.",
-      opcoes:[
-        { nome:"La Fontaine de Mars", detalhe:"129 Rue Saint-Dominique · 4,4 estrelas com 2.533 avaliações · bistrô clássico, o confit de pato é o carro-chefe", preco:"28 a 38 €" },
-        { nome:"Le Campanella", detalhe:"18 Av. Bosquet · 4,5 estrelas com 3.371 avaliações · mais em conta, sopa de cebola muito elogiada", preco:"20 a 28 €" },
-        { nome:"Bistro Saint Dominique", detalhe:"131 Rue Saint-Dominique · 4,0 estrelas com 2.702 avaliações · clima parisiense clássico, aberto desde cedo", preco:"22 a 30 €" }
-      ],
-      trajeto:{ modo:"metro", linha:"6", texto:"Estação École Militaire ou Bir-Hakeim, linha 6 direção Charles de Gaulle-Étoile (é o fim da linha nesse sentido, sem erro). Sem baldeação, cerca de 15 minutos." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Arc de Triomphe", mapa:"Place Charles de Gaulle, 75008 Paris",
-      texto:"O monumento sozinho já impressiona pelo tamanho, e do terraço se enxergam as doze avenidas saindo em estrela, com a Tour Eiffel de lado. É a segunda melhor vista de Paris, e a única de onde a torre aparece na foto.",
-      imperdivel:[
-        "Os relevos esculpidos na base, principalmente A Marselhesa",
-        "O Túmulo do Soldado Desconhecido, com a chama reacesa todo dia às 18h30",
-        "O terraço, com as doze avenidas abrindo em leque"
-      ],
-      dica:"<b>Nunca atravessem a rua por cima.</b> O acesso é por um túnel subterrâneo no lado par da Champs-Élysées. São 284 degraus até o terraço, sem elevador na maior parte do caminho.",
-      trajeto:{ modo:"pe", texto:"Descendo a Champs-Élysées. São 2 km planos, cerca de 25 minutos, com a linha 1 embaixo caso cansem." } },
-
-    { tipo:"passeio", hora:"17h00", titulo:"Champs-Élysées e Place de la Concorde", mapa:"Place de la Concorde, 75008 Paris",
-      texto:"A avenida mais famosa do mundo, terminando na maior praça de Paris. Do obelisco, dá para ver o Arc de Triomphe alinhado num extremo e o Louvre no outro: é aqui que se entende como a cidade foi desenhada.",
-      imperdivel:[
-        "O obelisco de Luxor, com 3.300 anos, trazido do Egito em 1836",
-        "As duas fontes monumentais da praça",
-        "O alinhamento perfeito entre Concorde, Champs-Élysées e Arc de Triomphe"
-      ],
-      dica:"Esse trecho da avenida também é onde ficam as lojas maiores, boa parada para roupas e itens do dia a dia sem sair do roteiro.",
-      trajeto:{ modo:"metro", linha:"8", texto:"Estação Concorde, linha 8 direção Pointe du Lac, até a estação République. Sem baldeação. Cerca de 20 minutos, mais 7 minutos a pé até o hotel." } },
-
-    { tipo:"refeicao", hora:"20h30", titulo:"Jantar de lua de mel",
-      nota:"O jantar especial da viagem, reservado para hoje. O Picotte é pequeno, autoral e fica na mesma rua do hotel, então vocês jantam bem e voltam a pé em dois minutos, sem caminhada noturna.",
-      opcoes:[
-        { nome:"Picotte", detalhe:"42 Rue de Malte · 4,7 estrelas com 968 avaliações · cozinha francesa autoral · reservem com antecedência, é pequeno", preco:"30 a 42 €" },
-        { nome:"La Place Royale", detalhe:"2 bis Place des Vosges · 4,5 estrelas com 979 avaliações · sob as arcadas da praça mais bonita do Marais, coq au vin muito elogiado", preco:"30 a 42 €" },
-        { nome:"MUSA Oberkampf", detalhe:"117 Rue Saint-Maur · 4,9 estrelas com 2.026 avaliações · tapas e coquetelaria, alternativa mais descontraída para fechar o dia", preco:"25 a 38 €" }
-      ]}
-  ],
-  seChover:"Troquem o Champ de Mars e a caminhada pela avenida por dois lugares cobertos e próximos: o Musée d'Orsay, com a maior coleção impressionista do mundo, ou as Galeries Lafayette Haussmann, com a cúpula de vitral.",
-  seSobrarEnergia:"Voltar ao Trocadéro às 21h ou 22h para ver a torre cintilar de longe. São 5 minutos de piscar a cada hora cheia.",
-  mapa:""
-},
-{
-  data:"Domingo, 4 de outubro",
-  titulo:"Montmartre e a Ópera",
-  bairro:"18º e 9º arrondissement",
-  saida:"Sair às 8h00",
-  paradas:[
-    { tipo:"passeio", hora:"08h45", titulo:"Montmartre e Sacré-Cœur", mapa:"Basilique du Sacré-Coeur, 35 Rue du Chevalier de la Barre, 75018 Paris",
-      texto:"Subam cedo, antes do movimento. Montmartre é um vilarejo inteiro dentro de Paris, com ruas de pedra, ateliês e a vista mais aberta da cidade. Num domingo, depois das 11h, fica cheio.",
-      imperdivel:[
-        "A escadaria em frente ao Sacré-Cœur, com Paris inteira aos pés",
-        "O interior da basílica, com o mosaico do teto, um dos maiores do mundo",
-        "A Place du Tertre, com os retratistas trabalhando ao ar livre",
-        "A Rue de l'Abreuvoir e a Maison Rose, as ruas mais fotografadas do bairro",
-        "A Rue de Steinkerque, na base da colina, com lojinhas de lembrancinha simples a preço melhor que o entorno da basílica"
-      ],
-      dica:"<b>Não deixem colocarem pulseira no pulso de vocês na subida.</b> É o golpe mais comum de Montmartre: colocam a pulseira e depois exigem pagamento. Não permitam contato físico e sigam andando. E para poupar as pernas, o funicular sobe a parte mais íngreme da colina e custa o mesmo que um bilhete de metrô.",
-      trajeto:{ modo:"pe", texto:"Descendo pela Rue Lepic e a Rue des Abbesses. 12 minutos, ladeira abaixo." } },
-
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço em Montmartre",
-      nota:"O Bouillon Pigalle é o bouillon mais famoso de Montmartre, na base da colina. Fila quase sempre, mas anda rápido.",
-      opcoes:[
-        { nome:"Bouillon Pigalle", detalhe:"22 Bd de Clichy · 4,6 estrelas com 57.232 avaliações · clássico francês, preço de bistrô, um dos mais avaliados de Paris", preco:"15 a 22 €" },
-        { nome:"La Villa des Abbesses", detalhe:"61 Rue des Abbesses · 4,3 estrelas com 1.786 avaliações · alternativa mais tranquila, sem fila, no meio da subida", preco:"20 a 28 €" },
-        { nome:"Café Marlette", detalhe:"45 Rue des Abbesses · 4,9 estrelas com 1.508 avaliações · brunch e almoço leve, ótima opção se preferirem algo mais rápido", preco:"14 a 20 €" }
-      ],
-      trajeto:{ modo:"metro", linha:"12", texto:"Estação Abbesses, linha 12 direção Mairie d'Issy, até a estação Trinité-d'Estienne d'Orves. Sem baldeação. Depois 6 minutos a pé até a Ópera. Cerca de 15 minutos no total." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Ópera Garnier", mapa:"Palais Garnier, Place de l'Opéra, 75009 Paris",
-      texto:"A Ópera Garnier é provavelmente o interior mais impressionante de Paris depois de Versalhes. Inaugurada em 1875, é o auge da arquitetura do Segundo Império.",
-      imperdivel:[
-        "A Grande Escadaria, em mármore de várias cores, que é o cartão-postal do lugar",
-        "O Grand Foyer, com dourado do chão ao teto, inspirado na Galeria dos Espelhos de Versalhes",
-        "O teto da sala de espetáculos, pintado por Marc Chagall em 1964, com o lustre de 7 toneladas"
-      ],
-      dica:"<b>Dois detalhes práticos.</b> A entrada de visitantes não é a fachada principal: fica na esquina das ruas Scribe e Auber, do lado esquerdo do prédio. E a sala de espetáculos pode estar fechada por ensaio, sem aviso, então nenhum ingresso garante o acesso a ela. A visita livre custa € 15 por pessoa (tarifa cheia, sem exposição temporária no momento) e a última entrada é uma hora antes de fechar. Confiram no site na véspera: se abrir uma exposição nova até lá, o preço sobe para € 18.",
-      ingresso:{ texto:"Site oficial da Ópera de Paris", url:"https://www.operadeparis.fr/visites/palais-garnier" },
-      trajeto:{ modo:"metro", linha:"8", texto:"Estação Opéra, linha 8 direção Pointe du Lac, até a estação République. Sem baldeação, cerca de 15 minutos. République fica a 7 minutos a pé do hotel." } },
-
-    { tipo:"refeicao", hora:"20h00", titulo:"Jantar perto do hotel",
-      nota:"O Bouillon Chartier fica a 5 minutos da Ópera, no caminho de volta. Restaurante histórico de 1896, com preço de bistrô e tanta fama que virou ponto turístico por si só.",
-      opcoes:[
-        { nome:"Bouillon Chartier Grands Boulevards", detalhe:"7 Rue du Faubourg Montmartre · 4,1 estrelas com 33.074 avaliações · aberto desde 1896, decoração original preservada", preco:"15 a 22 €" },
-        { nome:"La Brigade Oberkampf", detalhe:"103 Rue Oberkampf · 4,6 estrelas com 2.776 avaliações · perto do hotel, se preferirem não fazer parada extra", preco:"18 a 26 €" },
-        { nome:"Bouillon République", detalhe:"39 Bd du Temple · 4,6 estrelas com 39.756 avaliações · a caminho do hotel, mesmo estilo do almoço de hoje em Montmartre", preco:"15 a 25 €" }
-      ]}
-  ],
-  seChover:"Montmartre fica difícil na chuva, porque é tudo ladeira e pedra molhada. Se o dia amanhecer ruim, invertam a ordem: comecem pela Ópera Garnier de manhã, que é coberta, e deixem Montmartre para a tarde, torcendo pela melhora.",
-  seSobrarEnergia:"Voltar ao Champ de Mars à noite. A Tour Eiffel pisca por 5 minutos a cada hora cheia depois de escurecer, e ver isso de baixo, deitados no gramado, é diferente de ver do cruzeiro ou de longe. É de Uber ou Bolt, para não fazer isso a pé depois do jantar.",
-  mapa:""
-},
-{
-  data:"Segunda, 5 de outubro",
-  titulo:"Louvre e o Panteão",
-  bairro:"1º e 2º arrondissement",
-  saida:"Sair às 8h00",
-  paradas:[
-    { tipo:"passeio", hora:"09h00", titulo:"Musée du Louvre", mapa:"Musée du Louvre, Rue de Rivoli, 75001 Paris",
-      texto:"O maior museu do mundo, e o motivo de eu ter deixado esta segunda-feira livre de qualquer outra coisa pesada. Entrem no horário de abertura e vão direto ao que interessa: três horas bem escolhidas rendem muito mais que seis horas exaustas.",
-      imperdivel:[
-        "Mona Lisa, na ala Denon. Vão nela primeiro, antes das 10h, ou a sala fica impraticável",
-        "Vitória de Samotrácia, no alto da escadaria Daru",
-        "Vênus de Milo, na ala Sully",
-        "Os apartamentos de Napoleão III, na ala Richelieu, que quase ninguém visita e são impressionantes",
-        "A pirâmide de vidro vista de dentro, do subsolo para cima"
-      ],
-      dica:"<b>Três coisas que economizam tempo.</b> O ingresso com horário marcado é obrigatório e custa € 32 por pessoa para brasileiros. A entrada pelo Carrousel du Louvre, no 99 Rue de Rivoli, costuma ter fila bem menor que a da pirâmide. E a saída é definitiva: não dá para sair para almoçar e voltar com o mesmo ingresso.",
-      ingresso:{ texto:"Comprar no site oficial do Louvre", url:"https://www.louvre.fr" },
-      trajeto:{ modo:"pe", texto:"Saindo pela Rue de Rivoli até a Rue du Louvre. 5 minutos." } },
-
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço saindo do museu",
-      nota:"Restaurante colado em atração famosa costuma ser caro e fraco. Estes dois ficam a poucos minutos e fogem disso. A Rue de Rivoli, bem em frente ao museu, é boa parada para lembrancinha simples: livrarias de pôster, ímãs e miniaturas a preço justo, sem ser a loja oficial do museu.",
-      opcoes:[
-        { nome:"Le Relais du Louvre", detalhe:"3 Rue du Louvre · 4,7 estrelas com 2.585 avaliações · confit de pato e sopa de cebola muito elogiados", preco:"24 a 32 €" },
-        { nome:"Bistrot Richelieu", detalhe:"45 Rue de Richelieu · 4,4 estrelas com 4.200 avaliações · a 2 minutos da Biblioteca Nacional", preco:"20 a 28 €" },
-        { nome:"Bouillon Chartier Grands Boulevards", detalhe:"7 Rue du Faubourg Montmartre · 4,1 estrelas com 33.074 avaliações · 12 min a pé, o clássico de 1896, preço de bistrô", preco:"15 a 22 €" }
-      ],
-      trajeto:{ modo:"pe", texto:"Pela Rue de Richelieu até a Biblioteca Nacional. 8 minutos." } },
-
-    { tipo:"passeio", hora:"14h30", titulo:"Biblioteca Nacional da França", mapa:"BnF Richelieu, 5 Rue Vivienne, 75002 Paris",
-      texto:"O endereço certo é este: o sítio Richelieu, sede histórica da BnF, restaurada e reaberta há poucos anos. A Sala Oval, com sua cúpula de vidro e as estantes subindo pelas paredes, é uma das coisas mais bonitas de Paris, e a entrada nela é gratuita.",
-      imperdivel:[
-        "A Salle Ovale, de acesso livre, com a cúpula envidraçada e mais de 20 mil livros nas paredes",
-        "A Salle Labrouste, com suas colunas de ferro e abóbadas de cerâmica",
-        "O Museu da BnF, com peças da coleção real, que tem ingresso à parte"
-      ],
-      dica:"<b>A Sala Oval é gratuita e não precisa de reserva.</b> Acesso livre, sem custo, terça das 10h às 20h e quarta a domingo das 10h às 18h. Confiram o horário na véspera, porque muda conforme o dia. É uma sala de leitura de verdade, então entrem em silêncio.",
-      ingresso:{ texto:"Site oficial da BnF", url:"https://www.bnf.fr" },
-      trajeto:{ modo:"rer", linha:"B", texto:"A pé até a estação Châtelet-Les Halles (12 min). Ali, RER B direção Robinson ou Saint-Rémy-lès-Chevreuse (as duas servem, a bifurcação é depois de Denfert-Rochereau) até a estação Luxembourg. Cerca de 25 minutos no total." } },
-
-    { tipo:"passeio", hora:"16h00", titulo:"Panteão", mapa:"Place du Panthéon, 75005 Paris",
-      texto:"O templo dedicado aos grandes nomes da história francesa, num prédio neoclássico erguido por Soufflot no século 18. Descer à cripta é caminhar entre os túmulos de Voltaire, Victor Hugo, Marie Curie e Rousseau.",
-      imperdivel:[
-        "O pêndulo de Foucault, réplica da experiência de 1851 que provou a rotação da Terra, balançando no centro da nave",
-        "A cripta, com os túmulos de Voltaire, Rousseau, Victor Hugo, Marie Curie e outros nomes da história francesa",
-        "A nave principal, com os afrescos e esculturas do século 19"
-      ],
-      dica:"<b>Horário e preço confirmados no site oficial:</b> aberto das 10h às 18h30, última entrada às 17h45. Ingresso a € 11,50 por pessoa em outubro. A subida à cúpula, quando disponível, é sazonal e cobrada à parte, sujeita a fechamento em dias de vento forte.",
-      ingresso:{ texto:"Site oficial do Panteão", url:"https://www.paris-pantheon.fr" },
-      trajeto:{ modo:"pe", texto:"Descendo até a Rue Mouffetard. 10 minutos." } },
-
-    { tipo:"refeicao", hora:"19h30", titulo:"Jantar no Quartier Latin",
-      nota:"Última noite inteira em Paris, no bairro que fica ao lado do Panteão.",
-      opcoes:[
-        { nome:"Le Vieux Bistrot", detalhe:"54 Rue Mouffetard · 4,7 estrelas com 2.504 avaliações · boeuf bourguignon e crème brûlée muito elogiados", preco:"22 a 32 €" },
-        { nome:"Les Baux de Paris", detalhe:"71 Rue Mouffetard · 4,7 estrelas com 2.250 avaliações · ambiente aconchegante, magret de canard é o prato mais pedido", preco:"24 a 34 €" },
-        { nome:"OTTO Mouffetard", detalhe:"5 Rue Mouffetard · 4,7 estrelas com 744 avaliações · tapas franco-asiáticas, opção diferente para fechar a viagem", preco:"25 a 35 €" }
-      ]}
-  ],
-  seChover:"Este é o dia mais protegido do roteiro: Louvre, Biblioteca e Panteão são todos cobertos. Só o trajeto entre eles pega chuva.",
-  seSobrarEnergia:"O Louvre tem noturno até 21h45 nas quartas e sextas, mas não nas segundas. Se quiserem esticar hoje, a Rue Mouffetard segue viva depois do jantar, com bares e cafés até tarde.",
-  mapa:""
-},
-{
-  data:"Terça, 6 de outubro",
-  titulo:"Manhã livre e volta para casa",
-  bairro:"11º arrondissement",
-  saida:"Aproveitem a manhã, sem pressa",
+  data:"Terça, 22 de dezembro",
+  titulo:"Volta para casa",
+  bairro:"15º arrondissement",
+  saida:"Saída cedo para o aeroporto",
   paradas:[
     { tipo:"passeio", hora:"06h00", titulo:"Check-out e saída para o aeroporto", mapa:"Aéroport Charles de Gaulle, 95700 Roissy-en-France",
-      texto:"Vocês precisam estar com as malas prontas e sair do hotel às 6 da manhã no máximo para chegar ao CDG com a antecedência necessária. Peçam o táxi na recepção ou chamem pelo aplicativo com antecedência.",
-      dica:"<b>Horário apertado:</b> o voo de vocês sai às 10h25, o que exige chegada ao aeroporto até as 7h25. O trajeto até o CDG leva de 40 a 60 minutos. A tarifa fixa de táxi é a mesma da chegada, € 56.",
-      trajeto:{ modo:"taxi", texto:"Do hotel até o CDG. € 56 de tarifa fixa, 40 a 60 minutos." } }
+      texto:"O voo sai às 10h25 do CDG. Com 3 horas de aeroporto mais cerca de 50 minutos de RER B, o ideal é deixar o hotel por volta das 6h. Combinem com a recepção para fazerem o check-out ainda de madrugada, ou peçam para deixarem as malas guardadas na noite anterior já prontas para pegar.",
+      dica:"Se vocês fizeram compras acima de € 100 na mesma rede, hoje é o dia de usar o tax free (o passo a passo completo está na seção de preparação). Levem o formulário e as notas separados na bagagem de mão, e procurem o totem PABLO no aeroporto antes de despachar.",
+      trajeto:{ modo:"rer", linha:"B", texto:"Estação Cambronne, linha 6 até Denfert-Rochereau, depois RER B direção Aéroport Charles de Gaulle 2 TGV. Cerca de 50 minutos, € 14 por pessoa." } }
   ],
-  seChover:"A chuva não afeta a saída — vocês já estão indo embora de madrugada.",
+  seChover:"",
   seSobrarEnergia:"",
   mapa:""
 }
 ],
 
 reservas: {
-  texto: "A compra é feita por vocês, sempre pelos sites oficiais. Deixei em ordem de urgência: os três primeiros esgotam e precisam ser comprados agora, com a viagem tão próxima.",
+  texto: "A compra é feita por vocês, sempre pelos sites oficiais. Deixei em ordem de urgência: os primeiros esgotam mais rápido, principalmente em dezembro. Os preços por pessoa já consideram a idade de cada uma, porque muda o valor em alguns lugares.",
   linhas: [
-    { nome:"Palácio de Versalhes (Passeport)", quando:"Agora. Reserva de horário obrigatória e as terças são concorridas", preco:"€ 35 por pessoa (tarifa fora do EEE, alta temporada)", site:"chateauversailles.fr", url:"https://en.chateauversailles.fr" },
-    { nome:"Musée du Louvre", quando:"Agora. Horário marcado obrigatório e esgota semanas antes", preco:"€ 32 por pessoa (tarifa fora do EEE)", site:"louvre.fr", url:"https://www.louvre.fr" },
-    { nome:"Panteão", quando:"Recomendado com antecedência, para não pegar fila no fim da tarde", preco:"€ 11,50 por pessoa (tarifa de outubro)", site:"paris-pantheon.fr", url:"https://www.paris-pantheon.fr" },
-    { nome:"Cruzeiro no Sena", quando:"Assim que possível, para garantir o horário das 20h30", preco:"cerca de € 15 a € 20 por pessoa", site:"bateauxparisiens.com", url:"https://www.bateauxparisiens.com" },
-    { nome:"Ópera Garnier", quando:"Até 7 dias antes. Os horários de visita são limitados", preco:"€ 15 por pessoa (€ 18 se houver exposição temporária)", site:"operadeparis.fr", url:"https://www.operadeparis.fr/visites/palais-garnier" },
-    { nome:"Tour Eiffel", quando:"Podem decidir no dia, olhando o céu", preco:"varia conforme o andar escolhido", site:"toureiffel.paris", url:"https://www.toureiffel.paris" },
-    { nome:"Disneyland Paris", quando:"Conferir se os ingressos já estão inclusos na reserva do hotel", preco:"conforme o pacote contratado", site:"disneylandparis.com", url:"https://www.disneylandparis.com" },
-    { nome:"Biblioteca Nacional, Sala Oval", quando:"Não precisa reservar", preco:"gratuito", site:"bnf.fr", url:"https://www.bnf.fr" }
+    { nome:"Palácio de Versalhes (Passeport)", quando:"Agora. Reserva de horário obrigatória", preco:"€ 25 por pessoa, para as duas (tarifa fora do EEE, baixa temporada, sem diferença por idade)", site:"chateauversailles.fr", url:"https://en.chateauversailles.fr" },
+    { nome:"Catacumbas de Paris", quando:"Agora. Vagas limitadas a 200 pessoas por horário", preco:"€ 31 para a Raquel (26 anos ou mais) e € 25 para a Maria Clara (tarifa reduzida, 5 a 26 anos)", site:"catacombes.paris.fr", url:"https://catacombes.paris.fr" },
+    { nome:"Trem Paris-Amsterdã (ida e volta)", quando:"Agora. Preços sobem conforme a data se aproxima", preco:"a partir de € 35 por pessoa por trecho, comprando com antecedência", site:"eurostar.com", url:"https://www.eurostar.com" },
+    { nome:"Torre Eiffel (2º andar, elevador)", quando:"Assim que possível. Libera com até 60 dias de antecedência e esgota rápido", preco:"€ 23,50 para a Raquel (25 anos ou mais) e € 11,80 para a Maria Clara (tarifa jovem, 12 a 24 anos)", site:"toureiffel.paris", url:"https://www.toureiffel.paris" },
+    { nome:"Arco do Triunfo", quando:"Recomendado com antecedência, opcional se preferirem só a avenida", preco:"€ 17 por pessoa, para as duas (baixa temporada, sem diferença por idade para não residentes da UE)", site:"paris-arc-de-triomphe.fr", url:"https://www.paris-arc-de-triomphe.fr" }
   ],
-  aviso:"Confiram o horário no site oficial na véspera de cada visita. Sala fechada para restauração e mudança de horário acontecem, e uma conferida de dois minutos evita perder a manhã."
+  aviso:"Uma observação que vale para o roteiro inteiro: os restaurantes de cada dia são sugestões, escolhidas perto de cada passeio. Se encontrarem um Monoprix ou um Franprix no caminho, esses mercados vendem marmitas prontas e quentes (saladas, frango, massas) que também resolvem um almoço de verdade, rápido e mais barato, sem precisar parar num restaurante."
 },
 
 orcamento: {
-  texto: "Calculado com base nos restaurantes deste roteiro, nos ingressos das atrações e no perfil de compras do casal. A faixa combinada foi de 100 a 200 euros por dia por pessoa, sem contar voo e hotel: o roteiro cabe com folga na parte de baixo dessa faixa.",
+  texto: "Calculado com base nos ingressos deste roteiro, já considerando a idade de cada uma, no transporte e no perfil de alimentação combinado para a viagem: comida de verdade e barata no almoço, um único jantar especial e o restante no mercado. A faixa combinada foi de 100 a 200 euros por dia por pessoa, sem contar voo e hotel: o roteiro fica bem abaixo disso, com folga para imprevistos ou compras extras.",
   linhas: [
-    { item:"Ingressos (Versalhes, Louvre, Ópera, cruzeiro)", valor:"€ 190 os dois" },
-    { item:"Alimentação, 9 dias (almoço principal e jantar)", valor:"€ 720 a € 990 os dois" },
-    { item:"Navigo Semaine, todas as zonas (28/09 a 04/10)", valor:"€ 64,80 os dois" },
-    { item:"Transporte avulso (dias 5 e 6 de outubro)", valor:"cerca de € 40 os dois" },
-    { item:"Táxi do aeroporto na chegada", valor:"€ 56" },
-    { item:"Traslado de ida para a Disney (dia 30/09)", valor:"€ 60 a € 80 os dois, de carro" },
-    { item:"Compras (lembrancinhas, roupas, mercado)", valor:"€ 300 a € 600, conforme o apetite" },
-    { item:"Reserva para imprevistos", valor:"€ 200" }
+    { item:"Ingressos (Versalhes, Catacumbas, Torre Eiffel, Arco do Triunfo)", valor:"€ 175 as duas" },
+    { item:"Trem Paris-Amsterdã, ida e volta", valor:"€ 140 a € 280 as duas, reservando com antecedência" },
+    { item:"Transporte em Paris (Navigo + bilhetes avulsos)", valor:"cerca de € 113 as duas" },
+    { item:"RER B do aeroporto, ida e volta", valor:"incluído no Navigo (ida) e € 28 as duas (volta)" },
+    { item:"Alimentação, 6 dias (almoços, um jantar especial, cafés)", valor:"€ 370 a € 440 as duas" },
+    { item:"Macarons na Ladurée e lembrancinhas simples", valor:"€ 80 a € 140, conforme o apetite" },
+    { item:"Reserva para imprevistos", valor:"€ 150" }
   ],
-  total: "€ 1.630 a € 2.216 os dois, ou cerca de € 90 a € 123 por pessoa por dia"
+  total: "€ 1.056 a € 1.326 as duas, ou cerca de € 88 a € 110 por pessoa por dia"
 },
 
 etiqueta: {
-  texto: "Vocês falam pouco inglês e nada de francês, então esses detalhes valem ainda mais. Nada disso exige falar o idioma.",
+  texto: "A língua é a maior preocupação de vocês duas para essa viagem, então esses detalhes valem ainda mais. Nada disso exige falar o idioma.",
   itens: [
-    { i:"coracao", t:"Bonjour antes de tudo", d:"Entrar em qualquer lugar sem dizer bonjour é considerado grosseria em Paris. Essa única palavra muda o atendimento por completo, mesmo que vocês não digam mais nada." },
-    { i:"celular", t:"Apontar resolve", d:"Cardápio com preço visível e o dedo apontando é perfeitamente aceito. Se travar, o Google Tradutor lê o cardápio pela câmera do celular, mesmo offline." },
-    { i:"garfo", t:"Formule ou carte", d:"Formule é o menu de preço fixo, com entrada e prato ou prato e sobremesa, e tem o melhor custo-benefício no almoço. Carte é o cardápio completo, item a item." },
-    { i:"cafe", t:"Como pedir café", d:"Não peçam expresso. O correto é un café. Café crème vem com leite, e é o mais parecido com o que se toma no Brasil." },
-    { i:"cadeira", t:"Sur place ou à emporter", d:"Sur place é consumir no local e inclui serviço. À emporter é para viagem e sai mais barato pelo mesmo pedido." },
-    { i:"alerta", t:"Três sinais de restaurante ruim", d:"Fotos dos pratos na entrada, localização colada em atração famosa e alguém na calçada tentando convencer a entrar. Os três juntos são certeza." }
+    { i:"coracao", t:"Bonjour antes de tudo", d:"Entrar em qualquer lugar sem dizer bonjour é considerado grosseria em Paris. Essa única palavra muda o atendimento por completo." },
+    { i:"celular", t:"Apontar resolve", d:"Cardápio com preço visível e o dedo apontando é perfeitamente aceito. Se travar, o Google Tradutor lê o cardápio pela câmera, mesmo offline." },
+    { i:"garfo", t:"Formule ou carte", d:"Formule é o menu de preço fixo, com entrada e prato ou prato e sobremesa, e tem o melhor custo-benefício no almoço. Carte é o cardápio completo." },
+    { i:"cafe", t:"Como pedir café", d:"Não peçam expresso. O correto é un café. Café crème vem com leite." },
+    { i:"cadeira", t:"Sur place ou à emporter", d:"Sur place é consumir no local. À emporter é para viagem e sai mais barato pelo mesmo pedido." },
+    { i:"alerta", t:"Três sinais de restaurante ruim", d:"Fotos dos pratos na entrada, localização colada em atração famosa e alguém na calçada tentando convencer a entrar." }
   ]
 },
 
 frases:[
-  { fr:"Bonjour", pt:"bom dia" },
-  { fr:"Merci, au revoir", pt:"obrigado, tchau" },
-  { fr:"Une table pour deux, s'il vous plaît", pt:"uma mesa para dois, por favor" },
-  { fr:"L'addition, s'il vous plaît", pt:"a conta, por favor" },
-  { fr:"Une carafe d'eau, s'il vous plaît", pt:"uma jarra de água da torneira, por favor" },
+  { fr:"Bonjour / Bonsoir", pt:"bom dia / boa noite" },
+  { fr:"Merci beaucoup", pt:"muito obrigada" },
+  { fr:"Au revoir", pt:"tchau" },
+  { fr:"S'il vous plaît", pt:"por favor" },
+  { fr:"Excusez-moi", pt:"com licença" },
   { fr:"Je ne parle pas français", pt:"eu não falo francês" },
   { fr:"Parlez-vous anglais ?", pt:"você fala inglês?" },
-  { fr:"C'est notre voyage de noces", pt:"é a nossa lua de mel" }
+  { fr:"Où est le métro / la station, s'il vous plaît ?", pt:"onde fica o metrô / a estação, por favor?" },
+  { fr:"Combien ça coûte ?", pt:"quanto custa?" },
+  { fr:"Une table pour deux, s'il vous plaît", pt:"uma mesa para duas, por favor" },
+  { fr:"L'addition, s'il vous plaît", pt:"a conta, por favor" },
+  { fr:"Une carafe d'eau, s'il vous plaît", pt:"uma jarra de água da torneira, por favor" },
+  { fr:"C'est notre première fois à Paris", pt:"é a nossa primeira viagem a Paris" },
+  { fr:"Au secours !", pt:"socorro! (emergência)" },
+  { fr:"Je suis perdue", pt:"estou perdida" },
+  { fr:"(inglês) Excuse me, could you help me, please?", pt:"com licença, pode me ajudar, por favor?" },
+  { fr:"(inglês) Where is the train station?", pt:"onde fica a estação de trem?" },
+  { fr:"(inglês) A table for two, please", pt:"uma mesa para duas, por favor" },
+  { fr:"(inglês) The bill, please", pt:"a conta, por favor" },
+  { fr:"(inglês) Is this the right platform for Paris?", pt:"essa é a plataforma certa para Paris?" }
 ],
 
 cuidados: {
-  texto: "Nada alarmante, e Paris é uma cidade segura para caminhar. São cuidados simples que resolvem quase tudo, e vale os dois saberem antes de embarcar.",
-  emergencia: "112 funciona em toda a Europa e atende em inglês. Polícia 17, ambulância 15. Se travarem no idioma, digam o nome da rua e a palavra urgence.",
+  texto: "Nada alarmante, e Paris é uma cidade segura para caminhar. São cuidados simples que resolvem quase tudo, e vale as duas saberem antes de embarcar.",
+  emergencia: "112 funciona em toda a Europa, incluindo a Holanda, e atende em inglês. Polícia 17, ambulância 15. Se travarem no idioma, digam o nome da rua e a palavra urgence.",
   golpes: [
     { t:"Pulseira", d:"Clássico na subida do Sacré-Cœur, em Montmartre, que está no roteiro de vocês. Colocam a pulseira no pulso e depois exigem pagamento. Não permitam contato físico e sigam andando." },
     { t:"Petição", d:"Jovens com prancheta pedem assinatura para uma causa. Enquanto vocês olham o papel, outra pessoa mexe na bolsa. Ignorem e sigam andando." },
     { t:"Anel de ouro", d:"Alguém simula achar um anel no chão, entrega para vocês e depois cobra. Não aceitem nada de desconhecido." },
-    { t:"Bilhete falso", d:"Venda de ingresso na rua, perto das atrações e das estações. Comprem só online, nos sites oficiais que deixei na seção de reservas." },
-    { t:"Táxi irregular no aeroporto", d:"Quem aborda dentro do terminal oferecendo corrida é irregular. Só peguem na fila oficial sinalizada." }
+    { t:"Bilhete falso", d:"Venda de ingresso na rua, perto das atrações e das estações. Comprem só online, nos sites oficiais que deixei na seção de reservas." }
   ],
   habitos: [
-    { i:"mochila", t:"No metrô e no RER", d:"Bolsa e mochila na frente do corpo em vagão cheio, principalmente na linha 1 e no RER A para a Disney, que costuma ter gente com bagagem e distração." },
+    { i:"mochila", t:"No metrô e no RER", d:"Bolsa e mochila na frente do corpo em vagão cheio, principalmente indo para Montmartre e Versalhes." },
     { i:"celular", t:"Com o celular", d:"Não usem o celular na mão junto à porta do vagão pouco antes de fechar. É o momento clássico do furto." },
     { i:"euro", t:"Dinheiro dividido", d:"Não levem tudo junto. Deixem parte dos euros e um cartão reserva no cofre do hotel." },
-    { i:"pessoas", t:"Combinado entre vocês", d:"Definam um ponto de encontro por dia, caso se percam no meio da multidão da Disney ou de Versalhes." }
+    { i:"pessoas", t:"Combinado entre vocês", d:"Definam um ponto de encontro por dia, caso se percam no meio da multidão de Versalhes ou de Montmartre." }
   ],
   passaporte: [
     "Registrem a perda ou roubo em uma delegacia, o Commissariat de Police, e guardem o boletim de ocorrência.",
@@ -1076,23 +965,23 @@ cuidados: {
 depois: {
   texto: "Algumas pendências ficam para depois da viagem. Dá para resolver todas em uma tarde.",
   itens: [
-    { i:"etiqueta", t:"Tax free, ainda no aeroporto", d:"Vale a partir de € 100 na mesma rede de lojas, com reembolso de até 15%. Validem no totem antes de despachar as malas, no último aeroporto de saída da União Europeia. Reservem tempo, o processo demora." },
+    { i:"etiqueta", t:"Tax free, ainda no aeroporto", d:"Vale a partir de € 100 na mesma rede de lojas, com reembolso de até 15%. Validem no totem antes de despachar as malas." },
     { i:"wifi", t:"Cancelem o plano de internet", d:"eSIM ou chip físico. Muitos continuam ativos depois do retorno e geram cobrança no cartão, mesmo sem uso." },
-    { i:"escudo", t:"Seguro viagem, se usou", d:"Se usaram o seguro em qualquer situação (consulta médica, bagagem perdida, atraso de voo), peçam o reembolso dentro do prazo da apólice, em geral até 30 dias após o retorno. Reúnam recibos originais, laudos médicos e demais comprovantes, e enviem pelo canal indicado pela seguradora." },
-    { i:"euro", t:"Avisem o banco", d:"Alguns bancos mantêm o limite internacional ampliado por padrão, o que aumenta o risco em caso de fraude. Reduzam ao patamar habitual pelo aplicativo, leva menos de um minuto." },
+    { i:"escudo", t:"Seguro viagem, se usou", d:"Se usaram o seguro em qualquer situação, peçam o reembolso dentro do prazo da apólice, em geral até 30 dias após o retorno." },
+    { i:"euro", t:"Avisem o banco", d:"Alguns bancos mantêm o limite internacional ampliado por padrão. Reduzam ao patamar habitual pelo aplicativo." },
     { i:"mala", t:"Alfândega no Brasil", d:"Isenção de 1000 dólares por pessoa na chegada de avião. Acima disso, declarem na e-DBV antes de desembarcar." }
   ]
 },
 
 fim: {
-  titulo:"Que seja uma lua de mel inesquecível",
-  texto:"Está tudo aqui: cada dia, cada trajeto, cada endereço e cada reserva que precisa ser feita antes. Se bater qualquer dúvida antes de embarcar, é só me chamar.",
+  titulo:"Que o sonho da Maria Clara seja tudo o que ela imaginou.",
+  texto:"",
   assinatura:"Gabriela · Paris Sem Segredos"
 },
 
 contato: {
   whatsapp:"5511945208458",
-  mensagem:"Oi Gabriela! Aqui é o Jeferson, estou com o roteiro aberto e queria te perguntar uma coisa antes da viagem",
+  mensagem:"Oi Gabriela! Aqui é a Raquel, estou com o roteiro aberto e queria te perguntar uma coisa antes da viagem",
   chamada:"Falar comigo",
   apoio:"Dúvida antes da viagem?"
 }
