@@ -502,10 +502,10 @@ aeroportos: [
           ["Por que não o trem aqui","O trem (RER B até Saint-Lazare, depois Transilien Linha L até Bécon) exige troca de linha com as malas, muito mais difícil para uma família de quatro com bagagem pesada."]
         ] },
       { nome:"Transfer privado (indicação pessoal)", icone:"carro", rec:true, selo:"Escolhida",
-        preco:"R$ 1.569,94", precoNota:"por passageiro, ida e volta (aeroporto-hospedagem-aeroporto), esse valor multiplica por pessoa", tempo:"semelhante ao táxi",
+        preco:"R$ 1.744,36", precoNota:"valor total para os quatro, ida e volta (CDG ou Orly para Courbevoie e de volta)", tempo:"semelhante ao táxi",
         itens:[
           ["O que está incluso","Transporte particular de Courbevoie para o CDG ou Orly, e do CDG ou Orly para Courbevoie, motorista já esperando no saguão de desembarque com o nome de vocês."],
-          ["Combinado","Essa foi a opção que vocês escolheram, pela comodidade de tudo já reservado. Fica mais caro que o taxímetro, mas o motorista já espera no desembarque, sem precisar procurar ninguém."]
+          ["Combinado","Essa foi a opção que vocês escolheram, e pelo preço total, sai bem em conta: R$1.744,36 para os quatro, ida e volta, comparado ao táxi convencional (que ficaria entre €145 e €165 nos dois trechos sem tarifa fixa para Courbevoie)."]
         ] },
       { nome:"Trem RER B + Transilien Linha L", icone:"trem", selo:"Mais barato, mais trabalho",
         preco:"€ 14", precoNota:"por pessoa, bilhete de aeroporto RER B (€ 56 para os quatro), mais conexão com a Linha L", tempo:"cerca de 1h15 até Bécon-les-Bruyères",
@@ -527,7 +527,7 @@ aeroportos: [
           ["Cadeirinha das crianças","No app G7, a categoria G7 Family inclui cadeirinha e assento de elevação no carro. Selecionem essa categoria na reserva."]
         ] },
       { nome:"Transfer privado (indicação pessoal)", icone:"carro", rec:true, selo:"Escolhida, já incluso na ida e volta",
-        preco:"R$ 1.569,94", precoNota:"por passageiro, já cobre esse trecho de volta, dentro do mesmo pacote", tempo:"semelhante ao táxi",
+        preco:"R$ 1.744,36", precoNota:"total para os quatro, ida e volta, já incluso no mesmo pacote", tempo:"semelhante ao táxi",
         itens:[
           ["Vantagem aqui","O motorista já sabe o horário de buscar vocês em Courbevoie bem cedo, sem depender de pedir Uber às 5h ou acordar com medo de não achar táxi."]
         ] },
@@ -994,14 +994,14 @@ dias: [
       trajeto:{ modo:"taxi", texto:"Uber ou Bolt de volta ao apartamento em Courbevoie. Conte com 35 a 50 minutos e € 28 a € 38 para os quatro." } },
     { tipo:"passeio", hora:"14h30", titulo:"Tarde livre para arrumar as malas", mapa:"",
       texto:"De volta ao apartamento, tempo tranquilo para organizar a bagagem com calma antes do embarque de amanhã cedo, sem mais nenhum compromisso até o jantar." },
-    { tipo:"refeicao", hora:"19h30", titulo:"Jantar especial em família", mapa:"50 Avenue de la Motte-Picquet, 75015 Paris",
-      nota:"A única noite reservada para saírem todos juntos: sem ser chique nem caro, só o tempo em família com calma. Os restaurantes sugeridos ficam próximos do 9º, mas o Uber de volta para Courbevoie é tranquilo.",
+    { tipo:"refeicao", hora:"19h30", titulo:"Jantar especial em família", mapa:"7 Rue du Faubourg Montmartre, 75009 Paris",
+      nota:"Três opções bem diferentes, cada uma com um motivo claro para ser inesquecível. Reserva recomendada em todas.",
       opcoes:[
-        { nome:"Picchetto", detalhe:"50 Avenue de la Motte-Picquet · 4,5 estrelas com 2.588 avaliações · italiano descontraído, pizza muito bem avaliada por famílias com crianças, perto do Champ de Mars", preco:"16 a 26 €" },
-        { nome:"Le Café du Commerce", detalhe:"51 Rue du Commerce · 4,5 estrelas com 8.411 avaliações · brasserie clássica de bairro, ambiente bonito, cardápio francês tradicional", preco:"20 a 30 €" },
-        { nome:"Les Tomettes", detalhe:"64 Avenue de la Motte-Picquet · 4,7 estrelas com 885 avaliações · cardápio mediterrâneo, ambiente descontraído, boas opções vegetarianas também", preco:"18 a 28 €" }
+        { nome:"Bouillon Chartier Grands Boulevards", detalhe:"7 Rue du Faubourg Montmartre, 9º · 4,1 estrelas com 33.371 avaliações · brasserie art nouveau de 1896, o garçom anota o pedido na toalha de papel e soma a conta de cabeça na mesa, fila na calçada que já faz parte da experiência, cardápio francês clássico (frango assado, confit de pato, profiteroles) a preços de 1900. O lugar mais 'Paris de verdade' desta lista, e as crianças vão lembrar pelo resto da vida do barulho e do movimento de uma brasserie centenária cheia", preco:"€ 15 a € 25 por pessoa" },
+        { nome:"La Felicità", detalhe:"5 Parvis Alan Turing, 13º · 4,5 estrelas com 34.654 avaliações · enorme food court italiano dentro de vagões de trem cobertos de grafite, onde cada um pede o que quiser de uma praça diferente (pizza, massa, burrata). O lugar é visualmente impressionante, as crianças adoram o ambiente e a fila anda. Aberto às terças", preco:"€ 12 a € 20 por pessoa" },
+        { nome:"Al Caratello", detalhe:"5 Rue Audran, 18º, perto do Moulin Rouge · 4,7 estrelas com 3.546 avaliações · italiano acolhedor cujo dono é conhecido por montar surpresas para quem celebra algo especial (tiramisu com vela e sparkler, restaurante inteiro cantando). Ligando com antecedência e avisando que é a última noite de uma primeira viagem em família, existe uma chance real de eles fazerem esse gesto. Cardápio simples de massa artesanal, bom para o filho mais seletivo", preco:"€ 20 a € 30 por pessoa" }
       ],
-      dica:"Picchetto é a recomendação: pizza é aposta segura para o filho mais seletivo, o ambiente é descontraído e sem cerimônia, e o preço fica bem dentro do combinado. Os três restaurantes sugeridos ficam no 15º arrondissement: o Uber de Courbevoie até lá leva cerca de 25 a 35 minutos, e o Uber de volta depois do jantar mais uns 30 a 40 minutos. Vale a pena pelo último jantar juntos, mas combinem o horário de volta com calma, sem pressa. Se preferirem experimentar comida brasileira antes de ir embora, o Rodizio Paris (5 Boulevard Victor, 4,1 estrelas com 1.348 avaliações, 15º arrondissement) é uma opção: vale a ressalva de que rodízio brasileiro em Paris não é barato, fica na faixa de € 35 a € 45 por pessoa, mas pode valer a experiência de matar a saudade no último dia." }
+      dica:"Os três ficam em arrondissements diferentes de onde estavam os restaurantes antigos, mas como vêm de Courbevoie de Uber de qualquer jeito, a localização já não é um critério limitante. O Bouillon Chartier é a opção mais Paris-de-verdade e mais barata; La Felicità é a que mais encanta as crianças pelo visual; Al Caratello é a escolha se quiserem que o jantar tenha um gesto especial. Reservem com pelo menos uma semana de antecedência, principalmente o Chartier (que não aceita reserva para grupos pequenos, mas tem fila organizada) e o Al Caratello. O Uber de Courbevoie até qualquer um dos três leva 25 a 40 minutos." }
   ],
   seChover:"O zoológico tem estufas e áreas cobertas em algumas biozonas, mas é um passeio majoritariamente ao ar livre: melhor encurtar a visita se a chuva estiver forte.", seSobrarEnergia:"", mapa:""
 },
@@ -1037,7 +1037,7 @@ reservas: {
 },
 
 orcamento: {
-  texto: "Calculado com base nos ingressos deste roteiro, no transporte (Uber/Bolt para os trechos curtos, metrô só para Disney e o zoológico, carro alugado na Alemanha) e no perfil de alimentação combinado: a maioria das refeições em casa, com o mercado do bairro, e só algumas saídas para comer fora. Um alerta importante: com o transfer privado escolhido para os aeroportos (mais caro que o táxi oficial, pela comodidade), a média da viagem ainda fica perto do teto de 100 euros por dia por pessoa combinado no início, podendo passar um pouco dependendo da cotação do dia. Vale saber disso antes de fechar.",
+  texto: "Calculado com base nos ingressos deste roteiro, no transporte (Uber/Bolt para os trechos curtos, metrô só para Disney e o zoológico, carro alugado na Alemanha) e no perfil de alimentação combinado: a maioria das refeições em casa, com o mercado do bairro, e só algumas saídas para comer fora. O transfer privado, no total de R$1.744,36 para os quatro nos dois trechos, saiu mais em conta do que o táxi sem tarifa fixa de Courbevoie, o que ajuda a manter a média dentro do teto de € 100 por dia por pessoa combinado.",
   linhas: [
     { item:"Ingresso da Disneyland Paris, 2 dias separados (os quatro)", valor:"€ 720" },
     { item:"Ingresso da LEGOLAND Deutschland, 2 dias (os quatro)", valor:"€ 216 a € 290" },
@@ -1047,13 +1047,13 @@ orcamento: {
     { item:"Torre Eiffel, Arco do Triunfo e Aquário de Paris (os quatro)", valor:"€ 180 a € 230" },
     { item:"Passe família do Zoo de Vincennes", valor:"€ 68" },
     { item:"Cruzeiro no Sena (os quatro)", valor:"€ 54" },
-    { item:"Transfer privado nos aeroportos, ida e volta (os quatro)", valor:"R$ 6.279,76, cerca de € 1.045 a € 1.075" },
+    { item:"Transfer privado nos aeroportos, ida e volta (os quatro)", valor:"R$ 1.744,36 no total, cerca de € 290 a € 300" },
     { item:"Uber/Bolt e metrô nos trechos curtos dentro de Paris", valor:"cerca de € 160" },
     { item:"Alimentação, 11 dias (predominante no mercado, com algumas saídas)", valor:"€ 420 a € 520" },
     { item:"2 assentos de elevação infláveis (para Uber/Bolt em Paris)", valor:"€ 40 a € 60 (compra única, ficam com vocês)" },
     { item:"Reserva para imprevistos", valor:"€ 150" }
   ],
-  total: "€ 3.820 a € 4.590 para a família inteira, ou cerca de € 87 a € 104 por pessoa por dia. O transfer privado é o item que mais pesa nessa conta: sozinho, ele já passa de € 1.000. Se quiserem voltar com mais folga dentro do teto de € 100 por dia, o táxi oficial nos aeroportos (cerca de € 101 no total, ida e volta) é o ajuste mais simples"
+  total: "€ 3.060 a € 3.730 para a família inteira, ou cerca de € 70 a € 85 por pessoa por dia, dentro do teto combinado de € 100. O transfer privado, com o valor total de R$1.744,36 para os quatro, acabou saindo bem mais acessível do que o táxi convencional nos dois trechos, e não compromete o orçamento geral"
 },
 
 etiqueta: {
