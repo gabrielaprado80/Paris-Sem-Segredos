@@ -420,7 +420,7 @@ const ROTEIRO = {
 capa: {
   saudacao: "Pollyana e Lucas, este é o roteiro de vocês e das meninas em",
   titulo: "Paris",
-  subtitulo: "Cinco dias entre Disney, Torre Eiffel, Sena e Monet, num ritmo pensado para a Perola e a Pilar.",
+  subtitulo: "Seis dias entre Disney, Torre Eiffel, Sena e Monet, num ritmo pensado para a Perola e a Pilar.",
   chegada: "09 OUT 2026",
   saida: "14 OUT 2026",
   dataChegadaISO: "2026-10-09",
@@ -826,23 +826,18 @@ dias: [
     { tipo:"passeio", hora:"14h00", titulo:"Tarde na Fantasyland e cavalgada", mapa:"Fantasyland, Disneyland Park, 77700 Chessy",
       texto:"De volta ao parque, a tarde é para as atrações da Fantasyland, que são calmas e cobertas, e para esperar a cavalgada Mickey's Halloween Celebration, que costuma passar às 15h25 e às 17h. Confirmem o horário no aplicativo do parque.",
       dica:"Se a Pilar dormir no canguru, aproveitem para uma das atrações de altura mínima com a Perola. A saída às 18h evita o pico do fechamento no RER A, e quem quiser ficar até o show noturno encontra a segunda opção logo abaixo.",
-      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A em qualquer trem para Paris (Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye), até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } },
+      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A direção Paris, em qualquer trem com destino Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye, até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } },
 
     { tipo:"passeio", hora:"18h00", titulo:"Primeira opção: voltar para o apartamento", mapa:"Gare Marne-la-Vallée Chessy, 77700 Chessy",
       texto:"Quem preferir voltar no ritmo das crianças sai do parque por volta das 18h e pega o RER A antes do pico do fechamento, com a Pilar ainda de bom humor. O Carrefour City da Rue Jacques Hillairet abre até as 22h e a Mon Marché até as 21h30, e resolvem o jantar no caminho de volta. A noite é livre." },
 
-    { tipo:"refeicao", hora:"19h30", titulo:"Segunda opção: jantar no Disney Village e ficar para o show",
-      nota:"Quem preferir esperar o show noturno pode jantar no Disney Village, fora do parque, a poucos minutos da entrada. O ingresso permite sair e voltar no mesmo dia.",
-      opcoes:[
-        { nome:"The Royal Pub", detalhe:"Disney Village · 4,6 estrelas com 6.054 avaliações · pub familiar com pratos simples, aberto das 11h30 às 23h", preco:"20 a 28 €" },
-        { nome:"Rainforest Café", detalhe:"Disney Village · 4,3 estrelas com 10.001 avaliações · restaurante temático com aquários, aberto das 11h30 às 23h", preco:"25 a 38 €" },
-        { nome:"Earl of Sandwich", detalhe:"5 Disney Village · 4,1 estrelas com 3.203 avaliações · sanduíches montados do jeito de cada um, aberto das 8h às 23h", preco:"20 a 28 €" }
-      ] },
+    { tipo:"passeio", hora:"19h30", titulo:"Segunda opção: jantar no Disney Village e ficar para o show", mapa:"Disney Village, Av. Paul Séramy, 77700 Chessy",
+      texto:"Quem preferir esperar o show noturno pode jantar no Disney Village, fora do parque, a poucos minutos da entrada, com as mesmas três opções do almoço: The Royal Pub, Rainforest Café e Earl of Sandwich, a cerca de 20 a 28 € por pessoa. O ingresso permite sair e voltar no mesmo dia, e as mesas ficam mais cheias a partir das 19h, então vale chegar às 19h30 em ponto." },
 
     { tipo:"passeio", hora:"21h45", titulo:"Show noturno no castelo, para quem ficar", mapa:"Sleeping Beauty Castle, Disneyland Park, 77700 Chessy",
       texto:"O Disneyland Park tem um show noturno todas as noites no castelo, o Disney Tales of Magic, com fogos, projeções e fontes, incluído no ingresso do parque. O horário costuma ser perto das 22h, e o horário exato do dia aparece no aplicativo. O outro show noturno, o Disney Cascade of Lights, fica no lago do Disney Adventure World, o segundo parque, que só entra com o ingresso de 2 parques. Se esperarem pelo show, a volta é de RER A por volta das 22h45, e o RER A circula até perto da meia-noite. A Pilar volta dormindo no canguru.",
       dica:"<b>Para fotos e para ver bem:</b> fiquem na Main Street, de frente para o castelo, uns 30 minutos antes do show, para pegar um bom lugar. Depois do show, a saída do parque lota, então esperem 10 minutos para o fluxo diminuir.",
-      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A em qualquer trem para Paris (Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye), até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } }
+      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A direção Paris, em qualquer trem com destino Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye, até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } }
   ],
   seChover:"Boa parte das atrações da Fantasyland é interna e funciona com chuva. Levem capa de chuva em vez de guarda-chuva, que atrapalha nas filas e com a Pilar no canguru.",
   seSobrarEnergia:"O show noturno do castelo, por volta das 22h, é a opção para quem aguentar ficar até o fim do dia.",
@@ -1009,6 +1004,7 @@ orcamento: {
     { item:"Chocolate quente e lanche na Angelina (estimativa)", valor:"€ 40 a € 60" },
     { item:"Compras de farmácia e lembrancinhas, sem grife", valor:"€ 150 a € 300" },
     { item:"Reserva para imprevistos", valor:"€ 200" },
+    { item:"Jantar no Disney Village, só se ficarem para o show (estimativa, fora do total)", valor:"€ 70 a € 100" },
     { item:"ETA britânico, 4 pessoas (cobrado em libras, fora do total)", valor:"£ 80" }
   ],
   total: "a partir de € 1.475 para os quatro, ou cerca de € 245 por dia"
