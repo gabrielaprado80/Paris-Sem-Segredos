@@ -410,697 +410,1713 @@ svg.i{flex:none;vertical-align:-.16em}
   .btn-mapa{box-shadow:none}
   a{text-decoration:none}
 }
+
+.tab-wrap{padding:0;overflow:hidden}
+table.tab-compras{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.45}
+.tab-compras th{background:var(--navy);color:#fff;text-align:left;padding:11px 12px;font-family:'Mulish',sans-serif;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:800}
+.tab-compras td{padding:12px;vertical-align:top;border-top:1px solid var(--line)}
+.tab-compras tbody tr:nth-child(even) td{background:#FBF7EF}
+.tab-compras td:nth-child(4){font-weight:800;color:var(--navy);white-space:nowrap}
+@media (max-width:820px){
+  table.tab-compras,.tab-compras thead,.tab-compras tbody,.tab-compras tr,.tab-compras td{display:block;width:100%}
+  .tab-compras thead{position:absolute;left:-9999px}
+  .tab-compras tr{border-top:8px solid var(--cream)}
+  .tab-compras td{border-top:0;padding:6px 14px}
+  .tab-compras td:first-child{padding-top:12px;font-size:16px}
+  .tab-compras td:nth-child(n+2)::before{content:attr(data-l);display:block;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);font-weight:800}
+  .tab-compras td:nth-child(4){white-space:normal}
+}
+@media print{.tab-compras tr{break-inside:avoid}}
 </style>
 </head>
 <body>
 <div id="app"></div>
 <script>
 const ROTEIRO = {
-
-capa: {
-  saudacao: "Pollyana e Lucas, este é o roteiro de vocês e das meninas em",
-  titulo: "Paris",
-  subtitulo: "Seis dias entre Disney, Torre Eiffel, Sena e Monet, num ritmo pensado para a Perola e a Pilar.",
-  chegada: "09 OUT 2026",
-  saida: "14 OUT 2026",
-  dataChegadaISO: "2026-10-09",
-  chips: [
-    { i:"pessoas", t:"2 adultos e 2 crianças" },
-    { i:"calendario", t:"Disney, Sena, Torre e Monet" },
-    { i:"coracao", t:"Dia das Crianças na Disney" },
-    { i:"termometro", t:"Outono, 9°C a 17°C" }
+ "capa": {
+  "saudacao": "Pollyana e Lucas, este é o roteiro de vocês e das meninas em",
+  "titulo": "Paris",
+  "subtitulo": "Seis dias entre Disney, Torre Eiffel, Sena e Monet, num ritmo pensado para a Perola e a Pilar.",
+  "chegada": "09 OUT 2026",
+  "saida": "14 OUT 2026",
+  "dataChegadaISO": "2026-10-09",
+  "chips": [
+   {
+    "i": "pessoas",
+    "t": "2 adultos e 2 crianças"
+   },
+   {
+    "i": "calendario",
+    "t": "Disney, Sena, Torre e Monet"
+   },
+   {
+    "i": "coracao",
+    "t": "Dia das Crianças em Paris, dia 12"
+   },
+   {
+    "i": "termometro",
+    "t": "Outono, 9°C a 17°C"
+   }
   ]
-},
-
-carta: [
-  "Pollyana e Lucas, que bom ter vocês aqui. Este roteiro foi montado em volta de duas pessoas: a Perola, de 10 anos, e a Pilar, de 1 ano e 8 meses. Por isso cada dia sai do apartamento com tudo planejado para não precisar voltar no meio do dia, o transporte vem antes da caminhada, e as noites ficam livres, sem passeio marcado.",
-  "As quatro prioridades estão todas no roteiro: a Disneyland Paris na segunda, dia 12, que é o Dia das Crianças, o passeio no Sena e a Torre Eiffel no sábado, e as obras de Monet no Orangerie no domingo, na mesma manhã do Louvre que já está comprado. A Torre aparece nos melhores ângulos sem ninguém precisar subir, e o mesmo vale para o Arco do Triunfo, porque as alturas ficam fora do roteiro.",
-  "Versalhes ficou de fora. Fica longe de Paris, a visita exige muito andar e pouco combina com um bebê no colo e uma criança de 10 anos que se cansa com passeio demorado. No lugar entrou uma terça-feira mais leve, com Champs-Élysées, jardins, chocolate quente e as compras de farmácia e de grife.",
-  "Café da manhã e jantar são em casa, no apartamento com cozinha. O almoço é a refeição na rua, sempre com três opções perto de onde vocês estiverem, e a terça tem um almoço especial. A degustação formal de vinho ou champanhe fica de fora, porque as sessões costumam durar cerca de duas horas e não combinam com a Pilar. No lugar, o almoço especial tem a taça de champanhe.",
-  "Três coisas pedem ação antes de embarcar: o ETA britânico para os quatro, inclusive a Pilar, por causa do Eurostar do dia 14, o ingresso da Disney e o horário do Orangerie. Tudo está explicado nas seções de preparação e de reservas."
-],
-
-assinaturaCarta: "Boa viagem, Gabriela",
-
-voos: {
-  ida: {
-    tag: "Ida · 8 de outubro", cia: "Air France · AF511",
-    saidaHora:"18:55", saidaCod:"GIG", saidaCidade:"Rio de Janeiro",
-    chegadaHora:"10:55", chegadaCod:"CDG", chegadaCidade:"Paris, Terminal 2E",
-    duracao:"11h de voo, pouso na sexta, dia 9"
+ },
+ "carta": [
+  "Pollyana e Lucas, que bom ter vocês aqui. Este roteiro foi montado em volta de duas pessoas: a Perola, de 10 anos, e a Pilar, de 1 ano e 8 meses. Por isso cada dia sai do apartamento com tudo planejado para não precisar voltar no meio do dia, o transporte vem antes da caminhada, e as noites ficam livres, sem passeio marcado. A única exceção é o show noturno da Disney, para quem aguentar ficar.",
+  "As reservas que já estão feitas definiram a ordem dos dias: o ônibus Hop-On Hop-Off no sábado, o passeio no Sena de manhã e o Louvre às 14h30 no domingo, e a Disneyland Paris, com 2 parques, na terça, dia 13. A segunda, dia 12, é o Dia das Crianças, e ficou com as obras de Monet no Orangerie, uma tarde de brincar nas Tuileries, chocolate quente e as primeiras compras de grife e de farmácia.",
+  "A Torre Eiffel aparece nos melhores ângulos sem ninguém precisar subir: da ponte de Bir-Hakeim, do Champ de Mars, do Trocadéro, do ônibus e do barco no Sena. O mesmo vale para o Arco do Triunfo, visto de baixo. As alturas ficam fora do roteiro.",
+  "As compras que fecham o dia perfeito estão distribuídas: o sábado termina no Opéra, com perfumaria, Galeries Lafayette e Printemps, e a segunda passa pela Place Vendôme e pelas farmácias de cosméticos franceses. A tabela de compras traz o endereço, o que cada lugar vende e a faixa de preço.",
+  "Versalhes ficou de fora, porque fica longe e cansa muito com a Pilar. Giverny, a casa e os jardins de Monet, entra como opção para a segunda, com a ressalva de que é bem longe de Paris. Para quem preferir alugar um carro, há um bloco com o passo a passo da retirada, da devolução e das regras para dirigir em Paris.",
+  "Café da manhã e jantar são em casa, no apartamento com cozinha. O almoço é a refeição na rua, sempre com três opções perto de onde vocês estiverem, e o de segunda, Dia das Crianças, é o almoço especial, com a taça de champanhe no lugar da degustação formal, que costuma durar cerca de duas horas e não combina com a Pilar.",
+  "Duas coisas pedem ação antes de embarcar: o horário do Orangerie, que ainda precisa ser reservado, e o eSIM, que não chega mais a tempo como chip físico."
+ ],
+ "assinaturaCarta": "Boa viagem, Gabriela",
+ "voos": {
+  "ida": {
+   "tag": "Ida · 8 de outubro",
+   "cia": "Air France · AF511",
+   "saidaHora": "18:55",
+   "saidaCod": "GIG",
+   "saidaCidade": "Rio de Janeiro",
+   "chegadaHora": "10:55",
+   "chegadaCod": "CDG",
+   "chegadaCidade": "Paris, Terminal 2E",
+   "duracao": "11h de voo, pouso na sexta, dia 9"
   },
-  volta: {
-    tag: "Saída de Paris · 14 de outubro", cia: "Eurostar · trem 9043",
-    saidaHora:"16:02", saidaCod:"PAR", saidaCidade:"Paris Gare du Nord",
-    chegadaHora:"17:35", chegadaCod:"LON", chegadaCidade:"Londres St Pancras",
-    duracao:"2h33 de viagem, direto"
+  "volta": {
+   "tag": "Saída de Paris · 14 de outubro",
+   "cia": "Eurostar · trem 9043",
+   "saidaHora": "16:02",
+   "saidaCod": "PAR",
+   "saidaCidade": "Paris Gare du Nord",
+   "chegadaHora": "17:35",
+   "chegadaCod": "LON",
+   "chegadaCidade": "Londres St Pancras",
+   "duracao": "2h33 de viagem, direto"
   },
-  observacao: "Vocês pousam às 10h55 em Paris depois de um voo noturno, então o primeiro dia é deliberadamente leve. Os bilhetes da Air France mostram 1 mala despachada por passageiro, com limite de 10 kg para a Pilar. O Eurostar permite 2 malas por adulto e 1 por criança de 4 a 11 anos, mais o carrinho, e a Pilar viaja no colo, sem bilhete. Códigos de reserva: Air France YD66NL, Eurostar YGVMZJ."
-},
-
-aeroportos: [
+  "observacao": "Vocês pousam às 10h55 em Paris depois de um voo noturno, então o primeiro dia é deliberadamente leve. Os bilhetes da Air France mostram 1 mala despachada por passageiro, com limite de 10 kg para a Pilar. O Eurostar permite 2 malas por adulto e 1 por criança de 4 a 11 anos, mais o carrinho, e a Pilar viaja no colo, sem bilhete. Códigos de reserva: Air France YD66NL, Eurostar YGVMZJ."
+ },
+ "aeroportos": [
   {
-    sigla: "CDG",
-    nome: "Charles de Gaulle",
-    nota: "A chegada é no Terminal 2E, às 10h55. Para quatro pessoas, o táxi oficial de tarifa fixa é a opção mais simples: é porta a porta, o preço não muda com o trânsito e dispensa as escadas e a baldeação do RER. A saída de Paris não passa por aeroporto, porque o Eurostar parte da Gare du Nord.",
-    opcoes: [
-      { nome:"Táxi oficial de tarifa fixa", icone:"taxi", rec:true, selo:"Escolhida na chegada",
-        preco:"€ 56", precoNota:"tarifa fixa até a margem direita (12º)", tempo:"cerca de 45 a 60 min",
-        itens:[
-          ["Preço","€ 56 para qualquer endereço da margem direita do Sena, onde fica o hotel. A tarifa fixa vale nos dois sentidos, vem regulada pela Préfecture de Police e não muda com o trânsito. Para a margem esquerda são € 65. O preço fixo já inclui a taxa de partida."],
-          ["Onde pegar","Depois da esteira de bagagens do Terminal 2E, sigam as placas Taxis. Os painéis do aeroporto são em francês e em inglês, e o nível de desembarque aparece como Arrivées ou Arrivals. A estação de táxis fica nesse nível, na porta 10a, logo na saída. Não precisa de aplicativo nem de reserva: é só entrar na fila sinalizada e embarcar no primeiro carro."],
-          ["Como pedir","Entreguem o endereço escrito: 15 ter Rue Lamblardie, 75012 Paris. Digam au forfait, s'il vous plaît, que quer dizer pela tarifa fixa, por favor. Quatro pessoas cabem em um táxi comum, com a Pilar no colo."],
-          ["Como reconhecer o táxi de verdade","O táxi parisiense oficial tem o luminoso TAXI PARISIEN no teto, o taxímetro visível, a placa com o número do táxi na lateral dianteira direita e o crachá com o número da licença do motorista. Só valem os carros da estação oficial."],
-          ["Golpes","Quem aborda vocês dentro do terminal oferecendo corrida é irregular e costuma cobrar bem mais. Recusem e sigam até a porta 10a. Se o motorista disser que o taxímetro está quebrado ou propuser um preço diferente de € 56 para a margem direita, recusem e peçam outro carro. Uber e Bolt não têm tarifa fixa, e o ponto deles é outro, a porta 16a."]
-        ],
-        rota:"https://www.google.com/maps/dir/?api=1&origin=Terminal%202E%20Paris%20Charles%20de%20Gaulle&destination=15%20ter%20Rue%20Lamblardie%2C%2075012%20Paris&travelmode=driving" },
-      { nome:"RER B e RER A", icone:"trem", selo:"Mais barato",
-        preco:"€ 42", precoNota:"3 bilhetes de € 14, a Pilar viaja de graça", tempo:"cerca de 75 min até o hotel",
-        itens:[
-          ["Onde pegar","A estação de RER B Aéroport Charles de Gaulle 2 fica a cerca de 10 minutos a pé do Terminal 2E. Cada adulto e a Perola, que com 10 anos paga tarifa inteira, precisam do bilhete de aeroporto de € 14."],
-          ["O caminho até o hotel","RER B no sentido Paris até Châtelet-Les Halles, baldeação para o RER A no sentido Marne-la-Vallée ou Boissy-Saint-Léger até Nation, e 12 minutos a pé até o hotel. O RER A e o RER B têm todas as estações acessíveis, mas a baldeação em Châtelet-Les Halles é longa."],
-          ["A ressalva","Com duas malas grandes, duas mochilas e a Pilar no colo depois de um voo noturno, é a opção que menos recomendo. Fica aqui só como comparação de preço."]
-        ],
-        rota:"https://www.google.com/maps/dir/?api=1&origin=Aeroport%20Charles%20de%20Gaulle%202%20TGV%20RER%20station&destination=15%20ter%20Rue%20Lamblardie%2C%2075012%20Paris&travelmode=transit" }
-    ]
+   "sigla": "CDG",
+   "nome": "Charles de Gaulle",
+   "nota": "A chegada é no Terminal 2E, às 10h55. Para quatro pessoas, o táxi oficial de tarifa fixa é a opção mais simples: é porta a porta, o preço não muda com o trânsito e dispensa as escadas e a baldeação do RER. A saída de Paris não passa por aeroporto, porque o Eurostar parte da Gare du Nord.",
+   "opcoes": [
+    {
+     "nome": "Táxi oficial de tarifa fixa",
+     "icone": "taxi",
+     "rec": true,
+     "selo": "Escolhida na chegada",
+     "preco": "€ 56",
+     "precoNota": "tarifa fixa até a margem direita (12º)",
+     "tempo": "cerca de 45 a 60 min",
+     "itens": [
+      [
+       "Preço",
+       "€ 56 para qualquer endereço da margem direita do Sena, onde fica o hotel. A tarifa fixa vale nos dois sentidos, vem regulada pela Préfecture de Police e não muda com o trânsito. Para a margem esquerda são € 65. O preço fixo já inclui a taxa de partida."
+      ],
+      [
+       "Onde pegar",
+       "Depois da esteira de bagagens do Terminal 2E, sigam as placas Taxis. Os painéis do aeroporto são em francês e em inglês, e o nível de desembarque aparece como Arrivées ou Arrivals. A estação de táxis fica nesse nível, na porta 10a, logo na saída. Não precisa de aplicativo nem de reserva: é só entrar na fila sinalizada e embarcar no primeiro carro."
+      ],
+      [
+       "Como pedir",
+       "Entreguem o endereço escrito: 15 ter Rue Lamblardie, 75012 Paris. Digam au forfait, s'il vous plaît, que quer dizer pela tarifa fixa, por favor. Quatro pessoas cabem em um táxi comum, com a Pilar no colo."
+      ],
+      [
+       "Como reconhecer o táxi de verdade",
+       "O táxi parisiense oficial tem o luminoso TAXI PARISIEN no teto, o taxímetro visível, a placa com o número do táxi na lateral dianteira direita e o crachá com o número da licença do motorista. Só valem os carros da estação oficial."
+      ],
+      [
+       "Golpes",
+       "Quem aborda vocês dentro do terminal oferecendo corrida é irregular e costuma cobrar bem mais. Recusem e sigam até a porta 10a. Se o motorista disser que o taxímetro está quebrado ou propuser um preço diferente de € 56 para a margem direita, recusem e peçam outro carro. Uber e Bolt não têm tarifa fixa, e o ponto deles é outro, a porta 16a."
+      ]
+     ],
+     "rota": "https://www.google.com/maps/dir/?api=1&origin=Terminal%202E%20Paris%20Charles%20de%20Gaulle&destination=15%20ter%20Rue%20Lamblardie%2C%2075012%20Paris&travelmode=driving"
+    },
+    {
+     "nome": "RER B e RER A",
+     "icone": "trem",
+     "selo": "Mais barato",
+     "preco": "€ 42",
+     "precoNota": "3 bilhetes de € 14, a Pilar viaja de graça",
+     "tempo": "cerca de 75 min até o hotel",
+     "itens": [
+      [
+       "Onde pegar",
+       "A estação de RER B Aéroport Charles de Gaulle 2 fica a cerca de 10 minutos a pé do Terminal 2E. Cada adulto e a Perola, que com 10 anos paga tarifa inteira, precisam do bilhete de aeroporto de € 14."
+      ],
+      [
+       "O caminho até o hotel",
+       "RER B no sentido Paris até Châtelet-Les Halles, baldeação para o RER A no sentido Marne-la-Vallée ou Boissy-Saint-Léger até Nation, e 12 minutos a pé até o hotel. O RER A e o RER B têm todas as estações acessíveis, mas a baldeação em Châtelet-Les Halles é longa."
+      ],
+      [
+       "A ressalva",
+       "Com duas malas grandes, duas mochilas e a Pilar no colo depois de um voo noturno, é a opção que menos recomendo. Fica aqui só como comparação de preço."
+      ]
+     ],
+     "rota": "https://www.google.com/maps/dir/?api=1&origin=Aeroport%20Charles%20de%20Gaulle%202%20TGV%20RER%20station&destination=15%20ter%20Rue%20Lamblardie%2C%2075012%20Paris&travelmode=transit"
+    }
+   ]
   }
-],
-
-hospedagem: {
-  nome: "Aparthotel Adagio Paris Nation",
-  endereco: "15 ter Rue Lamblardie, 75012 Paris",
-  metro: "A estação mais próxima é Daumesnil (linhas 6 e 8), a cerca de 220 metros, uns 3 a 4 minutos a pé. Bel-Air (linha 6) fica a cerca de 290 metros e Nation (linhas 1, 2, 6 e RER A) a uns 12 minutos a pé.",
-  checkin: "Dia 9, a partir das 10h (check-in antecipado já pago)",
-  checkout: "Dia 14, até as 11h",
-  nota: "Apartamento de um quarto, com cama de casal, sofá conversível, cozinha equipada e banheira, que combina com o ritmo de café da manhã e jantar em casa. O berço da Pilar aparece como pendente na reserva do hotel. O hotel pede, na chegada, o cartão de crédito usado no pagamento, com o nome igual ao do documento.",
-  porPerto: [
-    { i:"metro", t:"Metrô mais próximo", d:"Daumesnil, linhas 6 e 8, a 3 a 4 minutos a pé. É a estação de partida da maioria dos trajetos deste roteiro. Nation (linha 1 e RER A) só entra no dia da Disney e na volta do Louvre e das Tuileries." },
-    { i:"mercado", t:"Mercados e supermercados", d:"Mon Marché, 4 Place Félix Éboué, 4,0 estrelas com 84 avaliações, a cerca de 220 metros, aberto das 8h30 às 21h30 e aos domingos das 8h30 às 12h30. Monoprix, 45 Rue de Reuilly, aberto das 8h às 20h45 e aos domingos das 9h às 19h45. Carrefour City, 47 Rue Jacques Hillairet, a uns 9 minutos a pé, aberto das 7h às 22h e aos domingos das 9h às 13h." },
-    { i:"mercado", t:"Hortifruti e feira", d:"Le Primeur Daumesnil, 256 Avenue Daumesnil, 3,9 estrelas com 128 avaliações, aberto todos os dias das 8h às 19h30, a uns 8 minutos a pé. A feira Marché Daumesnil, na Place Félix Éboué e no Boulevard de Reuilly, funciona às terças e sextas das 7h às 13h30, a menos de 5 minutos a pé, com frutas, legumes, peixe e carnes." },
-    { i:"pao", t:"Padaria", d:"Boulangerie Au Saint-Honoré, 219 Avenue Daumesnil, 4,4 estrelas com 233 avaliações, aberta de sexta a terça, das 7h às 20h30, e fechada às quartas e quintas. Na quarta, dia da saída, use a Leroy Monti, 203 Avenue Daumesnil, 4,1 estrelas com 230 avaliações, aberta de terça a domingo e fechada às segundas." },
-    { i:"farmacia", t:"Farmácia", d:"Pharmacie Lamblardie, 6 Rue Lamblardie, 4,4 estrelas com 51 avaliações, a 1 minuto do hotel, aberta de segunda a sexta das 8h30 às 20h, sábado das 9h às 19h30 e fechada aos domingos. Pharmacie de Reuilly, 27 Boulevard de Reuilly, 4,9 estrelas com 101 avaliações, aberta todos os dias das 9h às 20h, a uns 6 minutos a pé." },
-    { i:"loja", t:"Centro de compras", d:"Bercy Village, 28 Rue François Truffaut, 4,4 estrelas com mais de 30 mil avaliações, a cerca de 1,2 km, com restaurantes e lojas. De metrô, linha 6 de Daumesnil até Bercy, direção Charles de Gaulle-Étoile, 2 estações. É mais para comer e passear do que para compras. O Centro Comercial Italie Deux, 30 Avenue d'Italie, 4,0 estrelas com mais de 18 mil avaliações, tem supermercado e muitas lojas." },
-    { i:"alerta", t:"Sobre o bairro", d:"O entorno é residencial e bem servido de comércio. Como em qualquer cidade grande, fiquem atentos a bolsas e celulares no metrô e em volta da Place de la Nation à noite." }
+ ],
+ "hospedagem": {
+  "nome": "Aparthotel Adagio Paris Nation",
+  "endereco": "15 ter Rue Lamblardie, 75012 Paris",
+  "metro": "A estação mais próxima é Daumesnil (linhas 6 e 8), a cerca de 220 metros, uns 3 a 4 minutos a pé. Bel-Air (linha 6) fica a cerca de 290 metros e Nation (linhas 1, 2, 6 e RER A) a uns 12 minutos a pé.",
+  "checkin": "Dia 9, a partir das 10h (check-in antecipado já pago)",
+  "checkout": "Dia 14, até as 11h",
+  "nota": "Apartamento de um quarto, com cama de casal, sofá conversível, cozinha equipada e banheira, que combina com o ritmo de café da manhã e jantar em casa. O berço da Pilar aparece como pendente na reserva do hotel. O hotel pede, na chegada, o cartão de crédito usado no pagamento, com o nome igual ao do documento.",
+  "porPerto": [
+   {
+    "i": "metro",
+    "t": "Metrô mais próximo",
+    "d": "Daumesnil, linhas 6 e 8, a 3 a 4 minutos a pé. É a estação de partida da maioria dos trajetos deste roteiro. Nation (linha 1 e RER A) só entra no dia da Disney e na volta do Louvre e das Tuileries."
+   },
+   {
+    "i": "mercado",
+    "t": "Mercados e supermercados",
+    "d": "Mon Marché, 4 Place Félix Éboué, 4,0 estrelas com 84 avaliações, a cerca de 220 metros, aberto das 8h30 às 21h30 e aos domingos das 8h30 às 12h30. Monoprix, 45 Rue de Reuilly, aberto das 8h às 20h45 e aos domingos das 9h às 19h45. Carrefour City, 47 Rue Jacques Hillairet, a uns 9 minutos a pé, aberto das 7h às 22h e aos domingos das 9h às 13h."
+   },
+   {
+    "i": "mercado",
+    "t": "Hortifruti e feira",
+    "d": "Le Primeur Daumesnil, 256 Avenue Daumesnil, 3,9 estrelas com 128 avaliações, aberto todos os dias das 8h às 19h30, a uns 8 minutos a pé. A feira Marché Daumesnil, na Place Félix Éboué e no Boulevard de Reuilly, funciona às terças e sextas das 7h às 13h30, a menos de 5 minutos a pé, com frutas, legumes, peixe e carnes."
+   },
+   {
+    "i": "pao",
+    "t": "Padaria",
+    "d": "Boulangerie Au Saint-Honoré, 219 Avenue Daumesnil, 4,4 estrelas com 233 avaliações, aberta de sexta a terça, das 7h às 20h30, e fechada às quartas e quintas. Na quarta, dia da saída, use a Leroy Monti, 203 Avenue Daumesnil, 4,1 estrelas com 230 avaliações, aberta de terça a domingo e fechada às segundas."
+   },
+   {
+    "i": "farmacia",
+    "t": "Farmácia",
+    "d": "Pharmacie Lamblardie, 6 Rue Lamblardie, 4,4 estrelas com 51 avaliações, a 1 minuto do hotel, aberta de segunda a sexta das 8h30 às 20h, sábado das 9h às 19h30 e fechada aos domingos. Pharmacie de Reuilly, 27 Boulevard de Reuilly, 4,9 estrelas com 101 avaliações, aberta todos os dias das 9h às 20h, a uns 6 minutos a pé."
+   },
+   {
+    "i": "loja",
+    "t": "Centro de compras",
+    "d": "Bercy Village, 28 Rue François Truffaut, 4,4 estrelas com mais de 30 mil avaliações, a cerca de 1,2 km, com restaurantes e lojas. De metrô, linha 6 de Daumesnil até Bercy, direção Charles de Gaulle-Étoile, 2 estações. É mais para comer e passear do que para compras. O Centro Comercial Italie Deux, 30 Avenue d'Italie, 4,0 estrelas com mais de 18 mil avaliações, tem supermercado e muitas lojas."
+   },
+   {
+    "i": "alerta",
+    "t": "Sobre o bairro",
+    "d": "O entorno é residencial e bem servido de comércio. Como em qualquer cidade grande, fiquem atentos a bolsas e celulares no metrô e em volta da Place de la Nation à noite."
+   }
   ]
-},
-
-transporte: {
-  recomendacao: "Fiz a conta dia a dia. Vocês são três pagantes: a Perola, com 10 anos, paga tarifa inteira, e a Pilar, com menos de 4 anos, viaja de graça. Os trajetos de metrô e RER somam 30 bilhetes de € 2,55, ou € 76,50 no total: sábado (ida e volta), domingo (três trechos), segunda (Disney, ida e volta) e terça (três trechos). O Navigo Semaine custa mais de € 32 por pessoa e vale de segunda a domingo, então só cobriria segunda, terça e quarta: seriam mais de € 97 para três pessoas, contra cerca de € 38 em bilhetes avulsos nessa semana. Não compensa. Desde janeiro de 2025 o bilhete avulso de metrô e RER é único para toda a Île-de-France, inclusive até a Disney, com uma exceção: as linhas de aeroporto. Os táxis entram na chegada e na ida à Gare du Nord, com as malas.",
-  bilhetes: [
-    { nome:"Bilhete de metrô, RER e trem (unificado)", preco:"€ 2,55", nota:"por pessoa e por trajeto, com baldeações incluídas. Vale para metrô, RER e trem em toda a região, inclusive até a Disney. Crianças de 4 a 9 anos pagam metade, a Perola, com 10, paga inteiro, e a Pilar não paga", ideal:"todos os trajetos de metrô e RER deste roteiro" },
-    { nome:"Bilhete de aeroporto (RER B)", preco:"€ 14", nota:"por pessoa, tarifa própria do trajeto de aeroporto. Só entra se optarem pelo RER B em vez do táxi na chegada", ideal:"alternativa ao táxi na chegada" }
+ },
+ "transporte": {
+  "recomendacao": "Fiz a conta dia a dia. Vocês são três pagantes: a Perola, com 10 anos, paga tarifa inteira, e a Pilar, com menos de 4 anos, viaja de graça. Os trajetos de metrô e RER somam 27 bilhetes de € 2,55, ou € 68,85 no total: sábado (ida e volta), domingo (três trechos), segunda (ida e volta) e terça (Disney, ida e volta). O ônibus Hop-On Hop-Off do sábado já está pago e não entra na conta. O Navigo Semaine custa mais de € 32 por pessoa e vale de segunda a domingo, então só cobriria segunda, terça e quarta: seriam mais de € 97 para três pessoas, contra cerca de € 31 em bilhetes avulsos nessa semana. Não compensa. Desde janeiro de 2025 o bilhete avulso de metrô e RER é único para toda a Île-de-France, inclusive até a Disney, com uma exceção: as linhas de aeroporto. Os táxis entram na chegada e na ida à Gare du Nord, com as malas.",
+  "bilhetes": [
+   {
+    "nome": "Bilhete de metrô, RER e trem (unificado)",
+    "preco": "€ 2,55",
+    "nota": "por pessoa e por trajeto, com baldeações incluídas. Vale para metrô, RER e trem em toda a região, inclusive até a Disney. Crianças de 4 a 9 anos pagam metade, a Perola, com 10, paga inteiro, e a Pilar não paga",
+    "ideal": "todos os trajetos de metrô e RER deste roteiro"
+   },
+   {
+    "nome": "Bilhete de aeroporto (RER B)",
+    "preco": "€ 14",
+    "nota": "por pessoa, tarifa própria do trajeto de aeroporto. Só entra se optarem pelo RER B em vez do táxi na chegada",
+    "ideal": "alternativa ao táxi na chegada"
+   }
   ],
-  celular: [
-    ["Onde comprar","Aplicativo Île-de-France Mobilités, que tem versão em português, ou Bonjour RATP. Instalem ainda no Brasil."],
-    ["Sem cartão físico","Não precisam tirar nenhum cartão. Pelo aplicativo, o bilhete fica no celular, comprado e validado ali mesmo."],
-    ["Como usar","Abram o bilhete no aplicativo antes de entrar na catraca, aproximem o celular do validador e esperem o sinal verde. Cada pessoa com mais de 4 anos precisa do próprio bilhete."],
-    ["Táxi para a Gare du Nord","Para o dia 14, reservem um táxi comum pelo aplicativo G7 ou pelo telefone 3607. O táxi parisiense cobra € 4 pela reserva imediata e € 7 pela reserva com antecedência, além do taxímetro, segundo as tarifas de 2026. Quatro pessoas cabem em um táxi comum."]
+  "celular": [
+   [
+    "Onde comprar",
+    "Aplicativo Île-de-France Mobilités, que tem versão em português, ou Bonjour RATP. Instalem ainda no Brasil."
+   ],
+   [
+    "Sem cartão físico",
+    "Não precisam tirar nenhum cartão. Pelo aplicativo, o bilhete fica no celular, comprado e validado ali mesmo."
+   ],
+   [
+    "Como usar",
+    "Abram o bilhete no aplicativo antes de entrar na catraca, aproximem o celular do validador e esperem o sinal verde. Cada pessoa com mais de 4 anos precisa do próprio bilhete."
+   ],
+   [
+    "Táxi para a Gare du Nord",
+    "Para o dia 14, reservem um táxi comum pelo aplicativo G7 ou pelo telefone 3607. O táxi parisiense cobra € 4 pela reserva imediata e € 7 pela reserva com antecedência, além do taxímetro, segundo as tarifas de 2026. Quatro pessoas cabem em um táxi comum."
+   ]
   ],
-  avisos: [
-    "O bilhete de papelão não existe mais. Hoje tudo é pelo celular ou por um cartão sem contato chamado Navigo Easy, que vocês não vão precisar.",
-    "Validem sempre o bilhete ao entrar, mesmo em estações sem catraca física. Sem validação, a fiscalização multa na hora, mesmo com o bilhete comprado.",
-    "Só a linha 14 do metrô é totalmente acessível. As outras linhas têm escada, e por isso a Pilar vai no canguru. O RER A e o RER B têm todas as estações acessíveis, e 100% dos ônibus de Paris são acessíveis, com rampa.",
-    "Uber e Bolt: a lei francesa exige dispositivo de retenção para menores de 10 anos, e a Pilar precisa de cadeirinha. O táxi é dispensado por lei, e o motorista de aplicativo pode recusar a corrida sem cadeirinha. Por isso o táxi oficial é a opção deste roteiro. A Perola, com 10 anos, já pode usar só o cinto.",
-    "Em linhas mais antigas a porta do vagão não abre sozinha. Levantem a alavanca ou apertem o botão verde.",
-    "Alguns trechos da linha 6 são em viaduto elevado, com a ponte sobre o Sena e a estação Bir-Hakeim. Se isso incomodar o Lucas, o táxi ou o ônibus resolvem o trecho."
+  "avisos": [
+   "O bilhete de papelão não existe mais. Hoje tudo é pelo celular ou por um cartão sem contato chamado Navigo Easy, que vocês não vão precisar.",
+   "Validem sempre o bilhete ao entrar, mesmo em estações sem catraca física. Sem validação, a fiscalização multa na hora, mesmo com o bilhete comprado.",
+   "Só a linha 14 do metrô é totalmente acessível. As outras linhas têm escada, e por isso a Pilar vai no canguru. O RER A e o RER B têm todas as estações acessíveis, e 100% dos ônibus de Paris são acessíveis, com rampa.",
+   "Uber e Bolt: a lei francesa exige dispositivo de retenção para menores de 10 anos, e a Pilar precisa de cadeirinha. O táxi é dispensado por lei, e o motorista de aplicativo pode recusar a corrida sem cadeirinha. Por isso o táxi oficial é a opção deste roteiro. A Perola, com 10 anos, já pode usar só o cinto.",
+   "Em linhas mais antigas a porta do vagão não abre sozinha. Levantem a alavanca ou apertem o botão verde.",
+   "Alguns trechos da linha 6 são em viaduto elevado, com a ponte sobre o Sena e a estação Bir-Hakeim. Se isso incomodar o Lucas, o táxi ou o ônibus resolvem o trecho."
   ]
-},
-
-preparacao: {
-  texto: "Cada item aqui é para resolver ainda no Brasil, com o passo a passo.",
-  blocos: [
-    { titulo:"Bagagem de mão", icone:"passaporte", itens:[
-      ["Passaportes","Um para cada um dos quatro, inclusive a Pilar, com validade mínima de 3 meses após a saída da Europa. O Eurostar exige passaporte também de bebês e crianças."],
-      ["Comprovantes","Reserva do Adagio (código QQMDJGLB), bilhetes da Air France (código YD66NL), bilhetes do Eurostar (código YGVMZJ), ingresso do Louvre e apólice do seguro viagem. Levem tudo impresso além do digital."],
-      ["Cartão da reserva","O hotel pede, na chegada, o cartão de crédito usado no pagamento, e o nome no documento de identidade precisa ser igual ao do cartão."],
-      ["Certidão das crianças","Levem a certidão de nascimento da Perola e da Pilar, original ou cópia autenticada. Com os dois pais viajando, dificilmente será pedida, mas resolve qualquer dúvida sobre parentesco."],
-      ["Eletrônicos","Celular, carregador, fones de ouvido e power bank. O áudio guia do Louvre exige fones, e o power bank precisa ir na bagagem de mão."]
-    ]},
-    { titulo:"Entrada na Europa e a rota Londres e Lisboa", icone:"escudo", itens:[
-      ["EES, o que é e como funciona","Desde 10 de abril de 2026 o sistema de entrada e saída (EES) está em operação em todas as fronteiras externas do espaço Schengen e substituiu o carimbo no passaporte. É um registro digital: passaporte e foto de rosto para todos, e digitais só a partir dos 12 anos, então a Perola e a Pilar fazem só a foto. Dá para adiantar o cadastro de passaporte e foto pelo aplicativo oficial Travel to Europe, até 72 horas antes da viagem."],
-      ["ETIAS, atenção aqui","Ainda NÃO está em vigor, não há aplicações abertas e a União Europeia não confirmou data de início. Nenhum site emite ETIAS hoje, então qualquer cobrança por isso é golpe: não paguem nada."],
-      ["Londres, ETA britânico","Depois de Paris vocês vão de Eurostar para Londres, e todos precisam de ETA, inclusive a Pilar. Custa £ 20 por pessoa, no total £ 80 para os quatro, e é pedido pelo aplicativo UK ETA ou pelo site gov.uk/eta. Cuidado com sites que imitam o do governo e cobram mais. A maioria é aprovada em até 3 dias úteis, então peçam já."],
-      ["Lisboa, outra entrada em Schengen","Portugal é Schengen, e não pede nenhum documento além do passaporte. Como vocês saem do espaço Schengen para o Reino Unido e voltam por Lisboa, haverá um novo registro de entrada no EES na chegada em Lisboa. Os 90 dias por período de 180 dias contam para o espaço Schengen todo, não por país."],
-      ["Prova de meios na imigração","O agente pode pedir prova de que vocês conseguem se manter na viagem. O valor de referência é € 65 por dia por pessoa com hospedagem já paga, ou € 120 por dia sem hospedagem paga. Como o hotel está pago, vale o valor menor. Tenham parte em espécie e visível, junto com extrato ou cartão internacional."],
-      ["Seguro viagem","Recomendado para os quatro, com cobertura mínima de € 30.000 para despesas médicas e repatriação, válida no período inteiro, e que inclua o Reino Unido. Salvem o número da apólice e o telefone de emergência 24h antes de embarcar."]
-    ]},
-    { titulo:"Chip de celular, só eSIM", icone:"wifi", itens:[
-      ["Por que eSIM","Como a viagem é daqui a poucos dias, chip físico não chega a tempo. O eSIM é comprado e instalado pelo celular, por Wi-Fi, sem sair de casa."],
-      ["Qual comprar","Uma opção que serve para Paris, Londres e Lisboa é o plano regional Europa e Reino Unido, que cobre França, Portugal e Reino Unido. Duas marcas conhecidas são a Airalo (plano EUconnect, só dados) e a Holafly (plano Europa, dados ilimitados, 40 países). Confiram a lista de países na página do plano antes de pagar."],
-      ["Compatibilidade","Cada celular precisa ser compatível com eSIM e estar desbloqueado. Testem em Ajustes se existe a opção Adicionar eSIM antes de comprar."],
-      ["Quantos","Um eSIM para cada celular que for usado na viagem."],
-      ["Ativação","Instalem agora, ainda no Brasil, e só liguem o plano de dados ao pousar em Paris, para não gastar os dias antes de viajar."],
-      ["Tradutor e mapa","Baixem o Google Tradutor com francês offline, que traduz placas por foto, e o mapa de Paris no Google Maps."]
-    ]},
-    { titulo:"Dinheiro e cartão", icone:"euro", itens:[
-      ["Sobre o imposto (IOF)","Existe uma taxa de 3,5% cobrada pelo governo em qualquer compra ou saque internacional, seja no cartão de crédito, no débito ou comprando euro em espécie. Ela é igual em todo lugar, então não é isso que faz um jeito de pagar ser mais barato que outro."],
-      ["O que realmente muda de preço","O que varia é a cotação do euro que cada banco ou cartão usa para converter. Um cartão comum costuma usar uma cotação pior. Contas como Wise e Nomad usam a cotação comercial, mais próxima da real."],
-      ["Estratégia","Abram uma conta global (Wise ou Nomad são as mais usadas) antes de viajar, convertam euros com antecedência e usem esse cartão na maioria dos pagamentos. Cartões e carteiras digitais são amplamente aceitos em Paris."],
-      ["Espécie","Entre € 150 e € 200 por adulto como reserva, incluindo o valor que serve de prova de meios. Caixas eletrônicos funcionam 24h para saque, se precisarem complementar."],
-      ["Na maquininha","Recusem sempre a cobrança em reais (a chamada conversão dinâmica). Escolher euro sai mais barato."],
-      ["Antes de embarcar","Avisem o banco da viagem internacional para evitar bloqueio do cartão logo no primeiro dia."]
-    ]},
-    { titulo:"Reembolso de imposto (tax free) nos três países", icone:"loja", itens:[
-      ["França","Vale para quem mora fora da UE e tem 16 anos ou mais. A compra precisa passar de € 100 no mesmo magasin, ou na mesma rede de lojas, no mesmo dia ou em até 3 dias seguidos. Peçam o formulário na loja, com o passaporte na mão, no momento da compra. A loja pode cobrar taxa de processamento do operador, e o valor devolvido é o imposto menos essa taxa."],
-      ["Onde validar a França","Na saída da União Europeia, com as compras na mão, não na mala despachada. Como vocês vão de Eurostar para Londres, a validação pode ser feita no terminal Eurostar da Gare du Nord, depois do check-in e da segurança, nas bornas PABLO indicadas como Détaxe, Tax Refund. Como vocês voltam à UE por Lisboa, perguntem à alfândega da estação se a validação ali vale para o seu caso."],
-      ["Reino Unido","Não há reembolso de imposto para turistas em compras feitas na loja e levadas na bagagem. O Reino Unido acabou com o esquema em 2021. Só vale se a loja enviar a compra direto para um endereço fora do país."],
-      ["Portugal","O mínimo é de mais de € 50 por fatura sem IVA, o que dá cerca de € 61,50 com IVA de 23%. Peçam o tax free na loja com o passaporte. A validação é feita no último ponto de saída da UE, que no caso de vocês será o aeroporto de Lisboa, nos quiosques do e-Tax Free ou na alfândega."],
-      ["Como não errar","Guardem as notas originais, peçam o formulário na hora da compra, deixem as compras em local de fácil acesso para mostrar à alfândega e cheguem com folga."]
-    ]},
-    { titulo:"Com a Pilar e a Perola, sem carrinho", icone:"pessoas", itens:[
-      ["Carrinho","A recomendação desta consultoria é não levar carrinho. O metrô de Paris tem muita escada, e só uma linha, a 14, é totalmente acessível. Em Lisboa, o centro histórico tem ladeira e calçada de pedra. Para a Pilar, de 1 ano e 8 meses, levem um canguru ou sling bem confortável. Se mesmo assim preferirem levar um, que seja compacto e dobrável, e o Eurostar permite levar o carrinho de graça, dobrado no bagageiro."],
-      ["Cadeirinha","Em táxi não é exigida por lei na França. Em Uber e Bolt a Pilar precisa de cadeirinha, e o motorista pode recusar a corrida. Por isso este roteiro usa o táxi oficial."],
-      ["Comida da Pilar","Supermercados e farmácias vendem papinhas e leite, e a Disney vende papinhas dentro do parque. O apartamento tem cozinha equipada, e o café da manhã e os jantares são em casa."],
-      ["Trocadores","Há trocadores em muitos banheiros da Disney e em todos os trens do Eurostar."]
-    ]},
-    { titulo:"Apps essenciais, para instalar antes", icone:"celular", itens:[
-      ["Transporte","Île-de-France Mobilités (compra de bilhete) e Bonjour RATP (rotas e horários em tempo real)."],
-      ["Táxi","G7 TAXI, para reservar o táxi do dia 14 até a Gare du Nord."],
-      ["Mapas","Google Maps para rotas, e Citymapper como alternativa que combina metrô, ônibus e caminhada em tempo real."],
-      ["Ingressos","WeGoTrip, para o ingresso e o áudio guia do Louvre, e o aplicativo da Disneyland Paris, para horários e atrações."],
-      ["Documentação","Travel to Europe, para adiantar o EES, UK ETA, para o ETA britânico, e o app do Eurostar, para o embarque do dia 14."]
-    ]},
-    { titulo:"Mala de outubro", icone:"mala", itens:[
-      ["Temperatura","Em torno de 9°C a 17°C, com chuva fina frequente. Não é frio de neve, mas venta e esfria no fim da tarde."],
-      ["Camadas","Casaco médio impermeável para cada um, blusa de manga longa e um lenço fino. Para a Pilar, uma camada extra e uma muda de roupa completa na bolsa."],
-      ["Pés","Tênis confortável e à prova d'água para todos. Vocês vão caminhar dentro da Disney, do Louvre e dos jardins."],
-      ["Capa de chuva","Uma para cada, na mochila, todos os dias. Guarda-chuva atrapalha em fila e com a Pilar no canguru."]
-    ]},
-    { titulo:"Compras estratégicas, café da manhã e jantar em casa", icone:"loja", itens:[
-      ["Farmácia pequena","Pharmacie Lamblardie, 6 Rue Lamblardie, a 1 minuto do hotel, para o básico. Pharmacie de Reuilly, 27 Boulevard de Reuilly, aberta todos os dias, inclusive aos domingos."],
-      ["Farmácia grande de cosméticos","Citypharma, 86 Boulevard Soult, no 12º, aberta 24 horas, com dermocosméticos franceses a preços em geral mais baixos que os das farmácias pequenas. Os produtos ficam em vitrines e é preciso pedir a um funcionário. Levem o passaporte, que é pedido para o tax free."],
-      ["Supermercados e hortifruti","Mon Marché, Monoprix e Carrefour City ficam a poucos minutos do apartamento, e vendem papinhas, leite, fraldas e tudo para o café da manhã e os jantares. Para frutas e legumes frescos, Le Primeur Daumesnil e a feira Marché Daumesnil, às terças e sextas."],
-      ["Outlet","La Vallée Village, ao lado da Disney, aberto todos os dias, em geral das 10h às 20h. De RER A, desçam em Val d'Europe, uma estação antes de Chessy, e caminhem cerca de 10 minutos pelo shopping Val d'Europe, que também tem supermercado. Não entra no dia do parque, que já é cheio, e só vale a pena se preferirem um dia de compras a um dia de passeio."],
-      ["Grife e perfumaria","A terça traz as duas opções: a Avenue des Champs-Élysées, com a loja principal da Louis Vuitton, e as Galeries Lafayette Haussmann, com moda de luxo e perfumaria e cosméticos franceses no térreo."]
-    ]}
+ },
+ "preparacao": {
+  "texto": "Cada item aqui é para resolver ainda no Brasil, com o passo a passo.",
+  "blocos": [
+   {
+    "titulo": "Bagagem de mão",
+    "icone": "passaporte",
+    "itens": [
+     [
+      "Passaportes",
+      "Um para cada um dos quatro, inclusive a Pilar, com validade mínima de 3 meses após a saída da Europa. O Eurostar exige passaporte também de bebês e crianças."
+     ],
+     [
+      "Comprovantes",
+      "Reserva do Adagio (código QQMDJGLB), bilhetes da Air France (código YD66NL), bilhetes do Eurostar (código YGVMZJ), ingresso do Louvre e apólice do seguro viagem. Levem tudo impresso além do digital."
+     ],
+     [
+      "Cartão da reserva",
+      "O hotel pede, na chegada, o cartão de crédito usado no pagamento, e o nome no documento de identidade precisa ser igual ao do cartão."
+     ],
+     [
+      "Certidão das crianças",
+      "Levem a certidão de nascimento da Perola e da Pilar, original ou cópia autenticada. Com os dois pais viajando, dificilmente será pedida, mas resolve qualquer dúvida sobre parentesco."
+     ],
+     [
+      "Eletrônicos",
+      "Celular, carregador, fones de ouvido e power bank. O áudio guia do Louvre exige fones, e o power bank precisa ir na bagagem de mão."
+     ]
+    ]
+   },
+   {
+    "titulo": "Entrada na Europa e a rota Londres e Lisboa",
+    "icone": "escudo",
+    "itens": [
+     [
+      "EES, o que é e como funciona",
+      "Desde 10 de abril de 2026 o sistema de entrada e saída (EES) está em operação em todas as fronteiras externas do espaço Schengen e substituiu o carimbo no passaporte. É um registro digital: passaporte e foto de rosto para todos, e digitais só a partir dos 12 anos, então a Perola e a Pilar fazem só a foto. Dá para adiantar o cadastro de passaporte e foto pelo aplicativo oficial Travel to Europe, até 72 horas antes da viagem."
+     ],
+     [
+      "ETIAS, atenção aqui",
+      "Ainda NÃO está em vigor, não há aplicações abertas e a União Europeia não confirmou data de início. Nenhum site emite ETIAS hoje, então qualquer cobrança por isso é golpe: não paguem nada."
+     ],
+     [
+      "Londres, ETA britânico",
+      "Depois de Paris vocês vão de Eurostar para Londres, e todos precisam de ETA, inclusive a Pilar. Custa £ 20 por pessoa, no total £ 80 para os quatro, e é pedido pelo aplicativo UK ETA ou pelo site gov.uk/eta. Cuidado com sites que imitam o do governo e cobram mais. A maioria é aprovada em até 3 dias úteis, então peçam já."
+     ],
+     [
+      "Lisboa, outra entrada em Schengen",
+      "Portugal é Schengen, e não pede nenhum documento além do passaporte. Como vocês saem do espaço Schengen para o Reino Unido e voltam por Lisboa, haverá um novo registro de entrada no EES na chegada em Lisboa. Os 90 dias por período de 180 dias contam para o espaço Schengen todo, não por país."
+     ],
+     [
+      "Prova de meios na imigração",
+      "O agente pode pedir prova de que vocês conseguem se manter na viagem. O valor de referência é € 65 por dia por pessoa com hospedagem já paga, ou € 120 por dia sem hospedagem paga. Como o hotel está pago, vale o valor menor. Tenham parte em espécie e visível, junto com extrato ou cartão internacional."
+     ],
+     [
+      "Seguro viagem",
+      "Recomendado para os quatro, com cobertura mínima de € 30.000 para despesas médicas e repatriação, válida no período inteiro, e que inclua o Reino Unido. Salvem o número da apólice e o telefone de emergência 24h antes de embarcar."
+     ]
+    ]
+   },
+   {
+    "titulo": "Chip de celular, só eSIM",
+    "icone": "wifi",
+    "itens": [
+     [
+      "Por que eSIM",
+      "Como a viagem é daqui a poucos dias, chip físico não chega a tempo. O eSIM é comprado e instalado pelo celular, por Wi-Fi, sem sair de casa."
+     ],
+     [
+      "Qual comprar",
+      "Uma opção que serve para Paris, Londres e Lisboa é o plano regional Europa e Reino Unido, que cobre França, Portugal e Reino Unido. Duas marcas conhecidas são a Airalo (plano EUconnect, só dados) e a Holafly (plano Europa, dados ilimitados, 40 países). Confiram a lista de países na página do plano antes de pagar."
+     ],
+     [
+      "Compatibilidade",
+      "Cada celular precisa ser compatível com eSIM e estar desbloqueado. Testem em Ajustes se existe a opção Adicionar eSIM antes de comprar."
+     ],
+     [
+      "Quantos",
+      "Um eSIM para cada celular que for usado na viagem."
+     ],
+     [
+      "Ativação",
+      "Instalem agora, ainda no Brasil, e só liguem o plano de dados ao pousar em Paris, para não gastar os dias antes de viajar."
+     ],
+     [
+      "Tradutor e mapa",
+      "Baixem o Google Tradutor com francês offline, que traduz placas por foto, e o mapa de Paris no Google Maps."
+     ]
+    ]
+   },
+   {
+    "titulo": "Dinheiro e cartão",
+    "icone": "euro",
+    "itens": [
+     [
+      "Sobre o imposto (IOF)",
+      "Existe uma taxa de 3,5% cobrada pelo governo em qualquer compra ou saque internacional, seja no cartão de crédito, no débito ou comprando euro em espécie. Ela é igual em todo lugar, então não é isso que faz um jeito de pagar ser mais barato que outro."
+     ],
+     [
+      "O que realmente muda de preço",
+      "O que varia é a cotação do euro que cada banco ou cartão usa para converter. Um cartão comum costuma usar uma cotação pior. Contas como Wise e Nomad usam a cotação comercial, mais próxima da real."
+     ],
+     [
+      "Estratégia",
+      "Abram uma conta global (Wise ou Nomad são as mais usadas) antes de viajar, convertam euros com antecedência e usem esse cartão na maioria dos pagamentos. Cartões e carteiras digitais são amplamente aceitos em Paris."
+     ],
+     [
+      "Espécie",
+      "Entre € 150 e € 200 por adulto como reserva, incluindo o valor que serve de prova de meios. Caixas eletrônicos funcionam 24h para saque, se precisarem complementar."
+     ],
+     [
+      "Na maquininha",
+      "Recusem sempre a cobrança em reais (a chamada conversão dinâmica). Escolher euro sai mais barato."
+     ],
+     [
+      "Antes de embarcar",
+      "Avisem o banco da viagem internacional para evitar bloqueio do cartão logo no primeiro dia."
+     ]
+    ]
+   },
+   {
+    "titulo": "Reembolso de imposto (tax free) nos três países",
+    "icone": "loja",
+    "itens": [
+     [
+      "França",
+      "Vale para quem mora fora da UE e tem 16 anos ou mais. A compra precisa passar de € 100 no mesmo magasin, ou na mesma rede de lojas, no mesmo dia ou em até 3 dias seguidos. Peçam o formulário na loja, com o passaporte na mão, no momento da compra. A loja pode cobrar taxa de processamento do operador, e o valor devolvido é o imposto menos essa taxa."
+     ],
+     [
+      "Onde validar a França",
+      "Na saída da União Europeia, com as compras na mão, não na mala despachada. Como vocês vão de Eurostar para Londres, a validação pode ser feita no terminal Eurostar da Gare du Nord, depois do check-in e da segurança, nas bornas PABLO indicadas como Détaxe, Tax Refund. Como vocês voltam à UE por Lisboa, perguntem à alfândega da estação se a validação ali vale para o seu caso."
+     ],
+     [
+      "Reino Unido",
+      "Não há reembolso de imposto para turistas em compras feitas na loja e levadas na bagagem. O Reino Unido acabou com o esquema em 2021. Só vale se a loja enviar a compra direto para um endereço fora do país."
+     ],
+     [
+      "Portugal",
+      "O mínimo é de mais de € 50 por fatura sem IVA, o que dá cerca de € 61,50 com IVA de 23%. Peçam o tax free na loja com o passaporte. A validação é feita no último ponto de saída da UE, que no caso de vocês será o aeroporto de Lisboa, nos quiosques do e-Tax Free ou na alfândega."
+     ],
+     [
+      "Como não errar",
+      "Guardem as notas originais, peçam o formulário na hora da compra, deixem as compras em local de fácil acesso para mostrar à alfândega e cheguem com folga."
+     ]
+    ]
+   },
+   {
+    "titulo": "Com a Pilar e a Perola, sem carrinho",
+    "icone": "pessoas",
+    "itens": [
+     [
+      "Carrinho",
+      "A recomendação desta consultoria é não levar carrinho. O metrô de Paris tem muita escada, e só uma linha, a 14, é totalmente acessível. Em Lisboa, o centro histórico tem ladeira e calçada de pedra. Para a Pilar, de 1 ano e 8 meses, levem um canguru ou sling bem confortável. Se mesmo assim preferirem levar um, que seja compacto e dobrável, e o Eurostar permite levar o carrinho de graça, dobrado no bagageiro."
+     ],
+     [
+      "Cadeirinha",
+      "Em táxi não é exigida por lei na França. Em Uber e Bolt a Pilar precisa de cadeirinha, e o motorista pode recusar a corrida. Por isso este roteiro usa o táxi oficial."
+     ],
+     [
+      "Comida da Pilar",
+      "Supermercados e farmácias vendem papinhas e leite, e a Disney vende papinhas dentro do parque. O apartamento tem cozinha equipada, e o café da manhã e os jantares são em casa."
+     ],
+     [
+      "Trocadores",
+      "Há trocadores em muitos banheiros da Disney e em todos os trens do Eurostar."
+     ]
+    ]
+   },
+   {
+    "titulo": "Apps essenciais, para instalar antes",
+    "icone": "celular",
+    "itens": [
+     [
+      "Transporte",
+      "Île-de-France Mobilités (compra de bilhete) e Bonjour RATP (rotas e horários em tempo real)."
+     ],
+     [
+      "Táxi",
+      "G7 TAXI, para reservar o táxi do dia 14 até a Gare du Nord."
+     ],
+     [
+      "Mapas",
+      "Google Maps para rotas, e Citymapper como alternativa que combina metrô, ônibus e caminhada em tempo real."
+     ],
+     [
+      "Ingressos",
+      "WeGoTrip, para o ingresso e o áudio guia do Louvre, e o aplicativo da Disneyland Paris, para horários e atrações."
+     ],
+     [
+      "Documentação",
+      "Travel to Europe, para adiantar o EES, UK ETA, para o ETA britânico, e o app do Eurostar, para o embarque do dia 14."
+     ]
+    ]
+   },
+   {
+    "titulo": "Mala de outubro",
+    "icone": "mala",
+    "itens": [
+     [
+      "Temperatura",
+      "Em torno de 9°C a 17°C, com chuva fina frequente. Não é frio de neve, mas venta e esfria no fim da tarde."
+     ],
+     [
+      "Camadas",
+      "Casaco médio impermeável para cada um, blusa de manga longa e um lenço fino. Para a Pilar, uma camada extra e uma muda de roupa completa na bolsa."
+     ],
+     [
+      "Pés",
+      "Tênis confortável e à prova d'água para todos. Vocês vão caminhar dentro da Disney, do Louvre e dos jardins."
+     ],
+     [
+      "Capa de chuva",
+      "Uma para cada, na mochila, todos os dias. Guarda-chuva atrapalha em fila e com a Pilar no canguru."
+     ]
+    ]
+   },
+   {
+    "titulo": "Se optarem por alugar carro",
+    "icone": "carro",
+    "itens": [
+     [
+      "Quando faz sentido",
+      "O roteiro foi montado para funcionar sem carro, com metrô, RER, ônibus e táxi. O carro entra como opção para quem preferir mais conforto nos dias da Disney e de Giverny."
+     ],
+     [
+      "Retirar no CDG",
+      "O desembarque é no Terminal 2E. As locadoras (Europcar, Sixt, Avis, Budget, Enterprise, Alamo, Hertz e outras) atendem no pátio externo dos terminais 2E e 2F, e o acesso é pelo nível de desembarque (placa Arrivées ou Arrivals), porta 2a. Os balcões funcionam em geral das 6h à meia-noite, e o voo pousa às 10h55."
+     ],
+     [
+      "Devolver perto da Gare du Nord",
+      "Avis, Europcar, Budget, Sixt, Hertz e outras têm agências na própria estação, no nível -1 do 18 Rue de Dunkerque (entrada de pedestres), e o carro é devolvido no estacionamento, com entrada pelo 112 Rue de Maubeuge ou pelo 3 e 4 Rue de Compiègne (nível 6). O Eurostar parte às 16h02: devolvam o carro até as 13h30, para chegar ao terminal às 14h30."
+     ],
+     [
+      "Documentos",
+      "As locadoras costumam pedir a CNH junto com a PID (permissão internacional para dirigir) ou tradução oficial, o passaporte e um cartão de crédito no nome do motorista principal, com senha, para a caução. A Pilar precisa de cadeirinha, que se pede na reserva. A Perola, com 10 anos, já pode usar só o cinto na França."
+     ],
+     [
+      "Velocidade e zona de baixa emissão",
+      "Em Paris o limite é de 30 km/h na maior parte das ruas, com algumas exceções a 50 km/h, e no Périphérique é de 50 km/h. O carro precisa do selo Crit'Air da zona de baixa emissão, que a locadora costuma fornecer. A Zona de Tráfego Limitado do centro só aceita moradores, trabalhadores, entregas e visitantes com destino dentro da zona."
+     ],
+     [
+      "Estacionamento rotativo na rua",
+      "É pago de segunda a sábado, das 9h às 20h, e gratuito à noite, aos domingos e nos feriados. Visitantes podem ficar no máximo 6 horas no mesmo lugar. Paga-se no parquímetro, com cartão, ou pelos aplicativos PayByPhone, ParkNow e Flowbird. Do 1º ao 11º arrondissement (zona 1), a tarifa é de € 6 na primeira hora, € 12 em 2 horas, € 24 em 3, € 39 em 4, € 57 em 5 e € 75 em 6. Do 12º ao 20º (zona 2), é de € 4, € 8, € 16, € 26, € 38 e € 50. A multa por não pagar é de € 75 na zona 1 e de € 50 na zona 2."
+     ],
+     [
+      "Estacionamento nos passeios",
+      "Na Disney, o estacionamento de visitantes custa cerca de € 30 por dia, abre das 8h às 23h30 e fecha 30 minutos depois do parque. Em Giverny, há vários estacionamentos gratuitos. No Louvre, no Orangerie e na Champs-Élysées, o carro não compensa, porque a vaga é cara e rara."
+     ]
+    ]
+   },
+   {
+    "titulo": "Compras estratégicas, café da manhã e jantar em casa",
+    "icone": "loja",
+    "itens": [
+     [
+      "Farmácia pequena",
+      "Pharmacie Lamblardie, 6 Rue Lamblardie, a 1 minuto do hotel, para o básico. Pharmacie de Reuilly, 27 Boulevard de Reuilly, aberta todos os dias, inclusive aos domingos."
+     ],
+     [
+      "Farmácia grande de cosméticos",
+      "Citypharma, 86 Boulevard Soult, no 12º, aberta 24 horas, com dermocosméticos franceses a preços em geral mais baixos que os das farmácias pequenas. Os produtos ficam em vitrines e é preciso pedir a um funcionário. Levem o passaporte, que é pedido para o tax free."
+     ],
+     [
+      "Supermercados e hortifruti",
+      "Mon Marché, Monoprix e Carrefour City ficam a poucos minutos do apartamento, e vendem papinhas, leite, fraldas e tudo para o café da manhã e os jantares. Para frutas e legumes frescos, Le Primeur Daumesnil e a feira Marché Daumesnil, às terças e sextas."
+     ],
+     [
+      "Outlet",
+      "La Vallée Village, ao lado da Disney, aberto todos os dias, em geral das 10h às 20h. De RER A, desçam em Val d'Europe, uma estação antes de Chessy, e caminhem cerca de 10 minutos pelo shopping Val d'Europe, que também tem supermercado. Não entra no dia do parque, que já é cheio, e só vale a pena se preferirem um dia de compras a um dia de passeio."
+     ],
+     [
+      "Grife e perfumaria",
+      "A terça traz as duas opções: a Avenue des Champs-Élysées, com a loja principal da Louis Vuitton, e as Galeries Lafayette Haussmann, com moda de luxo e perfumaria e cosméticos franceses no térreo."
+     ]
+    ]
+   }
   ],
-  checklist: [
-    "Passaportes dos quatro conferidos","ETA britânico pedido para os quatro","Seguro viagem contratado","eSIM comprado e instalado",
-    "Google Tradutor com francês offline baixado","Conta global aberta e euros convertidos","Banco avisado da viagem",
-    "App WeGoTrip e áudio guia do Louvre baixados","Horário do Orangerie reservado","Ingresso da Disney comprado",
-    "Cruzeiro no Sena reservado","Almoço especial de terça reservado","Berço da Pilar confirmado com o hotel",
-    "Comprovantes impressos na bagagem de mão","Reserva em espécie separada","Canguru ou sling na mala",
-    "Mapa de Paris baixado offline","Aplicativo Travel to Europe preenchido","Roteiro salvo em PDF","Adaptador de tomada na mala"
+  "checklist": [
+   "Passaportes dos quatro conferidos",
+   "Seguro viagem contratado",
+   "eSIM comprado e instalado",
+   "Google Tradutor com francês offline baixado",
+   "Conta global aberta e euros convertidos",
+   "Banco avisado da viagem",
+   "App WeGoTrip e áudio guia do Louvre baixados",
+   "Horário do Orangerie reservado",
+   "Horário do ônibus Hop-On Hop-Off conferido no ingresso",
+   "Almoço de segunda reservado, se quiserem mesa garantida",
+   "Berço da Pilar confirmado com o hotel",
+   "Comprovantes impressos na bagagem de mão",
+   "Reserva em espécie separada",
+   "Canguru ou sling na mala",
+   "Mapa de Paris baixado offline",
+   "Aplicativo Travel to Europe preenchido",
+   "Roteiro salvo em PDF",
+   "Adaptador de tomada na mala"
   ]
-},
-
-dias: [
-{
-  data:"Sexta, 9 de outubro",
-  titulo:"Chegada e primeira tarde perto do apartamento",
-  bairro:"12º arrondissement",
-  saida:"Dia leve, sem compromisso de horário",
-  paradas:[
-    { tipo:"passeio", hora:"10h55", titulo:"Desembarque no CDG e táxi até o apartamento", mapa:"Aparthotel Adagio Paris Nation, 15 ter Rue Lamblardie, 75012 Paris",
-      texto:"O voo pousa às 10h55 no Terminal 2E. A imigração costuma levar de 40 a 70 minutos, com o registro do EES e a esteira de bagagens. Depois, sigam as placas Taxis até a estação de táxis do nível de desembarque (placa Arrivées ou Arrivals), porta 10a, e peçam o táxi de tarifa fixa. O passo a passo, o preço e os cuidados contra golpes estão na seção do aeroporto.",
-      dica:"<b>O check-in antecipado a partir das 10h já está pago</b>, então o apartamento deve estar liberado quando chegarem. Tenham à mão o cartão de crédito usado na reserva e o documento com o mesmo nome.",
-      trajeto:{ modo:"taxi", texto:"CDG, Terminal 2E, porta 10a, até 15 ter Rue Lamblardie. € 56 de tarifa fixa, 45 a 60 minutos." } },
-
-    { tipo:"refeicao", hora:"14h00", titulo:"Almoço perto do apartamento",
-      nota:"Depois do voo, algo simples, perto e com mesa para criança. Os três ficam a poucos minutos a pé do apartamento.",
-      opcoes:[
-        { nome:"La Grange de Reuilly", detalhe:"3 Boulevard de Reuilly · 4,9 estrelas com 631 avaliações · brasserie de bairro, aberta todos os dias das 7h30 às 2h, 6 min a pé", preco:"20 a 28 €" },
-        { nome:"Le 217", detalhe:"217 Avenue Daumesnil · 4,7 estrelas com 1.471 avaliações · bistrô familiar, aberto das 12h às 16h e das 19h às 23h, 3 min a pé", preco:"20 a 28 €" },
-        { nome:"Au Bois Doré", detalhe:"270 Avenue Daumesnil · 4,8 estrelas com 850 avaliações · brasserie francesa, aberta todos os dias, 10 min a pé", preco:"20 a 28 €" }
-      ] },
-
-    { tipo:"passeio", hora:"15h30", titulo:"Compras de chegada", mapa:"Mon Marché, 4 Place Félix Éboué, 75012 Paris",
-      texto:"Aproveitem a tarde para abastecer a cozinha: o café da manhã e os jantares são em casa, então a lista de hoje rende para os próximos dias. A feira Marché Daumesnil funciona às terças e sextas até as 13h30, então hoje ela já estará fechando e fica para a terça.",
-      imperdivelTitulo:"Onde comprar perto do hotel",
-      imperdivel:[
-        "Mon Marché, 4 Place Félix Éboué, 4,0 estrelas com 84 avaliações, a cerca de 220 metros, aberto das 8h30 às 21h30",
-        "Monoprix, 45 Rue de Reuilly, aberto das 8h às 20h45, com papinhas, leite e fraldas",
-        "Le Primeur Daumesnil, 256 Avenue Daumesnil, aberto das 8h às 19h30, para frutas e legumes",
-        "Pharmacie Lamblardie, 6 Rue Lamblardie, 4,4 estrelas com 51 avaliações, a 1 minuto do hotel, aberta até 20h",
-        "Boulangerie Au Saint-Honoré, 219 Avenue Daumesnil, 4,4 estrelas com 233 avaliações, para o pão do café da manhã de sábado"
-      ],
-      dica:"Comprem agora o que a Pilar aceita, porque no sábado vocês saem cedo e passam o dia fora.",
-      trajeto:{ modo:"pe", texto:"A pé, 3 a 8 minutos, por calçada plana." } },
-
-    { tipo:"passeio", hora:"19h00", titulo:"Jantar em casa e noite livre",
-      texto:"Primeira noite sem deslocamento: cozinhem no apartamento com o que foi comprado à tarde. A cama cedo é o melhor preparo para sábado." }
+ },
+ "dias": [
+  {
+   "data": "Sexta, 9 de outubro",
+   "titulo": "Chegada e primeira tarde perto do apartamento",
+   "bairro": "12º arrondissement",
+   "saida": "Dia leve, sem compromisso de horário",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "10h55",
+     "titulo": "Desembarque no CDG e táxi até o apartamento",
+     "mapa": "Aparthotel Adagio Paris Nation, 15 ter Rue Lamblardie, 75012 Paris",
+     "texto": "O voo pousa às 10h55 no Terminal 2E. A imigração costuma levar de 40 a 70 minutos, com o registro do EES e a esteira de bagagens. Depois, sigam as placas Taxis até a estação de táxis do nível de desembarque (placa Arrivées ou Arrivals), porta 10a, e peçam o táxi de tarifa fixa. O passo a passo, o preço e os cuidados contra golpes estão na seção do aeroporto.",
+     "dica": "<b>O check-in antecipado a partir das 10h já está pago</b>, então o apartamento deve estar liberado quando chegarem. Tenham à mão o cartão de crédito usado na reserva e o documento com o mesmo nome.",
+     "trajeto": {
+      "modo": "taxi",
+      "texto": "CDG, Terminal 2E, porta 10a, até 15 ter Rue Lamblardie. € 56 de tarifa fixa, 45 a 60 minutos."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "14h00",
+     "titulo": "Almoço perto do apartamento",
+     "nota": "Depois do voo, algo simples, perto e com mesa para criança. Os três ficam a poucos minutos a pé do apartamento.",
+     "opcoes": [
+      {
+       "nome": "La Grange de Reuilly",
+       "detalhe": "3 Boulevard de Reuilly · 4,9 estrelas com 631 avaliações · brasserie de bairro, aberta todos os dias das 7h30 às 2h, 6 min a pé",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Le 217",
+       "detalhe": "217 Avenue Daumesnil · 4,7 estrelas com 1.471 avaliações · bistrô familiar, aberto das 12h às 16h e das 19h às 23h, 3 min a pé",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Au Bois Doré",
+       "detalhe": "270 Avenue Daumesnil · 4,8 estrelas com 850 avaliações · brasserie francesa, aberta todos os dias, 10 min a pé",
+       "preco": "20 a 28 €"
+      }
+     ]
+    },
+    {
+     "tipo": "passeio",
+     "hora": "15h30",
+     "titulo": "Compras de chegada",
+     "mapa": "Mon Marché, 4 Place Félix Éboué, 75012 Paris",
+     "texto": "Aproveitem a tarde para abastecer a cozinha: o café da manhã e os jantares em casa dependem disso, então a lista de hoje rende para os próximos dias. A feira Marché Daumesnil funciona às terças e sextas até as 13h30, então hoje ela já estará fechando.",
+     "imperdivelTitulo": "Onde comprar perto do hotel",
+     "imperdivel": [
+      "Mon Marché, 4 Place Félix Éboué, 4,0 estrelas com 84 avaliações, a cerca de 220 metros, aberto das 8h30 às 21h30",
+      "Monoprix, 45 Rue de Reuilly, aberto das 8h às 20h45, com papinhas, leite e fraldas",
+      "Le Primeur Daumesnil, 256 Avenue Daumesnil, aberto das 8h às 19h30, para frutas e legumes",
+      "Pharmacie Lamblardie, 6 Rue Lamblardie, 4,4 estrelas com 51 avaliações, a 1 minuto do hotel, aberta até 20h",
+      "Boulangerie Au Saint-Honoré, 219 Avenue Daumesnil, 4,4 estrelas com 233 avaliações, para o pão do café da manhã de sábado"
+     ],
+     "dica": "Comprem agora o que a Pilar aceita, porque no sábado vocês saem cedo e passam o dia fora.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 3 a 8 minutos, por calçada plana."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "19h00",
+     "titulo": "Jantar em casa e noite livre",
+     "texto": "Primeira noite sem deslocamento: cozinhem no apartamento com o que foi comprado à tarde. A cama cedo é o melhor preparo para sábado."
+    }
+   ],
+   "seChover": "A tarde já é de compras perto do apartamento. O supermercado, a padaria e a farmácia ficam a poucos minutos, e as compras de chegada podem ser feitas com chuva fina.",
+   "seSobrarEnergia": "A Pelouse de Reuilly, o gramado grande do Bois de Vincennes, fica a cerca de 20 minutos a pé do hotel pela Avenue Daumesnil, e é um lugar fácil para a Perola correr depois do voo.",
+   "mapa": ""
+  },
+  {
+   "data": "Sábado, 10 de outubro",
+   "titulo": "Torre Eiffel, ônibus Hop-On Hop-Off e compras na Champs-Élysées e no Opéra",
+   "bairro": "7º, 8º e 9º arrondissement",
+   "saida": "Sair do apartamento às 10h",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "10h00",
+     "titulo": "Do apartamento à Torre Eiffel",
+     "mapa": "Bir-Hakeim, 75015 Paris",
+     "texto": "O dia inteiro é fora do apartamento, sem voltar no meio. A Torre Eiffel de hoje é vista de baixo e de longe, sem subir: a esplanada, o Champ de Mars e o Trocadéro dão as melhores fotos, e as crianças têm onde brincar. O café da manhã é em casa, antes de sair.",
+     "imperdivelTitulo": "Como ir à Torre",
+     "imperdivel": [
+      "Metrô direto: estação Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim, sem baldeação, cerca de 40 minutos. Dali são uns 10 minutos a pé até o pé da Torre. A estação tem escada, então a Pilar vai no canguru",
+      "Parte da linha 6 é em viaduto elevado. Se isso incomodar o Lucas, o táxi oficial resolve o trecho",
+      "Bilhetes: 3 de € 2,55 (a Pilar não paga), comprados no aplicativo antes de sair"
+     ],
+     "dica": "Saiam às 10h para pegar o Champ de Mars ainda tranquilo e as crianças com energia.",
+     "trajeto": {
+      "modo": "metro",
+      "linha": "6",
+      "texto": "Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim. Sem baldeação, cerca de 40 minutos. Depois, 10 minutos a pé até a Torre."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "10h40",
+     "titulo": "Ponte de Bir-Hakeim, a foto da chegada",
+     "mapa": "Pont de Bir-Hakeim, 75015 Paris",
+     "texto": "A ponte de Bir-Hakeim fica logo na saída da estação. O viaduto de ferro da linha 6 emoldura a Torre ao fundo, e é um dos pontos mais fotografados de Paris, com calçada própria para pedestres.",
+     "dica": "<b>Para fotos:</b> fiquem na calçada de pedestres da ponte, de frente para a Torre, com as meninas à frente e os arcos do viaduto ao redor. É a foto de abertura do dia, antes de ir ao pé da Torre.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 10 minutos, até o pé da Torre e o Champ de Mars."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "11h15",
+     "titulo": "Champ de Mars e pé da Torre",
+     "mapa": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+     "texto": "A Torre vista da esplanada, com as quatro pernas de ferro por cima, é a foto clássica de quem não sobe. O Champ de Mars, o grande gramado aos pés dela, tem parquinhos para a Perola e a Pilar.",
+     "imperdivel": [
+      "A Torre vista de baixo, da esplanada, com as quatro pernas por cima",
+      "Os parquinhos do Champ de Mars, para a Pilar andar livre",
+      "O gramado em direção à Escola Militar, com a Torre ao fundo, para a foto de família"
+     ],
+     "dica": "<b>Para fotos:</b> abram o gramado e se afastem até a Torre caber inteira no quadro, com as crianças na frente. Peçam a algum turista para fotografar os quatro juntos.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 12 minutos, até a Rue Cler. Caminho plano."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "12h30",
+     "titulo": "Almoço na Rue Cler",
+     "nota": "A Rue Cler é uma rua de pedestres com cafés e padarias, a 12 minutos a pé do Champ de Mars. É o almoço principal do dia, sem pressa.",
+     "opcoes": [
+      {
+       "nome": "Le Petit Cler",
+       "detalhe": "29 Rue Cler · 4,3 estrelas com 2.197 avaliações · bistrô clássico com mesas na calçada, aberto todos os dias das 8h à meia-noite",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "L'Éclair",
+       "detalhe": "32 Rue Cler · 4,4 estrelas com 1.148 avaliações · hambúrguer, saladas e pratos franceses, aberto todos os dias das 8h à 1h",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Bar du Central",
+       "detalhe": "99 Rue Saint-Dominique · 4,4 estrelas com 1.109 avaliações · cozinha francesa simples, equipe elogiada por receber famílias com bebê, 3 min a pé",
+       "preco": "20 a 28 €"
+      }
+     ],
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 12 minutos, de volta até o ponto da Torre Eiffel, no Quai Branly."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h00",
+     "titulo": "Ônibus Hop-On Hop-Off, saindo da Torre Eiffel",
+     "mapa": "Quai Branly, Tour Eiffel, 75007 Paris",
+     "texto": "O ingresso do Hop-On Hop-Off já está comprado. O horário e o ponto de embarque aparecem no ingresso, e as paradas das linhas principais incluem a Torre Eiffel, a Champs-Élysées e o Arco do Triunfo, a Ópera (com as Galeries Lafayette e o Printemps), o Louvre e Notre-Dame. Os ônibus passam a cada 15 a 45 minutos conforme a linha, de manhã até o fim da tarde, com a última saída entre 17h45 e 18h30 conforme a operadora. É um jeito de andar sem caminhar: vocês descem onde quiserem e voltam a subir.",
+     "imperdivel": [
+      "A Torre Eiffel e a Champs-Élysées vistas do andar aberto",
+      "O Arco do Triunfo, na descida pela Champs-Élysées",
+      "A Ópera Garnier, na parada do Opéra",
+      "O áudio guia do ônibus, com fones para as meninas"
+     ],
+     "dica": "<b>Altura:</b> o andar de cima é aberto, no alto do ônibus de dois andares. Se o Lucas preferir, o andar de baixo é coberto e tem janelas grandes. <b>Para fotos:</b> sentem-se no andar de cima e fotografem a Torre quando o ônibus sai do ponto e o Arco do Triunfo quando entra na Champs-Élysées.",
+     "trajeto": {
+      "modo": "onibus",
+      "texto": "Hop-On Hop-Off do ponto da Torre Eiffel até a parada da Champs-Élysées, perto do Arco do Triunfo, cerca de 25 a 30 minutos."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h45",
+     "titulo": "Champs-Élysées: perfumaria, cosméticos e macarons",
+     "mapa": "Guerlain, 68 Avenue des Champs-Élysées, 75008 Paris",
+     "texto": "Aqui começa a parte das comprinhas, descendo a Champs-Élysées pela calçada. A Maison Guerlain, no número 68, é a perfumaria da casa mais antiga da avenida, a Sephora, no 72, é a maior da rede, e a Ladurée, no 75, vende macarons de lembrança. As três ficam a poucos passos umas das outras.",
+     "imperdivel": [
+      "A Maison Guerlain, no número 68, com perfumes e batom personalizado com gravação",
+      "A Sephora, no número 72, a loja principal, com cosméticos e perfumes de todas as marcas",
+      "A Ladurée, no número 75, para macarons de lembrança",
+      "O Arco do Triunfo, a poucos minutos, para a foto de fim de tarde"
+     ],
+     "dica": "<b>Para fotos:</b> fiquem na calçada da Champs-Élysées, uns 100 metros antes do Arco, onde ele ocupa o fundo da avenida inteira. Compras de grife acima de € 100 na mesma loja dão direito ao tax free, e o passo a passo está na preparação.",
+     "trajeto": {
+      "modo": "onibus",
+      "texto": "Hop-On Hop-Off do ponto da Champs-Élysées até a parada do Opéra, cerca de 15 a 20 minutos. Última saída entre 17h45 e 18h30."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "16h45",
+     "titulo": "Opéra: Fragonard, Galeries Lafayette e Printemps",
+     "mapa": "Galeries Lafayette Haussmann, 40 Boulevard Haussmann, 75009 Paris",
+     "texto": "O Musée du Parfum Fragonard, no 9 Rue Scribe, é um museu gratuito de perfumes, aberto até as 17h30, e é a primeira parada. Depois vêm as Galeries Lafayette e o Printemps, lado a lado no Boulevard Haussmann, com moda de grife, perfumaria e cosméticos franceses, abertos até as 20h30 e as 20h. É o fecho do dia: vocês escolhem o ritmo e voltam de metrô, direto, da própria estação Opéra.",
+     "imperdivel": [
+      "O Musée du Parfum Fragonard, gratuito, no 9 Rue Scribe",
+      "As Galeries Lafayette, com a perfumaria e os cosméticos franceses no térreo",
+      "O Printemps, ao lado, com moda e acessórios de grife",
+      "A Ópera Garnier, vista de fora, na parada do ônibus"
+     ],
+     "dica": "<b>Para fotos:</b> a fachada da Ópera Garnier, de frente para a Place de l'Opéra, é a melhor foto da região, com a luz do fim da tarde. O terraço das Galeries Lafayette, no último andar, pode ser pulado: o Lucas fica tranquilo no térreo.",
+     "trajeto": {
+      "modo": "metro",
+      "linha": "8",
+      "texto": "Opéra, linha 8 direção Pointe du Lac, até Daumesnil. Sem baldeação, cerca de 25 minutos."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "19h30",
+     "titulo": "Jantar em casa e noite livre",
+     "texto": "Chegando ao apartamento, cozinhem com o que foi comprado na sexta. A noite fica livre."
+    }
+   ],
+   "seChover": "Troquem o Champ de Mars por um museu coberto: a Cité de l'Architecture et du Patrimoine, no Palais de Chaillot, aberta aos sábados das 11h às 19h. O ônibus tem o andar de baixo coberto, e as lojas do Opéra são internas.",
+   "seSobrarEnergia": "A Torre cintila por 5 minutos a cada hora cheia depois de escurecer. Se a Pilar aguentar, esperem a próxima hora cheia na esplanada do Trocadéro, antes de pegar o metrô.",
+   "mapa": ""
+  },
+  {
+   "data": "Domingo, 11 de outubro",
+   "titulo": "Passeio no Sena, Palais-Royal e Louvre às 14h30",
+   "bairro": "7º e 1º arrondissement",
+   "saida": "Sair do apartamento às 9h15",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "09h15",
+     "titulo": "Do apartamento ao cais do Sena",
+     "mapa": "Bir-Hakeim, 75015 Paris",
+     "texto": "O passeio de barco no Sena já está comprado para hoje e sai ao pé da Torre Eiffel, pelo ingresso Tarifa WEB da Bateaux Parisiens. A reserva mostra o horário de funcionamento de 10h às 22h, e a saída da manhã deixa a tarde livre para o Louvre.",
+     "imperdivelTitulo": "Como ir ao cais",
+     "imperdivel": [
+      "Metrô direto: estação Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim, sem baldeação, cerca de 40 minutos. Dali são uns 10 minutos a pé até o cais, o Port de la Bourdonnais, ao pé da Torre",
+      "Bilhetes: 3 de € 2,55 (a Pilar não paga), comprados no aplicativo antes de sair",
+      "Parte da linha 6 é em viaduto elevado. Se isso incomodar o Lucas, o táxi oficial resolve o trecho"
+     ],
+     "trajeto": {
+      "modo": "metro",
+      "linha": "6",
+      "texto": "Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim. Sem baldeação, cerca de 40 minutos. Depois, 10 minutos a pé até o cais."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "10h30",
+     "titulo": "Passeio no Sena, Bateaux Parisiens (já comprado)",
+     "mapa": "Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris",
+     "texto": "Uma hora de passeio, com saída e chegada ao pé da Torre, no Port de la Bourdonnais. O barco passa pelos principais monumentos de Paris sem ninguém precisar andar, o que o torna o passeio mais fácil do dia para as crianças. O ingresso é para 2 adultos, 1 criança e 1 bebê, e a Pilar entra no colo, sem bilhete.",
+     "imperdivel": [
+      "A Torre Eiffel vista do rio",
+      "A Pont Alexandre III, a ponte mais ornamentada de Paris",
+      "O Musée d'Orsay e o Louvre, vistos da água",
+      "A Notre-Dame, na Île de la Cité"
+     ],
+     "dica": "<b>Código de reserva GYG83W9KF2QL.</b> Apresentem o ingresso no cais, pelo aplicativo do GetYourGuide. <b>Para fotos:</b> fiquem no convés aberto, junto à borda, na saída e na volta, quando a Torre está de frente. O convés é baixo e plano, sem altura.",
+     "trajeto": {
+      "modo": "metro",
+      "linha": "6",
+      "texto": "Do cais, 10 minutos a pé até Bir-Hakeim. Linha 6 direção Charles de Gaulle-Étoile, até o fim da linha, e baldeação para a linha 1 direção Château de Vincennes, até Palais Royal-Musée du Louvre. Cerca de 30 minutos no total."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "12h15",
+     "titulo": "Jardim do Palais-Royal",
+     "mapa": "Jardin du Palais-Royal, 75001 Paris",
+     "texto": "Um jardim fechado por arcadas, gratuito, quase ao lado do Louvre, e muito mais tranquilo que as Tuileries. No pátio, as colunas listradas de preto e branco de Daniel Buren dão fotos divertidas, e as galerias em volta têm lojinhas e cafés.",
+     "imperdivel": [
+      "As colunas listradas de Daniel Buren, no pátio principal",
+      "As arcadas e as galerias em volta do jardim",
+      "Os bancos e as cadeiras do jardim, para a Pilar descansar no canguru"
+     ],
+     "dica": "<b>Para fotos:</b> peçam às meninas para ficarem de pé em cima das colunas mais baixas (é permitido sentar nelas, com cuidado), e fotografem de cima do degrau, com as arcadas ao fundo.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 5 minutos, até a Rue Saint-Honoré."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "12h45",
+     "titulo": "Almoço perto do Louvre",
+     "nota": "Almoço longo e sem pressa: o Louvre é às 14h30, e a tarde é a parte pesada do dia. Os três ficam a poucos minutos a pé do Jardim do Palais-Royal e da Pirâmide.",
+     "opcoes": [
+      {
+       "nome": "Matin des Oliviers",
+       "detalhe": "2 Rue de l'Échelle · 4,8 estrelas com 8.018 avaliações · brunch e pratos leves, aberto aos domingos das 7h30 às 20h, 4 min a pé do Louvre",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Café Saint Honoré",
+       "detalhe": "194 Rue Saint-Honoré · 4,6 estrelas com 4.293 avaliações · pizzas, massas e pratos franceses, aberto todos os dias das 8h à meia-noite, 4 min a pé do Louvre",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Café de la Régence",
+       "detalhe": "167 Rue Saint-Honoré · 4,4 estrelas com 4.194 avaliações · bistrô clássico com pato e bife, aberto todos os dias das 7h à 1h30, 5 min a pé do Louvre",
+       "preco": "20 a 28 €"
+      }
+     ],
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé até a Pirâmide do Louvre, 5 minutos. Cheguem às 14h15."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h30",
+     "titulo": "Louvre com áudio guia em português",
+     "mapa": "Musée du Louvre, Rue de Rivoli, 75001 Paris",
+     "texto": "O ingresso para os dois adultos e as crianças, com áudio guia em português, já está comprado para as 14h30. O áudio guia e o ingresso ficam no aplicativo WeGoTrip, que é a entrada pela fila de quem tem ingresso com horário.",
+     "imperdivel": [
+      "A Mona Lisa, na ala Denon",
+      "A Vênus de Milo, na ala Sully",
+      "A Vitória de Samotrácia, no alto da escadaria Daru",
+      "As antiguidades egípcias, a parte que mais prende as crianças"
+     ],
+     "dica": "<b>Antes de sair, baixem o áudio guia no Wi-Fi do apartamento</b> e levem fones de ouvido e celular carregado. Se o e-mail ou o SMS do WeGoTrip não chegarem, abram wgtr.app/gyg e digitem o código GYG6H73RK4K2. Três horas é muito para uma criança de 10 anos e uma de 1 ano e 8 meses: usem o áudio guia como mapa e, se o cansaço bater, fiquem só com os quatro destaques. <b>Para fotos:</b> a melhor foto da Pirâmide de vidro é no pátio, antes de entrar, com o prédio do Louvre atrás.",
+     "ingresso": {
+      "texto": "Abrir o ingresso do Louvre",
+      "url": "https://wgtr.app/PPLPmLTeF6b"
+     },
+     "trajeto": {
+      "modo": "metro",
+      "linha": "1",
+      "texto": "Palais Royal-Musée du Louvre, linha 1 direção Château de Vincennes, até Nation. Sem baldeação, cerca de 25 minutos. Depois, 12 minutos a pé até o apartamento, ou táxi oficial se a Pilar já estiver cansada."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "19h00",
+     "titulo": "Jantar em casa e noite livre",
+     "texto": "Depois do Louvre, nenhum deslocamento: jantar no apartamento. O Monoprix da Rue de Reuilly abre até as 19h45 aos domingos, e a Mon Marché até as 12h30, então os mantimentos do domingo precisam estar prontos da sexta ou do sábado."
+    }
+   ],
+   "seChover": "O dia é quase todo coberto: o Louvre é interno, e o passeio de barco costuma operar com chuva fina. Só o Palais-Royal pega chuva, então levem a capa.",
+   "seSobrarEnergia": "Se a Pilar dormir no canguru, a Pirâmide e o pátio do Louvre iluminados à noite valem uma foto antes de ir para o metrô.",
+   "mapa": ""
+  },
+  {
+   "data": "Segunda, 12 de outubro",
+   "titulo": "Dia das Crianças: Monet, Tuileries, chocolate quente e compras",
+   "bairro": "1º e 8º arrondissement",
+   "saida": "Sair do apartamento às 9h",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "09h00",
+     "titulo": "Do apartamento ao Orangerie",
+     "mapa": "Place de la Concorde, 75008 Paris",
+     "texto": "Hoje é o Dia das Crianças, e o dia é pensado para elas: arte com cor, parquinho, chocolate quente e uma compra de lembrança. A manhã vai para o Orangerie, que fica no Jardim das Tuileries e é o lugar para ver as obras de Monet.",
+     "imperdivelTitulo": "Como ir ao Orangerie",
+     "imperdivel": [
+      "Metrô direto: estação Daumesnil, linha 8 direção Balard, até Concorde, sem baldeação, cerca de 25 minutos. Dali são 5 minutos a pé pelo Jardim das Tuileries até o museu",
+      "Bilhetes: 3 de € 2,55, comprados no aplicativo antes de sair",
+      "A saída de Concorde tem escada, então a Pilar vai no canguru. Para menos escada, o táxi oficial leva direto à porta do Jardim das Tuileries"
+     ],
+     "trajeto": {
+      "modo": "metro",
+      "linha": "8",
+      "texto": "Daumesnil, linha 8 direção Balard, até Concorde. Sem baldeação, cerca de 25 minutos. Depois, 5 minutos a pé pelo jardim."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "10h00",
+     "titulo": "Musée de l'Orangerie e os Nenúfares de Monet",
+     "mapa": "Musée de l'Orangerie, Jardin des Tuileries, 75001 Paris",
+     "texto": "Monet doou os Nenúfares à França em 1922, e o museu abriu em 1927 para recebê-los. É pequeno e dá para ver sem pressa em cerca de uma hora e meia. As duas salas ovais foram pensadas para serem vistas de dentro, com os painéis dando a volta nas paredes, à luz natural. Menores de 18 anos entram de graça, mas precisam de horário reservado, inclusive a Pilar. O museu abre às segundas e fecha às terças.",
+     "imperdivel": [
+      "As duas salas ovais dos Nenúfares de Monet, com os painéis dando a volta nas paredes",
+      "O andar de baixo, com Renoir, Cézanne, Matisse e Picasso",
+      "A Place de la Concorde, a poucos passos da estação, com o obelisco de Luxor e as fontes"
+     ],
+     "dica": "<b>Reservem o horário das 10h</b> pelo site oficial: a entrada vale na meia hora seguinte ao horário reservado. O ingresso inteiro custa € 12,50 por adulto, e a reserva das crianças também é feita pelo site, de graça. <b>Para fotos:</b> nas salas dos Nenúfares não usem flash, e fotografem os painéis de longe, de modo a pegar a curva da sala inteira.",
+     "ingresso": {
+      "texto": "Reservar horário no Orangerie",
+      "url": "https://billetterie.musee-orangerie.fr"
+     },
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 8 minutos, pela Rue de Rivoli até a Rue Saint-Florentin e a Rue Cambon."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "12h00",
+     "titulo": "Almoço especial do Dia das Crianças",
+     "nota": "Este é o almoço especial da viagem, e é especial pelo cenário e pelo clima de bistrô clássico, e não pela alta gastronomia. Os três ficam a poucos minutos a pé do Orangerie e têm cardápio infantil ou pratos que a Perola e a Pilar aceitam. A taça de champanhe entra aqui, no lugar da degustação formal.",
+     "opcoes": [
+      {
+       "nome": "Brasserie Flottes",
+       "detalhe": "2 Rue Cambon · 4,6 estrelas com 2.174 avaliações · bistrô com toalhas brancas e cardápio infantil, aberto às segundas das 7h às 23h",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Le Florentin",
+       "detalhe": "10 Rue Saint-Florentin · 4,5 estrelas com 5.469 avaliações · bistrô clássico com pato confit e sopa, aberto todos os dias das 7h às 23h",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Relais Madeleine",
+       "detalhe": "9 Rue du Chevalier de Saint-George · 4,4 estrelas com 1.413 avaliações · cozinha francesa tradicional e cardápio infantil, aberto às segundas das 7h à meia-noite",
+       "preco": "20 a 28 €"
+      }
+     ],
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 5 minutos, pela Rue Cambon e a Rue de Castiglione até a Place Vendôme."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "13h45",
+     "titulo": "Place Vendôme e a perfumaria Jovoy",
+     "mapa": "Place Vendôme, 75001 Paris",
+     "texto": "A Place Vendôme é a praça das grandes joalherias de Paris, com a coluna de bronze no centro. Na Rue de Castiglione, a poucos metros, a Jovoy é uma perfumaria de nicho e de luxo, com marcas raras, aberta às segundas das 11h às 19h. É o toque de luxo e perfume do dia perfeito, sem a multidão da Champs-Élysées.",
+     "imperdivel": [
+      "A coluna de bronze no centro da Place Vendôme",
+      "As vitrines das joalherias, em volta da praça",
+      "A Jovoy, no 4 Rue de Castiglione, com perfumes de nicho"
+     ],
+     "dica": "<b>Para fotos:</b> fotografem as meninas ao pé da coluna, com a fachada de pedra clara da praça ao fundo. Perfumes de nicho têm preço de luxo, então a Jovoy é mais para ver e cheirar. Para uma compra de lembrança, as farmácias do fim da tarde são a opção mais acessível.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 6 minutos, pela Rue de Castiglione até o Jardim das Tuileries."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h45",
+     "titulo": "Playground das Tuileries",
+     "mapa": "Aire de jeux pour enfants des Tuileries, 1 Terrasse des Feuillants, 75001 Paris",
+     "texto": "É o momento de brincar do Dia das Crianças, e o parque fica ao lado da Rue de Rivoli. O playground das Tuileries é gratuito, fica aberto o dia todo e tem redes de escalada e tobogã. O jardim inteiro rende fotos sem esforço, com a Pirâmide do Louvre ao fundo.",
+     "imperdivel": [
+      "O playground das Tuileries, gratuito, com tobogã e rede de escalada",
+      "As alamedas do Jardim das Tuileries, planas e com cadeiras para sentar",
+      "A vista do Arco do Carrossel e da Pirâmide do Louvre, para a foto de família"
+     ],
+     "dica": "<b>Para fotos:</b> parem no meio do jardim, de costas para o Louvre, e fotografem as meninas com o obelisco e a Champs-Élysées ao fundo, ou de frente para o Louvre, com a Pirâmide no horizonte. A luz das 15h30 em outubro é suave.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 4 minutos, até a Angelina, na Rue de Rivoli."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "16h00",
+     "titulo": "Chocolate quente na Angelina",
+     "mapa": "Angelina, 226 Rue de Rivoli, 75001 Paris",
+     "texto": "A Angelina é a casa de chá mais famosa de Paris, na Rue de Rivoli, com 4,3 estrelas e mais de 18 mil avaliações, aberta todos os dias das 8h às 19h30 (às 20h nas sextas, sábados e domingos). O chocolate quente é a marca da casa e funciona como o presente do Dia das Crianças. Costuma ter fila, e as horas de menos movimento ficam entre as 15h e as 17h.",
+     "imperdivel": [
+      "O chocolate quente, a especialidade da casa",
+      "O Mont-Blanc, a sobremesa clássica de creme de castanha",
+      "O salão de época, para a foto com as meninas"
+     ],
+     "dica": "<b>Para fotos:</b> peçam uma mesa no salão principal, onde a decoração aparece melhor, e fotografem as meninas com a xícara. Se a fila estiver longa, o salão de chá menor ao lado atende mais rápido.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 8 minutos, pela Rue de Rivoli até a Pharmacie du Théâtre Français."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "17h00",
+     "titulo": "Cosméticos franceses perto do Louvre",
+     "mapa": "La Pharmacie du Théâtre Français, 2 Place André Malraux, 75001 Paris",
+     "texto": "Antes de voltar, as compras de farmácia, com lembrancinhas e cosméticos franceses, ficam na região do Louvre. A Pharmacie du Théâtre Français, na Place André Malraux, fica ao lado da estação Palais Royal-Musée du Louvre, que é a estação da volta, e abre de segunda a sexta das 8h às 22h. A Pharmacie Louvre Rivoli, no 2 Rue du Roule, a uns 10 minutos a pé, tem 4,5 estrelas e 149 avaliações, abre todos os dias, e segundo as avaliações faz o formulário de tax free na hora.",
+     "imperdivel": [
+      "La Pharmacie du Théâtre Français, 2 Place André Malraux, 4,1 estrelas com 343 avaliações, aberta até as 22h",
+      "Pharmacie Louvre Rivoli, 2 Rue du Roule, 4,5 estrelas com 149 avaliações, aberta todos os dias",
+      "Citypharma, 26 Rue du Four, no 6º, a farmácia mais famosa para cosméticos, 3,5 estrelas com mais de 4 mil avaliações, que fica mais longe e é muito cheia"
+     ],
+     "dica": "Levem o passaporte para o tax free, que vale a partir de € 100 na mesma loja. Marcas francesas de farmácia são as mais procuradas como lembrança.",
+     "trajeto": {
+      "modo": "metro",
+      "linha": "1",
+      "texto": "Palais Royal-Musée du Louvre, linha 1 direção Château de Vincennes, até Nation. Sem baldeação, cerca de 25 minutos. Depois, 12 minutos a pé até o apartamento."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "19h00",
+     "titulo": "Jantar em casa e noite livre",
+     "texto": "Jantar no apartamento, com os mantimentos da Mon Marché, aberta até as 21h30. A noite é livre, e amanhã é o dia da Disney, com saída às 8h15."
+    },
+    {
+     "tipo": "passeio",
+     "hora": "Opção",
+     "titulo": "Opção para o dia: Jardins de Monet em Giverny",
+     "mapa": "Maison et Jardins Claude Monet, 84 Rue Claude Monet, 27620 Giverny",
+     "texto": "Giverny é a casa onde Monet viveu de 1883 a 1926, com os jardins que inspiraram os Nenúfares, e é uma opção para trocar o dia inteiro. Em 2026 a casa e os jardins abrem de 1º de abril a 1º de novembro, todos os dias, então outubro ainda está dentro da temporada. Os nenúfares florescem no verão, e em outubro os jardins têm dálias, asters e crisântemos, com o lago e a ponte japonesa no lugar. É bem longe de Paris e o dia fica longo: a ida e a volta, somadas, passam de 3 horas, e a Disney vem logo no dia seguinte.",
+     "imperdivelTitulo": "Como é a viagem e a visita",
+     "imperdivel": [
+      "Trem TER da estação Paris Saint-Lazare até Vernon-Giverny, cerca de 49 minutos, com bilhetes a partir de € 10",
+      "Da estação de Vernon-Giverny, a navette até Giverny leva cerca de 20 minutos e custa € 10 ida e volta. Há também o pequeno trem turístico, que faz o trajeto em 20 minutos por € 10 ida e volta",
+      "Casa e jardins abrem das 10h às 18h, com a última entrada às 17h30. A visita leva de 1h30 a 2 horas",
+      "Ingresso de € 13,50 por adulto e € 7,50 para crianças de 7 a 17 anos, e grátis para menores de 7 anos",
+      "Os jardins têm acesso para cadeira de rodas, e a casa não"
+     ],
+     "dica": "<b>Para fotos:</b> a ponte japonesa sobre o lago de nenúfares é a foto clássica, e o jardim de flores à frente da casa rosa funciona bem com as meninas. Se escolherem Giverny, o Orangerie e a tarde de Paris ficam para outra ocasião.",
+     "ingresso": {
+      "texto": "Ver ingressos de Giverny",
+      "url": "https://claudemonetgiverny.fr"
+     }
+    }
+   ],
+   "seChover": "O Orangerie, o almoço e a Angelina são internos. A tarde de Place Vendôme e Tuileries pode virar Galeries Lafayette, com moda de grife e perfumaria, a 20 minutos de metrô da Concorde, estação Opéra.",
+   "seSobrarEnergia": "O Jardim do Palais-Royal, a 5 minutos da Angelina, tem as colunas listradas de Buren e galerias com lojinhas, para uma última foto antes do metrô.",
+   "mapa": ""
+  },
+  {
+   "data": "Terça, 13 de outubro",
+   "titulo": "Disneyland Paris, com 2 parques e show noturno",
+   "bairro": "12º arrondissement e Marne-la-Vallée",
+   "saida": "Sair do apartamento às 8h15",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "08h15",
+     "titulo": "Do apartamento à Disneyland Paris",
+     "mapa": "Place de la Nation, 75012 Paris",
+     "texto": "A Disney fica a mais de 30 km do apartamento. O RER A é o jeito mais simples: sai de Nation e termina na estação Marne-la-Vallée-Chessy, ao lado da entrada dos parques, sem cadeirinha e sem trânsito. O RER A tem todas as estações acessíveis, então a escada não é o problema aqui.",
+     "imperdivelTitulo": "Como ir para a Disney",
+     "imperdivel": [
+      "RER A, a opção que recomendo: do apartamento, 12 minutos a pé até Nation. Lá, plataforma da linha A direção Marne-la-Vallée-Chessy, o fim da linha. Cerca de 35 a 45 minutos de viagem. Bilhete de € 2,55 por adulto e pela Perola, a Pilar viaja de graça. Confiram o letreiro, porque alguns trens saem de Nation para Boissy-Saint-Léger, e esse não serve",
+      "Táxi oficial: porta a porta, sem escada. A corrida da Disney sai pelo taxímetro, bem mais cara que o RER, e é a opção para quem estiver muito cansado",
+      "Uber e Bolt: evitem, porque a Pilar precisa de cadeirinha e o motorista de aplicativo pode recusar a corrida"
+     ],
+     "dica": "<b>O ingresso de 1 dia para 2 parques já está comprado, para a terça, dia 13, e mostra o funcionamento das 9h30 às 23h.</b> Código de reserva GYG6H75RHM2H. A viagem leva cerca de uma hora porta a porta, então saindo às 8h15 vocês chegam ao portão por volta das 9h30, já com a fila de segurança.",
+     "trajeto": {
+      "modo": "rer",
+      "linha": "A",
+      "texto": "Nation, RER A direção Marne-la-Vallée-Chessy, até o fim da linha. Sem baldeação, 35 a 45 minutos. A estação fica ao lado dos parques."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "09h30",
+     "titulo": "Disneyland Park e o Festival de Halloween",
+     "mapa": "Disneyland Park, Boulevard de Parc, 77700 Chessy",
+     "texto": "O Disney Halloween Festival acontece de 26 de setembro a 1º de novembro no Disneyland Park e está incluído no ingresso. O ingresso de 2 parques vale para os dois no mesmo dia, e permite sair e voltar. A sugestão é começar pelo Disneyland Park, que tem as atrações calmas da Fantasyland para a Pilar, e deixar o segundo parque para a tarde, o Disney Adventure World.",
+     "imperdivel": [
+      "O castelo da Bela Adormecida e a Main Street, com a decoração de Halloween",
+      "A cavalgada Mickey's Halloween Celebration, com carros alegóricos e personagens",
+      "Para a Pilar, na Fantasyland: it's a small world, Dumbo, Peter Pan's Flight e o carrossel de Lancelot",
+      "Para a Perola: Pirates of the Caribbean e Star Tours, com a altura mínima marcada no aplicativo",
+      "Os encontros com vilões do festival, conforme a programação do dia"
+     ],
+     "dica": "<b>As atrações altas ficam fora do roteiro</b>, e em especial a Orbitron, na Discoveryland, que sobe e gira no alto. O castelo, o carrossel e as atrações da Fantasyland ficam no nível do chão, para o Lucas ir tranquilo. <b>Para revezar sem pegar a fila duas vezes:</b> peçam ao funcionário da entrada da atração o sistema de revezamento para pais com criança pequena. Os parques têm trocadores em muitos banheiros, papinhas à venda e aluguel de carrinho. <b>Para fotos:</b> a melhor foto do castelo é da Main Street, de frente, no começo da manhã, com o parque ainda vazio, e a cavalgada dá uma segunda chance de foto à tarde.",
+     "ingresso": {
+      "texto": "Abrir o aplicativo e o site da Disneyland Paris",
+      "url": "https://www.disneylandparis.com"
+     },
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 5 a 10 minutos, do parque até o Disney Village."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "12h30",
+     "titulo": "Almoço no Disney Village",
+     "nota": "Dentro do parque, as opções de almoço custam caro ou têm nota baixa. O Disney Village fica fora do parque, a poucos minutos da entrada, e o mesmo ingresso permite sair e voltar. A pausa também deixa a Pilar dormir.",
+     "opcoes": [
+      {
+       "nome": "The Royal Pub",
+       "detalhe": "Disney Village · 4,6 estrelas com 6.054 avaliações · pub familiar com pratos simples, aberto das 11h30 às 23h",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Rainforest Café",
+       "detalhe": "Disney Village · 4,3 estrelas com 10.001 avaliações · restaurante temático com aquários, bom para a Perola, aberto das 11h30 às 23h",
+       "preco": "25 a 38 €"
+      },
+      {
+       "nome": "Earl of Sandwich",
+       "detalhe": "5 Disney Village · 4,1 estrelas com 3.203 avaliações · sanduíches montados do jeito de cada um, bom para criança seletiva, aberto das 8h às 23h",
+       "preco": "20 a 28 €"
+      }
+     ]
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h00",
+     "titulo": "Segundo parque: Disney Adventure World",
+     "mapa": "Disney Adventure World, Chessy, 77700 Marne-la-Vallée",
+     "texto": "Com o ingresso de 2 parques, a tarde é para o segundo parque, o Disney Adventure World, que fica ao lado do primeiro, a poucos minutos a pé. Vale escolher poucas atrações que a Pilar e a Perola aproveitem juntas, e deixar o resto de lado: o dia é longo, com o show só à noite.",
+     "dica": "As atrações de queda livre e de altura ficam fora do roteiro. Se a Pilar dormir no canguru, aproveitem para uma atração de altura mínima com a Perola. <b>Para fotos:</b> procurem o ponto de vista da entrada do parque, com os cenários ao fundo, e peçam a um funcionário para fotografar a família inteira."
+    },
+    {
+     "tipo": "passeio",
+     "hora": "19h00",
+     "titulo": "Jantar no Disney Village",
+     "mapa": "Disney Village, Av. Paul Séramy, 77700 Chessy",
+     "texto": "Como o parque fica aberto até as 23h e há show à noite, o jantar é no Disney Village, com as mesmas três opções do almoço: The Royal Pub, Rainforest Café e Earl of Sandwich, a cerca de 20 a 28 € por pessoa. As mesas ficam mais cheias a partir das 19h, então vale chegar às 19h em ponto."
+    },
+    {
+     "tipo": "passeio",
+     "hora": "21h30",
+     "titulo": "Show noturno, para quem ficar",
+     "mapa": "Sleeping Beauty Castle, Disneyland Park, 77700 Chessy",
+     "texto": "Os dois parques têm um show noturno todas as noites, e o horário costuma ser perto das 22h, com o horário exato do dia no aplicativo. No Disneyland Park é o Disney Tales of Magic, no castelo, com fogos, projeções e fontes. No Disney Adventure World é o Disney Cascade of Lights, no lago. O ingresso de 2 parques vale para os dois, e vale escolher um só, o do castelo, que é o mais fácil de ver. Depois do show, o RER A circula até perto da meia-noite.",
+     "dica": "<b>Para fotos e para ver bem:</b> fiquem na Main Street, de frente para o castelo, uns 30 minutos antes do show. Depois do show, a saída do parque lota, então esperem 10 minutos para o fluxo diminuir. A Pilar volta dormindo no canguru. Quem preferir voltar mais cedo sai por volta das 18h, e o jantar vira em casa.",
+     "trajeto": {
+      "modo": "rer",
+      "linha": "A",
+      "texto": "Marne-la-Vallée-Chessy, RER A direção Paris, em qualquer trem com destino Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye, até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento."
+     }
+    }
+   ],
+   "seChover": "Boa parte das atrações da Fantasyland é interna e funciona com chuva. Levem capa de chuva em vez de guarda-chuva, que atrapalha nas filas e com a Pilar no canguru.",
+   "seSobrarEnergia": "O show noturno por volta das 22h é a opção para quem aguentar ficar até o fim do dia.",
+   "mapa": ""
+  },
+  {
+   "data": "Quarta, 14 de outubro",
+   "titulo": "Última manhã e Eurostar às 16h02",
+   "bairro": "12º e 10º arrondissement",
+   "saida": "Check-out até as 11h, trem às 16h02",
+   "paradas": [
+    {
+     "tipo": "passeio",
+     "hora": "09h00",
+     "titulo": "Padaria, farmácia e malas prontas",
+     "mapa": "Leroy Monti, 203 Avenue Daumesnil, 75012 Paris",
+     "texto": "A última manhã é para o pão do café da manhã, as últimas compras de farmácia e para fechar as malas. Lembrem que o Eurostar exige que vocês consigam carregar sozinhos tudo o que levarem, sem carregador na estação.",
+     "imperdivelTitulo": "Onde comprar",
+     "imperdivel": [
+      "Leroy Monti, 203 Avenue Daumesnil, 4,1 estrelas com 230 avaliações, aberta às quartas, para pães e doces de viagem",
+      "Pharmacie de Reuilly, 27 Boulevard de Reuilly, 4,9 estrelas com 101 avaliações, aberta das 9h às 20h",
+      "Citypharma, 86 Boulevard Soult, aberta 24 horas, para cosméticos e dermocosméticos franceses. Levem o passaporte"
+     ],
+     "dica": "Gastos acima de € 100 na mesma loja dão direito ao tax free. As bornas PABLO para validar o formulário ficam no terminal Eurostar da Gare du Nord, depois do check-in.",
+     "trajeto": {
+      "modo": "pe",
+      "texto": "A pé, 4 a 15 minutos, conforme a loja, por calçada plana."
+     }
+    },
+    {
+     "tipo": "passeio",
+     "hora": "11h00",
+     "titulo": "Check-out e táxi até a Gare du Nord",
+     "mapa": "Gare du Nord, 18 Rue de Dunkerque, 75010 Paris",
+     "texto": "O check-out é até as 11h. A política de bagagem depois do check-out não consta na reserva, então perguntem ao hotel por e-mail, ainda antes de embarcar, se guardam as malas. Sem essa garantia, saiam às 11h15 e almocem perto da estação, já com as malas.",
+     "dica": "Reservem o táxi oficial pelo aplicativo G7 ou pelo telefone 3607 para as 11h15. Quatro pessoas cabem em um táxi comum, com as malas no porta-malas. A reserva custa € 4 se for imediata e € 7 se for com antecedência, além do taxímetro, que costuma marcar entre € 25 e € 35 para esse trajeto.",
+     "trajeto": {
+      "modo": "taxi",
+      "texto": "Táxi oficial do apartamento até a Gare du Nord. Estimativa de € 25 a € 35 no taxímetro, cerca de 25 minutos."
+     }
+    },
+    {
+     "tipo": "refeicao",
+     "hora": "12h00",
+     "titulo": "Almoço perto da Gare du Nord",
+     "nota": "Com as malas, a opção mais prática é a que fica em frente à estação. As outras duas ficam a 5 minutos de táxi. O Bouillon Chartier é uma instituição parisiense de preço baixo, perfeito para o último almoço.",
+     "opcoes": [
+      {
+       "nome": "Bouillon Chartier Gare de l'Est",
+       "detalhe": "5 Rue du 8 Mai 1945 · 4,5 estrelas com 12.418 avaliações · clássico francês a preço justo, aberto todos os dias das 11h30 à meia-noite · não aceita reserva, chegar cedo evita fila",
+       "preco": "média à la carte abaixo de € 20 por pessoa"
+      },
+      {
+       "nome": "Brasserie Bellanger",
+       "detalhe": "140 Rue du Faubourg Poissonnière · 4,7 estrelas com 6.560 avaliações · brasserie moderna, aberta todos os dias, 12 min a pé da Gare du Nord",
+       "preco": "20 a 28 €"
+      },
+      {
+       "nome": "Terminus Nord",
+       "detalhe": "23 Rue de Dunkerque · 4,4 estrelas com 8.106 avaliações · brasserie clássica em frente à Gare du Nord, aberta das 7h30 às 23h, a mais cara das três",
+       "preco": "30 a 42 €"
+      }
+     ]
+    },
+    {
+     "tipo": "passeio",
+     "hora": "14h00",
+     "titulo": "Gare du Nord e Eurostar para Londres",
+     "mapa": "Gare du Nord, 18 Rue de Dunkerque, 75010 Paris",
+     "texto": "O trem 9043 sai às 16h02 e parte exatamente na hora. O bilhete pede para estar no terminal de partida às 15h02, e os portões fecham 30 minutos antes do trem, às 15h32. Na Gare du Nord, todos os controles acontecem antes do embarque: segurança, bagagem e as duas fronteiras, a francesa (com o registro do EES) e a britânica. Com duas crianças e as malas, recomendo chegar ao terminal Eurostar às 14h30, meia hora antes do horário do bilhete, para a fila e os imprevistos. Estejam prontos para embarcar 10 minutos antes da partida. Os assentos estão no vagão 4: Pollyana no 13, Lucas no 17 e Perola no 18. A Pilar viaja no colo, sem bilhete.",
+     "imperdivel": [
+      "Chegar ao terminal Eurostar às 14h30, com folga para a segurança e as duas fronteiras",
+      "Os quatro passaportes à mão e o ETA britânico aprovado para todos, inclusive a Pilar",
+      "Franquia de 2 malas por adulto e 1 por criança de 4 a 11 anos, mais uma bagagem de mão, e tudo o que levarem precisa ser carregado por vocês"
+     ],
+     "dica": "<b>Código de reserva YGVMZJ.</b> Escaneiem o QR code de cada bilhete individualmente nos portões. Depois do check-in e da segurança, procurem as bornas PABLO, indicadas como Détaxe, Tax Refund, se tiverem formulários de tax free para validar.",
+     "ingresso": {
+      "texto": "Abrir a reserva no Eurostar",
+      "url": "https://www.eurostar.com"
+     }
+    }
+   ],
+   "seChover": "A estação é toda coberta. A chuva só pega o trajeto de táxi até a porta.",
+   "seSobrarEnergia": "",
+   "mapa": ""
+  }
+ ],
+ "reservas": {
+  "texto": "Já estão comprados: o Louvre, o passeio no Sena, o ônibus Hop-On Hop-Off e a Disneyland Paris. Falta só o horário do Orangerie, e as demais linhas são opcionais.",
+  "linhas": [
+   {
+    "nome": "Musée de l'Orangerie",
+    "quando": "Agora, para o horário das 10h de segunda, dia 12",
+    "preco": "€ 12,50 por adulto. Menores de 18 anos não pagam, com horário reservado",
+    "site": "billetterie.musee-orangerie.fr",
+    "url": "https://billetterie.musee-orangerie.fr"
+   },
+   {
+    "nome": "Disneyland Paris, 1 dia, 2 parques",
+    "quando": "Já comprado para terça, dia 13. Código GYG6H75RHM2H",
+    "preco": "já pago",
+    "site": "disneylandparis.com",
+    "url": "https://www.disneylandparis.com"
+   },
+   {
+    "nome": "Passeio no Sena, Bateaux Parisiens",
+    "quando": "Já comprado para domingo, dia 11. Código GYG83W9KF2QL",
+    "preco": "já pago",
+    "site": "bateauxparisiens.com",
+    "url": "https://www.bateauxparisiens.com"
+   },
+   {
+    "nome": "Musée du Louvre com áudio guia",
+    "quando": "Já comprado para domingo, às 14h30. Código GYG6H73RK4K2. Baixem o aplicativo e o áudio guia antes",
+    "preco": "já pago",
+    "site": "wgtr.app",
+    "url": "https://wgtr.app/PPLPmLTeF6b"
+   },
+   {
+    "nome": "Ônibus Hop-On Hop-Off",
+    "quando": "Já comprado para sábado, dia 10. O horário e o ponto de embarque estão no ingresso",
+    "preco": "já pago",
+    "site": "ingresso do ônibus",
+    "url": ""
+   },
+   {
+    "nome": "ETA britânico, 4 pessoas",
+    "quando": "Já solicitado",
+    "preco": "£ 20 por pessoa, inclusive bebês",
+    "site": "gov.uk/eta",
+    "url": "https://www.gov.uk/eta"
+   },
+   {
+    "nome": "Eurostar, Paris para Londres",
+    "quando": "Já comprado para 14 de outubro, às 16h02",
+    "preco": "já pago",
+    "site": "eurostar.com",
+    "url": "https://www.eurostar.com"
+   },
+   {
+    "nome": "Táxi até a Gare du Nord, dia 14",
+    "quando": "Na véspera, pelo aplicativo G7",
+    "preco": "Taxímetro, mais € 4 (imediato) ou € 7 (antecipado) de reserva",
+    "site": "g7.fr",
+    "url": "https://www.g7.fr"
+   },
+   {
+    "nome": "Giverny, casa e jardins de Monet (opcional)",
+    "quando": "Só se escolherem a opção de segunda, dia 12",
+    "preco": "€ 13,50 por adulto e € 7,50 de 7 a 17 anos, grátis até 6 anos",
+    "site": "claudemonetgiverny.fr",
+    "url": "https://claudemonetgiverny.fr"
+   }
   ],
-  seChover:"A tarde já é de compras perto do apartamento. O supermercado, a padaria e a farmácia ficam a poucos minutos, e as compras de chegada podem ser feitas com chuva fina.",
-  seSobrarEnergia:"A Pelouse de Reuilly, o gramado grande do Bois de Vincennes, fica a cerca de 20 minutos a pé do hotel pela Avenue Daumesnil, e é um lugar fácil para a Perola correr depois do voo.",
-  mapa:""
-},
-
-{
-  data:"Sábado, 10 de outubro",
-  titulo:"Torre Eiffel, passeio no Sena e Trocadéro",
-  bairro:"7º e 16º arrondissement",
-  saida:"Sair do apartamento às 10h",
-  paradas:[
-    { tipo:"passeio", hora:"10h00", titulo:"Do apartamento à Torre Eiffel", mapa:"Bir-Hakeim, 75015 Paris",
-      texto:"O dia inteiro é fora do apartamento, sem voltar no meio. A Torre Eiffel de hoje é vista de baixo e de longe, sem subir: a esplanada, o Champ de Mars e o Trocadéro dão as melhores fotos, e as crianças têm onde brincar. O café da manhã é em casa, antes de sair.",
-      imperdivelTitulo:"Como ir à Torre",
-      imperdivel:[
-        "Metrô direto: estação Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim, sem baldeação, cerca de 40 minutos. Dali são uns 10 minutos a pé até o pé da Torre. A estação tem escada, então a Pilar vai no canguru",
-        "Parte da linha 6 é em viaduto elevado. Se isso incomodar o Lucas, o táxi oficial resolve o trecho",
-        "Bilhetes: 3 de € 2,55 (a Pilar não paga), comprados no aplicativo antes de sair"
-      ],
-      dica:"Saiam às 10h para pegar o Champ de Mars ainda tranquilo e as crianças com energia.",
-      trajeto:{ modo:"metro", linha:"6", texto:"Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até Bir-Hakeim. Sem baldeação, cerca de 40 minutos. Depois, 10 minutos a pé até a Torre." } },
-
-    { tipo:"passeio", hora:"10h40", titulo:"Ponte de Bir-Hakeim, a foto da chegada", mapa:"Pont de Bir-Hakeim, 75015 Paris",
-      texto:"A ponte de Bir-Hakeim fica logo na saída da estação. O viaduto de ferro da linha 6 emoldura a Torre ao fundo, e é um dos pontos mais fotografados de Paris, com calçada própria para pedestres.",
-      dica:"<b>Para fotos:</b> fiquem na calçada de pedestres da ponte, de frente para a Torre, com as meninas à frente e os arcos do viaduto ao redor. É a foto de abertura do dia, antes de ir ao pé da Torre.",
-      trajeto:{ modo:"pe", texto:"A pé, 10 minutos, até o pé da Torre e o Champ de Mars." } },
-
-    { tipo:"passeio", hora:"11h15", titulo:"Champ de Mars e pé da Torre", mapa:"Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
-      texto:"A Torre vista da esplanada, com as quatro pernas de ferro por cima, é a foto clássica de quem não sobe. O Champ de Mars, o grande gramado aos pés dela, tem parquinhos para a Perola e a Pilar.",
-      imperdivel:[
-        "A Torre vista de baixo, da esplanada, com as quatro pernas por cima",
-        "Os parquinhos do Champ de Mars, para a Pilar andar livre",
-        "O gramado em direção à Escola Militar, com a Torre ao fundo, para a foto de família"
-      ],
-      dica:"<b>Para fotos:</b> abram o gramado e se afastem até a Torre caber inteira no quadro, com as crianças na frente. Peçam a algum turista para fotografar os quatro juntos.",
-      trajeto:{ modo:"pe", texto:"A pé, 12 minutos, até a Rue Cler. Caminho plano." } },
-
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço na Rue Cler",
-      nota:"A Rue Cler é uma rua de pedestres com cafés e padarias, a 12 minutos a pé do Champ de Mars. É o almoço principal do dia, sem pressa.",
-      opcoes:[
-        { nome:"Le Petit Cler", detalhe:"29 Rue Cler · 4,3 estrelas com 2.197 avaliações · bistrô clássico com mesas na calçada, aberto todos os dias das 8h à meia-noite", preco:"20 a 28 €" },
-        { nome:"L'Éclair", detalhe:"32 Rue Cler · 4,4 estrelas com 1.148 avaliações · hambúrguer, saladas e pratos franceses, aberto todos os dias das 8h à 1h", preco:"20 a 28 €" },
-        { nome:"Bar du Central", detalhe:"99 Rue Saint-Dominique · 4,4 estrelas com 1.109 avaliações · cozinha francesa simples, equipe elogiada por receber famílias com bebê, 3 min a pé", preco:"20 a 28 €" }
-      ] },
-
-    { tipo:"passeio", hora:"14h00", titulo:"Parquinho e sombra no Champ de Mars", mapa:"Champ de Mars, 75007 Paris",
-      texto:"Depois do almoço, o tempo em volta da Torre, com parquinho e gramado, faz o papel de descanso: a Pilar tira a soneca no canguru ou no colo à sombra, enquanto a Perola brinca. Tudo sem voltar ao hotel.",
-      trajeto:{ modo:"pe", texto:"A pé, 10 minutos, até o cais Port de la Bourdonnais, ao pé da Torre." } },
-
-    { tipo:"passeio", hora:"16h00", titulo:"Cruzeiro no Sena, Bateaux Parisiens", mapa:"Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris",
-      texto:"Uma hora de passeio comentado, com saída e chegada ao pé da Torre, no Port de la Bourdonnais. O barco passa pelos principais monumentos de Paris sem ninguém precisar andar, o que torna o cruzeiro o passeio mais fácil do dia para as crianças. Há saídas ao longo do dia, a cada 30 a 45 minutos conforme a estação. Reservem o horário disponível entre 15h30 e 16h30.",
-      imperdivel:[
-        "A Torre Eiffel vista do rio",
-        "A Pont Alexandre III, a ponte mais ornamentada de Paris",
-        "O Musée d'Orsay e o Louvre, vistos da água",
-        "A Notre-Dame, na Île de la Cité"
-      ],
-      dica:"<b>Adulto € 17, criança de 4 a 11 anos € 8 e menores de 4 anos de graça.</b> Para a Perola e os dois adultos, o total é € 42. A Pilar entra no colo, sem bilhete. <b>Para fotos:</b> fiquem no convés aberto, junto à borda, na saída e na volta, quando a Torre está de frente. O convés é baixo e plano, sem altura.",
-      ingresso:{ texto:"Reservar o cruzeiro", url:"https://www.bateauxparisiens.com" },
-      trajeto:{ modo:"pe", texto:"A pé, 15 minutos, pela Pont d'Iéna até o Trocadéro." } },
-
-    { tipo:"passeio", hora:"17h15", titulo:"Trocadéro, as fotos clássicas", mapa:"Jardins du Trocadéro, 75016 Paris",
-      texto:"A esplanada do Trocadéro é o ponto de vista clássico da Torre, de frente. No fim da tarde o sol fica atrás de quem fotografa e ilumina a Torre inteira, e é por isso que o Trocadéro vem depois do cruzeiro e do almoço, e não de manhã. É o último passeio do dia, e o metrô de volta sai dali mesmo, direto para o apartamento.",
-      imperdivel:[
-        "A esplanada, com a Torre de frente e a Pont d'Iéna ao fundo",
-        "O carrossel do Trocadéro, o mais colorido de Paris, com a Torre atrás",
-        "Os jardins que descem até a Pont d'Iéna, onde a Perola pode correr"
-      ],
-      dica:"<b>Para fotos:</b> fiquem na esplanada, de costas para o Palais de Chaillot, com a Torre de frente. A balaustrada do terraço tem altura baixa e fica no nível da esplanada, sem precisar subir nada.",
-      trajeto:{ modo:"metro", linha:"6", texto:"Trocadéro, linha 6 direção Nation, até Daumesnil. Sem baldeação, cerca de 35 a 40 minutos. Ou táxi oficial, se a Pilar já estiver cansada." } },
-
-    { tipo:"passeio", hora:"19h30", titulo:"Jantar em casa e noite livre",
-      texto:"Chegando ao apartamento, cozinhem com o que foi comprado na sexta. A noite fica livre." }
+  "aviso": "Confiram o horário no site oficial na véspera de cada visita. Fechamento parcial e mudança de horário acontecem, e uma conferida de dois minutos evita perder a manhã."
+ },
+ "orcamento": {
+  "texto": "Calculado só com o que ainda falta pagar: o Louvre, o passeio no Sena, o ônibus Hop-On Hop-Off, a Disneyland Paris e o ETA já estão pagos e ficam fora do total. Entram o Orangerie, o transporte, os almoços, o jantar na Disney e o apartamento com cozinha, que reduz o gasto com jantares. Os valores de alimentação e de táxi são estimativas, e os ingressos e bilhetes são os preços de cada local. A Pilar não paga ingressos nem transporte.",
+  "linhas": [
+   {
+    "item": "Louvre, passeio no Sena, ônibus Hop-On Hop-Off, Disneyland Paris (2 parques) e ETA",
+    "valor": "já pago"
+   },
+   {
+    "item": "Musée de l'Orangerie, 2 adultos",
+    "valor": "€ 25"
+   },
+   {
+    "item": "Metrô e RER, 27 bilhetes avulsos",
+    "valor": "€ 68,85"
+   },
+   {
+    "item": "Táxi do aeroporto, tarifa fixa",
+    "valor": "€ 56"
+   },
+   {
+    "item": "Táxi até a Gare du Nord (estimativa)",
+    "valor": "€ 29 a € 42"
+   },
+   {
+    "item": "Almoços, 6 dias, incluindo o almoço especial de segunda (estimativa)",
+    "valor": "€ 330 a € 480"
+   },
+   {
+    "item": "Jantar no Disney Village, na terça (estimativa)",
+    "valor": "€ 70 a € 100"
+   },
+   {
+    "item": "Mercado: café da manhã e 4 jantares em casa (estimativa)",
+    "valor": "€ 170 a € 260"
+   },
+   {
+    "item": "Chocolate quente e lanche na Angelina (estimativa)",
+    "valor": "€ 40 a € 60"
+   },
+   {
+    "item": "Compras de farmácia e lembrancinhas, sem grife",
+    "valor": "€ 150 a € 300"
+   },
+   {
+    "item": "Reserva para imprevistos",
+    "valor": "€ 200"
+   },
+   {
+    "item": "Giverny, opcional e fora do total: ingresso de 2 adultos e 1 criança de 7 a 17 anos",
+    "valor": "€ 34,50, mais o trem e a navette"
+   },
+   {
+    "item": "Carro, opcional e fora do total: diária da locadora, combustível e estacionamento",
+    "valor": "depende da locadora"
+   }
   ],
-  seChover:"Troquem a tarde no Champ de Mars por um museu coberto: a Cité de l'Architecture et du Patrimoine, no Palais de Chaillot, aberta aos sábados das 11h às 19h. O cruzeiro costuma operar com chuva fina.",
-  seSobrarEnergia:"A Torre cintila por 5 minutos a cada hora cheia depois de escurecer. Se a Pilar aguentar, esperem a próxima hora cheia na esplanada do Trocadéro, antes de pegar o metrô.",
-  mapa:""
-},
-
-{
-  data:"Domingo, 11 de outubro",
-  titulo:"Nenúfares de Monet e Louvre às 14h30",
-  bairro:"1º arrondissement",
-  saida:"Sair do apartamento às 9h",
-  paradas:[
-    { tipo:"passeio", hora:"09h00", titulo:"Do apartamento ao Orangerie", mapa:"Place de la Concorde, 75008 Paris",
-      texto:"O Louvre de hoje é à tarde e já está comprado. A manhã vai para o Orangerie, que fica no próprio Jardim das Tuileries, a poucos minutos do Louvre, e é o lugar para ver as obras de Monet.",
-      imperdivelTitulo:"Como ir ao Orangerie",
-      imperdivel:[
-        "Metrô direto: estação Daumesnil, linha 8 direção Balard, até Concorde, sem baldeação, cerca de 25 minutos. Dali são 5 minutos a pé pelo Jardim das Tuileries até o museu",
-        "Bilhetes: 3 de € 2,55, comprados no aplicativo antes de sair",
-        "A saída de Concorde tem escada, então a Pilar vai no canguru. Para menos escada, o táxi oficial leva direto à porta do Jardim das Tuileries"
-      ],
-      trajeto:{ modo:"metro", linha:"8", texto:"Daumesnil, linha 8 direção Balard, até Concorde. Sem baldeação, cerca de 25 minutos. Depois, 5 minutos a pé pelo jardim." } },
-
-    { tipo:"passeio", hora:"10h00", titulo:"Musée de l'Orangerie e os Nenúfares de Monet", mapa:"Musée de l'Orangerie, Jardin des Tuileries, 75001 Paris",
-      texto:"Monet doou os Nenúfares à França em 1922, e o museu abriu em 1927 para recebê-los. É pequeno e dá para ver sem pressa em cerca de uma hora e meia. As duas salas ovais dos Nenúfares de Monet foram pensadas para serem vistas de dentro, com os painéis dando a volta nas paredes, à luz natural. Menores de 18 anos entram de graça, mas precisam de horário reservado, inclusive a Pilar.",
-      imperdivel:[
-        "As duas salas ovais dos Nenúfares de Monet, com os painéis dando a volta nas paredes",
-        "O andar de baixo, com Renoir, Cézanne, Matisse e Picasso",
-        "A Place de la Concorde, a poucos passos da estação, com o obelisco de Luxor e as fontes"
-      ],
-      dica:"<b>Reservem o horário das 10h</b> pelo site oficial: a entrada vale na meia hora seguinte ao horário reservado. O ingresso inteiro custa € 12,50 por adulto, e a reserva das crianças também é feita pelo site, de graça. <b>Para fotos:</b> nas salas dos Nenúfares não usem flash, e fotografem os painéis de longe, de modo a pegar a curva da sala inteira.",
-      ingresso:{ texto:"Reservar horário no Orangerie", url:"https://billetterie.musee-orangerie.fr" },
-      trajeto:{ modo:"metro", linha:"1", texto:"Concorde, linha 1 direção Château de Vincennes, até Palais Royal-Musée du Louvre. Sem baldeação, 2 estações, cerca de 5 minutos. Do Orangerie até a estação são uns 5 minutos a pé." } },
-
-    { tipo:"passeio", hora:"11h45", titulo:"Jardim do Palais-Royal", mapa:"Jardin du Palais-Royal, 75001 Paris",
-      texto:"Um jardim fechado por arcadas, gratuito, quase ao lado do Louvre, e muito mais tranquilo que as Tuileries. No pátio, as colunas listradas de preto e branco de Daniel Buren dão fotos divertidas, e as galerias em volta têm lojinhas e cafés.",
-      imperdivel:[
-        "As colunas listradas de Daniel Buren, no pátio principal",
-        "As arcadas e as galerias em volta do jardim",
-        "Os bancos e as cadeiras do jardim, para a Pilar descansar no canguru"
-      ],
-      dica:"<b>Para fotos:</b> peçam às meninas para ficarem de pé em cima das colunas mais baixas (é permitido sentar nelas, com cuidado), e fotografem de cima do degrau, com as arcadas ao fundo.",
-      trajeto:{ modo:"pe", texto:"A pé, 5 minutos, até a Rue Saint-Honoré." } },
-
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço perto do Louvre",
-      nota:"Almoço longo e sem pressa: o Louvre é às 14h30, e a tarde é a parte pesada do dia. Os três ficam a poucos minutos a pé da Pirâmide.",
-      opcoes:[
-        { nome:"Matin des Oliviers", detalhe:"2 Rue de l'Échelle · 4,8 estrelas com 8.018 avaliações · brunch e pratos leves, aberto aos domingos das 7h30 às 20h, 4 min a pé do Louvre", preco:"20 a 28 €" },
-        { nome:"Café Saint Honoré", detalhe:"194 Rue Saint-Honoré · 4,6 estrelas com 4.284 avaliações · pizzas, massas e pratos franceses, aberto todos os dias das 8h à meia-noite, 4 min a pé do Louvre", preco:"20 a 28 €" },
-        { nome:"Café de la Régence", detalhe:"167 Rue Saint-Honoré · 4,4 estrelas com 4.194 avaliações · bistrô clássico com pato e bife, aberto todos os dias das 7h à 1h30, 5 min a pé do Louvre", preco:"20 a 28 €" }
-      ],
-      trajeto:{ modo:"pe", texto:"A pé até a Pirâmide do Louvre, 5 minutos. Cheguem às 14h15." } },
-
-    { tipo:"passeio", hora:"14h30", titulo:"Louvre com áudio guia em português", mapa:"Musée du Louvre, Rue de Rivoli, 75001 Paris",
-      texto:"O ingresso para os dois adultos e as crianças, com áudio guia em português, já está comprado para as 14h30. O áudio guia e o ingresso ficam no aplicativo WeGoTrip, que é a entrada pela fila de quem tem ingresso com horário.",
-      imperdivel:[
-        "A Mona Lisa, na ala Denon",
-        "A Vênus de Milo, na ala Sully",
-        "A Vitória de Samotrácia, no alto da escadaria Daru",
-        "As antiguidades egípcias, a parte que mais prende as crianças"
-      ],
-      dica:"<b>Antes de sair, baixem o áudio guia no Wi-Fi do apartamento</b> e levem fones de ouvido e celular carregado. Se o e-mail ou o SMS do WeGoTrip não chegarem, abram wgtr.app/gyg e digitem o código GYG6H73RK4K2. Três horas é muito para uma criança de 10 anos e uma de 1 ano e 8 meses: usem o áudio guia como mapa e, se o cansaço bater, fiquem só com os quatro destaques. <b>Para fotos:</b> a melhor foto da Pirâmide de vidro é no pátio, antes de entrar, com o prédio do Louvre atrás.",
-      ingresso:{ texto:"Abrir o ingresso do Louvre", url:"https://wgtr.app/PPLPmLTeF6b" },
-      trajeto:{ modo:"metro", linha:"1", texto:"Palais Royal-Musée du Louvre, linha 1 direção Château de Vincennes, até Nation. Sem baldeação, cerca de 25 minutos. Depois, 12 minutos a pé até o apartamento, ou táxi oficial se a Pilar já estiver cansada." } },
-
-    { tipo:"passeio", hora:"19h00", titulo:"Jantar em casa e noite livre",
-      texto:"Depois do Louvre, nenhum deslocamento: jantar no apartamento. O Monoprix da Rue de Reuilly abre até as 19h45 aos domingos, e a Mon Marché até as 12h30, então os mantimentos do domingo precisam estar prontos da sexta ou do sábado." }
-  ],
-  seChover:"O dia é quase todo coberto: Orangerie e Louvre são internos. Só os 15 a 20 minutos entre eles pegam chuva, então levem a capa.",
-  seSobrarEnergia:"Se a Pilar dormir no canguru, a Pirâmide e o pátio do Louvre iluminados à noite valem uma foto antes de ir para o metrô.",
-  mapa:""
-},
-
-{
-  data:"Segunda, 12 de outubro",
-  titulo:"Dia das Crianças na Disneyland Paris",
-  bairro:"12º arrondissement e Marne-la-Vallée",
-  saida:"Sair do apartamento às 8h15",
-  paradas:[
-    { tipo:"passeio", hora:"08h15", titulo:"Do apartamento à Disneyland Paris", mapa:"Place de la Nation, 75012 Paris",
-      texto:"A Disney fica a mais de 30 km do apartamento. O RER A é o jeito mais simples: sai de Nation e termina na estação Marne-la-Vallée-Chessy, ao lado da entrada do parque, sem cadeirinha e sem trânsito. O RER A tem todas as estações acessíveis, então a escada não é o problema aqui.",
-      imperdivelTitulo:"Como ir para a Disney",
-      imperdivel:[
-        "RER A, a opção que recomendo: do apartamento, 12 minutos a pé até Nation. Lá, plataforma da linha A direção Marne-la-Vallée-Chessy, o fim da linha. Cerca de 35 a 45 minutos de viagem. Bilhete de € 2,55 por adulto e pela Perola, a Pilar viaja de graça. Confiram o letreiro, porque alguns trens saem de Nation para Boissy-Saint-Léger, e esse não serve",
-        "Táxi oficial: porta a porta, sem escada. A corrida da Disney sai pelo taxímetro, bem mais cara que o RER, e é a opção para quem estiver muito cansado",
-        "Uber e Bolt: evitem, porque a Pilar precisa de cadeirinha e o motorista de aplicativo pode recusar a corrida"
-      ],
-      dica:"<b>A Disney abre às 9h30 nos dias de semana</b>, e a viagem leva cerca de uma hora porta a porta. Saindo às 8h15, vocês chegam ao portão por volta das 9h30, já com a fila de segurança.",
-      trajeto:{ modo:"rer", linha:"A", texto:"Nation, RER A direção Marne-la-Vallée-Chessy, até o fim da linha. Sem baldeação, 35 a 45 minutos. A estação fica ao lado do parque." } },
-
-    { tipo:"passeio", hora:"09h30", titulo:"Disneyland Park e o Festival de Halloween", mapa:"Disneyland Park, Boulevard de Parc, 77700 Chessy",
-      texto:"O Disney Halloween Festival acontece de 26 de setembro a 1º de novembro no Disneyland Park, está incluído no ingresso e coincide com o dia 12, o Dia das Crianças. O roteiro usa um parque só, com a ordem pensada para uma criança de 10 anos e outra de 1 ano e 8 meses. A Pilar entra de graça. Pelo site oficial, o ingresso de 1 parque para o dia 12 sai em torno de € 100 por pessoa, inclusive para a Perola, e o de 2 parques em torno de € 140 por pessoa. Confiram o horário do dia no aplicativo oficial na véspera.",
-      imperdivel:[
-        "O castelo da Bela Adormecida e a Main Street, com a decoração de Halloween",
-        "A cavalgada Mickey's Halloween Celebration, com carros alegóricos e personagens",
-        "Para a Pilar, na Fantasyland: it's a small world, Dumbo, Peter Pan's Flight e o carrossel de Lancelot",
-        "Para a Perola: Pirates of the Caribbean e Star Tours, com a altura mínima marcada no aplicativo",
-        "Os encontros com vilões do festival, conforme a programação do dia"
-      ],
-      dica:"<b>As atrações altas ficam fora do roteiro</b>, e em especial a Orbitron, na Discoveryland, que sobe e gira no alto. O castelo, o carrossel e as atrações da Fantasyland ficam no nível do chão, para o Lucas ir tranquilo. <b>Para revezar sem pegar a fila duas vezes:</b> peçam ao funcionário da entrada da atração o sistema de revezamento para pais com criança pequena. O parque tem trocadores em muitos banheiros, papinhas à venda e aluguel de carrinho. O ingresso permite sair e voltar no mesmo dia. <b>Para fotos:</b> a melhor foto do castelo é da Main Street, de frente, no começo da manhã, com o parque ainda vazio, e a cavalgada dá uma segunda chance de foto à tarde.",
-      ingresso:{ texto:"Comprar o ingresso de 1 dia, 1 parque", url:"https://www.disneylandparis.com" },
-      trajeto:{ modo:"pe", texto:"A pé, 5 a 10 minutos, do parque até o Disney Village." } },
-
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço no Disney Village",
-      nota:"Dentro do parque, as opções de almoço custam caro ou têm nota baixa. O Disney Village fica fora do parque, a poucos minutos da entrada, e o mesmo ingresso permite sair e voltar. A pausa também deixa a Pilar dormir.",
-      opcoes:[
-        { nome:"The Royal Pub", detalhe:"Disney Village · 4,6 estrelas com 6.054 avaliações · pub familiar com pratos simples, aberto das 11h30 às 23h", preco:"20 a 28 €" },
-        { nome:"Rainforest Café", detalhe:"Disney Village · 4,3 estrelas com 10.001 avaliações · restaurante temático com aquários, bom para a Perola, aberto das 11h30 às 23h", preco:"20 a 28 €" },
-        { nome:"Earl of Sandwich", detalhe:"5 Disney Village · 4,1 estrelas com 3.203 avaliações · sanduíches montados do jeito de cada um, bom para criança seletiva, aberto das 8h às 23h", preco:"20 a 28 €" }
-      ] },
-
-    { tipo:"passeio", hora:"14h00", titulo:"Tarde na Fantasyland e cavalgada", mapa:"Fantasyland, Disneyland Park, 77700 Chessy",
-      texto:"De volta ao parque, a tarde é para as atrações da Fantasyland, que são calmas e cobertas, e para esperar a cavalgada Mickey's Halloween Celebration, que costuma passar às 15h25 e às 17h. Confirmem o horário no aplicativo do parque.",
-      dica:"Se a Pilar dormir no canguru, aproveitem para uma das atrações de altura mínima com a Perola. A saída às 18h evita o pico do fechamento no RER A, e quem quiser ficar até o show noturno encontra a segunda opção logo abaixo.",
-      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A direção Paris, em qualquer trem com destino Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye, até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } },
-
-    { tipo:"passeio", hora:"18h00", titulo:"Primeira opção: voltar para o apartamento", mapa:"Gare Marne-la-Vallée Chessy, 77700 Chessy",
-      texto:"Quem preferir voltar no ritmo das crianças sai do parque por volta das 18h e pega o RER A antes do pico do fechamento, com a Pilar ainda de bom humor. O Carrefour City da Rue Jacques Hillairet abre até as 22h e a Mon Marché até as 21h30, e resolvem o jantar no caminho de volta. A noite é livre." },
-
-    { tipo:"passeio", hora:"19h30", titulo:"Segunda opção: jantar no Disney Village e ficar para o show", mapa:"Disney Village, Av. Paul Séramy, 77700 Chessy",
-      texto:"Quem preferir esperar o show noturno pode jantar no Disney Village, fora do parque, a poucos minutos da entrada, com as mesmas três opções do almoço: The Royal Pub, Rainforest Café e Earl of Sandwich, a cerca de 20 a 28 € por pessoa. O ingresso permite sair e voltar no mesmo dia, e as mesas ficam mais cheias a partir das 19h, então vale chegar às 19h30 em ponto." },
-
-    { tipo:"passeio", hora:"21h45", titulo:"Show noturno no castelo, para quem ficar", mapa:"Sleeping Beauty Castle, Disneyland Park, 77700 Chessy",
-      texto:"O Disneyland Park tem um show noturno todas as noites no castelo, o Disney Tales of Magic, com fogos, projeções e fontes, incluído no ingresso do parque. O horário costuma ser perto das 22h, e o horário exato do dia aparece no aplicativo. O outro show noturno, o Disney Cascade of Lights, fica no lago do Disney Adventure World, o segundo parque, que só entra com o ingresso de 2 parques. Se esperarem pelo show, a volta é de RER A por volta das 22h45, e o RER A circula até perto da meia-noite. A Pilar volta dormindo no canguru.",
-      dica:"<b>Para fotos e para ver bem:</b> fiquem na Main Street, de frente para o castelo, uns 30 minutos antes do show, para pegar um bom lugar. Depois do show, a saída do parque lota, então esperem 10 minutos para o fluxo diminuir.",
-      trajeto:{ modo:"rer", linha:"A", texto:"Marne-la-Vallée-Chessy, RER A direção Paris, em qualquer trem com destino Cergy-le-Haut, Poissy ou Saint-Germain-en-Laye, até Nation. Sem baldeação, 35 a 45 minutos. Depois, 12 minutos a pé até o apartamento." } }
-  ],
-  seChover:"Boa parte das atrações da Fantasyland é interna e funciona com chuva. Levem capa de chuva em vez de guarda-chuva, que atrapalha nas filas e com a Pilar no canguru.",
-  seSobrarEnergia:"O show noturno do castelo, por volta das 22h, é a opção para quem aguentar ficar até o fim do dia.",
-  mapa:""
-},
-
-{
-  data:"Terça, 13 de outubro",
-  titulo:"Champs-Élysées, jardins, chocolate quente e compras",
-  bairro:"8º e 1º arrondissement",
-  saida:"Sair do apartamento às 9h45",
-  paradas:[
-    { tipo:"passeio", hora:"09h45", titulo:"Do apartamento ao Arco do Triunfo", mapa:"Place Charles de Gaulle, 75008 Paris",
-      texto:"A terça é o dia mais leve da viagem e reúne o que sobrou: grife, cosméticos franceses, jardim para a Perola e um almoço especial. O dia começa pela Étoile, onde o Arco do Triunfo é visto de baixo: o Lucas não precisa subir.",
-      imperdivelTitulo:"Como ir ao Arco do Triunfo",
-      imperdivel:[
-        "Metrô direto: estação Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até o fim da linha, sem baldeação, cerca de 35 a 40 minutos. A saída da estação já fica ao lado do Arco",
-        "Para chegar ao Arco, usem a passagem subterrânea sob a rotatória, e não atravessem o trânsito",
-        "Bilhetes: 3 de € 2,55, comprados no aplicativo antes de sair"
-      ],
-      trajeto:{ modo:"metro", linha:"6", texto:"Daumesnil, linha 6 direção Charles de Gaulle-Étoile, até o fim da linha. Sem baldeação, cerca de 35 a 40 minutos." } },
-
-    { tipo:"passeio", hora:"10h45", titulo:"Arco do Triunfo e Champs-Élysées, grife e macarons", mapa:"Louis Vuitton, 101 Avenue des Champs-Élysées, 75008 Paris",
-      texto:"O Arco do Triunfo, visto de baixo, já rende a foto. Descendo a Avenue des Champs-Élysées pela calçada, passa-se pela loja principal da Louis Vuitton, no número 101, aberta de segunda a sábado das 10h às 20h, e pela Ladurée, no número 75, famosa pelos macarons, aberta todos os dias das 8h às 21h30. Os dois ficam na mesma calçada, a poucos minutos um do outro.",
-      imperdivel:[
-        "O Arco do Triunfo, visto da base, sem subir",
-        "A loja principal da Louis Vuitton, no número 101 da Avenue des Champs-Élysées",
-        "A Ladurée, no número 75, para macarons de lembrança",
-        "O trecho largo da Champs-Élysées, para a foto com o Arco ao fundo"
-      ],
-      dica:"<b>Para fotos:</b> da calçada da Champs-Élysées, uns 100 metros antes do Arco, o Arco ocupa o fundo da avenida inteira. Com a Pilar no canguru, as fotos de família saem melhor aí do que na rotatória, que é movimentada. As compras de grife entram no tax free se passarem de € 100 na mesma loja, e o passo a passo está na preparação.",
-      trajeto:{ modo:"pe", texto:"A pé pela calçada, 10 a 15 minutos, até o almoço." } },
-
-    { tipo:"refeicao", hora:"12h45", titulo:"Almoço especial na Champs-Élysées",
-      nota:"Este é o almoço especial da viagem, já que as noites ficam livres e o jantar é em casa. Ele é especial pelo cenário e pela tradição, e não pela alta gastronomia: L'Alsace é uma brasserie histórica da Champs-Élysées, e a Ladurée, um salão de chá clássico. A taça de champanhe entra aqui, no lugar da degustação formal.",
-      opcoes:[
-        { nome:"L'Alsace", detalhe:"39 Avenue des Champs-Élysées · 4,6 estrelas com 25.023 avaliações · brasserie mítica da avenida desde 1968, com terraço e choucroute, aberta todos os dias das 7h às 2h", preco:"à la carte em média € 40 a € 60 por pessoa. O menu de almoço de dia útil sai por volta de € 20 a € 27" },
-        { nome:"Ladurée Champs-Élysées", detalhe:"75 Avenue des Champs-Élysées · 4,2 estrelas com 16.723 avaliações · salão de chá histórico, famoso pelos macarons, aberto todos os dias das 8h às 21h30", preco:"20 a 28 €" },
-        { nome:"Le Drugstore", detalhe:"133 Avenue des Champs-Élysées · 4,6 estrelas com 5.632 avaliações · restaurante com pátio de vidro perto do Arco, aberto de segunda a sexta das 8h à meia-noite", preco:"20 a 28 €" }
-      ],
-      trajeto:{ modo:"metro", linha:"1", texto:"Franklin D. Roosevelt, linha 1 direção Château de Vincennes, até Tuileries. Sem baldeação, 3 estações, cerca de 6 minutos." } },
-
-    { tipo:"passeio", hora:"14h45", titulo:"Playground e passeio no Jardim das Tuileries", mapa:"Aire de jeux pour enfants des Tuileries, 1 Terrasse des Feuillants, 75001 Paris",
-      texto:"É o parque do dia para a Perola e a Pilar, e fica ao lado do metrô. O playground das Tuileries é gratuito, fica aberto o dia todo e tem redes de escalada e tobogã. O jardim inteiro rende fotos sem esforço, com a Pirâmide do Louvre ao fundo.",
-      imperdivel:[
-        "O playground das Tuileries, gratuito, com tobogã e rede de escalada",
-        "As alamedas do Jardim das Tuileries, planas e com cadeiras para sentar",
-        "A vista do Arco do Carrossel e da Pirâmide do Louvre, para a foto de família"
-      ],
-      dica:"<b>Para fotos:</b> parem no meio do jardim, de costas para o Louvre, e fotografem as meninas com o Obelisco e a Champs-Élysées ao fundo, ou de frente para o Louvre, com a Pirâmide no horizonte. A luz das 15h30 em outubro é suave.",
-      trajeto:{ modo:"pe", texto:"A pé, 4 minutos, até a Angelina, na Rue de Rivoli." } },
-
-    { tipo:"passeio", hora:"16h00", titulo:"Chocolate quente na Angelina", mapa:"Angelina, 226 Rue de Rivoli, 75001 Paris",
-      texto:"A Angelina é a casa de chá mais famosa de Paris, na Rue de Rivoli, com 4,3 estrelas e mais de 18 mil avaliações, aberta todos os dias das 8h às 19h30 (às 20h nas sextas, sábados e domingos). O chocolate quente é a marca da casa e funciona como o lanche da tarde das meninas. Costuma ter fila, e as horas de menos movimento ficam entre as 15h e as 17h.",
-      imperdivel:[
-        "O chocolate quente, a especialidade da casa",
-        "O Mont-Blanc, a sobremesa clássica de creme de castanha",
-        "O salão de época, para a foto com as meninas"
-      ],
-      dica:"<b>Para fotos:</b> peçam uma mesa no salão principal, onde a decoração aparece melhor, e fotografem as meninas com a xícara. Se a fila estiver longa, o salão de chá menor ao lado atende mais rápido.",
-      trajeto:{ modo:"pe", texto:"A pé, 6 minutos, pela Rue de Castiglione até a Place Vendôme." } },
-
-    { tipo:"passeio", hora:"16h45", titulo:"Place Vendôme, joalherias e a coluna", mapa:"Place Vendôme, 75001 Paris",
-      texto:"A Place Vendôme é a praça das grandes joalherias de Paris, com a coluna de bronze no centro. Para quem gosta de ver vitrines de luxo sem a multidão da Champs-Élysées, é uma passada curta, a poucos metros da Angelina.",
-      imperdivel:[
-        "A coluna de bronze no centro da praça",
-        "As vitrines das joalherias, em volta da praça",
-        "A fachada do Hôtel Ritz, no canto da praça"
-      ],
-      dica:"<b>Para fotos:</b> fotografem as meninas ao pé da coluna, com a fachada de pedra clara da praça ao fundo. A luz de fim de tarde em outubro deixa a pedra dourada.",
-      trajeto:{ modo:"pe", texto:"A pé, 9 minutos, pela Rue Saint-Honoré até a Pharmacie du Théâtre Français." } },
-
-    { tipo:"passeio", hora:"17h45", titulo:"Cosméticos franceses perto do Louvre", mapa:"La Pharmacie du Théâtre Français, 2 Place André Malraux, 75001 Paris",
-      texto:"Antes de voltar, as compras de farmácia, com lembrancinhas e cosméticos franceses, ficam na região do Louvre. A Pharmacie du Théâtre Français, na Place André Malraux, fica ao lado da estação Palais Royal-Musée du Louvre, que é a estação da volta, e abre de segunda a sexta das 8h às 22h. A Pharmacie Louvre Rivoli, no 2 Rue du Roule, a uns 10 minutos a pé, tem 4,5 estrelas e 149 avaliações, abre todos os dias, e segundo as avaliações faz o formulário de tax free na hora.",
-      imperdivel:[
-        "La Pharmacie du Théâtre Français, 2 Place André Malraux, 4,1 estrelas com 343 avaliações, aberta até as 22h",
-        "Pharmacie Louvre Rivoli, 2 Rue du Roule, 4,5 estrelas com 149 avaliações, aberta das 9h às 20h",
-        "Citypharma, 26 Rue du Four, no 6º, a farmácia mais famosa para cosméticos, 3,5 estrelas com mais de 4 mil avaliações, que fica mais longe e é muito cheia"
-      ],
-      dica:"Levem o passaporte para o tax free, que vale a partir de € 100 na mesma loja. Marcas como La Roche-Posay, Avène e Nuxe são as mais procuradas. Confiram o preço de cada produto, porque a farmácia da vitrine e a grande farmácia do 12º, aberta 24 horas, às vezes têm preços diferentes.",
-      trajeto:{ modo:"metro", linha:"1", texto:"Palais Royal-Musée du Louvre, linha 1 direção Château de Vincennes, até Nation. Sem baldeação, cerca de 25 minutos. Depois, 12 minutos a pé até o apartamento." } },
-
-    { tipo:"passeio", hora:"19h00", titulo:"Jantar em casa e noite livre",
-      texto:"A feira Marché Daumesnil funciona às terças até as 13h30, então hoje de manhã, antes de sair, vale uma passada rápida de 15 minutos para frutas e legumes, e a Mon Marché abre até as 21h30 para o resto. A noite é livre." }
-  ],
-  seChover:"Troquem a Champs-Élysées pelas Galeries Lafayette Haussmann, 40 Boulevard Haussmann, 4,5 estrelas com mais de 98 mil avaliações, aberta de segunda a sábado das 10h às 20h30 e aos domingos das 11h às 20h. É um shopping de luxo coberto, com moda de grife, perfumaria e cosméticos, e dá para chegar de metrô, estação Opéra, linha 8, direto de Daumesnil, e mais uns 5 minutos a pé. O terraço panorâmico fica no último andar, e o Lucas pode pular.",
-  seSobrarEnergia:"Depois da farmácia, a Pilar pode terminar a tarde no colo na própria Place André Malraux, com a Ópera de Paris ao fundo, para uma última foto.",
-  mapa:""
-},
-
-{
-  data:"Quarta, 14 de outubro",
-  titulo:"Última manhã e Eurostar às 16h02",
-  bairro:"12º e 10º arrondissement",
-  saida:"Check-out até as 11h, trem às 16h02",
-  paradas:[
-    { tipo:"passeio", hora:"09h00", titulo:"Padaria, farmácia e malas prontas", mapa:"Leroy Monti, 203 Avenue Daumesnil, 75012 Paris",
-      texto:"A última manhã é para o pão do café da manhã, as últimas compras de farmácia e para fechar as malas. Lembrem que o Eurostar exige que vocês consigam carregar sozinhos tudo o que levarem, sem carregador na estação.",
-      imperdivelTitulo:"Onde comprar",
-      imperdivel:[
-        "Leroy Monti, 203 Avenue Daumesnil, 4,1 estrelas com 230 avaliações, aberta às quartas, para pães e doces de viagem",
-        "Pharmacie de Reuilly, 27 Boulevard de Reuilly, 4,9 estrelas com 101 avaliações, aberta das 9h às 20h",
-        "Citypharma, 86 Boulevard Soult, aberta 24 horas, para cosméticos e dermocosméticos franceses. Levem o passaporte"
-      ],
-      dica:"Gastos acima de € 100 na mesma loja dão direito ao tax free. As bornas PABLO para validar o formulário ficam no terminal Eurostar da Gare du Nord, depois do check-in.",
-      trajeto:{ modo:"pe", texto:"A pé, 4 a 15 minutos, conforme a loja, por calçada plana." } },
-
-    { tipo:"passeio", hora:"11h00", titulo:"Check-out e táxi até a Gare du Nord", mapa:"Gare du Nord, 18 Rue de Dunkerque, 75010 Paris",
-      texto:"O check-out é até as 11h. A política de bagagem depois do check-out não consta na reserva, então perguntem ao hotel por e-mail, ainda antes de embarcar, se guardam as malas. Sem essa garantia, saiam às 11h15 e almocem perto da estação, já com as malas.",
-      dica:"Reservem o táxi oficial pelo aplicativo G7 ou pelo telefone 3607 para as 11h15. Quatro pessoas cabem em um táxi comum, com as malas no porta-malas. A reserva custa € 4 se for imediata e € 7 se for com antecedência, além do taxímetro, que costuma marcar entre € 25 e € 35 para esse trajeto.",
-      trajeto:{ modo:"taxi", texto:"Táxi oficial do apartamento até a Gare du Nord. Estimativa de € 25 a € 35 no taxímetro, cerca de 25 minutos." } },
-
-    { tipo:"refeicao", hora:"12h00", titulo:"Almoço perto da Gare du Nord",
-      nota:"Com as malas, a opção mais prática é a que fica em frente à estação. As outras duas ficam a 5 minutos de táxi. O Bouillon Chartier é uma instituição parisiense de preço baixo, perfeito para o último almoço.",
-      opcoes:[
-        { nome:"Bouillon Chartier Gare de l'Est", detalhe:"5 Rue du 8 Mai 1945 · 4,5 estrelas com 12.418 avaliações · clássico francês a preço justo, aberto todos os dias das 11h30 à meia-noite · não aceita reserva, chegar cedo evita fila", preco:"média à la carte abaixo de € 20 por pessoa" },
-        { nome:"Brasserie Bellanger", detalhe:"140 Rue du Faubourg Poissonnière · 4,7 estrelas com 6.560 avaliações · brasserie moderna, aberta todos os dias, 12 min a pé da Gare du Nord", preco:"20 a 28 €" },
-        { nome:"Terminus Nord", detalhe:"23 Rue de Dunkerque · 4,4 estrelas com 8.106 avaliações · brasserie clássica em frente à Gare du Nord, aberta das 7h30 às 23h, a mais cara das três", preco:"30 a 42 €" }
-      ] },
-
-    { tipo:"passeio", hora:"14h00", titulo:"Gare du Nord e Eurostar para Londres", mapa:"Gare du Nord, 18 Rue de Dunkerque, 75010 Paris",
-      texto:"O trem 9043 sai às 16h02 e parte exatamente na hora. O bilhete pede para estar no terminal de partida às 15h02, e os portões fecham 30 minutos antes do trem, às 15h32. Na Gare du Nord, todos os controles acontecem antes do embarque: segurança, bagagem e as duas fronteiras, a francesa (com o registro do EES) e a britânica. Com duas crianças e as malas, recomendo chegar ao terminal Eurostar às 14h30, meia hora antes do horário do bilhete, para a fila e os imprevistos. Estejam prontos para embarcar 10 minutos antes da partida. Os assentos estão no vagão 4: Pollyana no 13, Lucas no 17 e Perola no 18. A Pilar viaja no colo, sem bilhete.",
-      imperdivel:[
-        "Chegar ao terminal Eurostar às 14h30, com folga para a segurança e as duas fronteiras",
-        "Os quatro passaportes à mão e o ETA britânico aprovado para todos, inclusive a Pilar",
-        "Franquia de 2 malas por adulto e 1 por criança de 4 a 11 anos, mais uma bagagem de mão, e tudo o que levarem precisa ser carregado por vocês"
-      ],
-      dica:"<b>Código de reserva YGVMZJ.</b> Escaneiem o QR code de cada bilhete individualmente nos portões. Depois do check-in e da segurança, procurem as bornas PABLO, indicadas como Détaxe, Tax Refund, se tiverem formulários de tax free para validar.",
-      ingresso:{ texto:"Abrir a reserva no Eurostar", url:"https://www.eurostar.com" } }
-  ],
-  seChover:"A estação é toda coberta. A chuva só pega o trajeto de táxi até a porta.",
-  seSobrarEnergia:"",
-  mapa:""
-}
-],
-
-reservas: {
-  texto: "A compra é feita por vocês, sempre pelos sites oficiais. Deixei em ordem de urgência: as três primeiras linhas precisam ser resolvidas já.",
-  linhas: [
-    { nome:"ETA britânico, 4 pessoas", quando:"Agora. A maioria é aprovada em até 3 dias úteis", preco:"£ 20 por pessoa, inclusive bebês", site:"gov.uk/eta", url:"https://www.gov.uk/eta" },
-    { nome:"Disneyland Paris, 1 dia, 1 parque", quando:"Antes de sair do Brasil, para garantir o dia 12", preco:"Em torno de € 100 por pessoa em 12/10 com 1 parque, inclusive a Perola, e em torno de € 140 com 2 parques. A Pilar não paga", site:"disneylandparis.com", url:"https://www.disneylandparis.com" },
-    { nome:"Musée de l'Orangerie", quando:"Agora, para o horário das 10h de domingo", preco:"€ 12,50 por adulto. Menores de 18 anos não pagam, com horário reservado", site:"billetterie.musee-orangerie.fr", url:"https://billetterie.musee-orangerie.fr" },
-    { nome:"Cruzeiro no Sena, Bateaux Parisiens", quando:"Esta semana, para garantir o horário do sábado", preco:"€ 17 por adulto, € 8 por criança de 4 a 11 anos, grátis até 3 anos", site:"bateauxparisiens.com", url:"https://www.bateauxparisiens.com" },
-    { nome:"Almoço especial de terça", quando:"Na semana da viagem, no restaurante escolhido", preco:"Confiram o cardápio do restaurante", site:"Google Maps", url:"https://www.google.com/maps/search/?api=1&query=L%27Alsace%20Champs-%C3%89lys%C3%A9es%20Paris" },
-    { nome:"Táxi até a Gare du Nord, dia 14", quando:"Na véspera, pelo aplicativo G7", preco:"Taxímetro, mais € 4 (imediato) ou € 7 (antecipado) de reserva", site:"g7.fr", url:"https://www.g7.fr" },
-    { nome:"Musée du Louvre com áudio guia", quando:"Já comprado para domingo, às 14h30. Baixem o aplicativo e o áudio guia antes", preco:"já pago", site:"wgtr.app", url:"https://wgtr.app/PPLPmLTeF6b" },
-    { nome:"Eurostar, Paris para Londres", quando:"Já comprado para 14 de outubro, às 16h02", preco:"já pago", site:"eurostar.com", url:"https://www.eurostar.com" }
-  ],
-  aviso:"Confiram o horário no site oficial na véspera de cada visita. Fechamento parcial e mudança de horário acontecem, e uma conferida de dois minutos evita perder a manhã."
-},
-
-orcamento: {
-  texto: "Calculado com os ingressos das atrações, os restaurantes deste roteiro e o apartamento com cozinha, que reduz o gasto com jantares. Os valores de alimentação e de táxi são estimativas, e os ingressos e bilhetes são os preços de cada local. A Pilar não paga ingressos nem transporte.",
-  linhas: [
-    { item:"Musée de l'Orangerie, 2 adultos", valor:"€ 25" },
-    { item:"Cruzeiro no Sena, 2 adultos e 1 criança", valor:"€ 42" },
-    { item:"Disneyland Paris, 3 pagantes (a Pilar não paga): 1 parque, em torno de € 100 por pessoa", valor:"cerca de € 300. Com 2 parques, em torno de € 140 por pessoa, cerca de € 420" },
-    { item:"Louvre com áudio guia", valor:"já pago" },
-    { item:"Metrô e RER, 30 bilhetes avulsos", valor:"€ 76,50" },
-    { item:"Táxi do aeroporto, tarifa fixa", valor:"€ 56" },
-    { item:"Táxi até a Gare du Nord (estimativa)", valor:"€ 29 a € 42" },
-    { item:"Almoços, 6 dias, com o almoço especial de terça (estimativa)", valor:"€ 365 a € 530" },
-    { item:"Mercado: café da manhã e 5 jantares em casa (estimativa)", valor:"€ 190 a € 290" },
-    { item:"Chocolate quente e lanche na Angelina (estimativa)", valor:"€ 40 a € 60" },
-    { item:"Compras de farmácia e lembrancinhas, sem grife", valor:"€ 150 a € 300" },
-    { item:"Reserva para imprevistos", valor:"€ 200" },
-    { item:"Jantar no Disney Village, só se ficarem para o show (estimativa, fora do total)", valor:"€ 70 a € 100" },
-    { item:"ETA britânico, 4 pessoas (cobrado em libras, fora do total)", valor:"£ 80" }
-  ],
-  total: "a partir de € 1.475 para os quatro, ou cerca de € 245 por dia"
-},
-
-etiqueta: {
-  texto: "O inglês é pouco e o francês nenhum, então esses detalhes valem ainda mais, principalmente com um bebê na mesa. Nada disso exige falar o idioma.",
-  itens: [
-    { i:"coracao", t:"Bonjour antes de tudo", d:"Entrar em qualquer lugar sem dizer bonjour é considerado grosseria em Paris. Essa única palavra muda o atendimento por completo, mesmo que vocês não digam mais nada." },
-    { i:"cadeira", t:"Cadeirinha de bebê", d:"A maioria dos restaurantes tem. Peçam: une chaise haute, s'il vous plaît. Em lugares pequenos ou muito cheios, confirmem ao chegar." },
-    { i:"garfo", t:"Cardápio infantil", d:"Peçam o menu enfant ou pratos simples, como croque-monsieur, massa ou frango com batata. Também dá para pedir meia porção." },
-    { i:"relogio", t:"Horário das refeições", d:"A cozinha de restaurante francês costuma servir o almoço entre 12h e 14h30 e o jantar a partir das 19h. Chegar às 12h evita espera, e o jantar às 19h cai bem no ritmo da Pilar." },
-    { i:"celular", t:"Apontar resolve", d:"Cardápio com preço visível e o dedo apontando é perfeitamente aceito. Se travar, o Google Tradutor lê o cardápio pela câmera, mesmo offline." },
-    { i:"cafe", t:"Água grátis", d:"Peçam une carafe d'eau, que é a jarra de água da torneira, de graça. Não peçam eau, que vem engarrafada e cobrada." },
-    { i:"cadeira", t:"Sur place ou à emporter", d:"Sur place é consumir no local e inclui serviço. À emporter é para viagem e sai mais barato pelo mesmo pedido." }
+  "total": "€ 1.140 a € 1.590 para os quatro, sem contar o que já foi pago, ou cerca de € 190 a € 265 por dia"
+ },
+ "etiqueta": {
+  "texto": "O inglês é pouco e o francês nenhum, então esses detalhes valem ainda mais, principalmente com um bebê na mesa. Nada disso exige falar o idioma.",
+  "itens": [
+   {
+    "i": "coracao",
+    "t": "Bonjour antes de tudo",
+    "d": "Entrar em qualquer lugar sem dizer bonjour é considerado grosseria em Paris. Essa única palavra muda o atendimento por completo, mesmo que vocês não digam mais nada."
+   },
+   {
+    "i": "cadeira",
+    "t": "Cadeirinha de bebê",
+    "d": "A maioria dos restaurantes tem. Peçam: une chaise haute, s'il vous plaît. Em lugares pequenos ou muito cheios, confirmem ao chegar."
+   },
+   {
+    "i": "garfo",
+    "t": "Cardápio infantil",
+    "d": "Peçam o menu enfant ou pratos simples, como croque-monsieur, massa ou frango com batata. Também dá para pedir meia porção."
+   },
+   {
+    "i": "relogio",
+    "t": "Horário das refeições",
+    "d": "A cozinha de restaurante francês costuma servir o almoço entre 12h e 14h30 e o jantar a partir das 19h. Chegar às 12h evita espera, e o jantar às 19h cai bem no ritmo da Pilar."
+   },
+   {
+    "i": "celular",
+    "t": "Apontar resolve",
+    "d": "Cardápio com preço visível e o dedo apontando é perfeitamente aceito. Se travar, o Google Tradutor lê o cardápio pela câmera, mesmo offline."
+   },
+   {
+    "i": "cafe",
+    "t": "Água grátis",
+    "d": "Peçam une carafe d'eau, que é a jarra de água da torneira, de graça. Não peçam eau, que vem engarrafada e cobrada."
+   },
+   {
+    "i": "cadeira",
+    "t": "Sur place ou à emporter",
+    "d": "Sur place é consumir no local e inclui serviço. À emporter é para viagem e sai mais barato pelo mesmo pedido."
+   }
   ]
-},
-
-frases:[
-  { fr:"Bonjour", pt:"bom dia" },
-  { fr:"Merci, au revoir", pt:"obrigado, tchau" },
-  { fr:"Au forfait, s'il vous plaît", pt:"pela tarifa fixa, por favor (táxi do aeroporto)" },
-  { fr:"Une table pour quatre, avec une chaise haute, s'il vous plaît", pt:"uma mesa para quatro, com cadeirinha de bebê, por favor" },
-  { fr:"Avez-vous un menu enfant ?", pt:"vocês têm cardápio infantil?" },
-  { fr:"Pouvez-vous réchauffer ce biberon, s'il vous plaît ?", pt:"podem esquentar esta mamadeira, por favor?" },
-  { fr:"Avez-vous une table à langer ?", pt:"vocês têm trocador?" },
-  { fr:"Une carafe d'eau, s'il vous plaît", pt:"uma jarra de água da torneira, por favor" },
-  { fr:"L'addition, s'il vous plaît", pt:"a conta, por favor" },
-  { fr:"Où sont les toilettes ?", pt:"onde ficam os banheiros?" },
-  { fr:"Je ne parle pas français", pt:"eu não falo francês" },
-  { fr:"Parlez-vous anglais ?", pt:"você fala inglês?" },
-  { fr:"Un billet pour la Perola et deux adultes", pt:"um bilhete de criança e dois de adulto (na bilheteria)" },
-  { fr:"Billetterie", pt:"placa: bilheteria" },
-  { fr:"Entrée / Sortie", pt:"placa: entrada / saída" },
-  { fr:"Ouvert / Fermé", pt:"placa: aberto / fechado" },
-  { fr:"Poussez / Tirez", pt:"placa na porta: empurre / puxe" },
-  { fr:"Toilettes / Consigne", pt:"placa: banheiros / guarda-volumes" },
-  { fr:"Interdit / Défense de", pt:"placa: proibido" },
-  { fr:"Attention aux pickpockets", pt:"placa: cuidado com batedores de carteira (aparece no metrô e nas atrações)" },
-  { fr:"Gare / Métro / RER", pt:"placa: estação de trem / metrô / trem urbano" },
-  { fr:"Direction / Correspondance", pt:"placa no metrô: sentido (o último nome da linha) / baldeação" },
-  { fr:"Sortie de secours", pt:"placa: saída de emergência" },
-  { fr:"Sens unique", pt:"placa de trânsito: mão única" },
-  { fr:"Passage piéton", pt:"placa de trânsito: faixa de pedestres" },
-  { fr:"Tarif réduit / Gratuit", pt:"placa de ingresso: tarifa reduzida / grátis" },
-  { fr:"Horaires", pt:"placa: horários" }
-],
-
-cuidados: {
-  texto: "Nada alarmante, e Paris é uma cidade segura para caminhar. São cuidados simples que resolvem quase tudo, e vale os dois saberem antes de embarcar.",
-  emergencia: "112 funciona em toda a Europa e atende em inglês. Polícia 17, ambulância 15. Se travarem no idioma, digam o nome da rua e a palavra urgence.",
-  golpes: [
-    { t:"Bilhete de metrô na rua", d:"Gente perto das estações vendendo bilhete de metrô ou passe para museus a preço alto. Comprem o bilhete só pelo aplicativo e os ingressos só online, nos sites que deixei na seção de reservas." },
-    { t:"Petição", d:"Jovens com prancheta pedem assinatura para uma causa. Enquanto vocês olham o papel, outra pessoa mexe na bolsa. Ignorem e sigam andando." },
-    { t:"Anel de ouro", d:"Alguém simula achar um anel no chão, entrega para vocês e depois cobra. Não aceitem nada de desconhecido." },
-    { t:"Ajuda com malas e carrinho", d:"Alguém oferece ajuda com a mala ou com o carrinho em estação cheia e depois cobra ou furta. Aceitem ajuda só de funcionários uniformizados." },
-    { t:"Táxi irregular no aeroporto", d:"Quem aborda dentro do terminal oferecendo corrida é irregular. Só peguem na fila oficial sinalizada ou pelo aplicativo." }
+ },
+ "frases": [
+  {
+   "fr": "Bonjour",
+   "pt": "bom dia"
+  },
+  {
+   "fr": "Merci, au revoir",
+   "pt": "obrigado, tchau"
+  },
+  {
+   "fr": "Au forfait, s'il vous plaît",
+   "pt": "pela tarifa fixa, por favor (táxi do aeroporto)"
+  },
+  {
+   "fr": "Une table pour quatre, avec une chaise haute, s'il vous plaît",
+   "pt": "uma mesa para quatro, com cadeirinha de bebê, por favor"
+  },
+  {
+   "fr": "Avez-vous un menu enfant ?",
+   "pt": "vocês têm cardápio infantil?"
+  },
+  {
+   "fr": "Pouvez-vous réchauffer ce biberon, s'il vous plaît ?",
+   "pt": "podem esquentar esta mamadeira, por favor?"
+  },
+  {
+   "fr": "Avez-vous une table à langer ?",
+   "pt": "vocês têm trocador?"
+  },
+  {
+   "fr": "Une carafe d'eau, s'il vous plaît",
+   "pt": "uma jarra de água da torneira, por favor"
+  },
+  {
+   "fr": "L'addition, s'il vous plaît",
+   "pt": "a conta, por favor"
+  },
+  {
+   "fr": "Où sont les toilettes ?",
+   "pt": "onde ficam os banheiros?"
+  },
+  {
+   "fr": "Je ne parle pas français",
+   "pt": "eu não falo francês"
+  },
+  {
+   "fr": "Parlez-vous anglais ?",
+   "pt": "você fala inglês?"
+  },
+  {
+   "fr": "Un billet pour la Perola et deux adultes",
+   "pt": "um bilhete de criança e dois de adulto (na bilheteria)"
+  },
+  {
+   "fr": "Billetterie",
+   "pt": "placa: bilheteria"
+  },
+  {
+   "fr": "Entrée / Sortie",
+   "pt": "placa: entrada / saída"
+  },
+  {
+   "fr": "Ouvert / Fermé",
+   "pt": "placa: aberto / fechado"
+  },
+  {
+   "fr": "Poussez / Tirez",
+   "pt": "placa na porta: empurre / puxe"
+  },
+  {
+   "fr": "Toilettes / Consigne",
+   "pt": "placa: banheiros / guarda-volumes"
+  },
+  {
+   "fr": "Interdit / Défense de",
+   "pt": "placa: proibido"
+  },
+  {
+   "fr": "Attention aux pickpockets",
+   "pt": "placa: cuidado com batedores de carteira (aparece no metrô e nas atrações)"
+  },
+  {
+   "fr": "Gare / Métro / RER",
+   "pt": "placa: estação de trem / metrô / trem urbano"
+  },
+  {
+   "fr": "Direction / Correspondance",
+   "pt": "placa no metrô: sentido (o último nome da linha) / baldeação"
+  },
+  {
+   "fr": "Sortie de secours",
+   "pt": "placa: saída de emergência"
+  },
+  {
+   "fr": "Sens unique",
+   "pt": "placa de trânsito: mão única"
+  },
+  {
+   "fr": "Passage piéton",
+   "pt": "placa de trânsito: faixa de pedestres"
+  },
+  {
+   "fr": "Tarif réduit / Gratuit",
+   "pt": "placa de ingresso: tarifa reduzida / grátis"
+  },
+  {
+   "fr": "Horaires",
+   "pt": "placa: horários"
+  }
+ ],
+ "cuidados": {
+  "texto": "Nada alarmante, e Paris é uma cidade segura para caminhar. São cuidados simples que resolvem quase tudo, e vale os dois saberem antes de embarcar.",
+  "emergencia": "112 funciona em toda a Europa e atende em inglês. Polícia 17, ambulância 15. Se travarem no idioma, digam o nome da rua e a palavra urgence.",
+  "golpes": [
+   {
+    "t": "Bilhete de metrô na rua",
+    "d": "Gente perto das estações vendendo bilhete de metrô ou passe para museus a preço alto. Comprem o bilhete só pelo aplicativo e os ingressos só online, nos sites que deixei na seção de reservas."
+   },
+   {
+    "t": "Petição",
+    "d": "Jovens com prancheta pedem assinatura para uma causa. Enquanto vocês olham o papel, outra pessoa mexe na bolsa. Ignorem e sigam andando."
+   },
+   {
+    "t": "Anel de ouro",
+    "d": "Alguém simula achar um anel no chão, entrega para vocês e depois cobra. Não aceitem nada de desconhecido."
+   },
+   {
+    "t": "Ajuda com malas e carrinho",
+    "d": "Alguém oferece ajuda com a mala ou com o carrinho em estação cheia e depois cobra ou furta. Aceitem ajuda só de funcionários uniformizados."
+   },
+   {
+    "t": "Táxi irregular no aeroporto",
+    "d": "Quem aborda dentro do terminal oferecendo corrida é irregular. Só peguem na fila oficial sinalizada ou pelo aplicativo."
+   }
   ],
-  habitos: [
-    { i:"mochila", t:"No metrô e no RER", d:"Bolsa e mochila na frente do corpo em vagão cheio. Não pendurem bolsa no carrinho em lugares cheios." },
-    { i:"celular", t:"Com o celular", d:"Não usem o celular na mão junto à porta do vagão pouco antes de fechar. É o momento clássico do furto." },
-    { i:"euro", t:"Dinheiro dividido", d:"Não levem tudo junto. Deixem parte dos euros e um cartão reserva no cofre do apartamento." },
-    { i:"pessoas", t:"Ponto de encontro", d:"Definam um ponto de encontro por dia, caso se percam no meio da multidão da Disney ou do Louvre. Anotem o nome do hotel e um telefone no bolso da Perola." }
+  "habitos": [
+   {
+    "i": "mochila",
+    "t": "No metrô e no RER",
+    "d": "Bolsa e mochila na frente do corpo em vagão cheio. Não pendurem bolsa no carrinho em lugares cheios."
+   },
+   {
+    "i": "celular",
+    "t": "Com o celular",
+    "d": "Não usem o celular na mão junto à porta do vagão pouco antes de fechar. É o momento clássico do furto."
+   },
+   {
+    "i": "euro",
+    "t": "Dinheiro dividido",
+    "d": "Não levem tudo junto. Deixem parte dos euros e um cartão reserva no cofre do apartamento."
+   },
+   {
+    "i": "pessoas",
+    "t": "Ponto de encontro",
+    "d": "Definam um ponto de encontro por dia, caso se percam no meio da multidão da Disney ou do Louvre. Anotem o nome do hotel e um telefone no bolso da Perola."
+   }
   ],
-  passaporte: [
-    "Registrem a perda ou roubo em uma delegacia, o Commissariat de Police, e guardem o boletim de ocorrência.",
-    "Tirem foto no padrão de documento em um Photomaton, as cabines automáticas comuns nas estações de metrô.",
-    "Solicitem atendimento pelo sistema e-consular do Consulado-Geral do Brasil em Paris. Não vão ao consulado sem agendamento.",
-    "Se precisarem voltar ao Brasil sem a documentação completa, peçam a ARB, a Autorização de Retorno ao Brasil."
+  "passaporte": [
+   "Registrem a perda ou roubo em uma delegacia, o Commissariat de Police, e guardem o boletim de ocorrência.",
+   "Tirem foto no padrão de documento em um Photomaton, as cabines automáticas comuns nas estações de metrô.",
+   "Solicitem atendimento pelo sistema e-consular do Consulado-Geral do Brasil em Paris. Não vão ao consulado sem agendamento.",
+   "Se precisarem voltar ao Brasil sem a documentação completa, peçam a ARB, a Autorização de Retorno ao Brasil."
   ]
-},
-
-depois: {
-  texto: "Algumas pendências ficam para depois. Dá para resolver todas em uma tarde.",
-  itens: [
-    { i:"etiqueta", t:"Tax free, na saída da União Europeia", d:"Se fizerem compras acima de € 100 na mesma loja na França, ou acima de cerca de € 61,50 em Portugal, validem o formulário na saída da União Europeia: em Paris, nas bornas PABLO do terminal Eurostar da Gare du Nord, e em Portugal, no aeroporto de Lisboa. No Reino Unido não há reembolso de imposto para turistas. Reservem tempo, o processo demora." },
-    { i:"wifi", t:"Cancelem o plano de internet", d:"eSIM ou chip físico. Muitos continuam ativos depois do retorno e geram cobrança no cartão, mesmo sem uso." },
-    { i:"escudo", t:"Seguro viagem, se usou", d:"Se usaram o seguro em qualquer situação (consulta médica, bagagem perdida, atraso de voo), peçam o reembolso dentro do prazo da apólice, em geral até 30 dias após o retorno. Reúnam recibos originais, laudos médicos e demais comprovantes." },
-    { i:"euro", t:"Avisem o banco", d:"Alguns bancos mantêm o limite internacional ampliado por padrão, o que aumenta o risco em caso de fraude. Reduzam ao patamar habitual pelo aplicativo, leva menos de um minuto." },
-    { i:"mala", t:"Alfândega no Brasil", d:"Isenção de 1000 dólares por pessoa na chegada de avião. Acima disso, declarem na e-DBV antes de desembarcar." }
+ },
+ "depois": {
+  "texto": "Algumas pendências ficam para depois. Dá para resolver todas em uma tarde.",
+  "itens": [
+   {
+    "i": "etiqueta",
+    "t": "Tax free, na saída da União Europeia",
+    "d": "Se fizerem compras acima de € 100 na mesma loja na França, ou acima de cerca de € 61,50 em Portugal, validem o formulário na saída da União Europeia: em Paris, nas bornas PABLO do terminal Eurostar da Gare du Nord, e em Portugal, no aeroporto de Lisboa. No Reino Unido não há reembolso de imposto para turistas. Reservem tempo, o processo demora."
+   },
+   {
+    "i": "wifi",
+    "t": "Cancelem o plano de internet",
+    "d": "eSIM ou chip físico. Muitos continuam ativos depois do retorno e geram cobrança no cartão, mesmo sem uso."
+   },
+   {
+    "i": "escudo",
+    "t": "Seguro viagem, se usou",
+    "d": "Se usaram o seguro em qualquer situação (consulta médica, bagagem perdida, atraso de voo), peçam o reembolso dentro do prazo da apólice, em geral até 30 dias após o retorno. Reúnam recibos originais, laudos médicos e demais comprovantes."
+   },
+   {
+    "i": "euro",
+    "t": "Avisem o banco",
+    "d": "Alguns bancos mantêm o limite internacional ampliado por padrão, o que aumenta o risco em caso de fraude. Reduzam ao patamar habitual pelo aplicativo, leva menos de um minuto."
+   },
+   {
+    "i": "mala",
+    "t": "Alfândega no Brasil",
+    "d": "Isenção de 1000 dólares por pessoa na chegada de avião. Acima disso, declarem na e-DBV antes de desembarcar."
+   }
   ]
-},
-
-fim: {
-  titulo:"Que seja uma viagem inesquecível, com as meninas",
-  texto:"Está tudo aqui: cada dia, cada trajeto, cada endereço e cada reserva que precisa ser feita antes. Se bater qualquer dúvida antes de embarcar, é só me chamar.",
-  assinatura:"Gabriela · Paris Sem Segredos"
-},
-
-contato: {
-  whatsapp:"5511945208458",
-  mensagem:"Oi Gabriela! Aqui é a Pollyana, estou com o roteiro aberto e queria te perguntar uma coisa antes da viagem",
-  chamada:"Falar comigo",
-  apoio:"Dúvida antes da viagem?"
-}
-
+ },
+ "fim": {
+  "titulo": "Que seja uma viagem inesquecível, com as meninas",
+  "texto": "Está tudo aqui: cada dia, cada trajeto, cada endereço e cada reserva que precisa ser feita antes. Se bater qualquer dúvida antes de embarcar, é só me chamar.",
+  "assinatura": "Gabriela · Paris Sem Segredos"
+ },
+ "contato": {
+  "whatsapp": "5511945208458",
+  "mensagem": "Oi Gabriela! Aqui é a Pollyana, estou com o roteiro aberto e queria te perguntar uma coisa antes da viagem",
+  "chamada": "Falar comigo",
+  "apoio": "Dúvida antes da viagem?"
+ },
+ "compras": {
+  "texto": "Lojas famosas de moda, perfumaria e cosméticos, com endereço, o que vendem e a faixa de preço. Os níveis são de referência, e não preços de produto: € acessível, €€ médio, €€€ alto e €€€€ luxo. Os horários valem para os dias do roteiro.",
+  "colunas": [
+   "Onde",
+   "Endereço",
+   "O que vende",
+   "Faixa de preço",
+   "Quando encaixar"
+  ],
+  "linhas": [
+   [
+    "<b>Galeries Lafayette Haussmann</b>",
+    "40 Boulevard Haussmann, 75009",
+    "Moda de grife e de rede, bolsas, perfumaria e cosméticos franceses no térreo, moda infantil",
+    "€€ a €€€€",
+    "Sábado, depois do Opéra. Aberta de segunda a sábado das 10h às 20h30 e aos domingos das 11h às 20h"
+   ],
+   [
+    "<b>Printemps Haussmann</b>",
+    "64 Boulevard Haussmann, 75009",
+    "Moda e acessórios de grife, beleza e perfumaria",
+    "€€€ a €€€€",
+    "Sábado, na mesma rua das Galeries Lafayette. Aberto das 10h às 20h, e aos domingos a partir das 11h"
+   ],
+   [
+    "<b>Maison Guerlain Champs-Élysées</b>",
+    "68 Avenue des Champs-Élysées, 75008",
+    "Perfumes da casa Guerlain e maquiagem, com batom personalizado e gravação",
+    "€€€ a €€€€",
+    "Sábado, na Champs-Élysées. Aberta das 11h às 20h, e aos domingos até as 19h"
+   ],
+   [
+    "<b>Sephora Champs-Élysées</b>",
+    "72 Avenue des Champs-Élysées, 75008",
+    "Cosméticos e perfumes de todas as marcas, na maior loja da rede",
+    "€€ a €€€",
+    "Sábado, ao lado da Guerlain. Aberta das 10h às 21h30, e às terças só até as 18h30"
+   ],
+   [
+    "<b>Musée du Parfum Fragonard</b>",
+    "9 Rue Scribe, 75009",
+    "Museu gratuito de perfumes, com loja da Fragonard e ateliê pago para criar o próprio perfume",
+    "€ a €€",
+    "Sábado, na parada do Opéra. Aberto das 9h às 17h30"
+   ],
+   [
+    "<b>Jovoy Paris</b>",
+    "4 Rue de Castiglione, 75001",
+    "Perfumaria de nicho e de luxo, com marcas raras",
+    "€€€€",
+    "Segunda, junto à Place Vendôme. Aberta das 11h às 19h, fechada aos domingos"
+   ],
+   [
+    "<b>La Pharmacie du Théâtre Français</b>",
+    "2 Place André Malraux, 75001",
+    "Cosméticos franceses de farmácia e lembrancinhas",
+    "€ a €€",
+    "Segunda, ao lado da estação Palais Royal. Aberta de segunda a sexta até as 22h"
+   ],
+   [
+    "<b>Pharmacie Louvre Rivoli</b>",
+    "2 Rue du Roule, 75001",
+    "Cosméticos franceses de farmácia e lembrancinhas, com formulário de tax free no balcão",
+    "€ a €€",
+    "Segunda, a uns 10 minutos a pé da estação Palais Royal"
+   ],
+   [
+    "<b>Samaritaine</b>",
+    "9 Rue de la Monnaie, 75001",
+    "Loja de departamentos de luxo em prédio restaurado, com moda de grife e perfumaria",
+    "€€€ a €€€€",
+    "Opção para a segunda, perto da Pont Neuf, a cerca de 1 km do Louvre. Aberta todos os dias das 10h às 20h"
+   ],
+   [
+    "<b>Westfield Forum des Halles</b>",
+    "101 Porte Berger, 75001",
+    "Shopping com redes de moda, de casa e de beleza, e restaurantes",
+    "€ a €€",
+    "Opção para qualquer dia, em Châtelet-Les Halles, a 6 estações da Nation pela linha 1. Aberto das 10h às 20h30"
+   ],
+   [
+    "<b>BHV Marais</b>",
+    "52 Rue de Rivoli, 75004",
+    "Loja de departamentos popular, com moda, casa, beleza e um porão de utilidades",
+    "€ a €€",
+    "Opção, em frente ao Hôtel de Ville. Aberto das 10h às 20h, e aos domingos das 11h às 19h"
+   ],
+   [
+    "<b>Le Bon Marché Rive Gauche</b>",
+    "24 Rue de Sèvres, 75007",
+    "A loja de departamentos de luxo mais elegante de Paris, com moda, beleza, casa e uma ala de comida gourmet",
+    "€€€ a €€€€",
+    "Opção, na margem esquerda, estação Sèvres-Babylone. Aberto das 10h às 19h45, e aos domingos das 11h às 19h45"
+   ],
+   [
+    "<b>Marché aux Puces de Saint-Ouen</b>",
+    "Rue des Rosiers, 93400 Saint-Ouen",
+    "Mercado de pulgas famoso, com antiguidades, roupas e objetos vintage",
+    "€ a €€€, com pechincha",
+    "Opção para sábado, domingo ou segunda, das 10h às 18h. Fica longe e é cheio, então atenção a carteiras"
+   ]
+  ]
+ }
 };
 /* ==========================================================================
    DAQUI PRA BAIXO É O MOTOR. NÃO PRECISA MEXER.
@@ -1207,6 +2223,7 @@ if(R.hospedagem || R.ondeSeHospedar) navItens.push(['#base','Onde ficam','']);
 if(R.transporte) navItens.push(['#transporte','Transporte','']);
 if(R.preparacao) navItens.push(['#preparacao','Checklist','']);
 (R.dias||[]).length ? navItens.push(['#roteiro','Roteiro','']) : null;
+if(R.compras) navItens.push(['#compras','Compras','']);
 if(R.reservas) navItens.push(['#reservas','Reservas','']);
 if(R.orcamento) navItens.push(['#orcamento','Orçamento','']);
 if(R.etiqueta) navItens.push(['#mesa','Na mesa','']);
@@ -1449,6 +2466,15 @@ if(tem(R.dias)){
   </section>`);
 }
 
+/* ---------- compras (tabela opcional) ---------- */
+if(R.compras){
+  const c=R.compras;
+  H.push(`<section class="sec wrap" id="compras">
+    ${cab('Compras','loja','Onde fazer compras em Paris',c.texto)}
+    <div class="card tab-wrap"><table class="tab-compras"><thead><tr>${c.colunas.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${c.linhas.map(l=>`<tr>${l.map((v,i)=>`<td data-l="${c.colunas[i]}">${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+  </section>`);
+}
+
 /* ---------- reservas ---------- */
 if(R.reservas){
   const r=R.reservas;
@@ -1458,7 +2484,7 @@ if(R.reservas){
       <table class="tab"><thead><tr><th>Atração</th><th>Quando comprar</th><th>Preço</th><th>Site oficial</th></tr></thead>
       <tbody>${r.linhas.map(l=>`<tr>
         <td><b>${l.nome}</b></td><td data-r="Quando">${l.quando}</td><td data-r="Preço">${l.preco}</td>
-        <td data-r="Site oficial"><a href="${l.url}" target="_blank" rel="noopener">${l.site}</a></td></tr>`).join('')}</tbody></table>
+        <td data-r="Site oficial">${l.url?`<a href="${l.url}" target="_blank" rel="noopener">${l.site}</a>`:l.site}</td></tr>`).join('')}</tbody></table>
     </div>
     ${tem(r.aviso)?`<div class="alerta"><span class="ico">${ic('alerta',19)}</span><span>${r.aviso}</span></div>`:''}
   </section>`);
