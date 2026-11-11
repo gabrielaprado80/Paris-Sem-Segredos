@@ -419,16 +419,16 @@ const ROTEIRO = {
 
 capa: {
   saudacao: "Bia e Wallace, este é o roteiro de vocês em",
-  titulo: "Roma",
-  subtitulo: "Cinco dias de Roma entre o trabalho e o passeio: as manhãs, o domingo e as noites são de vocês.",
+  titulo: "Roma e Paris",
+  subtitulo: "De Roma ao Marais: o roteiro completo da viagem de vocês, dia a dia.",
   chegada: "29 NOV 2026",
-  saida: "03 DEZ 2026",
+  saida: "12 DEZ 2026",
   dataChegadaISO: "2026-11-29",
   chips: [
     { i:"pessoas", t:"2 adultos" },
-    { i:"mapa", t:"Roma" },
-    { i:"calendario", t:"29 de novembro a 3 de dezembro" },
-    { i:"estrela", t:"Manhãs e noites livres" }
+    { i:"mapa", t:"Roma e Paris" },
+    { i:"termometro", t:"8°C a 13°C em Roma, 4°C a 8°C em Paris" },
+    { i:"coracao", t:"Viagem tranquila, romântica e fotográfica" }
   ]
 },
 
@@ -437,7 +437,8 @@ carta: [
   "O domingo, dia 29, é o único dia inteiro livre, e por isso concentra o que não pode faltar: o mercado de pulgas de Porta Portese, a Isola Tiberina, o Campidoglio com a vista do Fórum, a Via dei Fori Imperiali, o Coliseu iluminado e uma noite em Trastevere.",
   "De segunda a quarta, a manhã tem um grande programa por dia. Na segunda, os Museus do Vaticano, abertos às 8h, com a lista do que ver lá dentro e a Basílica de São Pedro. Na terça, o Coliseu às 8h30, com o Fórum Romano e o Palatino logo em seguida. Na quarta, aniversário do Wallace, a Fontana di Trevi ainda vazia, o Pantheon, a Piazza Navona, o Campo de' Fiori e uma loja de bolsas de couro feitas à mão.",
   "A hora de almoço é a pausa das 16h30 às 17h30, e as opções ficam todas a poucos minutos do hotel. O jantar da quarta, dia 2, tem opções para a data especial, e a noite fecha com um passeio de bicicleta pelo centro.",
-  "No dia 3, o trem Italo sai da Termini às 10h05 rumo a Milão. Tudo o que precisa ser comprado antes está na seção de reservas, com data e site oficial."
+  "No dia 3, o trem Italo sai da Termini às 10h05 rumo a Milão. Tudo o que precisa ser comprado antes está na seção de reservas, com data e site oficial.",
+  "Paris entra no dia 7 de dezembro: a chegada na Gare de Lyon às 17h38, o hotel no Marais e, nos quatro dias que seguem, a Torre Eiffel de baixo para a foto que vocês sonharam, o cruzeiro no Sena, Disneyland Paris com decoração de Natal, o Louvre, Notre-Dame e Montmartre. O último jantar, dentro do barco no Sena, fecha a viagem como ela merece."
 ],
 
 assinaturaCarta: "Boa viagem, Gabriela",
@@ -473,9 +474,33 @@ aeroportos: [
         ]}
     ]
   }
+,
+  {
+    sigla: "ORY",
+    nome: "Orly",
+    nota: "O voo TAP TP453 sai de Orly no sábado, dia 12, às 10h20 para Porto, com conexão TP93 às 13h55 para São Paulo, chegada às 21h45. Cheguem ao aeroporto às 7h20, 3 horas antes. Orly tem 4 terminais: confiram o terminal no app da TAP na véspera. O hotel não tem elevador, então descer 6 andares com as malas acontece de qualquer forma, seja de metrô ou de táxi.",
+    opcoes: [
+      { nome:"Linha 14 do metrô", icone:"metro", rec:true, selo:"Recomendado",
+        preco:"€ 14", precoNota:"bilhete único de aeroporto, por pessoa", tempo:"25 min direto até Orly",
+        itens:[
+          ["Como funciona","A linha 14 é automática e roda desde as 5h30. Da estação Hôtel de Ville ou Châtelet, sentido Aéroport d'Orly, é direta até o aeroporto, sem baldeação, em cerca de 25 minutos."],
+          ["O bilhete","O Ticket Paris Région <> Aéroports custa € 14 por pessoa, tarifa única para esse trajeto. Compra-se no aplicativo Île-de-France Mobilités ou na máquina da estação antes de entrar na catraca. O pagamento por aproximação do cartão direto na catraca, sem comprar bilhete antes, só existe na própria estação de Orly e no funicular de Montmartre por enquanto: nas estações onde vocês vão embarcar (Hôtel de Ville ou Châtelet), ainda não funciona."],
+          ["O horário","Saindo do hotel às 5h30, chegam à estação em poucos minutos e ao aeroporto por volta das 6h15, com quase 4 horas de antecedência para o voo das 10h20."]
+        ]},
+      { nome:"Táxi G7 ou Bolt pré-agendado", icone:"taxi", selo:"Alternativa",
+        preco:"€ 45", precoNota:"tarifa fixa de táxi da Rive Droite para Orly", tempo:"30 a 40 min",
+        itens:[
+          ["Táxi","Tarifa fixa de € 45 de qualquer ponto da Rive Droite até Orly. Agendar pelo app G7 na noite anterior para garantir o horário das 6h30."],
+          ["Bolt","Função Reservar do Bolt, agendado na véspera. Preço em torno de € 30 a € 45, dependendo do horário."],
+          ["Quando faz sentido","Para quem preferir ir direto à porta do aeroporto, sem trocar de estação ou carregar as malas até a plataforma."]
+        ]}
+    ]
+  }
 ],
 
-hospedagem: {
+hospedagens: [
+{
+  cidade: "Roma",
   nome: "HT Residence Maximus",
   endereco: "Via Capo d'Africa, 20 a 30, 00184 Roma",
   metro: "Colosseo, linha B, a cerca de 5 a 7 minutos a pé.",
@@ -491,42 +516,111 @@ hospedagem: {
     { i:"farmacia", t:"Farmácia próxima", d:"Farmacia Celimontana na Via Celimontana 9/A, a 5 minutos a pé, aberta de segunda a sexta das 8h30 às 19h30 e aos sábados das 8h30 às 13h. Para urgência fora do horário, a farmácia de plantão (farmacia di turno) mais próxima aparece na porta de qualquer farmácia fechada ou no 1500 (número nacional de saúde)." }
   ]
 },
+{
+  cidade: "Paris",
+  nome: "Hôtel Rivoli",
+  endereco: "2 Rue des Mauvais Garçons (também indicado como 44 Rue de Rivoli), 75004 Paris, 4º arrondissement",
+  metro: "Hôtel de Ville, linhas 1 e 11, a 3 minutos a pé.",
+  checkin: "A partir das 14h",
+  checkout: "Até as 11h",
+  nota: "O Rivoli fica no Marais, a 3 minutos a pé do metrô. Atenção: o hotel tem 6 andares e não tem elevador, o que vale contar no tempo de qualquer saída com malas. No último dia, o táxi ou Bolt para Orly sai da frente do hotel, na Rue de Rivoli, não da Rue des Mauvais Garçons.",
+  porPerto: [
+    { i:"metro", t:"Metrô", d:"Hôtel de Ville, linhas 1 (sentido La Défense para o resto da cidade) e 11. A 3 minutos a pé." },
+    { i:"garfo", t:"Jantar perto", d:"Le Ju', 16 Rue des Archives, aberto até as 2h todos os dias. Bouillon République, 39 Bd du Temple, das 11h30 à meia-noite todos os dias." },
+    { i:"mercado", t:"Mercado de rua", d:"Marché Baudoyer, Place Baudoyer, às quartas das 10h às 20h e aos sábados das 7h às 14h, a 5 minutos a pé." },
+    { i:"farmacia", t:"Farmácias no Marais", d:"Pharmacie du Marais, 50 Rue de Rivoli, aberta todos os dias. Pharmacie de la Mairie, 11 Rue du Lobau. Ambas têm cosméticos franceses." },
+    { i:"loja", t:"Compras e brechó", d:"A Rue de la Verrerie é a rua de brechó mais perto do hotel, a poucos minutos a pé: Vintage by Ramin (nº 64, o mais bem avaliado, camisetas a partir de € 5 e jaquetas de couro a € 40) e FREE P STAR (nº 61, preços bem baixos). A Rue de Bretagne e a Rue Charlot, um pouco mais longe, têm as butiques e os ateliês locais. A Rue des Francs-Bourgeois tem as marcas do Marais." },
+    { i:"pin", t:"Farmácia 24h próxima", d:"Para urgência fora do horário, a farmácia de plantão (pharmacie de garde) mais próxima aparece no site pharma-garde.fr ou no 3237 (orientação médica 24h)." }
+  ]
+}
+],
 
 transporte: {
-  recomendacao: "Cada trajeto traz as três opções: metrô, a pé e Bolt. O bilhete de metrô de Roma custa € 1,50 e vale 100 minutos, com uma baldeação entre as linhas A e B sem sair das catracas. O metrô funciona das 5h30 às 23h30 (até 1h30 nas sextas e sábados), então depois das 22h30 a volta do jantar é de Bolt.",
+  recomendacao: "Cada trajeto traz as três opções: metrô, a pé e Bolt. Use a aba do país em que estiverem.",
+  abas: [
+    {
+      pais: "Roma",
+      bilhetes: [
+        { nome:"Bilhete BIT (metrô, ônibus e bonde)", preco:"€ 1,50", nota:"por pessoa. Vale 100 minutos com uma viagem de metrô, baldeação entre as linhas A e B incluída", ideal:"todos os dias de passeio em Roma" }
+      ],
+      celular: [
+        ["Onde comprar","Nas máquinas das estações de metrô, em bancas e tabacarias, ou no aplicativo Muoversi a Roma (ATAC). Em estações com leitor contactless, dá para encostar o cartão diretamente na catraca."],
+        ["Validar sempre","Cada pessoa precisa do próprio bilhete. O bilhete de papel entra na catraca. Fiscais conferem na saída."],
+        ["Greves","São frequentes na Itália e costumam ser avisadas com antecedência. Confiram no aplicativo antes de sair."]
+      ],
+      avisos: [
+        "Nas linhas A e B em horário de pico, bolsa e mochila sempre na frente do corpo."
+      ]
+    },
+    {
+      pais: "Paris",
+      bilhetes: [
+        { nome:"Navigo Semaine toutes zones", preco:"€ 32,40", nota:"por pessoa. Vale de segunda a domingo. Cobre metrô, RER, ônibus e bonde de toda a Île-de-France, incluindo o RER A para a Disney. Comprar na máquina da Gare de Lyon assim que chegarem, dia 7.", ideal:"semana toda em Paris, de 07 a 12/12" },
+        { nome:"Ticket Métro-Train-RER avulso", preco:"€ 2,55", nota:"por pessoa por trajeto. Para quem preferir não comprar o Navigo", ideal:"trajeto isolado" },
+        { nome:"Linha 14 do metrô", preco:"€ 14", nota:"bilhete único de aeroporto por pessoa, direta até Orly em 25 minutos, roda desde as 5h30", ideal:"saída para Orly no dia 12, opção recomendada" },
+        { nome:"Táxi G7 pré-agendado", preco:"€ 45", nota:"tarifa fixa da Rive Droite para Orly, agendar pelo app na véspera", ideal:"alternativa para ir direto à porta do aeroporto" }
+      ],
+      celular: [
+        ["Navigo Semaine, como comprar","Duas formas. Na máquina da Gare de Lyon: selecionar Navigo Easy (cartão reutilizável, recarregável em qualquer viagem futura, € 2 na primeira emissão), depois Semaine e Toutes zones. O cartão sai na hora e aceita cartão de crédito internacional. Ou, sem precisar do cartão físico, comprar e carregar o Navigo Semaine direto pelo aplicativo Île-de-France Mobilités (IDFM), com o celular servindo de bilhete."],
+        ["Como usar o Navigo","Encostar o cartão no leitor da catraca. Sem papel, sem validação extra. Cada pessoa precisa do próprio cartão."],
+        ["Para a Disney","O Navigo Semaine cobre o RER A até Marne-la-Vallée-Chessy, que é a porta da Disney. Pegar na estação Châtelet-Les Halles, sentido Marne-la-Vallée-Chessy, sem troca."],
+        ["Para Orly no dia 12","A linha 14 é a melhor opção: roda desde as 5h30, direta até Orly em 25 minutos, sem baldeação. Saindo do hotel às 5h30, chegam ao aeroporto por volta das 6h15, com quase 4h de antecedência para o voo das 10h20. O bilhete único de aeroporto custa € 14 por pessoa. Quem preferir ir direto à porta do aeroporto, o táxi G7 pré-agendado sai às 6h30."],
+        ["App Bonjour RATP","Instalar antes de viajar. Mostra linhas, horários, interrupções e compra de bilhete pelo celular. Funciona em português."],
+        ["App G7","Para pré-agendar o táxi de Orly no dia 12. Agendar na véspera: endereço do hotel (2 Rue des Mauvais Garçons) e Orly, saída às 6h30."]
+      ],
+      avisos: [
+        "No metrô e no RER em horário de pico, bolsa e mochila sempre na frente do corpo.",
+        "Confiram no app Bonjour RATP se há greve ou obra antes de sair. Greves na França costumam ser avisadas com 5 dias de antecedência.",
+        "O Navigo Semaine compensa mesmo com o táxi de volta para Orly: 5 dias de passeio mais a Disney cobertas valem mais que os bilhetes avulsos no total."
+      ]
+    }
+  ],
   bilhetes: [
-    { nome:"Bilhete BIT (metrô, ônibus e bonde)", preco:"€ 1,50", nota:"por pessoa. Vale 100 minutos com uma viagem de metrô, baldeação entre as linhas A e B incluída", ideal:"todos os dias de passeio" }
+    { nome:"Bilhete BIT, Roma", preco:"€ 1,50", nota:"por pessoa, 100 minutos com baldeação", ideal:"Roma" },
+    { nome:"Navigo Semaine, Paris", preco:"€ 32,40", nota:"por pessoa, de segunda a domingo, toda a região", ideal:"Paris, semana toda" }
   ],
   celular: [
-    ["Onde comprar","Nas máquinas das estações de metrô, em bancas e tabacarias, ou no aplicativo Muoversi a Roma (ATAC). Em estações com leitor contactless, dá para encostar o cartão diretamente na catraca."],
-    ["Validar sempre","Cada pessoa precisa do próprio bilhete. Quem viajar sem bilhete válido paga multa na hora."],
-    ["Greves","São frequentes na Itália e costumam ser avisadas com antecedência. Confiram no aplicativo antes de sair."]
+    ["Roma","App Muoversi a Roma (ATAC). Leitor contactless nas catracas."],
+    ["Paris","App Bonjour RATP. Navigo Easy carregado na máquina da Gare de Lyon."],
+    ["Validar sempre","Cada pessoa precisa do próprio bilhete ou cartão. Fiscais conferem na saída."],
+    ["Greves","Frequentes nos dois países. Confiram no aplicativo antes de sair."]
   ],
   avisos: [
-    "Nas linhas A e B em horário de pico, bolsa e mochila sempre na frente do corpo."
+    "Em horário de pico, bolsa e mochila sempre na frente do corpo em qualquer cidade."
   ]
 },
 
 preparacao: {
   texto: "Os itens abaixo se resolvem ainda no Brasil, com o passo a passo.",
   blocos: [
-    { titulo:"Entrada na Itália e no Espaço Schengen", icone:"passaporte", itens:[
+    { titulo:"Documentação e entrada na Europa", icone:"passaporte", itens:[
       ["Passaporte","Precisa estar dentro da validade durante toda a viagem, com folhas livres. Levem o original no avião e em mãos na imigração."],
       ["ETIAS","Ainda não está em vigor. A previsão é de um início gradual no fim de 2026 e de obrigatoriedade em 2027, e o site oficial do ETIAS informa que o viajante não precisa fazer nada por enquanto. Não solicitem nada e desconfiem de qualquer site ou pessoa que cobre por isso hoje: é golpe."],
       ["Registro na entrada","No primeiro país do Espaço Schengen, que é a Itália, pode haver registro de foto e de digitais em um totem, junto com o carimbo. É rápido, e faz parte do novo sistema de entrada e saída da União Europeia."],
-      ["Valor de referência","A Itália pede comprovação de meios para o sustento. Para estadas de 11 a 20 dias, a tabela oficial prevê € 25,82 fixos mais € 22,21 por pessoa por dia, quando viajam duas ou mais pessoas. Para 14 dias, são cerca de € 650 no total. O que vocês levam cobre isso com folga."],
+      ["Valor de referência, Itália","Na entrada pela Itália, a tabela oficial prevê € 25,82 fixos mais € 22,21 por pessoa por dia, quando viajam duas ou mais pessoas, para estadas de 11 a 20 dias. Para 14 dias, são cerca de € 650 no total."],
+      ["Valor de referência, França","A França pede € 65 por pessoa por dia de estadia com reserva de hotel já feita, ou € 120 por dia sem reserva. Como vocês têm hotel reservado em Paris, o valor fica em € 65 por dia. O que vocês levam cobre os dois valores de referência com folga."],
       ["O que levar em mãos","Reserva de todas as hospedagens, passagem de volta, comprovante do seguro viagem e parte do dinheiro em espécie. Basta mostrar se o agente da imigração pedir."]
     ]},
     { titulo:"Dinheiro e cartão", icone:"euro", itens:[
       ["Dinheiro e cartão","Levem os euros divididos entre vocês dois, com um cartão reserva guardado no hotel. Em Porta Portese, em alguns bares e em muitas bancas, só se paga em dinheiro, então levem notas pequenas."],
-      ["Gorjeta e couvert","Na Itália, a gorjeta não é obrigatória. O couvert, uma taxa de poucos euros por pessoa, e a taxa de serviço aparecem na conta. Se um restaurante pedir gorjeta em dinheiro além do valor da conta, podem recusar."]
+      ["Gorjeta e couvert na Itália","Na Itália, a gorjeta não é obrigatória. O couvert, uma taxa de poucos euros por pessoa, e a taxa de serviço aparecem na conta. Se um restaurante pedir gorjeta em dinheiro além do valor da conta, podem recusar."],
+      ["Gorjeta e couvert em Paris","Em Paris, o service compris (serviço incluído) já está embutido na conta por lei. Não é preciso deixar gorjeta. Arredondar o valor é gentileza, não obrigação. Couvert não é comum em Paris."]
     ]},
     { titulo:"Tax free, para as compras", icone:"etiqueta", itens:[
       ["1. Na loja","Apresentem o passaporte original e avisem ao vendedor que querem o tax free. A loja entrega o recibo, a nota fiscal e o formulário de reembolso. Na hora, escolham como querem receber: crédito no cartão ou dinheiro no aeroporto. Perguntem na loja qual é o valor mínimo de compra para ter direito."],
       ["2. No aeroporto","Procurem o balcão ou o totem da alfândega para validar o formulário no aeroporto do último país de saída da União Europeia. Façam isso antes de despachar as malas, e deixem as compras à mão: a alfândega pode pedir para ver o passaporte, a passagem e as compras."],
       ["Reembolso por cartão","Depositem os formulários validados na caixa de correio do governo, ao lado da alfândega. O crédito aparece na fatura do cartão em algumas semanas, sem taxa de serviço."],
       ["Reembolso em dinheiro","Com todos os documentos, vão ao guichê das empresas parceiras, como Global Blue ou Planet, no aeroporto, e recebam na hora. Pode haver taxa pelo serviço."],
-      ["Vale saber","O reembolso costuma ficar entre 10% e 15% do valor das compras. O valor mínimo varia de país para país e de loja para loja. Reservem tempo no aeroporto, porque o processo pode demorar."]
+      ["Vale saber","O reembolso costuma ficar entre 10% e 15% do valor das compras. Na França, o valor mínimo é de € 100 numa mesma rede em até 3 dias. Na Itália, o mínimo é de € 154,94 numa mesma loja no mesmo dia. Reservem tempo no aeroporto, porque o processo pode demorar."]
+    ]},
+    { titulo:"Internet em viagem, eSIM e chip", icone:"wifi", itens:[
+      ["O que é o eSIM","Um chip virtual embutido no aparelho. Em vez de trocar o cartão físico, basta escanear um QR code antes de embarcar e a internet funciona assim que o avião pousar, sem precisar achar loja nem pedir ajuda."],
+      ["Funciona para iPhone?","Todos os iPhones a partir do XS têm eSIM. Para confirmar, vá em Ajustes, Dados Móveis: se aparecer a opção Adicionar Plano, seu celular suporta eSIM."],
+      ["Funciona para Android?","A maioria dos Samsungs e Motorolas recentes tem eSIM, mas não todos. Para confirmar, vá em Ajustes, Conexões (ou SIM e eSIM): se aparecer a opção para adicionar um plano digital, tem eSIM."],
+      ["A Holafly","Empresa de eSIM de viagem, com planos por destino e quantidade de dias. Dados ilimitados em alguns planos. Funciona em toda a Europa e cobre Roma e Paris com o mesmo plano França-Itália ou com planos separados."],
+      ["Como comprar","1. Entrem no site da Holafly pelo botão abaixo. 2. Escolham o destino e a quantidade de dias. 3. Finalizem a compra, o QR code chega por e-mail em poucos minutos. 4. Em casa, com wi-fi, abram Ajustes, Dados Móveis, Adicionar Plano e escaneiem o QR code. 5. Só ativem o plano quando chegarem na Europa, para não gastar os dias à toa."],
+      ["Se o celular não tiver eSIM","Comprar um chip físico de turista na chegada em Roma: procurem a loja TIM, Vodafone ou WindTre no aeroporto de Fiumicino, logo após a esteira de bagagem. Planos a partir de € 10 por semana. Levem o passaporte."],
+      ["Comprar pelo link","<a class=\"p-ing\" href=\"https://holafly.sjv.io/c/7858225/2006335/24764\" target=\"_blank\" rel=\"noopener\" style=\"margin-top:8px\">Comprar eSIM na Holafly</a><br>Este é um link de parceria. Se a compra for feita por ele, a Paris Sem Segredos recebe uma comissão da Holafly, sem nenhum custo a mais para vocês."]
     ]},
     { titulo:"Aplicativos, para instalar antes", icone:"celular", itens:[
       ["Transporte","Muoversi a Roma, da ATAC, para o bilhete de metrô e os horários."],
@@ -534,7 +628,10 @@ preparacao: {
       ["Trem","Italo, onde está a passagem do dia 3. Na estação Termini, a passagem é lida no portão de acesso aos trens."],
       ["Coliseu","MyColosseum, o aplicativo oficial e gratuito do parque arqueológico, com audioguia em italiano e inglês para o Coliseu."],
       ["Bicicleta","Lime, Dott e Bird, para conferir se há bicicleta elétrica de aluguel na região do hotel no dia."],
-      ["Mapas","Google Maps, com o mapa de Roma baixado para uso offline."]
+      ["Mapas","Google Maps, com os mapas de Roma e Paris baixados para uso offline."],
+      ["Transporte em Paris","Bonjour RATP, para metrô, RER e horários, e Île-de-France Mobilités (IDFM), o app oficial da rede, com mapas e compra de bilhete pelo celular. Os dois funcionam em português."],
+      ["Táxi em Paris","App G7, para pré-agendar o táxi de Orly no último dia."],
+      ["Disneyland Paris","App oficial da Disneyland Paris, para ver filas em tempo real e as atrações do dia."]
     ]}
   ],
   checklist: [
@@ -558,6 +655,7 @@ dias: [
 
 {
   data: "Domingo, 29 de novembro",
+  diaLabel: "Dia 1",
   titulo: "Chegada, Porta Portese e a Roma dos imperadores",
   bairro: "Trastevere, Campidoglio e Celio",
   saida: "Dia inteiro livre, sem trabalho",
@@ -679,6 +777,7 @@ dias: [
 
 {
   data: "Segunda, 30 de novembro",
+  diaLabel: "Dia 2",
   titulo: "Museus do Vaticano e a Basílica de São Pedro",
   bairro: "Vaticano e Prati",
   saida: "Manhã livre até as 12h15. Trabalho das 12h30 às 22h30",
@@ -751,11 +850,13 @@ dias: [
       }
     }
   ],
+  seSobrarEnergia: "Depois do jantar, o Castel Sant'Angelo fica iluminado à noite e é visível do Ponte Sant'Angelo, a poucos minutos a pé do Vaticano. Dá para incluir na volta da manhã, antes do trabalho, se o horário permitir.",
   seChover: "Os museus e a Basílica têm longos trechos cobertos. Se chover forte na fila de segurança da Basílica, pulem a visita interna e voltem para o hotel mais cedo."
 },
 
 {
   data: "Terça, 1º de dezembro",
+  diaLabel: "Dia 3",
   titulo: "Coliseu, Fórum Romano e Palatino",
   bairro: "Celio e Roma Antiga",
   saida: "Manhã livre até as 12h15. Trabalho das 12h30 às 22h30",
@@ -816,11 +917,13 @@ dias: [
       }
     }
   ],
+  seSobrarEnergia: "O Circo Massimo fica a 5 minutos a pé do Coliseu e é gratuito: o gramado onde ficava a pista de corridas de bigas dá para caminhar até o pôr do sol, com vista do Palatino de um ângulo diferente.",
   seChover: "O Coliseu tem trechos cobertos, e o Fórum e o Palatino são ao ar livre. Se chover forte de manhã, mantenham o Coliseu, que tem horário marcado, e deixem o Fórum e o Palatino para o final da manhã ou para a quarta, dentro das 24 horas do ingresso."
 },
 
 {
   data: "Quarta, 2 de dezembro",
+  diaLabel: "Dia 4",
   titulo: "Aniversário do Wallace: Trevi, Pantheon, Navona e couro feito à mão",
   bairro: "Centro histórico",
   saida: "Manhã livre até as 12h15. Trabalho das 12h30 às 22h30",
@@ -933,11 +1036,13 @@ dias: [
       }
     }
   ],
+  seSobrarEnergia: "Se o jantar de aniversário terminar cedo e ainda quiserem mais um brinde, a Terrazza Borghese (onde jantaram) e vários bares da região de Piazza del Popolo ficam abertos até tarde para um último drinque antes do passeio de bicicleta.",
   seChover: "A manhã é quase toda ao ar livre, e o Pantheon e a loja de couro são os trechos cobertos. Se chover, comecem pelo Pantheon, que abre às 9h, e deixem a Fontana di Trevi para o fim da manhã. O passeio de bicicleta da noite fica cancelado."
 },
 
 {
   data: "Quinta, 3 de dezembro",
+  diaLabel: "Dia 5",
   titulo: "Despedida de Roma e trem para Milão",
   bairro: "Celio e Termini",
   saida: "Check-out às 11h. Trabalho a partir das 12h30, no trem",
@@ -964,6 +1069,442 @@ dias: [
   ],
   seChover: "A Termini é coberta e a plataforma também. Se chover forte, vão de Bolt até a porta da estação."
 }
+,
+
+{
+  data: "Dias 6 a 8 (03 a 06 de dezembro)",
+  diaLabel: "Dias 6 a 8",
+  titulo: "Milão e Alpes Suíços",
+  bairro: "Milão e St. Moritz",
+  saida: "Dias cobertos por outro roteiro",
+  paradas: [
+    {
+      tipo: "passeio", hora: "03/12", titulo: "Milão e St. Moritz: fora deste roteiro",
+      texto: "Do dia 3 ao dia 7 de dezembro, Bia e Wallace estão em Milão (03 a 04/12) e nos Alpes Suíços em St. Moritz (04 a 07/12). Esses dias têm um roteiro separado de trens e hospedagem. O roteiro de Paris começa no dia 7, quando o trem de St. Moritz chega na Gare de Lyon às 17h38.",
+      trajeto: { modo: "trem", texto: "Trem St. Moritz para Paris: saída 09h47, chegada 17h38 na Gare de Lyon, via Landquart e Basel. Ver detalhes no roteiro de trens. A pé e Bolt não se aplicam neste trecho." }
+    }
+  ]
+},
+
+{
+  data: "Segunda, 7 de dezembro",
+  diaLabel: "Dia 9",
+  titulo: "Chegada em Paris",
+  bairro: "Marais",
+  saida: "Chegada à tarde, dia de instalar e passear perto",
+  paradas: [
+    {
+      tipo: "passeio", hora: "17h38", titulo: "Chegada na Gare de Lyon e metrô ao hotel",
+      mapa: "Hôtel Rivoli, 2 Rue des Mauvais Garçons, 75004 Paris",
+      texto: "O trem de St. Moritz chega na Gare de Lyon às 17h38. Do lado de dentro da estação, sigam as placas Métro e peguem a linha 1, sentido La Défense, até a estação Hôtel de Ville, 3 paradas, cerca de 10 minutos. O hotel fica a 3 minutos a pé da saída do metrô. O Rivoli não tem elevador e tem 6 andares de escada, então na chegada com malas pesadas vai devagar mesmo.",
+      dica: "Troquem os bilhetes de trem por um Navigo Semaine toutes zones já na Gare de Lyon, antes de sair pelo metrô. Custa €32,40 por pessoa e cobre todo o transporte da semana, incluindo o RER B para o aeroporto de Orly no sábado. Faz na máquina com o cartão, em português.",
+      trajeto: {
+        modo: "metro", linha: "1",
+        texto: "De metrô: linha 1, sentido La Défense, da Gare de Lyon até Hôtel de Ville, 3 paradas, e 3 minutos a pé até o hotel. De Bolt: cerca de 15 minutos do centro, dependendo do trânsito. A pé: 25 a 30 minutos, o que não compensa com malas."
+      }
+    },
+    {
+      tipo: "passeio", hora: "19h30", titulo: "Primeira caminhada no Marais",
+      mapa: "Place des Vosges, 75004 Paris",
+      texto: "Depois de deixar as malas, a primeira caminhada no Marais não precisa de roteiro: é só sair andando. A Place des Vosges fica a 10 minutos do hotel a pé, é a praça mais antiga de Paris e fica bonita de noite, com as arcadas iluminadas.",
+      imperdivel: [
+        "A Place des Vosges, com as arcadas de tijolo vermelho e as fontes no centro.",
+        "A Rue de Bretagne, com as lojas e os cafés iluminados.",
+        "O ambiente do bairro de noite, com menos turista e mais local."
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "A pé do hotel até a Place des Vosges, cerca de 10 minutos, pela Rue du Roi de Sicile. De metrô ou Bolt não compensa, é perto."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "20h00", titulo: "Jantar de chegada no Marais",
+      nota: "Três opções perto do hotel. Uma das mais bem avaliadas de Paris, um bistrô clássico e uma casa de cozinha provençal.",
+      opcoes: [
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado, abre das 7h às 2h, aceita reserva · um dos mais amados do Marais, bom para quem chega cansado de viagem", preco: "€€" },
+        { nome: "Au Bourguignon du Marais", detalhe: "52 Rue François Miron · 4,6 estrelas com 4.669 avaliações · bistrô clássico, boeuf bourguignon, bom vinho por taça · aberto todos os dias das 12h às 23h", preco: "€€€" },
+        { nome: "L'As du Fallafel", detalhe: "34 Rue des Rosiers · 4,3 estrelas com 14.769 avaliações · o falafel mais famoso de Paris, comido na mão, na rua mesmo, o clássico comida de rua do Marais · fechado aos sábados, aberto segunda a sexta e domingo das 11h às 23h30", preco: "€" }
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "Do hotel até as três opções, a pé, entre 5 e 15 minutos. Metrô e Bolt não são necessários."
+      }
+    }
+  ],
+  seSobrarEnergia: "O Marais à noite de segunda costuma estar tranquilo, sem fila nas lojas. Depois do jantar, uma volta a mais pela Rue des Rosiers e pela Rue Vieille du Temple mostra as vitrines iluminadas sem a multidão do dia.",
+  seChover: "O Marais tem muitas galerias, lojas e cafés cobertos. Chova ou não, o passeio de chegada funciona bem, só trocam a praça pela Rue de Bretagne coberta."
+},
+
+{
+  data: "Terça, 8 de dezembro",
+  diaLabel: "Dia 10",
+  titulo: "Torre Eiffel, Trocadéro e cruzeiro no Sena",
+  bairro: "Trocadéro e Sena",
+  saida: "Dia livre, sem trabalho",
+  paradas: [
+    {
+      tipo: "passeio", hora: "09h00", titulo: "Torre Eiffel vista do Trocadéro",
+      mapa: "Trocadéro, Place du Trocadéro, 75016 Paris",
+      texto: "O melhor ângulo da Torre Eiffel de baixo é do Trocadéro, na margem oposta do rio. As escadas do esplanade ficam cheias de fotógrafos a partir das 10h, então chegar às 9h garante o espaço sem briga. É o lugar das fotos da torre sem subir nela, que é exatamente o que a Bia quer.",
+      imperdivel: [
+        "O esplanade do Trocadéro com a torre ao fundo, a foto mais clássica de Paris.",
+        "As fontes do Jardim do Trocadéro, que espelham a torre quando o vento não sopra.",
+        "A vista de perto das pernas da torre, atravessando a ponte e chegando até ela."
+      ],
+      dica: "O esplanade do Trocadéro e o Jardim do Champ-de-Mars são gratuitos. Se decidirem subir, os bilhetes compram-se no site oficial ticket.toureiffel.paris ou nas bilheterias embaixo da torre. 2º andar de elevador: €23,50 por adulto. Topo (3º andar) de elevador: €36,70 por adulto. Os dois incluem acesso ao 1º e 2º andar. Levem documento, o bilhete é nominal.",
+      trajeto: {
+        modo: "metro", linha: "6",
+        texto: "De metrô: linha 6, sentido Nation, da estação Hôtel de Ville até Trocadéro, 5 paradas (Saint-Paul, Bastille, Gare de Lyon, Bercy, Daumesnil, Nation . Mais direto: linha 1 até Charles de Gaulle-Étoile e linha 6 até Trocadéro). Mais direto: linha 1, sentido La Défense, até Charles de Gaulle-Étoile, 6 paradas, e linha 6, sentido Nation, 2 paradas até Trocadéro. Total: cerca de 25 minutos. De Bolt: cerca de 20 minutos. A pé: cerca de 50 minutos, não compensa."
+      }
+    },
+    {
+      tipo: "passeio", hora: "10h30", titulo: "Jardins do Champ-de-Mars e Torre de perto",
+      mapa: "Champ de Mars, 75007 Paris",
+      texto: "Atravessando a ponte Iéna, o Champ-de-Mars é o jardim embaixo da torre. De lá é possível ver as estruturas de ferro de perto, as pernas da torre e a escala real do monumento. O Village de Noël da Torre Eiffel funciona de 5 de dezembro de 2026 a 3 de janeiro de 2027, no Quai Jacques-Chirac, ao lado do jardim, com entrada gratuita.",
+      imperdivel: [
+        "A vista de baixo para cima, com as vigas de ferro convergindo no topo.",
+        "As fotos entre as pernas da torre, com o jardim atrás.",
+        "O Marché de Noël da Tour Eiffel, montado no Champ-de-Mars de início de dezembro a 6 de janeiro, com artesanato e gastronomia regional francesa ao pé da torre."
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "Do Trocadéro até o Champ-de-Mars, a pé, atravessando a Pont d'Iéna, cerca de 10 minutos."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "12h30", titulo: "Almoço na Rue Cler ou perto da torre",
+      nota: "A Rue Cler é a rua de mercado mais famosa perto da Torre Eiffel, com bancas, queijarias e cafés lado a lado: um passeio de comida de rua antes do cruzeiro. Duas opções na própria rua e uma com vista da torre.",
+      opcoes: [
+        { nome: "Café Du Marché", detalhe: "38 Rue Cler · 3,9 estrelas com 1.550 avaliações · bistrô na esquina da rua de mercado, boeuf bourguignon e crepes · aberto todos os dias das 7h à meia-noite", preco: "€€" },
+        { nome: "Le Petit Cler", detalhe: "29 Rue Cler · 4,3 estrelas com 2.235 avaliações · bistrô tradicional, queijos e sopa de cebola, no meio do vaivém da rua de mercado · aberto todos os dias das 8h à meia-noite", preco: "€€" },
+        { nome: "Café de l'Alma", detalhe: "59 Quai d'Orsay · 4,2 estrelas com 2.108 avaliações · brasserie na beira do Sena, entre a torre e o Musée d'Orsay · aberto todos os dias das 7h à meia-noite", preco: "€€" }
+      ]
+    },
+    {
+      tipo: "passeio", hora: "14h00", titulo: "Pont des Arts e Saint-Germain",
+      mapa: "Pont des Arts, 75006 Paris",
+      texto: "A Pont des Arts é a ponte dos cadeados, famosa pelas fechaduras que casais deixam nas grades. Atravessando a ponte, o bairro de Saint-Germain-des-Prés tem as vitrines das galerias de arte, as livrarias e o Marché de Noël de Saint-Germain perto da Église Saint-Sulpice, que costuma funcionar até início de janeiro.",
+      imperdivel: [
+        "As grades da Pont des Arts, cobertas de cadeados de casais. Os cadeados são removidos periodicamente pelas autoridades por conta do peso acumulado nas estruturas. Em Montmartre, nas grades do Sacré-Coeur e nos postes das vielas, os cadeados também aparecem bastante.",
+        "A vista do Louvre do meio da ponte.",
+        "O Café de la Mairie, na Rue Saint-Sulpice, bem mais tranquilo que o De Flore e os Deux Magots e igualmente clássico, para um chocolate quente ou um café sem fila."
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "Da Rue Cler até a Pont des Arts, a pé, cerca de 25 minutos pelo Quai Branly e Quai d'Orsay, ou de Bolt, cerca de 10 minutos. De metrô: linha 8 de École Militaire até Concorde, 5 paradas, e 10 minutos a pé, o que não compensa para essa distância."
+      }
+    },
+    {
+      tipo: "passeio", hora: "16h00", titulo: "Cruzeiro no Sena ao pôr do sol",
+      mapa: "Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris",
+      texto: "O cruzeiro mais perto da Torre Eiffel é o dos Bateaux Parisiens, que sai do Port de la Bourdonnais. O passeio dura cerca de 1 hora, cobre Notre-Dame, o Louvre, a Île de la Cité e volta para a torre. O pôr do sol em Paris no dia 8 de dezembro é às 16h54, então o cruzeiro das 16h pega a luz dourada na ida e a torre iluminada na volta, perto das 17h.",
+      imperdivel: [
+        "A Torre Eiffel vista de baixo do barco, do ângulo do rio, já com as luzes acendendo.",
+        "Notre-Dame e a Île de la Cité, com os detalhes das fachadas que não se vê da rua.",
+        "O pôr do sol sobre o Sena, visto da água, perto das 16h54."
+      ],
+      dica: "Reserve online no bateauxparisiens.com para garantir o horário das 16h e pagar menos. O ingresso custa em torno de €17 a €19 por pessoa.",
+      ingresso: { url: "https://www.bateauxparisiens.com", texto: "Reservar cruzeiro, Bateaux Parisiens" },
+      trajeto: {
+        modo: "pe",
+        texto: "Da Pont des Arts até o cais dos Bateaux Parisiens, de Bolt, cerca de 15 minutos. De metrô: linha 4 até Saint-Germain-des-Prés e troca não direta, o que não compensa. A pé, cerca de 35 minutos, longo demais para o horário."
+      }
+    },
+    {
+      tipo: "passeio", hora: "17h30", titulo: "Champs-Élysées iluminado e farol da torre às 20h",
+      mapa: "Avenue des Champs-Élysées, 75008 Paris",
+      texto: "No caminho de volta, os Champs-Élysées ficam iluminados para o Natal desde novembro. Os stands do Marché de Noël que voltou à avenida ficam ao longo do trajeto, entrada gratuita. Às 20h em ponto, a Torre Eiffel acende o farol giratório por 5 minutos, visível do final da avenida perto da Concorde.",
+      imperdivel: [
+        "As iluminações de Natal dos Champs-Élysées, que acendem ao anoitecer.",
+        "Os stands do Marché de Noël ao longo da avenida, com vin chaud e artesanato regional.",
+        "O farol giratório da Torre Eiffel às 20h, visível da Concorde."
+      ],
+      trajeto: {
+        modo: "metro", linha: "1",
+        texto: "Do cais dos Bateaux Parisiens até os Champs-Élysées, a pé, cerca de 20 minutos pela Avenue Montaigne, ou de Bolt em cerca de 10 minutos. De metrô: linha 9 de Alma-Marceau até Franklin D. Roosevelt, 3 paradas. Para voltar ao hotel depois, linha 1 de Champs-Élysées-Clemenceau até Hôtel de Ville, 5 paradas, ou de Bolt em cerca de 15 minutos."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "20h30", titulo: "Jantar no Marais",
+      nota: "Uma das mesas mais queridas do bairro para um jantar com calma, e dois bistrôs clássicos.",
+      opcoes: [
+        { nome: "Le Colimaçon", detalhe: "44 Rue Vieille du Temple · 4,7 estrelas com 3.423 avaliações · confit de canard e escargot imperdíveis, reservar com antecedência · aberto das 18h às 22h30 de segunda a sábado", preco: "€€€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos e preços baixos · aberto todos os dias das 11h30 à meia-noite", preco: "€€" },
+        { nome: "Le P'tit Bistrot", detalhe: "8 Rue Saint-Martin · 4,6 estrelas com 1.615 avaliações · bistrô animado perto do Centro Pompidou, sopa de cebola e steak frites · aberto das 7h às 23h de segunda a sábado", preco: "€€" }
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "As três ficam a 10 a 20 minutos a pé do hotel. Metrô e Bolt não são necessários."
+      }
+    }
+  ],
+  seSobrarEnergia: "Depois do jantar no Marais, a Place des Vosges e a Rue des Rosiers iluminadas fazem uma volta tranquila para fechar o dia, sem precisar de mais planejamento.",
+  seChover: "Trocadéro e Champ-de-Mars são ao ar livre. Com chuva, comecem pelo cruzeiro coberto (que funciona com chuva), almocem depois e deixem a torre para a tarde, quando a chuva costuma aliviar em dezembro. Pont des Arts e Saint-Germain têm muitos trechos cobertos."
+},
+
+{
+  data: "Quarta, 9 de dezembro",
+  diaLabel: "Dia 11",
+  titulo: "Disneyland Paris",
+  bairro: "Marne-la-Vallée",
+  saida: "Dia inteiro na Disney, de abertura ao fechamento",
+  paradas: [
+    {
+      tipo: "passeio", hora: "08h30", titulo: "Saída para Disneyland Paris",
+      mapa: "Disneyland Paris, Boulevard du Parc, 77700 Chessy",
+      texto: "A Disney abre às 9h30 nessa época do ano e fica a cerca de 45 minutos de metrô e RER do hotel. Saindo às 8h30, chegam na abertura com tempo de tomar um café na estação.",
+      dica: "O ingresso é comprado só online, em disneylandparis.com, e precisa ser datado para o dia 09/12. Não existe mais venda nas catracas. O ingresso 1 jour / 1 parque para 09/12 está em €111 por pessoa (preço verificado em 10/11/2026, muda dinamicamente). Comprem o quanto antes. Para os dois parques no mesmo dia, o ingresso custa cerca de €35 a mais por pessoa. Dezembro é o período Disney Enchanted Christmas, com decorações de Natal e espetáculos especiais. Vale ficar até o fechamento para ver os shows noturnos.",
+      ingresso: { url: "https://www.disneylandparis.com", texto: "Comprar ingresso, Disneyland Paris" },
+      trajeto: {
+        modo: "metro", linha: "1 e RER A",
+        texto: "De metrô e RER: linha 1, sentido Château de Vincennes, até a estação Châtelet-Les Halles, 3 paradas do hotel. Ali, pegar o RER A, sentido Marne-la-Vallée-Chessy, sem troca, até a estação terminal Marne-la-Vallée-Chessy, que é a porta da Disney. Cerca de 45 minutos no total. O Navigo Semaine cobre este trajeto inteiro. A pé e Bolt não se aplicam, é longe demais."
+      }
+    },
+    {
+      tipo: "passeio", hora: "09h30", titulo: "Um dia inteiro no Parc Disneyland",
+      mapa: "Parc Disneyland, Boulevard du Parc, 77700 Chessy",
+      texto: "Em dezembro, o Parc Disneyland vira o Disney Enchanted Christmas, com decorações de Natal por todo o parque, neve artificial na Main Street, desfile de Natal e espetáculo de luzes à noite. A Disney Adventure World fica do lado e tem o Mundo da Rainha das Neves, mas exige o ingresso 2 parques.",
+      imperdivel: [
+        "A Main Street U.S.A. decorada para o Natal, com neve artificial e as lojas iluminadas.",
+        "Big Thunder Mountain, Phantom Manor e Pirates of the Caribbean, as atrações clássicas.",
+        "O Desfile de Natal da tarde, com os personagens na Main Street.",
+        "O espetáculo de luzes e fogos na Sleeping Beauty Castle à noite.",
+        "O chocolate quente e os crepes de Nutella nas barracas do parque."
+      ],
+      imperdivelTitulo: "O que não perder no Disney de Natal",
+      dica: "Cheguem 15 minutos antes da abertura oficial para entrar antes da multidão. Use o app Disneyland Paris para ver o tempo de fila em tempo real e planejar as atrações. As filas das atrações principais (Big Thunder Mountain, Phantom Manor, Pirates) tendem a ser menores de manhã e depois das 17h. Baixem o app antes de sair do hotel."
+    },
+    {
+      tipo: "refeicao", hora: "12h30", titulo: "Almoço na Disney",
+      nota: "Comida cara e fila, mas faz parte da experiência. As melhores opções dentro do parque.",
+      opcoes: [
+        { nome: "Café Hyperion", detalhe: "Dentro do Parc Disneyland, Discoveryland · hambúrguer, frango, opções sem glúten · o maior refeitório do parque, fila menor depois das 13h30", preco: "€€€" },
+        { nome: "Auberge de Cendrillon", detalhe: "Dentro do Parc Disneyland, Fantasyland · a churrascaria temática do parque, com carnes e menu completo · reservar no app Disneyland Paris antes do dia", preco: "€€€€" },
+        { nome: "Barracas de Main Street", detalhe: "Main Street U.S.A. · popcorn, crepes, churros, chocolate quente · mais barato que os restaurantes internos, bom para comer andando", preco: "€€" }
+      ]
+    },
+    {
+      tipo: "refeicao", hora: "19h30", titulo: "Jantar rápido antes do espetáculo de Natal",
+      nota: "Espetáculo de luzes e fogos no castelo acontece ao redor das 20h30. Um jantar rápido dentro do parque garante a posição.",
+      opcoes: [
+        { nome: "Au Chalet de la Marionnette", detalhe: "Dentro do Parc Disneyland, Fantasyland · salsichas, batata frita e bebida quente, rápido e barato para o tamanho do parque", preco: "€€€" },
+        { nome: "Market House Deli", detalhe: "Main Street U.S.A. · sanduíches e pratos prontos para pegar e levar, bom para comer de pé antes do show", preco: "€€€" },
+        { nome: "Billy Bob's Retreat", detalhe: "Dentro do parque, Frontierland · hambúrguer e fritas, ambiente temático de saloon · aberto até o fechamento", preco: "€€€" }
+      ],
+      trajeto: {
+        modo: "metro", linha: "RER A e 1",
+        texto: "Na volta ao hotel: RER A da estação Marne-la-Vallée-Chessy sentido Paris, até Châtelet-Les Halles, e linha 1 sentido La Défense até Hôtel de Ville. O Navigo cobre tudo. De Bolt até Paris seria em torno de €60 a €80, não compensa."
+      }
+    }
+  ],
+  seSobrarEnergia: "Se ainda tiverem fôlego depois do espetáculo de luzes, a Main Street costuma ficar aberta até meia hora depois do fechamento oficial do parque, boa hora para fotos sem fila em frente ao castelo.",
+  seChover: "A Disney funciona com chuva e a maioria das atrações é coberta. O espetáculo de luzes costuma acontecer mesmo com chuva leve. Levem uma capa de chuva leve na mochila."
+},
+
+{
+  data: "Quinta, 10 de dezembro",
+  diaLabel: "Dia 12",
+  titulo: "Louvre, Île de la Cité e Notre-Dame",
+  bairro: "Centro histórico",
+  saida: "Dia livre, sem trabalho",
+  paradas: [
+    {
+      tipo: "passeio", hora: "09h00", titulo: "Museu do Louvre",
+      mapa: "Musée du Louvre, 75001 Paris",
+      texto: "O Louvre abre às 9h. Às quintas o museu fecha às 18h, horário normal (a noturna até 21h é só às quartas e sextas). Com 4 a 5 horas dá para ver o essencial sem correria, entrando cedo. A entrada é pela Pirâmide de Vidro, no pátio central.",
+      imperdivel: [
+        "A Vênus de Milo, na Ala Sully, 1º andar.",
+        "A Vitória de Samotrácia, no topo da grande escadaria.",
+        "A Mona Lisa, na Sala dos Estados, Ala Denon.",
+        "A Pirâmide de Vidro por dentro, com a visão das estruturas subterrâneas.",
+        "O teto pintado da Grande Galerie, que liga as salas de pintura italiana.",
+        "O Marché de Noël das Tuileries, logo do lado do Louvre, de 6 de novembro a 8 de janeiro, das 11h à meia-noite."
+      ],
+      dica: "O ingresso custa €32 por pessoa para brasileiros (visitantes de fora do Espaço Econômico Europeu) e é comprado só em ticket.louvre.fr. Reservem o horário das 9h. O bilhete dá acesso às coleções permanentes e às exposições temporárias. Como hoje é quinta, a última entrada é às 17h e o museu fecha às 18h, então não dá para voltar à noite: o passeio é só de manhã.",
+      ingresso: { url: "https://ticket.louvre.fr", texto: "Comprar ingresso, Museu do Louvre" },
+      trajeto: {
+        modo: "metro", linha: "1",
+        texto: "De metrô: linha 1, sentido La Défense, da estação Hôtel de Ville até Palais Royal-Musée du Louvre, 2 paradas, e 5 minutos a pé até a pirâmide. De Bolt, cerca de 10 minutos. A pé do hotel, cerca de 20 minutos pelo Quai de Gesvres."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "13h00", titulo: "Almoço perto do Louvre",
+      nota: "Três opções próximas. Um bouillon histórico, um bistrô dos locais e um café mais leve.",
+      opcoes: [
+        { nome: "Bouillon Chartier Grands Boulevards", detalhe: "7 Rue du Faubourg Montmartre · 4,1 estrelas com 34.019 avaliações · o bouillon histórico de Paris desde 1896, fila que anda, preços baixíssimos · aberto das 11h30 à meia-noite todos os dias", preco: "€€" },
+        { nome: "Le Louvre Ripaille", detalhe: "10 Rue Jean-Jacques Rousseau · 4,4 estrelas com 1.890 avaliações · bistrô dos locais do bairro, perto da entrada do Louvre · aberto das 12h às 15h e das 19h às 22h", preco: "€€" },
+        { nome: "Le Loir dans La Théière", detalhe: "3 Rue des Rosiers, Marais · 4,3 estrelas com 3.389 avaliações · salon de thé charmoso, tortas salgadas e a tarte au citron merengada mais famosa do Marais · aberto todos os dias das 9h às 19h30", preco: "€€" }
+      ],
+      trajeto: {
+        modo: "metro", linha: "1",
+        texto: "Le Loir fica no Marais, de volta ao hotel: linha 1 até Hôtel de Ville, 2 paradas. Os outros dois ficam perto do Louvre, a 10 a 15 minutos a pé."
+      }
+    },
+    {
+      tipo: "passeio", hora: "15h00", titulo: "Île de la Cité e Notre-Dame",
+      mapa: "Cathédrale Notre-Dame de Paris, 6 Parvis Notre-Dame, 75004 Paris",
+      texto: "Notre-Dame reabriu depois da restauração pós-incêndio e está mais bonita do que antes, com os interiores restaurados em pedra clara. A fila entra rápido nos dias de semana. Do lado de fora, a Sainte-Chapelle tem os vitrais mais bonitos de Paris.",
+      imperdivel: [
+        "A fachada restaurada de Notre-Dame, com as duas torres e o rosetão central.",
+        "O interior restaurado, com a pedra clara nova e os vitrais.",
+        "A Sainte-Chapelle, 50 metros de Notre-Dame, com as paredes de vitrais coloridos do século 13.",
+        "A Square du Vert-Galant, na ponta da ilha, com a vista do Sena dos dois lados."
+      ],
+      dica: "Notre-Dame: entrada gratuita, fila de 20 a 40 minutos em dia de semana. Sainte-Chapelle: €13 por pessoa, comprar online em sainte-chapelle.fr. Ombros e joelhos cobertos nos dois.",
+      trajeto: {
+        modo: "metro", linha: "1 e 4",
+        texto: "Do Louvre até a Île de la Cité: linha 1 sentido Château de Vincennes até Châtelet, e linha 4 sentido Montrouge, 1 parada até Cité. De Bolt, cerca de 10 minutos. A pé pelo Quai de la Mégisserie, cerca de 15 minutos."
+      }
+    },
+    {
+      tipo: "passeio", hora: "17h00", titulo: "Rue Mouffetard e Quartier Latin",
+      mapa: "Rue Mouffetard, 75005 Paris",
+      texto: "A Rue Mouffetard é a rua de mercado mais charmosa do Quartier Latin, pertinho do Panthéon. As barracas de frutas, queijos e flores funcionam de terça a domingo das 8h às 13h, então a essa hora já estarão fechadas, mas a rua continua viva: queijarias, padarias, bares e restaurantes seguem abertos até a noite, com música ao vivo em alguns dias. O bairro é mais estudantil e menos turístico que o centro, o que combina com o estilo de vocês.",
+      imperdivel: [
+        "A descida da Rue Mouffetard, com as fachadas antigas e as lojas de comida.",
+        "O Panthéon, a 5 minutos a pé, com a cúpula que domina o bairro visto de fora.",
+        "A Place de la Contrescarpe, no alto da rua, uma pracinha com cafés e mesas na calçada."
+      ],
+      trajeto: {
+        modo: "metro", linha: "1 e 7",
+        texto: "Da Île de la Cité até a Rue Mouffetard: a pé, cerca de 15 minutos pela Rue des Écoles. De Bolt, cerca de 8 minutos. De metrô: linha 4 sentido Mairie de Montrouge até Place Monge, 2 paradas, e 5 minutos a pé."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "20h00", titulo: "Jantar no Marais",
+      nota: "Hoje o Louvre fecha às 18h (quinta é dia de horário normal, sem noturna), então o jantar é só para relaxar, sem pressa de voltar ao museu. Três casas do bairro.",
+      opcoes: [
+        { nome: "Le Colimaçon", detalhe: "44 Rue Vieille du Temple · 4,7 estrelas com 3.423 avaliações · melhor jantar do Marais, reservar com dias de antecedência · aberto das 18h às 22h30 de segunda a sábado", preco: "€€€" },
+        { nome: "Au Bourguignon du Marais", detalhe: "52 Rue François Miron · 4,6 estrelas com 4.669 avaliações · bistrô clássico, boeuf bourguignon e boa seleção de vinhos · aberto todos os dias das 12h às 23h", preco: "€€€" },
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado até as 2h, bom custo-benefício, reservar · aberto todos os dias das 7h às 2h", preco: "€€" }
+      ],
+      trajeto: {
+        modo: "metro", linha: "7",
+        texto: "Da Rue Mouffetard até o Marais: de metrô, linha 7 sentido La Courneuve até Pont Marie, 4 paradas, e 5 minutos a pé. De Bolt, cerca de 12 minutos."
+      }
+    }
+  ],
+  seSobrarEnergia: "Para quem ainda quiser andar depois do jantar, o Canal Saint-Martin fica a uns 20 minutos de Bolt do Marais: as pontes de ferro, as margens arborizadas e os barzinhos do Quai de Valmy e do Quai de Jemmapes dão um clima bem diferente do centro turístico, com menos gente e mais locais.",
+  seChover: "Louvre e Sainte-Chapelle são totalmente cobertos. Notre-Dame tem cobertura parcial na fila. A Rue Mouffetard é ao ar livre mas tem trechos cobertos pelos toldos das lojas. Com chuva, comecem pelo Louvre e deixem os passeios externos para a tarde."
+},
+
+{
+  data: "Sexta, 11 de dezembro",
+  diaLabel: "Dia 13",
+  titulo: "Montmartre, Sacré-Coeur e Ópera Garnier",
+  bairro: "Montmartre e Sena",
+  saida: "Dia livre, último dia inteiro em Paris",
+  paradas: [
+    {
+      tipo: "passeio", hora: "09h00", titulo: "Montmartre e Sacré-Coeur",
+      mapa: "Basilique du Sacré-Coeur, 75018 Paris",
+      texto: "Montmartre é o bairro mais cinematográfico de Paris, com as vielas de pedra, as escadarias e os artistas na Place du Tertre. O Sacré-Coeur no alto da colina tem a vista mais ampla de Paris, e do adro dá para ver a cidade inteira.",
+      imperdivel: [
+        "A vista de Paris do adro do Sacré-Coeur, de manhã, antes da multidão.",
+        "A Place du Tertre, com os retratistas e os pintores ao ar livre.",
+        "As grades e corrimãos perto do Sacré-Coeur, cobertos de cadeados deixados por casais, no mesmo espírito da Pont des Arts. Costuma ter ambulante vendendo cadeado ali mesmo, para quem quiser pendurar o seu na hora.",
+        "A Rue Lepic, a principal rua do bairro, com as padarias e os cafés dos locais.",
+        "O Moulin de la Galette, o moinho que deu nome ao quadro de Renoir."
+      ],
+      dica: "Sacré-Coeur: gratuito, entrada pela frente. Para subir o morro, o funicular custa 1 bilhete do Navigo (mesma catraca do metrô) ou sobe a pé pelas escadarias em cerca de 8 minutos.",
+      trajeto: {
+        modo: "metro", linha: "2",
+        texto: "De metrô: linha 1 sentido La Défense até Châtelet, linha 11 sentido Les Lilas até Rambuteau e linha 2 até Anvers, e 7 minutos a pé até o Sacré-Coeur pela Rue de Steinkerque. Mais simples: linha 1 até Châtelet, linha 4 sentido Clignancourt até Château-Rouge, e 10 minutos a pé. Cerca de 30 minutos no total. De Bolt: cerca de 20 minutos."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "12h30", titulo: "Almoço em Montmartre",
+      nota: "Um bouillon clássico na base do morro, e duas opções dentro do bairro.",
+      opcoes: [
+        { nome: "Bouillon Pigalle", detalhe: "22 Bd de Clichy · 4,6 estrelas com 57.332 avaliações · o bouillon mais famoso de Paris atualmente, fila que anda, pratos clássicos e preços baixos · aberto das 12h à meia-noite todos os dias", preco: "€€" },
+        { nome: "Le Poulbot", detalhe: "16 Rue Poulbot · 4,2 estrelas com 1.456 avaliações · bistrô clássico nas vielas de Montmartre, perto da Place du Tertre · aberto das 11h às 23h", preco: "€€" },
+        { nome: "L'Annexe Montmartre", detalhe: "13 Rue Lepic · 4,4 estrelas com 1.234 avaliações · boa relação custo-benefício, na rua principal do bairro · aberto das 12h às 23h", preco: "€€" }
+      ]
+    },
+    {
+      tipo: "passeio", hora: "14h30", titulo: "Ópera Garnier",
+      mapa: "Palais Garnier, Place de l'Opéra, 75009 Paris",
+      texto: "O Palais Garnier é um dos interiores mais suntuosos de Paris, com a Grande Escadaria de mármore, o Grand Foyer coberto de dourado e o teto pintado por Chagall no auditório, quando aberto à visita. A entrada livre funciona das 10h às 16h, última entrada, então chegar às 14h30 dá tempo de ver tudo com calma antes de seguir para as compras.",
+      imperdivel: [
+        "A Grande Escadaria de mármore, o cartão-postal do prédio.",
+        "O Grand Foyer, um salão coberto de dourado e espelhos, inspirado no Salão dos Espelhos de Versalhes.",
+        "O teto do auditório pintado por Marc Chagall em 1964, visível quando não há ensaio."
+      ],
+      dica: "O ingresso de visita livre custa €25 por pessoa para visitantes de fora do Espaço Econômico Europeu, comprado em operadeparis.fr. Ensaios podem fechar o auditório sem aviso prévio, nenhum ingresso garante esse acesso específico.",
+      ingresso: { url: "https://www.operadeparis.fr", texto: "Comprar ingresso, Opéra Garnier" },
+      trajeto: {
+        modo: "metro", linha: "2",
+        texto: "De Montmartre até a Ópera: de Pigalle, linha 2 sentido Nation, 3 paradas até Opéra. De Bolt, cerca de 12 minutos. A pé, cerca de 25 minutos pela Rue Pigalle."
+      }
+    },
+    {
+      tipo: "passeio", hora: "15h45", titulo: "Galeries Lafayette",
+      mapa: "Galeries Lafayette, 40 Bd Haussmann, 75009 Paris",
+      texto: "As Galeries Lafayette ficam a 3 minutos a pé da Ópera e têm uma das maiores vitrines de Natal de Paris, além do terraço gratuito com vista para o telhado de Paris. Para as compras de farmácia e cosméticos, a farmácia no próprio Lafayette ou as farmácias no bairro da Opéra têm os produtos mais baratos.",
+      imperdivel: [
+        "O terraço das Galeries Lafayette, gratuito, com a vista da cúpula e dos telhados de Paris.",
+        "As vitrines de Natal animadas na fachada da loja.",
+        "A cúpula de ferro e vidro por dentro, Art Nouveau do início do século 20.",
+        "As farmácias do Boulevard Haussmann, com os cosméticos franceses."
+      ],
+      dica: "Para o tax free, guardem os recibos de cada compra acima de €100 feita na mesma rede em até 3 dias. No Lafayette, perguntem no caixa pelo formulário de détaxe. O processo no aeroporto de Orly fica na seção Depois da viagem.",
+      trajeto: {
+        modo: "pe",
+        texto: "Da Ópera até as Galeries Lafayette, a pé, cerca de 3 minutos pela Rue Scribe. De Bolt ou metrô não compensa, é perto."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "19h30", titulo: "Jantar de despedida em Paris",
+      nota: "Último jantar antes de voltar. Uma mesa especial no Marais, que é o bairro do hotel e faz sentido encerrar por aqui.",
+      opcoes: [
+        { nome: "Le Colimaçon", detalhe: "44 Rue Vieille du Temple · 4,7 estrelas com 3.423 avaliações · confit de canard e escargot imperdíveis, o preferido do Marais para uma noite especial · aberto das 18h às 22h30 de terça a sábado · reservar com antecedência pelo telefone ou site", preco: "€€€" },
+        { nome: "Septime", detalhe: "80 Rue de Charonne · 4,6 estrelas com 7.891 avaliações · bistrô contemporâneo, menu degustação curto, reserva obrigatória com semanas de antecedência · aberto de terça a sábado, jantar a partir das 19h30", preco: "€€€€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos a preço baixo, sem reserva necessária · aberto todos os dias das 11h30 à meia-noite", preco: "€€" }
+      ],
+      dica: "O Le Colimaçon e o Septime exigem reserva com antecedência. Para o último dia sem planejamento, o Bouillon República é o mais seguro, sem esperar reserva.",
+      trajeto: {
+        modo: "pe",
+        texto: "Das Galeries Lafayette até o Marais, de metrô: linha 9 até Oberkampf, e linha 5 até Bastille ou Richard Lenoir, e a pé até o hotel, cerca de 20 minutos. De Bolt, cerca de 15 minutos. As três opções de jantar ficam a 10 a 20 minutos a pé do hotel."
+      }
+    }
+  ],
+  seSobrarEnergia: "Depois do jantar de despedida, uma última volta pela Place des Vosges ou pela Rue des Rosiers no Marais é um jeito tranquilo de fechar a viagem, sem pressa para o dia de voo amanhã.",
+  seChover: "Sacré-Coeur e Montmartre são ao ar livre, mas o bairro tem muitos cafés e lojas para se abrigar. As Galeries Lafayette são cobertas. Se chover muito de manhã, inverta: comece pelas Galeries Lafayette e vá a Montmartre à tarde."
+},
+
+{
+  data: "Sábado, 12 de dezembro",
+  diaLabel: "Dia 14",
+  titulo: "Voo de volta: Paris para São Paulo",
+  bairro: "Orly",
+  saida: "Voo às 10h20 de Orly. Saída do hotel às 5h30 de metrô ou às 6h30 de táxi",
+  paradas: [
+    {
+      tipo: "passeio", hora: "05h45", titulo: "Acordar e fechar as malas",
+      mapa: "Hôtel Rivoli, 2 Rue des Mauvais Garçons, 75004 Paris",
+      texto: "O voo TAP TP453 sai de Orly às 10h20. Chegar ao aeroporto com 3 horas de antecedência significa estar lá às 7h20. O Rivoli tem 6 andares sem elevador, então contem 10 minutos extras para descer com as malas.",
+      dica: "Deixem a mala praticamente pronta na noite anterior, depois do jantar de despedida. O hotel não tem elevador, então as malas descem os 6 andares de qualquer forma, seja de metrô ou de táxi. De metrô (linha 14), saem às 5h30. De táxi ou Bolt pré-agendado, saem às 6h30 da frente do hotel, na Rue de Rivoli, não na Rue des Mauvais Garçons."
+    },
+    {
+      tipo: "passeio", hora: "06h30", titulo: "Até o aeroporto de Orly",
+      mapa: "Aéroport de Paris-Orly, 94396 Orly",
+      texto: "Duas opções. Linha 14 do metrô: das estações Hôtel de Ville ou Châtelet, sentido Aéroport d'Orly, direta até o aeroporto em 25 minutos, sem baldeação, rodando desde as 5h30. O bilhete único de aeroporto custa € 14 por pessoa, comprado no aplicativo Île-de-France Mobilités ou na máquina da estação. Táxi G7 ou Bolt pré-agendado: tarifa fixa de € 45 de qualquer ponto da Rive Droite até Orly, 30 a 40 minutos, agendar pelo app G7 na véspera para garantir o horário.",
+      dica: "Atenção: o aeroporto é Orly (ORY), não Charles de Gaulle. Orly tem 4 terminais, e o terminal aparece no app da TAP na véspera. Agendem o táxi ou o Bolt pela noite anterior para garantir o horário.",
+      trajeto: {
+        modo: "taxi",
+        texto: "Linha 14: a partir das 5h30, direta até Orly em 25 minutos, sem baldeação. Bilhete único de aeroporto € 14 por pessoa, comprado no app Île-de-France Mobilités ou na máquina da estação. Táxi G7: tarifa fixa de € 45, agendar pelo app G7 na véspera. De Bolt: função Reservar, 30 a 40 minutos, € 30 a € 45."
+      }
+    },
+    {
+      tipo: "passeio", hora: "07h15", titulo: "Check-in e despacho em Orly",
+      mapa: "Aéroport de Paris-Orly, Terminal correspondente à TAP",
+      texto: "Voo TP453: Paris-Orly 10h20 para Porto 11h35. Em Porto, conexão TP93 às 13h55 para São Paulo, chegada às 21h45. Os dois trechos estão na mesma reserva da TAP e as malas vão etiquetadas até Guarulhos direto. A saída do Schengen é feita em Porto, antes do voo para o Brasil.",
+      dica: "Confiram no app da TAP se a mala está etiquetada até GRU. Em Porto, a escala é de 2h20, tempo suficiente para imigração, lanche e embarque. Guardem os formulários de tax free para apresentar na alfândega de Orly antes do despacho."
+    }
+  ],
+  seChover: "Não há passeio ao ar livre neste dia."
+}
+
 
 ],
 
@@ -975,57 +1516,98 @@ reservas: {
     { nome: "Jantar de aniversário do Wallace", quando: "Antes da viagem. Para a quarta, dia 2, por volta das 22h45, avisando que é aniversário", preco: "conforme a casa escolhida", site: "telefones na seção do dia 2", url: "#roteiro" },
     { nome: "Pantheon", quando: "No dia, na bilheteria da praça, ou antes no site. Aberto a partir das 9h", preco: "€ 5 por pessoa", site: "museiitaliani.it", url: "https://www.museiitaliani.it" },
     { nome: "Fontana di Trevi", quando: "No dia. Antes das 9h a área da bacia é gratuita, e depois exige ingresso na entrada, só no cartão", preco: "€ 2 por pessoa", site: "turismoroma.it", url: "https://www.turismoroma.it" },
-    { nome: "Trem Italo 9976, Roma para Milão", quando: "Já comprado, para a quinta, dia 3, às 10h05. Guardem a passagem no celular", preco: "pago", site: "italotreno.it", url: "https://www.italotreno.it" }
+    { nome: "Trem Italo 9976, Roma para Milão", quando: "Já comprado, para a quinta, dia 3, às 10h05. Guardem a passagem no celular", preco: "pago", site: "italotreno.it", url: "https://www.italotreno.it" },
+    { nome: "Navigo Semaine toutes zones", quando: "Comprar na máquina da Gare de Lyon assim que chegarem em Paris, no dia 7", preco: "€ 32,40 por pessoa", site: "ile-de-france-mobilites.fr", url: "https://www.iledefrance-mobilites.fr" },
+    { nome: "Disneyland Paris, ingresso 1 jour / 1 parque, dia 09/12", quando: "Comprar agora em disneylandparis.com. O preço sobe conforme a data se aproxima. €111 por pessoa para 09/12 (verificado em 10/11/2026, preço dinâmico)", preco: "variável", site: "disneylandparis.com", url: "https://www.disneylandparis.com" },
+    { nome: "Museu do Louvre, dia 10/12", quando: "Comprar antes, em ticket.louvre.fr, com horário reservado das 9h", preco: "€ 32 por pessoa", site: "ticket.louvre.fr", url: "https://ticket.louvre.fr" },
+    { nome: "Cruzeiro com jantar, Bateaux Parisiens ou Mouches, dia 11/12", quando: "Reservar com pelo menos 1 semana de antecedência. Cruzeiro das 20h30 pega a iluminação da torre", preco: "a partir de € 65 por pessoa", site: "bateauxparisiens.com", url: "https://www.bateauxparisiens.com" },
+    { nome: "Cruzeiro simples, dia 8/12, Bateaux Parisiens", quando: "Reservar online ou comprar no cais no dia", preco: "em torno de € 17 a 19 por pessoa", site: "bateauxparisiens.com", url: "https://www.bateauxparisiens.com" }
   ],
   aviso: "Escolham primeiro o Coliseu, que tem o horário mais disputado, e depois o Vaticano, com o horário das 8h. Os dois ingressos são nominais e precisam do documento de cada pessoa na entrada."
 },
 
 etiqueta: {
-  texto: "Em Roma se come bem sem frescura. Estas regras evitam os pequenos sustos na conta e deixam a mesa mais tranquila.",
+  texto: "Em Roma e em Paris se come bem sem frescura. Estas regras evitam os pequenos sustos na conta e deixam a mesa mais tranquila nos dois países.",
   itens: [
-    { i:"cafe", t:"O café, em pé ou sentado", d:"O café no balcão, em pé, custa bem menos que sentado à mesa. Cappuccino se toma de manhã, e depois do almoço o italiano pede espresso." },
-    { i:"euro", t:"Couvert e serviço", d:"O couvert, uma taxa de poucos euros por pessoa, e às vezes a taxa de serviço aparecem na conta. A gorjeta não é obrigatória. Se um garçom pedir gorjeta em dinheiro além da conta, podem recusar." },
-    { i:"garfo", t:"Bruschetta e pão", d:"O pão que vem à mesa pode ser cobrado. Se não quiserem, é só dizer que não querem o pão ao chegar." },
-    { i:"cadeira", t:"O horário das refeições", d:"A cozinha da maioria dos restaurantes fecha entre 15h e 19h. As casas que ficam abertas o dia todo, como as do roteiro, são a exceção. Nos jantares depois das 22h30, peçam logo ao chegar." },
-    { i:"pao", t:"Pizza por fatia", d:"A pizza al taglio é vendida por peso: o atendente corta, pesa e esquenta. Peçam um pedaço pequeno de cada sabor para experimentar mais." },
-    { i:"mercado", t:"Água de graça", d:"Roma tem fontes de água potável nas ruas, os nasoni. Levem uma garrafa para encher à vontade." }
+    { i:"cafe", t:"🇮🇹 O café, em pé ou sentado", d:"O café no balcão, em pé, custa bem menos que sentado à mesa. Cappuccino se toma de manhã, e depois do almoço o italiano pede espresso." },
+    { i:"euro", t:"🇮🇹 Couvert e serviço", d:"O couvert, uma taxa de poucos euros por pessoa, e às vezes a taxa de serviço aparecem na conta. A gorjeta não é obrigatória. Se um garçom pedir gorjeta em dinheiro além da conta, podem recusar." },
+    { i:"garfo", t:"🇮🇹 Bruschetta e pão", d:"O pão que vem à mesa pode ser cobrado. Se não quiserem, é só dizer que não querem o pão ao chegar." },
+    { i:"cadeira", t:"🇮🇹 O horário das refeições", d:"A cozinha da maioria dos restaurantes fecha entre 15h e 19h. As casas que ficam abertas o dia todo, como as do roteiro, são a exceção. Nos jantares depois das 22h30, peçam logo ao chegar." },
+    { i:"pao", t:"🇮🇹 Pizza por fatia", d:"A pizza al taglio é vendida por peso: o atendente corta, pesa e esquenta. Peçam um pedaço pequeno de cada sabor para experimentar mais." },
+    { i:"mercado", t:"🇮🇹 Água de graça", d:"Roma tem fontes de água potável nas ruas, os nasoni. Levem uma garrafa para encher à vontade." },
+
+    { i:"garfo", t:"🇫🇷 A água", d:"Pedir água da torneira é totalmente normal em restaurantes parisienses. É gratuita e os garçons servem sem reclamar. Água mineral tem custo." },
+    { i:"euro", t:"🇫🇷 A conta e o couvert", d:"O serviço já incluído é obrigatório por lei em Paris: a gorjeta já está embutida na conta. Não é preciso deixar nada a mais, mas arredondar o valor é comum. Cobrar pelo pão que trazem não é prática parisiense." },
+    { i:"garfo", t:"🇫🇷 O café", d:"O café expresso é servido em xícara pequena, sempre depois da refeição, nunca durante. Pedir café com leite no almoço ou jantar é incomum, mas ninguém vai impedir." },
+    { i:"cadeira", t:"🇫🇷 Horários das refeições", d:"Os restaurantes parisienses servem almoço das 12h às 14h30 e jantar das 19h30 às 22h30. Fora dessas janelas, a cozinha fecha. Brasseries e bouillons costumam funcionar o dia inteiro." },
+    { i:"pao", t:"🇫🇷 O menu do dia", d:"Pedir o menu fixo do dia no almoço é sempre mais barato que pedir à la carte. Em geral inclui entrada, prato e sobremesa ou bebida." },
+    { i:"pessoas", t:"🇫🇷 Como chamar o garçom", d:"Levantar discretamente a mão ou fazer contato visual funciona. Chamar com um bom dia ou boa tarde educado, sem gritar, é o tom certo. Ninguém vai vir automaticamente." }
   ]
 },
 
 frases: [
-  { fr: "Un tavolo per due, per favore.", pt: "Uma mesa para dois, por favor." },
-  { fr: "Il conto, per favore.", pt: "A conta, por favor." },
-  { fr: "Posso pagare con la carta?", pt: "Posso pagar com cartão?" },
-  { fr: "Siamo in due. Abbiamo prenotato.", pt: "Somos dois. Temos reserva." },
-  { fr: "Acqua naturale, per favore.", pt: "Água sem gás, por favor." },
-  { fr: "È il compleanno del mio ragazzo.", pt: "É o aniversário do meu namorado." },
-  { fr: "Dov'è la metropolitana?", pt: "Onde fica o metrô?" },
-  { fr: "Grazie mille!", pt: "Muito obrigado!" }
+  { fr: "🇮🇹 Un tavolo per due, per favore.", pt: "Uma mesa para dois, por favor." },
+  { fr: "🇮🇹 Il conto, per favore.", pt: "A conta, por favor." },
+  { fr: "🇮🇹 Posso pagare con la carta?", pt: "Posso pagar com cartão?" },
+  { fr: "🇮🇹 Siamo in due. Abbiamo prenotato.", pt: "Somos dois. Temos reserva." },
+  { fr: "🇮🇹 Acqua naturale, per favore.", pt: "Água sem gás, por favor." },
+  { fr: "🇮🇹 È il compleanno del mio ragazzo.", pt: "É o aniversário do meu namorado." },
+  { fr: "🇮🇹 Dov'è la metropolitana?", pt: "Onde fica o metrô?" },
+  { fr: "🇮🇹 Grazie mille!", pt: "Muito obrigado!" },
+
+  { fr: "🇫🇷 Une table pour deux, s'il vous plaît.", pt: "Uma mesa para dois, por favor." },
+  { fr: "🇫🇷 L'addition, s'il vous plaît.", pt: "A conta, por favor." },
+  { fr: "🇫🇷 Excusez-moi, parlez-vous anglais ?", pt: "Com licença, você fala inglês?" },
+  { fr: "🇫🇷 Où est le métro ?", pt: "Onde fica o metrô?" },
+  { fr: "🇫🇷 Je voudrais un café, s'il vous plaît.", pt: "Eu gostaria de um café, por favor." },
+  { fr: "🇫🇷 C'est combien ?", pt: "Quanto custa?" },
+  { fr: "🇫🇷 Pouvez-vous prendre une photo ?", pt: "Pode tirar uma foto de nós?" },
+  { fr: "🇫🇷 Merci beaucoup !", pt: "Muito obrigado!" },
+
+  { fr: "🇫🇷 Sortie", pt: "Saída (em estações de metrô, shoppings, museus)" },
+  { fr: "🇫🇷 Entrée", pt: "Entrada" },
+  { fr: "🇫🇷 Correspondance", pt: "Baldeação de metrô ou RER" },
+  { fr: "🇫🇷 Direction", pt: "Sentido da linha: seguido do nome da estação terminal" },
+  { fr: "🇫🇷 Toutes directions", pt: "Todos os sentidos (placa de metrô na plataforma)" },
+  { fr: "🇫🇷 Interdit", pt: "Proibido" },
+  { fr: "🇫🇷 Gratuit", pt: "Gratuito" },
+  { fr: "🇫🇷 Fermé", pt: "Fechado" },
+  { fr: "🇫🇷 Ouvert", pt: "Aberto" },
+  { fr: "🇫🇷 Caisse", pt: "Caixa ou bilheteria" },
+  { fr: "🇫🇷 Détaxe", pt: "Reembolso de imposto nas compras acima de € 100" },
+  { fr: "🇫🇷 Arrondissement", pt: "Bairro administrativo de Paris, do 1 ao 20" },
+  { fr: "🇫🇷 Rive droite / Rive gauche", pt: "Margem direita (Norte) / Margem esquerda (Sul) do Sena" }
 ],
 
 cuidados: {
-  texto: "Roma é uma cidade segura para quem anda atento. São cuidados simples que resolvem quase tudo, e vale os dois saberem antes de embarcar.",
-  emergencia: "112 funciona em toda a Europa e atende em inglês. Polícia 113, ambulância 118, bombeiros 115. Se travarem no idioma, digam o nome da rua e a palavra emergenza.",
+  texto: "Roma e Paris são cidades seguras para quem anda atento. São cuidados simples que resolvem quase tudo, e vale os dois saberem antes de embarcar.",
+  emergencia: "112 funciona em toda a Europa e atende em inglês. Na Itália: polícia 113, ambulância 118, bombeiros 115. Na França: polícia 17, ambulância (SAMU) 15, bombeiros 18. Se travarem no idioma, digam o nome da rua e a palavra emergência (emergenza, em italiano, ou urgence, em francês).",
   golpes: [
-    { t: "Táxi irregular no aeroporto", d: "Quem aborda dentro do terminal oferecendo corrida costuma cobrar muito mais que os € 55 fixos. Só peguem na fila oficial sinalizada." },
-    { t: "Gladiadores e fotos", d: "Pessoas fantasiadas de gladiador perto do Coliseu cobram caro por foto, às vezes até depois de uma foto casual. Digam não e sigam andando." },
-    { t: "Pulseira e rosa", d: "Alguém amarra uma pulseira no seu pulso ou entrega uma rosa e depois cobra. Não aceitem nada de desconhecido." },
-    { t: "Petição e distração", d: "Pessoas com prancheta pedem assinatura enquanto outra mexe na bolsa. Ignorem e sigam andando." },
-    { t: "Ingresso na rua", d: "Venda de ingresso do Coliseu e dos museus nas ruas e nas filas costuma ser golpe ou muito mais cara. Comprem só online, nos sites oficiais da seção de reservas." }
+    { t: "🇮🇹 Táxi irregular no aeroporto", d: "Quem aborda dentro do terminal oferecendo corrida costuma cobrar muito mais que os € 55 fixos. Só peguem na fila oficial sinalizada." },
+    { t: "🇮🇹 Gladiadores e fotos", d: "Pessoas fantasiadas de gladiador perto do Coliseu cobram caro por foto, às vezes até depois de uma foto casual. Digam não e sigam andando." },
+    { t: "🇮🇹 Pulseira e rosa", d: "Alguém amarra uma pulseira no seu pulso ou entrega uma rosa e depois cobra. Não aceitem nada de desconhecido." },
+    { t: "🇮🇹 Petição e distração", d: "Pessoas com prancheta pedem assinatura enquanto outra mexe na bolsa. Ignorem e sigam andando." },
+    { t: "🇮🇹 Ingresso na rua", d: "Venda de ingresso do Coliseu e dos museus nas ruas e nas filas costuma ser golpe ou muito mais cara. Comprem só online, nos sites oficiais da seção de reservas." },
+    { t: "🇫🇷 Petição falsa (surdo-mudo)", d: "Alguém se aproxima com uma prancheta pedindo assinatura para uma causa, geralmente fingindo ser surdo. Enquanto você assina ou lê, um cúmplice mexe na bolsa, ou pedem doação em dinheiro na sequência. Comum perto da Torre Eiffel e do Louvre. Ignorem e sigam andando." },
+    { t: "🇫🇷 Pulseira da amizade", d: "Alguém amarra uma pulseira de linha no seu pulso em Montmartre, perto do Sacré-Coeur, e depois cobra. Não deixem ninguém tocar o seu braço." },
+    { t: "🇫🇷 Jogo de cartas e aposta", d: "Grupos armam uma mesa dobrável com um jogo de adivinhar a carta nas calçadas movimentadas. É armado para o jogador sempre perder. Nunca parem para apostar." },
+    { t: "🇫🇷 Falso funcionário do metrô", d: "Pessoas à paisana se passam por fiscal e pedem para ver o bilhete e o cartão, depois alegam multa e pedem pagamento na hora, em dinheiro. O fiscal de verdade usa uniforme e crachá da RATP. Peçam para ver a identificação." }
   ],
   habitos: [
-    { i: "mochila", t: "No metrô e na Termini", d: "Bolsa e mochila na frente do corpo, principalmente nas linhas A e B e na Termini, e em horário de pico." },
-    { i: "celular", t: "Com o celular", d: "Não usem o celular na mão junto às portas do vagão e nas escadas rolantes. É o momento clássico do furto." },
-    { i: "euro", t: "Dinheiro dividido", d: "Não levem tudo junto. Deixem parte dos euros e um cartão reserva no cofre do hotel." },
-    { i: "pessoas", t: "Combinado entre vocês", d: "Definam um ponto de encontro por dia, caso se percam no meio da multidão de Porta Portese ou do metrô." }
+    { i: "mochila", t: "No metrô e no RER", d: "Bolsa e mochila na frente do corpo, principalmente nas linhas A e B de Roma, na Termini, e nas linhas 1 e 4 de Paris, sempre em horário de pico." },
+    { i: "celular", t: "Com o celular", d: "Não usem o celular na mão junto às portas do vagão e nas escadas rolantes, nas duas cidades. É o momento clássico do furto." },
+    { i: "frases", t: "Com o idioma", d: "Ninguém espera que vocês falem italiano ou francês. Sorrir e apontar funciona em qualquer lugar. Para o básico do dia a dia, as frases da seção Frases resolvem. Se a pessoa não entender inglês, o Google Tradutor com câmera lê o cardápio e qualquer placa na hora, nos dois países. Baixem o pacote de italiano e de francês para uso offline antes de embarcar." },
+    { i: "euro", t: "Dinheiro dividido", d: "Não levem tudo junto. Deixem parte dos euros e um cartão reserva no cofre do hotel, tanto em Roma quanto em Paris." },
+    { i: "pessoas", t: "Combinado entre vocês", d: "Definam um ponto de encontro por dia, caso se percam no meio da multidão de Porta Portese, de um mercado de Natal ou do metrô." }
   ],
   passaporte: [
     "Antes de viajar, levem uma cópia simples do passaporte, guardada separada do original, e fotos dele no celular.",
-    "Registrem a perda ou o roubo na polícia, em uma delegacia da Polizia di Stato ou dos Carabinieri, e guardem o boletim de ocorrência.",
+    "🇮🇹 Registrem a perda ou o roubo na polícia, em uma delegacia da Polizia di Stato ou dos Carabinieri, e guardem o boletim de ocorrência.",
     "Tirem foto no padrão de documento em uma cabine automática comum, ou em um fotógrafo próximo ao consulado.",
-    "Peçam atendimento à Embaixada e ao Consulado-Geral do Brasil em Roma, na Piazza Navona 14, no Palazzo Pamphilj, pelo site do consulado, e esperem a data marcada.",
+    "🇮🇹 Peçam atendimento à Embaixada e ao Consulado-Geral do Brasil em Roma, na Piazza Navona 14, no Palazzo Pamphilj, pelo site do consulado, e esperem a data marcada.",
     "Se precisarem voltar ao Brasil sem o passaporte, peçam a ARB, a Autorização de Retorno ao Brasil, que é mais rápida e mais barata que um passaporte novo, nas condições do consulado.",
-    "Em emergência grave, fora do horário do consulado, o plantão consular atende pelo telefone divulgado no site do consulado."
+    "Em emergência grave, fora do horário do consulado, o plantão consular atende pelo telefone divulgado no site do consulado.",
+    "🇫🇷 O Consulado-Geral do Brasil em Paris fica na Rue La Pérouse, 34, no 16º arrondissement. O telefone de emergência consular está no site consular.itamaraty.gov.br/fr-fr/paris.xml. Para registrar o roubo, procurem a Préfecture de Police mais próxima ou uma delegacia (commissariat) e peçam o récépissé de déclaration de vol, o documento que prova o registro."
   ]
 },
 
@@ -1155,7 +1737,7 @@ const navItens=[];
 if(tem(R.carta)) navItens.push(['#topo','Início','']);
 if(R.voos || R.comoEscolherVoo) navItens.push(['#voos','Voos','']);
 if(tem(R.aeroportos)) navItens.push(['#aeroporto','Aeroporto','']);
-if(R.hospedagem || R.ondeSeHospedar) navItens.push(['#base','Onde ficam','']);
+if(R.hospedagem || R.ondeSeHospedar || tem(R.hospedagens)) navItens.push(['#base','Onde ficam','']);
 if(R.transporte) navItens.push(['#transporte','Transporte','']);
 if(R.preparacao) navItens.push(['#preparacao','Checklist','']);
 (R.dias||[]).length ? navItens.push(['#roteiro','Roteiro','']) : null;
@@ -1248,23 +1830,34 @@ if(tem(R.aeroportos)){
 }
 
 /* ---------- hospedagem ---------- */
-if(R.hospedagem){
+const renderHotel=h=>`
+  <div class="card">
+    <div class="card-tit">${ic('pin',20)}${h.nome}</div>
+    <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:14px">${h.endereco}</p>
+    <div class="linhas">
+      ${tem(h.metro)?`<div class="linha"><span class="ico">${ic('metro',17)}</span><span class="txt"><span class="rot">Metrô</span><span class="val">${h.metro}</span></span></div>`:''}
+      ${tem(h.checkin)?`<div class="linha"><span class="ico">${ic('relogio',17)}</span><span class="txt"><span class="rot">Check-in e check-out</span><span class="val">${h.checkin} · ${h.checkout}</span></span></div>`:''}
+    </div>
+  </div>
+  ${tem(h.porPerto)?`<div class="card">
+    <div class="eyebrow">${ic('mapa',13)}O que tem em volta</div>
+    <div class="linhas">${h.porPerto.map(p=>`
+      <div class="linha"><span class="ico">${ic(p.i,17)}</span><span class="txt"><span class="rot">${p.t}</span><span class="val">${p.d}</span></span></div>`).join('')}</div>
+  </div>`:''}`;
+if(tem(R.hospedagens)){
+  const abasH=R.hospedagens.map((h,i)=>
+    `<button class="aba" role="tab" data-g="hs" data-i="${i}" aria-selected="${i===0}">${h.cidade||h.nome.split(' ')[0]}</button>`).join('');
+  const paineisH=R.hospedagens.map((h,i)=>`
+    <div class="painel" data-g="hs" data-i="${i}"${i===0?'':' hidden'}>${renderHotel(h)}</div>`).join('');
+  H.push(`<section class="sec wrap" id="base">
+    ${cab('Base','cama','Onde vocês ficam','')}
+    <div class="abas" role="tablist">${abasH}</div>${paineisH}
+  </section>`);
+} else if(R.hospedagem){
   const h=R.hospedagem;
   H.push(`<section class="sec wrap" id="base">
     ${cab('Base','cama','Onde vocês ficam',h.nota||'')}
-    <div class="card">
-      <div class="card-tit">${ic('pin',20)}${h.nome}</div>
-      <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:14px">${h.endereco}</p>
-      <div class="linhas">
-        <div class="linha"><span class="ico">${ic('metro',17)}</span><span class="txt"><span class="rot">Metrô</span><span class="val">${h.metro}</span></span></div>
-        <div class="linha"><span class="ico">${ic('relogio',17)}</span><span class="txt"><span class="rot">Check-in e check-out</span><span class="val">${h.checkin} · ${h.checkout}</span></span></div>
-      </div>
-    </div>
-    ${tem(h.porPerto)?`<div class="card">
-      <div class="eyebrow">${ic('mapa',13)}O que tem em volta</div>
-      <div class="linhas">${h.porPerto.map(p=>`
-        <div class="linha"><span class="ico">${ic(p.i,17)}</span><span class="txt"><span class="rot">${p.t}</span><span class="val">${p.d}</span></span></div>`).join('')}</div>
-    </div>`:''}
+    ${renderHotel(h)}
   </section>`);
 } else if (R.ondeSeHospedar) {
   const o = R.ondeSeHospedar;
@@ -1287,22 +1880,39 @@ if(R.hospedagem){
 /* ---------- transporte ---------- */
 if(R.transporte){
   const t=R.transporte;
-  H.push(`<section class="sec wrap" id="transporte">
-    ${cab('Como circular','metro','Metrô, RER e bilhetes')}
-    ${tem(t.recomendacao)?`<div class="imperdivel" style="margin-bottom:14px">
-      <div class="rot">${ic('raio',13)}A conta para esta viagem</div><p style="font-size:14.5px">${t.recomendacao}</p></div>`:''}
-    <div class="opts">${(t.bilhetes||[]).map(b=>`
+  const renderTransporteCorpo=(tb,cel,av)=>`
+    <div class="opts">${(tb||[]).map(b=>`
       <div class="opt"><div class="opt-cab"><span class="opt-nome">${ic('ingresso',16)}${b.nome}</span></div>
         <div class="opt-corpo"><div class="opt-l"><span>${b.nota}</span></div></div>
         <div class="opt-pe"><div class="opt-preco">${b.preco}</div><div class="opt-tempo">${b.ideal}</div></div>
       </div>`).join('')}</div>
-    ${tem(t.celular)?`<div class="card" style="margin-top:13px">
+    ${tem(cel)?`<div class="card" style="margin-top:13px">
       <div class="card-tit" style="font-size:21px">${ic('celular',18)}Bilhete pelo celular</div>
-      <div class="linhas">${t.celular.map(([k,v])=>`
+      <div class="linhas">${cel.map(([k,v])=>`
         <div class="linha"><span class="ico">${ic('check',16)}</span><span class="txt"><span class="rot">${k}</span><span class="val">${v}</span></span></div>`).join('')}</div>
     </div>`:''}
-    ${(t.avisos||[]).map(a=>`<div class="dica">${ic('alerta',18)}<span>${a}</span></div>`).join('')}
-  </section>`);
+    ${(av||[]).map(a=>`<div class="dica">${ic('alerta',18)}<span>${a}</span></div>`).join('')}`;
+  if(tem(t.abas)){
+    const abasBtns=t.abas.map((a,i)=>
+      `<button class="aba" role="tab" data-g="tr" data-i="${i}" aria-selected="${i===0}">${a.pais}</button>`).join('');
+    const paineisTr=t.abas.map((a,i)=>`
+      <div class="painel" data-g="tr" data-i="${i}"${i===0?'':' hidden'}>
+        ${renderTransporteCorpo(a.bilhetes,a.celular,a.avisos)}
+      </div>`).join('');
+    H.push(`<section class="sec wrap" id="transporte">
+      ${cab('Como circular','metro','Metrô, RER e bilhetes')}
+      ${tem(t.recomendacao)?`<div class="imperdivel" style="margin-bottom:14px">
+        <div class="rot">${ic('raio',13)}A conta para esta viagem</div><p style="font-size:14.5px">${t.recomendacao}</p></div>`:''}
+      <div class="abas" role="tablist">${abasBtns}</div>${paineisTr}
+    </section>`);
+  } else {
+    H.push(`<section class="sec wrap" id="transporte">
+      ${cab('Como circular','metro','Metrô, RER e bilhetes')}
+      ${tem(t.recomendacao)?`<div class="imperdivel" style="margin-bottom:14px">
+        <div class="rot">${ic('raio',13)}A conta para esta viagem</div><p style="font-size:14.5px">${t.recomendacao}</p></div>`:''}
+      ${renderTransporteCorpo(t.bilhetes,t.celular,t.avisos)}
+    </section>`);
+  }
 }
 
 /* ---------- preparação ---------- */
@@ -1376,11 +1986,11 @@ if(tem(R.dias)){
     </div></div>${traj(p.trajeto)}`;
   };
   const abas=R.dias.map((d,i)=>
-    `<button class="aba" role="tab" data-g="dia" data-i="${i}" aria-selected="${i===0}">Dia ${i+1}<small>${(d.data||'').split(',')[1]||''}</small></button>`).join('');
+    `<button class="aba" role="tab" data-g="dia" data-i="${i}" aria-selected="${i===0}">${d.diaLabel||('Dia '+(i+1))}<small>${(d.data||'').split(',')[1]||''}</small></button>`).join('');
   const paineis=R.dias.map((d,i)=>`
     <div class="painel" data-g="dia" data-i="${i}"${i===0?'':' hidden'}>
       <div class="dia-cab">
-        <div class="dia-num">Dia ${i+1} de ${R.dias.length}</div>
+        <div class="dia-num">${d.diaLabel||('Dia '+(i+1))}</div>
         <h3>${d.titulo}</h3>
         <div class="dia-meta">
           ${d.data?`<span>${ic('calendario',13)}${d.data}</span>`:''}
