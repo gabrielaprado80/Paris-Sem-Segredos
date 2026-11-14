@@ -415,6 +415,7 @@ svg.i{flex:none;vertical-align:-.16em}
 <body>
 <div id="app"></div>
 <script>
+
 const ROTEIRO = {
 
 capa: {
@@ -427,17 +428,18 @@ capa: {
   chips: [
     { i:"pessoas", t:"6 pessoas" },
     { i:"mapa", t:"Londres, Disney e Paris" },
-    { i:"calendario", t:"10 a 25 de dezembro" },
+    { i:"termometro", t:"Londres de 3 °C a 8 °C, Paris de 3 °C a 7 °C" },
     { i:"coracao", t:"Clássica e em família" }
   ]
 },
 
 carta: [
   "Aline, esse roteiro acompanha os três trechos da viagem: cinco noites em Londres, quatro na Disney e cinco em Paris. A ideia central em todos eles é equilibrar o que você e seu marido gostam de ver (pontos famosos, cultura, gastronomia) com o que o resto do grupo prefere (compras, passeios mais leves, sem correria), sem dividir o grupo o tempo todo.",
-  "Em Londres, os dias intercalam pontos clássicos com tempo livre de loja: a troca da guarda ficou na segunda-feira, dia 14, o dia mais confiável da semana para essa escala. A Abadia de Westminster e a St. Paul's Cathedral não recebem visitantes aos domingos, só culto, então o roteiro de domingo ficou com o Museu de História Natural e o mercado de Natal de Hyde Park, os dois abertos.",
+  "Em Londres, cada dia concentra uma região para vocês andarem pouco entre um ponto e outro. Sábado é o dia da National Gallery, da St Paul's por fora, da Millennium Bridge, do Borough Market e do Leadenhall Market, com as locações de Harry Potter pelo caminho, e do Sky Garden ao pôr do sol. Domingo é o Museu de História Natural, o Churchill Arms e as compras de Natal: a loja de Harry Potter da Oxford Street, a Hamleys e a Regent Street, enquanto o Rafael, o Alexandre e o Vinicius vão ao jogo no Selhurst Park, às 19h. Segunda é a troca da guarda, a Abadia de Westminster, o Big Ben e o Soho, com a Fortnum & Mason e a House of MinaLima. Terça é a Torre de Londres, a Tower Bridge, o barco no Tâmisa e o teleférico.",
   "Na Disney, os dois ingressos que vocês já compraram (17 e 18 de dezembro) valem para os dois parques no mesmo dia, incluindo a nova área da Frozen. O dia 19, sem ingresso de parque, ficou como um dia mais tranquilo, de compras no Val d'Europe, o shopping ao lado do resort, até vocês decidirem se preferem outra coisa.",
-  "Em Paris, a tarde de 21 de dezembro é só para a sessão de fotos da família toda, as seis pessoas, no Trocadéro, com a Torre Eiffel subida até o 3º andar antes, no fim da manhã. O dia 22, aniversário de casamento de vocês, tem Notre-Dame pela manhã e, à noite, o cruzeiro no Sena com jantar fica só para o casal: o resto da família já tem um programa próprio ali perto, no mercado de Natal e na pista de gelo ao pé da Torre, terminando num jantar a poucos minutos dali. Assim ninguém fica sem plano enquanto vocês comemoram.",
-  "A alergia a camarão do seu marido entrou em todas as sugestões de restaurante, não só num dia. A cadeira de rodas ou carrinho de bebê da sua filha também pesou na escolha de cada trajeto: sempre que havia uma opção de metrô com elevador e outra só de escada, a rota do roteiro escolhe a que tem elevador.",
+  "Em Paris, o dia 20 já começa com o cruzeiro no Sena pela Vedettes de Paris, com a família toda junta, seguido do mercado de Natal e do jantar ali perto da Torre Eiffel. O dia 21 é o ensaio fotográfico, com a Torre e a Pirâmide do Louvre como plano de fundo, e à tarde o grupo se divide por uma hora entre a Ópera Garnier e as Galeries Lafayette, antes de reencontrar todo mundo a caminho do mercado das Tulherias. O dia 22 é só Montmartre de trenzinho e Le Marais. O dia 23 tem a patinação no Grand Palais e o Arco do Triunfo. E o dia 24 fecha com Notre-Dame de manhã e a subida da Torre Eiffel à tarde, já reservada.",
+  "Como o passeio de barco juntou todo mundo no dia 20, não ficou nada marcado à noite para o aniversário de casamento de vocês no dia 22. Deixei como uma sugestão opcional, se sobrar energia depois do jantar: um passeio tranquilo só para vocês três, você, o Rafael e a Laura, na Place des Vosges iluminada à noite.",
+  "A alergia a camarão do seu marido entrou em todas as sugestões de restaurante, não só num dia. O carrinho de bebê da sua filha também pesou na escolha de cada trajeto: os ônibus vermelhos de Londres e as vans de transfer têm espaço para o carrinho, e nos trechos mais longos o roteiro indica o Bolt como alternativa ao metrô, já que nem toda estação de metrô tem elevador.",
   "O documento mais urgente de toda essa viagem é a ETA do Reino Unido: diferente do ETIAS da Europa (que ainda nem está em vigor), essa é obrigatória agora, para as seis pessoas, incluindo a sua filha. Isso está destacado logo na seção de Reservas, antes de qualquer ingresso."
 ],
 
@@ -456,7 +458,7 @@ aeroportos: [
       { nome:"Transfer privado de van (6 lugares)", icone:"carro", rec:true, selo:"Recomendado para o grupo com bagagem e criança pequena",
         preco:"£ 75 a £ 115", precoNota:"por van, para o grupo inteiro, reservado com antecedência", tempo:"50 a 70 min conforme o trânsito",
         itens:[
-          ["Empresas confiáveis em Heathrow","Addison Lee (a maior empresa de minicab de Londres, com balcão e motorista de placa já esperando no saguão) e Blacklane (serviço internacional de motorista executivo, nota 4,7 em milhares de avaliações). As duas operam normalmente no aeroporto e cobram preço fechado, fixado antes da corrida."],
+          ["Empresas confiáveis em Heathrow","Addison Lee (a maior empresa de minicab de Londres, com balcão e motorista de placa já esperando no saguão) e Blacklane (serviço internacional de motorista executivo, nota 4,7 em milhares de avaliações). As duas têm representantes no aeroporto e cobram preço fechado, fixado antes da corrida."],
           ["Como funciona","Reserva-se com antecedência pelo aplicativo ou site da empresa, informando voo e horário. O motorista espera no saguão de chegada com uma placa com o nome, mesmo se o voo atrasar."],
           ["Por que não dividir em dois táxis pretos","Um táxi preto de Londres leva no máximo 5 passageiros. Com 6 pessoas, seria preciso 2 carros, 2 motoristas e o risco de se perderem um do outro. Uma van só resolve tudo de uma vez."],
           ["Bagagem","Avisem a quantidade de malas grandes na hora de reservar, para a empresa mandar um veículo com porta-malas grande o suficiente."]
@@ -464,8 +466,8 @@ aeroportos: [
       { nome:"Elizabeth line + troca de linha", icone:"metro", selo:"Mais barato, mas difícil com bagagem grande e criança pequena",
         preco:"£ 15,50", precoNota:"por pessoa, tarifa única da TfL para o trecho Heathrow–Zona 1, cobrada por aproximação, sem comprar bilhete", tempo:"cerca de 75 a 90 min, com baldeação",
         itens:[
-          ["O caminho até o hotel","Da estação Heathrow Terminal 5 (ou 2&3, conforme o terminal de chegada), Elizabeth line sentido Abbey Wood, até Paddington. Em Paddington, baldeação para a linha Circle ou District, sentido leste, até a estação Blackfriars. Do metrô Blackfriars, poucos minutos a pé até o hotel."],
-          ["O bilhete","Pague com cartão de crédito ou débito por aproximação direto na catraca (o mesmo contactless do dia a dia), sem precisar comprar bilhete separado. O valor é descontado automaticamente pela distância percorrida."],
+          ["O caminho até o hotel","Da estação Heathrow Terminal 5 (ou 2 e 3, conforme o terminal de chegada), Elizabeth line sentido Abbey Wood, direto até Farringdon. Ali, trem Thameslink sentido sul, 2 paradas até Blackfriars. Do metrô Blackfriars, 8 minutos a pé até o hotel."],
+          ["O bilhete","Pague com cartão de crédito ou débito por aproximação direto na catraca, sem precisar comprar bilhete separado. O valor é descontado automaticamente pela distância percorrida."],
           ["Por que não é a melhor escolha aqui","Com 3 ou mais malas grandes e um carrinho de bebê, trocar de linha em Paddington, com escadas e plataformas longas, é bem mais cansativo que a van."]
         ]}
     ]
@@ -478,7 +480,7 @@ aeroportos: [
         preco:"€ 90 a € 110", precoNota:"por van, para o grupo inteiro, reservado com antecedência", tempo:"40 a 60 min conforme o trânsito",
         itens:[
           ["Horário de saída do hotel","Para um voo que sai do Espaço Schengen às 12h05, o recomendado é chegar ao aeroporto com 2h30 de antecedência, ou seja, por volta das 9h30. Saindo do hotel às 8h, de van, sobra folga mesmo com o trânsito de feriado."],
-          ["Se o transfer tiver algum imprevisto","Uber e Bolt funcionam normalmente em Paris no dia de Natal. Outra opção é o táxi oficial: reconhece-se pelo painel luminoso no teto do carro (com a palavra 'Taxi Parisien' ou o nome da frota) e pelo taxímetro visível; pelo aplicativo G7, dá para chamar um e já reservar o horário de saída, sem precisar pegar na rua."]
+          ["Se o transfer tiver algum imprevisto","Uber e Bolt funcionam em Paris no dia de Natal. Outra opção é o táxi oficial: reconhece-se pelo painel luminoso no teto do carro (com a palavra 'Taxi Parisien' ou o nome da frota) e pelo taxímetro visível; pelo aplicativo G7, dá para chamar um e já reservar o horário de saída, sem precisar pegar na rua."]
         ]},
       { nome:"RER B direto", icone:"trem", selo:"Só como referência: o transfer já está reservado para este trecho",
         preco:"€ 14", precoNota:"por pessoa, bilhete de aeroporto Paris Região, carregado antes no aplicativo Île-de-France Mobilités ou no guichê", tempo:"cerca de 45 min, sem baldeação a partir da região do hotel",
@@ -539,23 +541,26 @@ hospedagem: [
 ],
 
 transporte: {
-  recomendacao:"Em Londres, cada um paga por aproximação com cartão de crédito ou débito contactless, sem precisar comprar Oyster: o sistema já cobra automaticamente o valor certo e aplica o teto diário, então ninguém paga mais do que valeria um passe do dia. Em Paris, considerando o número de viagens de metrô do roteiro inteiro, o bilhete avulso sai mais em conta do que qualquer passe Navigo Semaine para a quantidade de dias e trajetos de vocês.",
+  recomendacao:"🇬🇧 Em Londres, cada um paga por aproximação do próprio cartão de crédito ou débito na roda de entrada do metrô e do ônibus, sem precisar comprar o cartão Oyster: o sistema cobra o valor certo e para de cobrar ao chegar no teto de £ 8,90 por dia. Crianças menores de 11 anos viajam de graça acompanhadas de um adulto, então a Laura não paga. 🇫🇷 Em Paris, com o número de viagens do roteiro, o bilhete avulso 'ticket Métro-Train-RER' sai mais em conta do que o passe Navigo Semaine.",
   comoFunciona: [
-    ["Em Londres, contactless em vez de bilhete","Encoste o próprio cartão de crédito ou débito (ou o celular com Apple Pay/Google Pay) direto na roda de entrada do metrô, do ônibus ou do trem. O sistema calcula e cobra o valor certo automaticamente, sem precisar comprar nada antes."],
-    ["Em Paris, o que significa 'sentido' nas placas","O metrô não indica ponto cardeal, indica o nome da última estação da linha. Se o trajeto diz 'sentido Nation', é esse nome que aparece na plataforma e na frente do trem."],
-    ["Metrô x RER, em Paris","O Metrô circula dentro de Paris, com estações mais frequentes. O RER é maior e também vai para fora da cidade, como para o aeroporto. O mesmo bilhete avulso vale para os dois, menos no trecho direto do aeroporto."],
-    ["Como validar em Paris","Encostem o cartão Navigo Easy ou o celular (com o bilhete carregado) na roda de entrada ou no poste de validação, sem precisar inserir nada."],
-    ["O cartão Navigo Easy","Custa € 2, comprado uma vez em qualquer estação. Cada pessoa do grupo precisa do próprio cartão, porque duas pessoas não passam com o mesmo ao mesmo tempo. Depois, é recarregado pelo aplicativo Île-de-France Mobilités ou no guichê."],
-    ["Até que horas funciona","Em Paris, o metrô para de rodar por volta da 0h40 na maioria dos dias, e 1h40 nas noites de sexta e sábado. Em Londres, várias linhas centrais rodam a noite toda nas sextas e sábados (Night Tube); nas outras noites, o metrô para por volta de meia-noite e meia."]
+    ["🇬🇧 Metrô de Londres, passo a passo","Encoste o cartão de crédito ou débito (ou o celular com Apple Pay ou Google Pay) no leitor amarelo da catraca na entrada e de novo na saída. O sistema calcula sozinho o valor da viagem e aplica o teto diário. Todos do grupo usam o próprio cartão, e nunca o mesmo cartão para duas pessoas."],
+    ["🇬🇧 Ônibus vermelhos de Londres","Entra-se pela porta da frente e encosta-se o cartão uma vez, sem validar na saída. A tarifa é de £ 1,85 por viagem, e dentro de 1 hora a próxima viagem de ônibus não custa nada (tarifa 'Hopper'). Todos os ônibus têm espaço no andar de baixo para o carrinho, e o andar de cima, na frente, tem a melhor vista."],
+    ["🇬🇧 O que significa 'sentido' nas placas","Nas plataformas do metrô de Londres, a placa mostra o nome da última estação da linha, com a direção (por exemplo, 'Jubilee line, Stanmore'). O 'sentido' do roteiro é esse nome."],
+    ["🇬🇧 Trem Thameslink, Elizabeth line e barco","A Elizabeth line e o trem Thameslink funcionam com o mesmo cartão, no mesmo sistema do metrô. O barco Uber Boat tem bilhete próprio, e o teleférico também; os dois estão no dia 15/12."],
+    ["🇫🇷 Em Paris, o que significa 'sentido' nas placas","O metrô não indica ponto cardeal, indica o nome da última estação da linha. Se o trajeto diz 'sentido Nation', é esse nome que aparece na plataforma e na frente do trem."],
+    ["🇫🇷 Metrô x RER, em Paris","O Metrô circula dentro de Paris, com estações mais frequentes. O RER é maior e também vai para fora da cidade, como para o aeroporto e para a Disney. O mesmo bilhete avulso vale para os dois, menos no trecho direto do aeroporto."],
+    ["🇫🇷 Como validar em Paris","Encostem o cartão Navigo Easy (ou o celular, com o bilhete carregado no aplicativo Île-de-France Mobilités) no leitor da catraca ou no poste de validação, mesmo em estação sem catraca, porque o fiscal multa quem não validou."],
+    ["🇫🇷 O cartão Navigo Easy","Custa € 2 na primeira compra, em qualquer estação, e é reutilizável. Cada pessoa precisa do próprio cartão. O bilhete avulso (€ 2,55) é carregado no cartão ou no aplicativo."],
+    ["🇬🇧 🇫🇷 Até que horas funciona","🇬🇧 Em Londres, várias linhas centrais rodam a noite toda nas sextas e sábados (Night Tube); nas outras noites, o metrô para por volta de meia-noite e meia. 🇫🇷 Em Paris, o metrô para de rodar por volta da 0h40 na maioria dos dias, e 1h40 nas noites de sexta e sábado."]
   ],
   bilhetes: [
-    { nome:"Londres: contactless (cartão ou celular)", preco:"máx. £ 8,90/dia", nota:"teto diário automático em zonas 1-2, cobrado por aproximação, sem comprar nada antes", ideal:"recomendado para toda a estadia em Londres" },
-    { nome:"Paris: bilhete avulso, no Navigo Easy", preco:"€ 2,55", nota:"por pessoa e por trajeto, com baldeações em até 2 horas, válido em toda a Île-de-France menos nas linhas de aeroporto", ideal:"recomendado para toda a estadia em Paris" },
-    { nome:"Paris: bilhete de aeroporto, RER B", preco:"€ 14", nota:"por pessoa, carregado antes no aplicativo Île-de-France Mobilités, só necessário se decidirem ir de trem por conta própria até o CDG", ideal:"só como referência, já que o transfer do dia 25 está reservado" }
+    { nome:"🇬🇧 Londres: pagamento por aproximação (cartão ou celular)", preco:"teto de £ 8,90 por dia", nota:"metrô, trem e ônibus nas zonas 1 e 2; o ônibus tem teto próprio de £ 5,55 por dia; crianças menores de 11 anos não pagam", ideal:"recomendado para toda a estadia em Londres" },
+    { nome:"🇫🇷 Paris: bilhete avulso 'ticket Métro-Train-RER', no Navigo Easy", preco:"€ 2,55", nota:"por pessoa e por trajeto, com baldeações em até 2 horas, válido em toda a Île-de-France menos nas linhas de aeroporto", ideal:"recomendado para toda a estadia em Paris" },
+    { nome:"🇫🇷 Paris: bilhete de aeroporto, RER B", preco:"€ 14", nota:"por pessoa, carregado antes no aplicativo Île-de-France Mobilités, só necessário se decidirem ir de trem por conta própria até o CDG", ideal:"só como referência, já que o transfer do dia 25 está reservado" }
   ],
   avisos: [
-    "O bilhete de papelão não existe mais em Paris: hoje é digital, no celular (aplicativo Île-de-France Mobilités) ou no cartão Navigo Easy.",
-    "Em Londres, nunca compre Oyster físico achando que é mais barato: o contactless tem o mesmo teto e evita fila."
+    "🇫🇷 O bilhete de papelão não existe mais em Paris: hoje é digital, no celular (aplicativo Île-de-France Mobilités) ou no cartão Navigo Easy.",
+    "🇬🇧 Em Londres, não precisa comprar o cartão Oyster: o pagamento por aproximação do cartão do banco tem o mesmo teto e evita fila."
   ]
 },
 
@@ -563,33 +568,33 @@ preparacao: {
   texto: "Os itens abaixo valem a pena resolver ainda no Brasil, com o passo a passo de cada um. A ordem aqui é a de urgência.",
   blocos: [
     { titulo:"Aplicativos úteis, para baixar antes de ir", icone:"celular", itens:[
-      ["Para o transporte em Londres","Nenhum aplicativo é obrigatório: é só encostar o próprio cartão de crédito ou débito contactless na roda do metrô ou do ônibus. O TfL Go (grátis) ajuda a planejar os trajetos e ver os horários."],
-      ["Para o transporte em Paris","Île-de-France Mobilités (grátis), para comprar e guardar os bilhetes de metrô direto no celular, sem precisar do cartão físico Navigo Easy."],
-      ["Para o transfer do aeroporto","Addison Lee (maior empresa de minicab de Londres) ou Blacklane (motorista executivo internacional, nota 4,7 em milhares de avaliações): qualquer uma das duas é confiável para reservar o transfer de van."],
-      ["Como alternativa de última hora","Uber ou Bolt, caso haja algum imprevisto com algum transfer já reservado, tanto em Londres quanto em Paris. Em Paris, o G7 é o aplicativo do táxi oficial, e deixa reservar com horário marcado."],
-      ["Para se orientar nas duas cidades","Google Maps, para abrir os endereços deste roteiro direto no mapa."]
+      ["🇬🇧 Para o transporte em Londres","Nenhum aplicativo é obrigatório: é só encostar o próprio cartão de crédito ou débito no leitor do metrô ou do ônibus. O TfL Go (grátis) ajuda a planejar os trajetos e a ver os horários. Para o barco e o teleférico do dia 15/12, o aplicativo Uber Boat (Thames Clippers Tickets) guarda os bilhetes no celular."],
+      ["🇫🇷 Para o transporte em Paris","Île-de-France Mobilités (grátis), para comprar e guardar os bilhetes de metrô direto no celular, sem precisar do cartão físico Navigo Easy."],
+      ["🇬🇧 Para o transfer do aeroporto","Addison Lee (maior empresa de minicab de Londres) ou Blacklane (motorista executivo internacional, nota 4,7 em milhares de avaliações): qualquer uma das duas é confiável para reservar o transfer de van."],
+      ["🇬🇧 🇫🇷 Como alternativa de última hora","Uber ou Bolt, caso haja algum imprevisto com algum transfer reservado, tanto em Londres quanto em Paris. 🇫🇷 Em Paris, o G7 é o aplicativo do táxi oficial, e deixa reservar com horário marcado."],
+      ["🇬🇧 🇫🇷 Para se orientar nas duas cidades","Google Maps, para abrir os endereços deste roteiro direto no mapa."]
     ]},
-    { titulo:"ETA do Reino Unido, urgente, para as 6 pessoas", icone:"passaporte", itens:[
+    { titulo:"🇬🇧 ETA do Reino Unido, urgente, para as 6 pessoas", icone:"passaporte", itens:[
       ["O que é","Uma autorização eletrônica obrigatória para entrar no Reino Unido, em vigor desde janeiro de 2025. Não é visto, mas sem ela a passagem é negada no check-in do voo."],
       ["Quem precisa","Todas as 6 pessoas da viagem, inclusive a criança de 3 anos. Não existe isenção por idade."],
       ["Preço","£ 20 por pessoa, pago no cartão de crédito ou débito na hora da solicitação."],
       ["Onde pedir","Só pelo site oficial gov.uk/eta ou pelo aplicativo oficial 'UK ETA', da loja de aplicativos. Qualquer outro site que cobre por isso é golpe."],
-      ["Prazo","A aprovação costuma sair em minutos, podendo levar até 3 dias úteis em análise manual. Como a viagem é em dezembro, dá pra pedir com bastante folga, mas o ideal é fazer isso antes de qualquer outra coisa desta lista."],
+      ["Prazo","A resposta chega por e-mail, em minutos na maioria dos pedidos e em até 3 dias úteis nos que passam por análise manual. Peçam antes de qualquer outra coisa desta lista."],
       ["Validade","2 anos, ou até o passaporte vencer, o que vier primeiro. Permite múltiplas entradas no Reino Unido nesse período."],
       ["O que não garante","A ETA não garante a entrada: a palavra final é sempre do agente de imigração na chegada a Heathrow."]
     ]},
-    { titulo:"Passaporte, imigração e o ETIAS da Europa", icone:"passaporte", itens:[
+    { titulo:"🇬🇧 🇫🇷 Passaporte, imigração e o ETIAS da Europa", icone:"passaporte", itens:[
       ["Passaporte","Validade de pelo menos 3 meses depois da data em que a família sair do Espaço Schengen (ou seja, depois de 25 de dezembro). Levem o original e uma cópia simples guardada separada, cada um com a própria."],
       ["Onde é carimbada a entrada na Europa","É em Londres, ao desembarcar em Heathrow, que o passaporte passa pelo primeiro controle de fronteira da viagem (fora da União Europeia, mas já começa o registro biométrico do sistema europeu de entrada e saída). A entrada no Espaço Schengen (França) acontece no controle de fronteira francês, feito dentro da própria estação de Londres St Pancras, antes de embarcar no Eurostar, não em Paris: por isso, ao desembarcar em Gare du Nord, ninguém passa pela imigração de novo."],
       ["ETIAS, ainda não vale","O ETIAS, a autorização eletrônica de viagem da Europa, segue adiado e não deve entrar em vigor antes de 2027. Para esta viagem, em dezembro de 2026, não é preciso solicitar nada. Qualquer site cobrando por isso hoje é golpe."],
       ["Prova de meios","A referência para a França é de € 65 por pessoa por dia com hospedagem paga, ou € 120 sem hospedagem paga. Levem o comprovante das reservas pagas, cartão de crédito e extrato bancário."]
     ]},
-    { titulo:"O que levar na mala", icone:"mala", itens:[
+    { titulo:"🇬🇧 🇫🇷 O que levar na mala", icone:"mala", itens:[
       ["Bagagem despachada","O grupo despacha 3 ou mais malas grandes. Confiram no site da companhia o peso e as medidas permitidas antes de fechar as malas."],
       ["Roupa","Dezembro em Londres e Paris é frio, com chance de chuva e pouca luz solar (o sol se põe por volta das 16h). Levem casaco pesado, cachecol, luvas, uma camada térmica por baixo, guarda-chuva compacto e sapato fechado e confortável para caminhar bastante."],
-      ["Carrinho de bebê","Levem o carrinho dobrável mais leve que tiverem: tanto o metrô de Londres quanto o de Paris têm estações sem elevador, então o carrinho vai precisar ser dobrado e carregado em alguns trechos (o roteiro já evita essas estações sempre que dá, mas vale estar preparado)."]
+      ["Carrinho de bebê","Levem o carrinho dobrável mais leve que tiverem: tanto o metrô de Londres quanto o de Paris têm estações sem elevador, então o carrinho precisa ser dobrado e carregado nas escadas em alguns trechos. Por isso, nos trajetos mais difíceis o roteiro indica o Bolt, o ônibus vermelho (com espaço para carrinho) ou o transfer."]
     ]},
-    { titulo:"Tax free, antes de sair da União Europeia", icone:"etiqueta", itens:[
+    { titulo:"🇫🇷 Tax free, antes de sair da União Europeia", icone:"etiqueta", itens:[
       ["Onde fazer","O CDG, no dia 25 de dezembro, é o último aeroporto da viagem dentro da União Europeia. É ali, antes de despachar as malas, que o tax free das compras feitas na França precisa ser feito."],
       ["Passo a passo","1. Na loja, no momento da compra, peçam o formulário de tax free e levem o passaporte, o recibo e a nota fiscal. 2. No aeroporto, antes do check-in, procurem o totem PABLO e escaneiem o código de barras do formulário. 3. Reembolso por cartão: o formulário validado vai para a caixa de correio do governo ao lado da alfândega, e o crédito cai em algumas semanas, sem taxa. 4. Reembolso em dinheiro: guichê Global Blue ou Planet, na hora, mas com taxa."],
       ["Regra do valor mínimo","Só vale para compras acima de € 100 na mesma rede de lojas, feitas em até 3 dias."],
@@ -600,12 +605,19 @@ preparacao: {
     "ETA do Reino Unido pedida, pelas 6 pessoas, inclusive a filha",
     "Voucher real dos ingressos da Disney conferido (tipo exato de acesso aos dois parques, 17 e 18/12)",
     "Hospedagem de Serris (Airbnb) confirmada com nome e endereço exatos",
-    "Troca da guarda em Buckingham Palace reconfirmada na escala oficial mais perto da viagem",
-    "Cruzeiro no Sena com jantar reservado para a noite de 22/12 (aniversário de casamento)",
-    "Mercado de Natal da Torre Eiffel e pista de gelo conferidos como abertos em 22/12",
-    "Torre Eiffel, ingresso até o 3º andar, comprado com horário marcado para 21/12",
-    "Sessão de fotos no Trocadéro confirmada com o fotógrafo para a tarde de 21/12",
-    "Aplicativos Île-de-France Mobilités e contactless/cartão testado para o transporte de Londres instalados",
+    "Sky Garden: 6 ingressos gratuitos reservados para sábado, 12/12, por volta das 15h15 (liberação na segunda, 16/11)",
+    "Museu de História Natural: horário de entrada gratuito reservado para domingo, 13/12, às 10h",
+    "Abadia de Westminster: ingressos comprados para segunda, 14/12, às 13h45",
+    "Torre de Londres: ingressos comprados para terça, 15/12, às 9h",
+    "Uber Boat e teleférico: ingresso combinado comprado para terça, 15/12",
+    "Van do transfer de quarta, 16/12, reservada com 1 hora de espera em King's Cross",
+    "Cruzeiro no Sena pela Vedettes de Paris reservado para a tarde de 20/12, com a família toda",
+    "Mercado de Natal da Torre Eiffel e pista de gelo conferidos como abertos em 20/12",
+    "Torre Eiffel, ingresso até o 3º andar, já reservado para 24/12 às 15h",
+    "Ensaio fotográfico (Torre Eiffel e Pirâmide do Louvre) já reservado para a manhã de 21/12",
+    "Grand Palais des Glaces (patinação) reservado para a tarde de 23/12",
+    "Arco do Triunfo, ingresso de subida, comprado para 23/12",
+    "Aplicativos Île-de-France Mobilités, TfL Go e Uber Boat instalados, e cartão de crédito com pagamento por aproximação ativado para o transporte de Londres",
     "Passaporte com validade conferida e uma cópia guardada separada, para cada um",
     "Comprovante das reservas pagas, cartão e extrato bancário organizados para a prova de meios",
     "Roteiro salvo em PDF"
@@ -631,293 +643,500 @@ dias: [
   data:"Sexta, 11 de dezembro",
   titulo:"Chegada em Londres",
   bairro:"Heathrow e Southbank",
-  saida:"Pouso às 14h05, sem passeio programado além da chegada",
+  saida:"Pouso às 14h05, caminhada leve no fim da tarde",
   paradas:[
     { tipo:"passeio", hora:"14h05", titulo:"Pouso em Heathrow e transfer até o hotel", mapa:"Novotel London Blackfriars, 46 Blackfriars Rd, London SE1 8NZ",
-      texto:"Depois da imigração (primeiro carimbo da viagem) e da bagagem, o transfer de van já reservado leva o grupo inteiro direto até o hotel, sem precisar trocar de linha de metrô com bagagem.",
-      dica:"O check-in do hotel é a partir das 15h. Com o voo chegando cedo e o transfer levando cerca de uma hora, vocês devem chegar perto desse horário.",
-      trajeto:{ modo:"carro", texto:"Transfer privado de van, já reservado, de Heathrow até o hotel: cerca de 50 a 70 minutos conforme o trânsito." } },
+      texto:"Depois da imigração (primeiro carimbo da viagem) e da bagagem, a van do transfer leva o grupo inteiro direto até o hotel, sem trocar de linha de metrô com as malas.",
+      dica:"O check-in do hotel é a partir das 15h. Com o transfer levando cerca de uma hora, vocês chegam perto desse horário.",
+      trajeto:{ opcoes:[
+        { modo:"taxi", texto:"Van do transfer: de Heathrow até o hotel, cerca de 50 a 70 minutos, com as malas e o carrinho da Laura no mesmo carro." },
+        { modo:"trem", linha:"Elizabeth", texto:"Metrô e trem: estação Heathrow Terminal 5 (ou Terminais 2 e 3), Elizabeth line sentido Abbey Wood, direto até Farringdon; ali, trem Thameslink sentido sul, 2 paradas até Blackfriars; do metrô Blackfriars, 8 minutos a pé até o hotel. Tarifa de £ 15,50 por adulto, paga por aproximação do cartão; a Laura viaja de graça." },
+        { modo:"taxi", texto:"Bolt ou Uber, no tamanho para 6 passageiros: cerca de 50 a 70 minutos conforme o trânsito." }
+      ] } },
 
     { tipo:"passeio", hora:"16h30", titulo:"Caminhada leve pela beira do Tâmisa", mapa:"Golden Jubilee Bridges, London SE1 7PB",
-      texto:"Nada de ingresso ou fila: só uma caminhada tranquila pela própria Southbank, saindo do hotel, para esticar as pernas depois do voo e já ver de relance o London Eye e o rio iluminado.",
+      texto:"Nada de ingresso ou fila: só uma caminhada tranquila pela própria Southbank, saindo do hotel, para esticar as pernas depois do voo e ver o rio e a London Eye iluminados, por fora.",
       imperdivel:[
-        "O London Eye iluminado, visto da margem sul do Tâmisa, sem precisar subir nele hoje."
+        "A London Eye iluminada, vista da margem sul do Tâmisa.",
+        "O Mercado de Natal do Southbank Centre, montado em cabanas de madeira à beira do rio, aberto desde 2 de novembro."
       ],
-      dica:"Um passeio de 30 a 40 minutos é suficiente; voltem no ritmo da filha de vocês, sem pressa nenhuma.",
-      trajeto:{ modo:"pe", texto:"Do hotel até os Golden Jubilee Bridges e volta, a pé, pela própria Southbank: cerca de 15 minutos de ida." } },
+      dica:"Um passeio de 30 a 40 minutos é suficiente; voltem no ritmo da Laura, sem pressa nenhuma.",
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do hotel até os Golden Jubilee Bridges pela própria Southbank, cerca de 15 minutos." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos, se preferirem poupar as pernas." }
+      ] } },
 
     { tipo:"refeicao", hora:"19h00", titulo:"Primeiro jantar, perto do hotel",
-      nota:"Depois do voo e do transfer, um jantar tranquilo e perto do hotel, sem precisar de mais deslocamento. Nenhuma das três leva camarão nos pratos principais sugeridos abaixo, mas confirmem sempre com o garçom por causa da alergia do seu marido.",
+      nota:"Depois do voo e do transfer, um jantar tranquilo e perto do hotel, sem mais deslocamento. Confirmem sempre a ausência de camarão por causa da alergia do Rafael.",
       opcoes:[
         { nome:"Giraffe Southbank", detalhe:"Royal Festival Hall, Riverside Level 1 · 4,3 estrelas com quase 8 mil avaliações · cardápio bem variado, ótimo para criança pequena", preco:"££" },
         { nome:"Strada Southbank", detalhe:"337-338 Belvedere Rd · 4,4 estrelas com mais de 4 mil avaliações · italiano simples, massas e pizza", preco:"££" },
-        { nome:"Troia Southbank", detalhe:"Belvedere Rd · 4,4 estrelas com quase 4 mil avaliações · mediterrâneo/turco, pratos para dividir", preco:"££" }
+        { nome:"Troia Southbank", detalhe:"Belvedere Rd · 4,4 estrelas com quase 4 mil avaliações · mediterrâneo e turco, pratos para dividir", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"Do hotel até o restaurante, a pé, de 5 a 10 minutos pela própria Belvedere Road, na faixa da Southbank." } }
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do hotel até o restaurante, de 5 a 10 minutos pela Belvedere Road." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      ] } }
   ],
-  seChover:"A faixa da Southbank tem cobertura em vários trechos perto do Royal Festival Hall.",
-  seSobrarEnergia:"Se ainda houver fôlego depois do voo, a vista noturna do Tâmisa saindo da porta do hotel já vale a pena, sem precisar andar longe."
+  seChover:"A caminhada pode virar um passeio curto até o Royal Festival Hall, que tem cobertura e cafés dentro do próprio prédio, a poucos minutos do hotel.",
+  seSobrarEnergia:"Se ainda houver fôlego depois do jantar, voltem ao Mercado de Natal do Southbank Centre, à beira do rio, para ver as cabanas iluminadas."
 },
 
 {
   data:"Sábado, 12 de dezembro",
-  titulo:"St Paul's, Millennium Bridge e Borough Market",
-  bairro:"City of London e Bankside",
-  saida:"Saída às 9h30",
+  titulo:"National Gallery, ônibus vermelho, Harry Potter no Borough Market e Sky Garden",
+  bairro:"Trafalgar Square, City e Bankside",
+  saida:"Saída às 9h15",
   paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Ida até a St Paul's Cathedral", mapa:"St Paul's Cathedral, St Paul's Churchyard, London EC4M 8AD",
-      texto:"A cúpula de Christopher Wren é um dos símbolos de Londres, com quase 350 anos de história.",
+    { tipo:"passeio", hora:"10h00", titulo:"National Gallery: Monet, Van Gogh e Leonardo da Vinci", mapa:"The National Gallery, Trafalgar Square, London WC2N 5DN",
+      texto:"A galeria de pintura mais importante de Londres, na Trafalgar Square, com entrada gratuita e visita de cerca de 1h30 só pelos nomes que vocês mais querem ver. Abre às 10h; chegar na abertura deixa as salas mais vazias.",
+      imperdivelTitulo:"Não saiam de lá sem ver",
+      imperdivel:[
+        "Van Gogh: 'Os Girassóis' (1888), uma das pinturas mais famosas do mundo.",
+        "Monet: 'O Lago das Ninfeias' (1899) e as outras telas dele na sala dos impressionistas.",
+        "Leonardo da Vinci: 'A Virgem dos Rochedos', na ala Sainsbury, e o desenho preparatório 'A Virgem e o Menino com Santa Ana e São João Batista', o único grande desenho preparatório de Leonardo que sobreviveu."
+      ],
+      dica:"Entrada gratuita, todos os dias das 10h às 18h (sextas até 21h). O café Muriel's Kitchen fica dentro da galeria, para uma pausa com a Laura.",
+      ingresso:{ url:"https://www.nationalgallery.org.uk", texto:"Ver horários, National Gallery" },
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District, sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 2 paradas até Embankment; de lá, 7 minutos a pé até a Trafalgar Square." },
+        { modo:"metro", linha:"Jubilee", texto:"Metrô com baldeação: estação Southwark, linha Jubilee, sentido Stanmore, 1 parada até Waterloo; baldeação para a linha Bakerloo, sentido Harrow & Wealdstone, 2 paradas até Charing Cross; a galeria fica a 3 minutos a pé." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos, a opção mais fácil com o carrinho da Laura." }
+      ] } },
+
+    { tipo:"passeio", hora:"11h45", titulo:"De ônibus vermelho até a St Paul's Cathedral", mapa:"Trafalgar Square, London WC2N 5DN",
+      texto:"A viagem de ônibus faz parte do passeio: sentem no andar de cima, na frente, e vejam a Strand e a Fleet Street passando pela janela. Os dois ônibus de dois andares que fazem o trajeto são o 11 (sentido Liverpool Street) e o 15 (sentido Blackwall); descem no ponto St Paul's Cathedral, cerca de 25 minutos depois.",
+      dica:"Pagamento por aproximação do cartão: £ 1,85 por adulto, e a Laura viaja de graça. Todos os ônibus de Londres têm espaço no andar de baixo para o carrinho.",
+      trajeto:{ opcoes:[
+        { modo:"onibus", texto:"Ônibus 11 ou 15 na Trafalgar Square (ponto perto da estação Charing Cross), sentido leste, até St Paul's Cathedral." },
+        { modo:"metro", linha:"District", texto:"Metrô: estação Embankment, linha District, sentido leste (Upminster ou Tower Hill), 4 paradas até Mansion House; de lá, 8 minutos a pé até a catedral." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      ] } },
+
+    { tipo:"passeio", hora:"12h15", titulo:"St Paul's Cathedral, só por fora", mapa:"St Paul's Cathedral, St Paul's Churchyard, London EC4M 8AD",
+      texto:"A cúpula de Christopher Wren, com quase 350 anos, é um dos símbolos de Londres e rende ótimas fotos de fora, do alto da escadaria da fachada.",
       imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
       imperdivel:[
-        "A Whispering Gallery, dentro da cúpula, onde um sussurro de um lado é ouvido do outro.",
-        "A escadaria em caracol de pedra da catedral, que virou a escada da Torre de Adivinhação em Harry Potter e o Prisioneiro de Azkaban e em Harry Potter e o Cálice de Fogo.",
-        "A vista de Londres do alto da cúpula, para quem topar a escalada."
+        "A cúpula e a escadaria da fachada, os melhores ângulos para foto.",
+        "A escada em espiral de pedra, por dentro da catedral, virou a escada da Torre de Adivinhação em Harry Potter e o Prisioneiro de Azkaban e em Harry Potter e o Cálice de Fogo."
       ],
-      dica:"Ingresso de £ 27 por adulto, crianças até 6 anos entram grátis. Comprado no site oficial, stpauls.co.uk.",
-      ingresso:{ url:"https://www.stpauls.co.uk", texto:"Comprar ingresso, St Paul's Cathedral" },
-      trajeto:{ modo:"metro", linha:"Circle e District", texto:"Do hotel até St Paul's: estação Blackfriars, linha Circle ou District, sentido leste, 2 paradas até Mansion House, ou já a pé: cerca de 15 minutos subindo a New Bridge Street. De metrô, da estação St Paul's (linha Central) seria mais perto do portão principal." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da catedral até a Millennium Bridge, 6 minutos, descendo pela Peter's Hill." }
+      ] } },
 
-    { tipo:"passeio", hora:"11h30", titulo:"Millennium Bridge e Borough Market", mapa:"Borough Market, 8 Southwark St, London SE1 1TL",
-      texto:"Depois da catedral, a travessia a pé pela Millennium Bridge, com a cúpula de St Paul's de um lado e a Tate Modern e o Shakespeare's Globe do outro, direto até o Borough Market.",
+    { tipo:"passeio", hora:"12h30", titulo:"Millennium Bridge", mapa:"Millennium Bridge, London SE1 9JE",
+      texto:"A ponte de pedestres que liga a St Paul's à Tate Modern, com a cúpula da catedral enquadrada de frente.",
       imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
       imperdivel:[
-        "A vista de St Paul's do meio da Millennium Bridge, a mesma ponte que os Comensais da Morte destroem na cena de abertura de Harry Potter e o Enigma do Príncipe.",
-        "O trecho da Stoney Street, dentro do Borough Market, onde a entrada do Caldeirão Furado foi recriada para Harry Potter e o Prisioneiro de Azkaban (é também onde Harry chama o Nightbus, o Autobus Night, nesse filme).",
-        "As barracas de comida do Borough Market, boas para almoçar ali mesmo sem reserva."
+        "A vista de St Paul's do meio da ponte.",
+        "É a ponte que os Comensais da Morte destroem na cena de abertura de Harry Potter e o Enigma do Príncipe."
       ],
-      dica:"O mercado costuma ficar bem cheio aos sábados por volta do meio-dia; cheguem um pouco antes se quiserem andar com mais espaço.",
-      trajeto:{ modo:"pe", texto:"Da catedral até a ponte: cerca de 10 minutos a pé. Da ponte até o Borough Market: mais 5 minutos." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do lado sul da ponte até o Borough Market, 15 minutos pela Bankside, passando pelo Shakespeare's Globe." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      ] } },
 
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço no próprio Borough Market",
-      nota:"Em vez de um restaurante fechado, o almoço aqui é nas barracas do próprio mercado, que tem opção para todo mundo, inclusive sem camarão. Normalmente é por conta própria, cada um escolhendo sua barraca.",
-      opcoes:[
-        { nome:"Barracas de carnes assadas e sanduíches", detalhe:"várias barracas dentro do mercado, com fila rápida, boa opção para quem não quer esperar mesa", preco:"£" },
-        { nome:"Barracas de massas e risoto", detalhe:"boas opções para a filha de vocês, porções menores disponíveis", preco:"£" },
-        { nome:"Barracas de queijos e pães", detalhe:"para montar um prato mais leve, sem pressa", preco:"£" }
-      ],
-      trajeto:{ modo:"pe", texto:"Tempo livre dentro do próprio mercado, sem deslocamento." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Tarde livre: Tate Modern, Shakespeare's Globe ou só loja", mapa:"Tate Modern, Bankside, London SE1 9TG",
-      texto:"Sem compromisso de horário, com algumas opções ali mesmo ao lado do Borough Market, caso quiram aproveitar a tarde sem andar muito mais.",
+    { tipo:"passeio", hora:"12h50", titulo:"Borough Market e a Stoney Street", mapa:"Borough Market, 8 Southwark St, London SE1 1TL",
+      texto:"O mercado de comida mais famoso de Londres, com barracas de queijo, pão, carnes e doces, além de restaurantes nas ruas em volta.",
+      imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
       imperdivel:[
-        "A Tate Modern, museu de arte moderna com entrada gratuita na coleção permanente, a poucos passos do mercado.",
-        "O Shakespeare's Globe, a reconstrução do teatro de Shakespeare, com a fachada e a loja de souvenirs abertas mesmo sem ver uma peça.",
-        "Se preferirem só caminhar e ver vitrine, a própria Southbank de volta ao hotel já rende um passeio tranquilo."
-      ],
-      trajeto:{ modo:"pe", texto:"Do Borough Market até a Tate Modern e o Shakespeare's Globe: cerca de 5 minutos a pé. De volta ao hotel pela Southbank: mais 15 a 20 minutos, no ritmo do grupo." } },
+        "A Stoney Street, onde a entrada do Caldeirão Furado foi recriada para Harry Potter e o Prisioneiro de Azkaban.",
+        "As barracas de queijo e de pães, boas para montar um lanche e levar."
+      ] },
 
-    { tipo:"refeicao", hora:"19h30", titulo:"Jantar perto do hotel",
-      nota:"Mais uma opção perto do hotel, para não precisar se deslocar à noite. Confirmem sempre a ausência de camarão no prato do seu marido.",
+    { tipo:"refeicao", hora:"13h15", titulo:"Almoço no Borough Market",
+      nota:"Opções a poucos passos da Stoney Street. Confirmem sempre a ausência de camarão.",
       opcoes:[
-        { nome:"Flat Iron Southbank", detalhe:"Royal Festival Hall · 4,9 estrelas com quase 4 mil avaliações · especialista em bife, com sorvete grátis de sobremesa", preco:"££" },
+        { nome:"Brother Marcus Borough", detalhe:"1 Dirty Ln · 4,8 estrelas com mais de 7 mil avaliações · mediterrâneo e turco, ótimo para família", preco:"££" },
+        { nome:"Bancone Borough Yards", detalhe:"Arch 213, 18 Stoney St · 4,5 estrelas com mais de 1,1 mil avaliações · massas feitas na casa", preco:"££" },
+        { nome:"Arabica Borough Market", detalhe:"3 Rochester Walk · 4,4 estrelas com mais de 2,3 mil avaliações · cozinha do Oriente Médio, pratos para dividir", preco:"£££" }
+      ],
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Northern", texto:"Metrô: estação London Bridge, linha Northern (ramal Bank), sentido Edgware ou High Barnet, 1 parada até Bank; de lá, 6 minutos a pé até o Leadenhall Market." },
+        { modo:"pe", texto:"A pé: pela London Bridge, com vista para a Tower Bridge, 20 minutos até o Leadenhall Market." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 10 minutos." }
+      ] } },
+
+    { tipo:"passeio", hora:"14h45", titulo:"Leadenhall Market e a Bull's Head Passage", mapa:"Leadenhall Market, Gracechurch St, London EC3V 1LT",
+      texto:"Um mercado coberto vitoriano de 1881, com teto de ferro pintado em verde, vermelho e dourado.",
+      imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
+      imperdivel:[
+        "A Bull's Head Passage, onde uma loja de óptica real serviu de entrada para o Caldeirão Furado em Harry Potter e a Pedra Filosofal.",
+        "O mercado também aparece como o Beco Diagonal no primeiro filme.",
+        "O teto de ferro pintado e as fachadas vitorianas, lindos para fotos."
+      ],
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do Leadenhall Market até o Sky Garden (20 Fenchurch Street), 5 minutos pela Lime Street e pela Fenchurch Street." }
+      ] } },
+
+    { tipo:"passeio", hora:"15h15", titulo:"Sky Garden, o mirante gratuito mais alto de Londres", mapa:"Sky Garden, 1 Sky Garden Walk, London EC3M 8AF",
+      texto:"Jardim e mirante no 35º andar do prédio conhecido como Walkie-Talkie, com vista para a Tower Bridge, a St Paul's e todo o Tâmisa. O pôr do sol de 12 de dezembro é por volta das 15h50: o ingresso das 15h15 pega a luz dourada e o começo da noite.",
+      imperdivel:[
+        "A vista de 360 graus para a Tower Bridge e o Shard.",
+        "O jardim de plantas tropicais dentro do mirante, aquecido, bom para o frio de dezembro."
+      ],
+      dica:"Entrada gratuita, com horário marcado de 1 hora; nos fins de semana o mirante funciona das 11h às 21h. Reservem 6 ingressos, um para cada pessoa do grupo. Menores de 16 anos entram sempre acompanhados de um adulto. As vagas gratuitas são liberadas toda segunda-feira de manhã, com 3 semanas de antecedência: as de 7 a 13 de dezembro saem na segunda, 16 de novembro, e esgotam rápido.",
+      ingresso:{ url:"https://skygarden.london/booking/", texto:"Reservar ingresso gratuito, Sky Garden" },
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"District", texto:"Metrô: estação Monument, linha District (ou Circle), sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 3 paradas até Blackfriars; do metrô, 8 minutos a pé até o hotel." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos até o hotel." },
+        { modo:"pe", texto:"A pé: cerca de 35 minutos pela beira do rio, melhor só se a Laura estiver dormindo no carrinho." }
+      ] } },
+
+    { tipo:"refeicao", hora:"19h00", titulo:"Jantar perto do hotel",
+      nota:"De volta à Southbank para o jantar, fechando o dia perto do hotel. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"Flat Iron Southbank", detalhe:"Royal Festival Hall · 4,9 estrelas com quase 4 mil avaliações · especialista em bife, sorvete grátis de sobremesa", preco:"££" },
         { nome:"La Cucina Di Mamma", detalhe:"3J-3K Belvedere Rd · 4,3 estrelas com 2,7 mil avaliações · italiano, massas e pizza, ambiente tranquilo", preco:"££" },
-        { nome:"Locale Southbank", detalhe:"County Hall, 3B Belvedere Rd · 4,1 estrelas com mais de 2 mil avaliações · italiano, perto do London Eye", preco:"££" }
+        { nome:"Locale Southbank", detalhe:"County Hall, 3B Belvedere Rd · 4,1 estrelas com mais de 2 mil avaliações · italiano, perto da London Eye", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"Tudo a pé, dentro da própria Southbank, de 5 a 10 minutos do hotel." } }
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé, dentro da própria Southbank, de 5 a 10 minutos do hotel." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      ] } }
   ],
-  seChover:"A Borough Market tem área coberta. A Millennium Bridge fica exposta, então levem guarda-chuva para essa travessia.",
-  seSobrarEnergia:"O London Eye fica a poucos minutos a pé do hotel, caso quiram ver por fora à noite, iluminado."
+  seChover:"A National Gallery, o Sky Garden e a maior parte do Leadenhall Market são cobertos. Na travessia da Millennium Bridge e na caminhada pela Bankside, levem guarda-chuva; se a chuva apertar, peçam um Bolt entre a Millennium Bridge e o Borough Market.",
+  seSobrarEnergia:"A Tate Modern, a poucos passos da Millennium Bridge, tem entrada gratuita na coleção permanente, um bom jeito de esticar a tarde antes do jantar."
 },
 
 {
   data:"Domingo, 13 de dezembro",
-  titulo:"Museu de História Natural e mercado de Natal de Hyde Park",
-  bairro:"South Kensington e Hyde Park",
-  saida:"Saída às 9h30",
+  titulo:"Museu de História Natural, Churchill Arms e Londres iluminada",
+  bairro:"South Kensington, Kensington e West End",
+  saida:"Saída às 9h30; o jogo do Rafael, do Alexandre e do Vinicius começa às 19h",
   paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Museu de História Natural", mapa:"Natural History Museum, Cromwell Rd, South Kensington, London SW7 5BD",
-      texto:"Westminster Abbey e St Paul's não recebem visita turística aos domingos, só culto, então esse dia ficou com o Museu de História Natural, que abre normal todo santo dia e é gratuito. O esqueleto de baleia azul suspenso no hall principal (o 'Hope') e a seção de dinossauros costumam agradar tanto adulto quanto criança pequena.",
+    { tipo:"passeio", hora:"10h00", titulo:"Museu de História Natural", mapa:"Natural History Museum, Cromwell Rd, South Kensington, London SW7 5BD",
+      texto:"O museu mais lúdico de Londres, com entrada gratuita, aberto todos os dias das 10h às 17h50 (última entrada às 17h30). Reservem o horário de entrada gratuito pelo site do museu: quem reserva entra direto, sem fila.",
       imperdivel:[
-        "O esqueleto da baleia azul, suspenso no teto do Hintze Hall, a entrada principal.",
-        "A sala dos dinossauros, com o T-Rex animado, ótima para a filha de vocês."
+        "O esqueleto da baleia azul, 'Hope', suspenso no Hintze Hall, a entrada principal.",
+        "A sala dos dinossauros, com o T-Rex animado, ótima para a Laura.",
+        "O Earth Hall, com a escada rolante que sobe por dentro de um globo gigante."
       ],
-      dica:"Entrada gratuita, sem necessidade de ingresso para a exposição permanente. Em dezembro costuma ter fila na porta logo cedo; chegar às 9h30 ajuda a entrar sem muita espera.",
-      trajeto:{ modo:"metro", linha:"Circle e District + Piccadilly", texto:"Do hotel até o museu: estação Blackfriars, linha Circle ou District, sentido oeste, até South Kensington (cerca de 20 minutos, sem baldeação pela District). Da estação, a pé pelo túnel de acesso direto ao museu, coberto, cerca de 5 minutos." } },
+      dica:"Duas horas bastam para os três pontos acima e uma pausa no café do museu.",
+      ingresso:{ url:"https://www.nhm.ac.uk/visit", texto:"Reservar horário gratuito, Museu de História Natural" },
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido oeste, 7 paradas até South Kensington; a estação não tem elevador, então o carrinho precisa ser levado pelas escadas; do metrô, o túnel coberto de 5 minutos leva direto à entrada do museu." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 25 minutos, a opção mais fácil com o carrinho." }
+      ] } },
 
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço perto do museu",
-      nota:"Opções a poucos minutos do museu, todas sem camarão nos pratos citados, mas sempre bom confirmar.",
+    { tipo:"refeicao", hora:"13h00", titulo:"Almoço no Churchill Arms",
+      nota:"Domingo, a cozinha do Churchill Arms funciona das 12h às 21h. Confirmem sempre a ausência de camarão: boa parte do cardápio é tailandês.",
       opcoes:[
-        { nome:"Garden Kitchen", detalhe:"no próprio jardim do Museu de História Natural · opção mais prática, com cardápio infantil", preco:"££" },
-        { nome:"Pierino", detalhe:"37 Thurloe Pl · 4,4 estrelas com mais de 2,7 mil avaliações · italiano, massas e pizza, a cerca de 8 minutos a pé", preco:"££" },
-        { nome:"Cacciari's South Kensington", detalhe:"82 Old Brompton Rd · 4,5 estrelas com quase 1,2 mil avaliações · pizza no forno a lenha", preco:"££" }
+        { nome:"The Churchill Arms", detalhe:"119 Kensington Church St · pub famoso pela fachada coberta de árvores de Natal, com cozinha tailandesa no salão de vidro dos fundos", preco:"££" },
+        { nome:"Cherry On", detalhe:"6 Pembridge Rd · 4,6 estrelas com mais de 1,3 mil avaliações · restaurante de família, cardápio variado, 8 minutos a pé do pub", preco:"££" },
+        { nome:"Old Swan", detalhe:"206 Kensington Church St · 4,4 estrelas com mais de 2 mil avaliações · pub inglês, fish and chips e tortas", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé do museu." } },
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Circle", texto:"Metrô: estação South Kensington, linha Circle ou District, sentido Edgware Road ou Paddington, 3 paradas até Notting Hill Gate; do metrô, 5 minutos a pé até o pub." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 12 minutos." }
+      ] } },
 
-    { tipo:"passeio", hora:"14h30", titulo:"Winter Wonderland, mercado de Natal de Hyde Park", mapa:"Hyde Park, London W2 2UH",
-      texto:"O maior mercado de Natal de Londres, dentro do Hyde Park, de 19 de novembro de 2026 a 3 de janeiro de 2027, com barracas, comidas típicas, roda-gigante e brinquedos, inclusive para criança pequena. Diferente da maioria dos mercados de Natal de Londres, aqui a entrada no parque, não só os brinquedos, precisa de ingresso com horário marcado.",
+    { tipo:"passeio", hora:"14h45", titulo:"Harry Potter Shop e as luzes de Natal da Oxford Street", mapa:"Harry Potter Shop, The Ribbon, 134-140 Oxford St, London",
+      texto:"A maior loja oficial de Harry Potter do Reino Unido, aberta em 4 de novembro, em dois andares: o Beco Diagonal recriado, um dragão sobre o banco Gringotes, o Nôitibus em tamanho real e o Caldeirão Furado, com cerveja amanteigada. A Oxford Street também está decorada com iluminação de Natal inspirada em Harry Potter.",
       imperdivel:[
-        "As barracas de comida e bebida típicas de Natal, tipo vinho quente e castanhas assadas.",
-        "O carrossel clássico, bom para a filha de vocês."
+        "O Nôitibus em tamanho real e o dragão sobre o Gringotes.",
+        "A cerveja amanteigada no Caldeirão Furado, dentro da própria loja."
       ],
-      dica:"Ingresso de entrada a partir de £ 1 (horário de menor movimento) até £ 8,25 por pessoa (horário de pico); a filha de vocês, com 3 anos, também precisa de ingresso, mesmo que mais barato. Comprado com horário marcado no site oficial, hydeparkwinterwonderland.com.",
-      ingresso:{ url:"https://hydeparkwinterwonderland.com", texto:"Comprar ingresso, Winter Wonderland" },
-      trajeto:{ modo:"metro", linha:"Piccadilly", texto:"De South Kensington até Hyde Park Corner: linha Piccadilly, sentido Cockfosters, 2 paradas, sem baldeação." } },
+      dica:"A loja fica entre as estações Oxford Circus e Tottenham Court Road. Desde 24 de outubro não passam ônibus pela Oxford Street entre a Marble Arch e a Oxford Circus, por isso o jeito mais simples de chegar é o metrô.",
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Central", texto:"Metrô: estação Notting Hill Gate, linha Central, sentido Epping, 6 paradas até Tottenham Court Road; a loja fica a 5 minutos a pé." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 20 minutos." }
+      ] } },
 
-    { tipo:"refeicao", hora:"19h00", titulo:"Jantar perto do hotel",
-      nota:"De volta à região do hotel para o jantar, fechando o dia sem mais deslocamento longo.",
-      opcoes:[
-        { nome:"Troia Southbank", detalhe:"já visitada ou nova, mediterrâneo/turco, pratos para dividir", preco:"££" },
-        { nome:"La Cucina Di Mamma", detalhe:"italiano, perto do hotel, boa opção pra quem prefere algo mais leve depois de um dia cheio", preco:"££" },
-        { nome:"Giraffe Southbank", detalhe:"cardápio variado, atende bem criança pequena", preco:"££" }
+    { tipo:"passeio", hora:"16h15", titulo:"Rafael, Alexandre e Vinicius vão para o jogo: Crystal Palace x Manchester United", mapa:"Selhurst Park, Whitehorse Ln, London SE25 6PU",
+      texto:"O jogo, pela Premier League, começa às 19h de domingo, em Selhurst Park. Os três saem da Oxford Street às 16h15 para chegar ao estádio com folga, e ainda dá tempo de comer algo por lá antes do apito inicial.",
+      dica:"O estádio não aceita bolsas grandes, e as lanchonetes do estádio só aceitam cartão. Na volta, o caminho mais simples é o trem de Norwood Junction até London Bridge e a linha Jubilee até Southwark, a 10 minutos a pé do hotel.",
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Jubilee", texto:"Ida: da Oxford Circus, linha Central até Bond Street (1 parada), baldeação para a linha Jubilee, sentido Stratford, 5 paradas até London Bridge; de lá, trem Southern direto até Norwood Junction e uma caminhada curta até o estádio, cerca de 30 minutos de London Bridge até a porta. O percurso inteiro leva cerca de 1h15." },
+        { modo:"taxi", texto:"Bolt ou Uber da Oxford Street até o estádio: cerca de 1 hora, sujeito ao trânsito de dia de jogo." }
+      ] } },
+
+    { tipo:"passeio", hora:"16h30", titulo:"Hamleys e a Regent Street iluminada", mapa:"Hamleys, 188-196 Regent St, London W1B 5BT",
+      texto:"Aline, Fatima e Laura seguem juntas para a Hamleys, a maior loja de brinquedos de Londres, com 7 andares, aberta aos domingos das 12h às 18h. Os anjos de luz que cruzam a Regent Street de ponta a ponta ficam acesos até 5 de janeiro.",
+      imperdivel:[
+        "Os 7 andares de brinquedos, com demonstrações ao vivo em cada piso.",
+        "Os anjos iluminados da Regent Street, uma das decorações de Natal mais famosas de Londres."
       ],
-      trajeto:{ modo:"pe", texto:"A pé, dentro da própria Southbank." } }
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da loja Harry Potter até a Hamleys, 12 minutos pela Oxford Street e pela Regent Street, já no meio das luzes." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      ] } },
+
+    { tipo:"passeio", hora:"17h45", titulo:"Piccadilly Circus, Goodwin's Court e Covent Garden",  mapa:"Goodwin's Court, St Martin's Lane, London",
+      texto:"A Regent Street termina na Piccadilly Circus; dali, uma caminhada de 20 minutos passa pela Leicester Square e chega à Goodwin's Court, uma ruela histórica só de pedestres, famosa por lembrar o Beco Diagonal. Em seguida, o Covent Garden, com a árvore de Natal gigante na praça e enfeites de Natal pendurados no mercado coberto, tudo aceso desde 12 de novembro.",
+      imperdivel:[
+        "Os painéis da Piccadilly Circus, ainda mais bonitos depois que escurece.",
+        "A Goodwin's Court, escondida em frente à rua St Martin's Lane.",
+        "A árvore de Natal na praça do Covent Garden e as bolas espelhadas pendendo do mercado coberto."
+      ],
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da Hamleys até a Piccadilly Circus, 5 minutos; da Piccadilly Circus pela Leicester Square até a Goodwin's Court, 12 minutos; da Goodwin's Court até o Covent Garden, 5 minutos." },
+        { modo:"metro", linha:"Piccadilly", texto:"Metrô, se cansarem: estação Piccadilly Circus, linha Piccadilly, sentido Cockfosters, 2 paradas até Covent Garden." }
+      ] } },
+
+    { tipo:"refeicao", hora:"18h45", titulo:"Jantar no Covent Garden",
+      nota:"Aline, Fatima e Laura jantam ali mesmo, no Covent Garden. O Rafael, o Alexandre e o Vinicius comem no estádio ou nos pubs em volta de Norwood Junction. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"Ave Mario", detalhe:"15 Henrietta St · 4,8 estrelas com mais de 31 mil avaliações · italiano, pizza e massas, restaurante de família", preco:"££" },
+        { nome:"Bill's Covent Garden", detalhe:"St Martin's Courtyard, Slingsby Pl · 4,6 estrelas com mais de 10 mil avaliações · cardápio variado, bom para criança", preco:"££" },
+        { nome:"Banana Tree Covent Garden", detalhe:"34 Wellington St · 4,7 estrelas com mais de 3 mil avaliações · tailandês e asiático, restaurante de família", preco:"££" }
+      ],
+      trajeto:{ opcoes:[
+        { modo:"taxi", texto:"Bolt ou Uber de volta ao hotel: cerca de 15 minutos, a opção mais simples à noite, com a Laura no carrinho." },
+        { modo:"metro", linha:"Bakerloo", texto:"Metrô: do Covent Garden até a estação Charing Cross, 10 minutos a pé; ali, linha Bakerloo, sentido Elephant & Castle, 2 paradas até Waterloo; baldeação para a linha Jubilee, sentido Stratford, 1 parada até Southwark; do metrô, 10 minutos a pé até o hotel." }
+      ] } }
   ],
-  seChover:"O Museu de História Natural é todo coberto. No Winter Wonderland, levem guarda-chuva; boa parte das filas e brincadeiras fica ao ar livre.",
-  seSobrarEnergia:"O Museu de Ciências fica literalmente ao lado do Museu de História Natural, ligado por um túnel coberto, caso sobre tempo e energia."
+  seChover:"O Museu de História Natural, o Churchill Arms, a Hamleys, a loja Harry Potter e o Covent Garden (mercado coberto) são por dentro. Na Regent Street e na Goodwin's Court, levem guarda-chuva.",
+  seSobrarEnergia:"Se sobrar energia depois do jantar, a árvore de Natal gigante da Trafalgar Square, a 10 minutos a pé do Covent Garden, fecha a noite antes do Bolt de volta ao hotel."
 },
 
 {
   data:"Segunda, 14 de dezembro",
-  titulo:"Troca da guarda, Westminster Abbey e Big Ben",
-  bairro:"Westminster",
+  titulo:"Troca da guarda, Westminster Abbey, Big Ben e Soho",
+  bairro:"Westminster, Piccadilly e Soho",
   saida:"Saída às 9h30",
   paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Abadia de Westminster", mapa:"Westminster Abbey, 20 Deans Yd, London SW1P 3PA",
-      texto:"Igreja de coroações e casamentos reais, com mais de mil anos de história, aberta a visitantes de segunda a sábado. Fica a poucos minutos a pé do Big Ben.",
+    { tipo:"passeio", hora:"10h15", titulo:"Troca da guarda em Buckingham Palace", mapa:"Buckingham Palace, London SW1A 1AA",
+      texto:"A Guarda do Rei troca de turno em frente ao palácio às segundas, quartas e sextas, às 11h. A cerimônia começa às 10h45 e dura cerca de 45 minutos, com banda de música. Cheguem às 10h15 para conseguir um lugar de frente para o portão.",
       imperdivel:[
-        "O Poets' Corner, onde estão enterrados ou homenageados grandes escritores britânicos.",
-        "O túmulo do Soldado Desconhecido, logo na entrada."
+        "A chegada da nova guarda, vinda do Wellington Barracks, com banda.",
+        "O Victoria Memorial, em frente ao portão principal."
       ],
-      dica:"Ingresso a partir de £ 27 por adulto, comprado com antecedência no site oficial (na bilheteria, no dia, costuma sair mais caro, por volta de £ 31); crianças até 5 anos entram grátis. Comprado com horário marcado em westminster-abbey.org.",
-      ingresso:{ url:"https://www.westminster-abbey.org", texto:"Comprar ingresso, Westminster Abbey" },
-      trajeto:{ modo:"metro", linha:"Circle e District", texto:"Do hotel até Westminster: estação Blackfriars, linha Circle ou District, sentido oeste, 3 paradas até Westminster (Temple, Embankment, Westminster), sem baldeação. Da estação, 2 minutos a pé." } },
+      dica:"A cerimônia é gratuita e não precisa de ingresso.",
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Jubilee", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stanmore, 3 paradas (Waterloo, Westminster, Green Park) até Green Park; de lá, 8 minutos a pé pelo Green Park até o palácio." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      ] } },
 
-    { tipo:"passeio", hora:"11h00", titulo:"Troca da guarda em Buckingham Palace", mapa:"Buckingham Palace, London SW1A 1AA",
-      texto:"A cerimônia começa às 11h e dura cerca de 45 minutos, com a banda tocando enquanto a guarda nova substitui a antiga. Segunda-feira é um dos dias mais frequentes da escala de Buckingham Palace.",
+    { tipo:"passeio", hora:"11h45", titulo:"St James's Park até Westminster", mapa:"St James's Park, London SW1A 2BJ",
+      texto:"Depois da cerimônia, a caminhada de 25 minutos pelo St James's Park, o parque real mais bonito de Londres, com lago, esquilos e pelicanos.",
       imperdivel:[
-        "A passagem da guarda nova saindo do Wellington Barracks pela Birdcage Walk.",
-        "A vista do alto do Victoria Memorial, em frente ao portão principal, se conseguirem espaço."
+        "Os pelicanos do lago.",
+        "A vista do Palácio de Buckingham da ponte sobre o lago."
       ],
-      dica:"Cheguem com uns 30 minutos de antecedência para conseguir um lugar de frente para o portão. Não precisa de ingresso, é só se posicionar na praça.",
-      trajeto:{ modo:"pe", texto:"De Westminster até Buckingham Palace: cerca de 15 a 20 minutos a pé por St James's Park, um passeio agradável mesmo no frio." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do palácio até a Horse Guards Parade, 15 minutos pelo parque; de lá até a região de Westminster, mais 10 minutos pela Whitehall." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 8 minutos." }
+      ] } },
 
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço perto de Westminster",
-      nota:"Opções a poucos minutos da região do palácio, nenhuma com camarão nos pratos citados.",
+    { tipo:"refeicao", hora:"12h45", titulo:"Almoço perto de Westminster",
+      nota:"Opções a poucos minutos da Abadia, nenhuma com camarão nos pratos citados.",
       opcoes:[
         { nome:"Mio Casa", detalhe:"58 Great Peter St · 4,8 estrelas com mais de 1,7 mil avaliações · italiano, ambiente pequeno e acolhedor", preco:"££" },
-        { nome:"Sapori", detalhe:"60 Horseferry Rd · 4,6 estrelas com 1,6 mil avaliações · italiano, perto de Lambeth Bridge", preco:"££" },
-        { nome:"Old Queen Street Cafe", detalhe:"6 Old Queen St · 4,5 estrelas com quase 1 mil avaliações · cardápio britânico/francês, serve o dia todo", preco:"££" }
+        { nome:"Sapori", detalhe:"60 Horseferry Rd · 4,6 estrelas com 1,6 mil avaliações · italiano, perto da Lambeth Bridge", preco:"££" },
+        { nome:"Old Queen Street Cafe", detalhe:"6 Old Queen St · 4,5 estrelas com quase 1 mil avaliações · cardápio britânico e francês, serve o dia todo", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé da região de Westminster." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: todas ficam a menos de 10 minutos da Abadia de Westminster." }
+      ] } },
 
-    { tipo:"passeio", hora:"14h30", titulo:"Big Ben e Houses of Parliament, por fora", mapa:"Houses of Parliament, London SW1A 0AA",
-      texto:"A torre do relógio mais famosa de Londres e o prédio do Parlamento, vistos de fora, com a Westminster Bridge logo ao lado para uma boa foto com o rio.",
+    { tipo:"passeio", hora:"13h45", titulo:"Abadia de Westminster", mapa:"Westminster Abbey, 20 Deans Yd, London SW1P 3PA",
+      texto:"A igreja das coroações e dos casamentos reais, com mais de mil anos de história, aberta a visitantes de segunda a sábado. Duração de cerca de 1h30, com o guia multimídia incluído no ingresso (em português).",
       imperdivel:[
-        "A vista do Big Ben a partir da Westminster Bridge, com o London Eye do outro lado do rio."
+        "O Poets' Corner, onde estão enterrados ou homenageados grandes escritores britânicos.",
+        "A Cadeira da Coroação, usada nas coroações britânicas.",
+        "O túmulo do Soldado Desconhecido britânico, no chão da nave, logo depois da porta de entrada."
       ],
-      trajeto:{ modo:"pe", texto:"A pé, saindo de Buckingham Palace de volta a Westminster, cerca de 15 minutos." } },
+      dica:"Ingresso de £ 32 por adulto; crianças de 6 a 17 anos pagam £ 14, e a Laura, com 3 anos, entra de graça. A entrada de visitantes vai das 9h30 às 15h30, então o horário das 13h45 ainda deixa folga. Pagamento e horário marcado pelo site oficial.",
+      ingresso:{ url:"https://tickets.westminster-abbey.org/", texto:"Comprar ingresso, Westminster Abbey" },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do almoço até a Abadia, menos de 10 minutos." }
+      ] } },
 
-    { tipo:"refeicao", hora:"19h30", titulo:"Jantar perto do hotel",
-      nota:"De volta à Southbank para o jantar, fechando mais um dia sem deslocamento longo à noite.",
-      opcoes:[
-        { nome:"Strada Southbank", detalhe:"italiano, massas e pizza", preco:"££" },
-        { nome:"Giraffe Southbank", detalhe:"cardápio variado, bom para a filha de vocês", preco:"££" },
-        { nome:"Troia Southbank", detalhe:"mediterrâneo/turco, pratos para dividir", preco:"££" }
+    { tipo:"passeio", hora:"15h20", titulo:"Big Ben, Parlamento e Westminster Bridge", mapa:"Houses of Parliament, London SW1A 0AA",
+      texto:"A torre do relógio mais famosa de Londres e o prédio do Parlamento, vistos de fora, com a Westminster Bridge logo ao lado para uma foto com o rio. O pôr do sol de 14 de dezembro é por volta das 15h50, então o horário pega as luzes se acendendo.",
+      imperdivel:[
+        "A foto clássica do Big Ben da Westminster Bridge, com um ônibus vermelho passando.",
+        "A estátua de Boadiceia e sua carruagem, na ponta da ponte."
       ],
-      trajeto:{ modo:"pe", texto:"A pé, dentro da própria Southbank." } }
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Jubilee", texto:"Metrô para a loja Fortnum & Mason: estação Westminster, linha Jubilee, sentido Stanmore, 1 parada até Green Park; de lá, 8 minutos a pé pela Piccadilly." },
+        { modo:"pe", texto:"A pé: da Westminster Bridge até a Fortnum & Mason, 25 minutos pelo St James's Park e pelo Green Park." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 10 minutos." }
+      ] } },
+
+    { tipo:"passeio", hora:"16h30", titulo:"Fortnum & Mason, em Piccadilly", mapa:"Fortnum & Mason, 181 Piccadilly, London W1A 1ER",
+      texto:"A loja de chás, biscoitos e geleias mais tradicional de Londres, aberta de segunda a sábado das 10h às 20h. É o lugar para comprar lembrancinhas de comida em embalagem de presente.",
+      imperdivel:[
+        "O térreo, com chás, biscoitos, geleias e chocolates em embalagem de presente."
+      ],
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da Fortnum & Mason até a Carnaby Street, 12 minutos pela Piccadilly e pela Regent Street, já entre as luzes de Natal." },
+        { modo:"metro", linha:"Piccadilly", texto:"Metrô: estação Piccadilly Circus, linha Bakerloo, sentido Harrow & Wealdstone, 1 parada até Oxford Circus; a Carnaby Street fica a 3 minutos a pé." }
+      ] } },
+
+    { tipo:"passeio", hora:"17h30", titulo:"Carnaby Street e House of MinaLima", mapa:"House of MinaLima, 157 Wardour St, London W1F 8WQ",
+      texto:"A Carnaby Street, com lojas e a iluminação de Natal 'Press Play on Christmas', de tema anos 90, e a House of MinaLima, galeria e loja do estúdio que criou a arte gráfica dos filmes de Harry Potter (jornais Profeta Diário, o mapa do Maroto, as cartas de Hogwarts), de entrada gratuita.",
+      imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
+      imperdivel:[
+        "Os cartazes de 'Procurado' e os jornais Profeta Diário, desenhados à mão para os filmes.",
+        "A loja do térreo, com réplicas de cartas de Hogwarts e cadernos, boas para lembrança."
+      ],
+      dica:"A House of MinaLima abre todos os dias das 11h às 18h45, então o horário das 17h30 ainda deixa 1 hora de visita.",
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da Carnaby Street até a Wardour Street, 10 minutos por Ganton Street e Great Marlborough Street." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      ] } },
+
+    { tipo:"refeicao", hora:"19h00", titulo:"Jantar na Kingly Court, em Soho",
+      nota:"A Kingly Court reúne vários restaurantes em um pátio de vários andares, ótimo para o grupo escolher cada um o que quer. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"Kingly Court", detalhe:"Kingly St, Carnaby · 4,5 estrelas com mais de 10 mil avaliações · pátio com vários restaurantes, aberto até as 23h", preco:"££" },
+        { nome:"Bleecker Burger Soho", detalhe:"33 Old Compton St · 4,7 estrelas com mais de 3 mil avaliações · hambúrguer, poucas mesas, pedido no balcão", preco:"££" },
+        { nome:"Junk Soho", detalhe:"49 Old Compton St · 4,5 estrelas com mais de 3,3 mil avaliações · hambúrguer smash, a 10 minutos a pé da Kingly Court", preco:"££" }
+      ],
+      trajeto:{ opcoes:[
+        { modo:"taxi", texto:"Bolt ou Uber de volta ao hotel: cerca de 20 minutos." },
+        { modo:"metro", linha:"Jubilee", texto:"Metrô: estação Bond Street, linha Jubilee, sentido Stratford, 4 paradas (Green Park, Westminster, Waterloo, Southwark) até Southwark; do metrô, 10 minutos a pé até o hotel. De Soho até a Bond Street, 15 minutos a pé pela Oxford Street." }
+      ] } }
   ],
-  seChover:"Westminster Abbey é por dentro. Na troca da guarda e no Big Ben, levem guarda-chuva, é tudo ao ar livre.",
-  seSobrarEnergia:"A London Eye, bem perto do hotel, é uma boa forma de fechar a noite com uma vista alta da cidade, se ainda houver pique."
+  seChover:"A Abadia de Westminster, a Fortnum & Mason, a House of MinaLima e a Kingly Court são por dentro. A troca da guarda, o St James's Park e o Big Ben são ao ar livre; se a cerimônia for cancelada pela chuva, a Troca da Guarda a Cavalo da Horse Guards Parade, às 11h, também é gratuita e fica no caminho para Westminster.",
+  seSobrarEnergia:"Se ainda houver fôlego depois do jantar, uma volta de 10 minutos por Seven Dials, com os lampiões de Natal, ou pela Regent Street iluminada, ao lado, fecha a noite."
 },
 
 {
   data:"Terça, 15 de dezembro",
-  titulo:"Tower Bridge, Leadenhall Market e compras em Oxford Street",
-  bairro:"City of London, Tower Hill e West End",
-  saida:"Saída às 9h30",
+  titulo:"Torre de Londres, Tower Bridge, barco no Tâmisa e teleférico",
+  bairro:"Tower Hill, Tower Bridge e Greenwich Peninsula",
+  saida:"Saída às 8h15, para chegar à abertura da Torre às 9h",
   paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Tower Bridge", mapa:"Tower Bridge, Tower Bridge Rd, London SE1 2UP",
-      texto:"Atravessar a ponte a pé é de graça; só a exposição por dentro (torres, passarela de vidro e sala de máquinas vitoriana) é paga.",
+    { tipo:"passeio", hora:"09h00", titulo:"Torre de Londres e as Joias da Coroa", mapa:"Tower of London, London EC3N 4AB",
+      texto:"A fortaleza de 900 anos que guarda as Joias da Coroa britânica, o Beefeater (guarda cerimonial) e os corvos da Torre. Chegar às 9h, na abertura, é o melhor horário: a fila das Joias da Coroa é menor antes do meio-dia. Reservem cerca de 3 horas.",
       imperdivel:[
-        "A vista da ponte a partir do Potters Fields Park, do lado sul, o melhor ângulo para foto.",
-        "A passarela de vidro suspensa, para quem entrar na exposição paga."
+        "As Joias da Coroa, com a Coroa Imperial do Estado e o diamante Cullinan I, de 530 quilates, no Cetro do Soberano.",
+        "A visita guiada gratuita com um Beefeater, incluída no ingresso (a última sai às 14h30).",
+        "Os corvos da Torre, no gramado ao lado da Torre Branca."
       ],
-      dica:"Ingresso da exposição a partir de £ 15,80 por adulto, com preço variável conforme a época. Comprado no site oficial, towerbridge.org.uk. Fechado nos dias 24, 25 e 26 de dezembro, então esse é o único dia do roteiro em que dá para entrar.",
-      ingresso:{ url:"https://www.towerbridge.org.uk", texto:"Comprar ingresso, Tower Bridge Exhibition" },
-      trajeto:{ modo:"metro", linha:"Jubilee + District/Circle", texto:"Do hotel até a Tower Bridge: estação Southwark, linha Jubilee, sentido Stratford, até London Bridge, baldeação para a linha Northern ou seguir a pé: cerca de 20 minutos. O caminho mais simples é a pé pela Southbank, cerca de 25 minutos à beira do rio." } },
+      dica:"Ingresso de £ 38 por adulto, £ 19 para crianças de 5 a 15 anos, grátis até 4 anos (a Laura entra de graça). Aberto às terças das 9h às 16h30, última entrada às 15h. O chão da fortaleza é de pedra irregular, e há estacionamento de carrinho na entrada.",
+      ingresso:{ url:"https://www.hrp.org.uk/tower-of-london/visit-us/", texto:"Comprar ingresso, Tower of London" },
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido leste (Upminster, Tower Hill ou Aldgate), 4 paradas até Tower Hill; a estação tem acesso sem escada até a rua, e a entrada da Torre fica a 5 minutos a pé." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      ] } },
 
-    { tipo:"passeio", hora:"11h00", titulo:"Leadenhall Market", mapa:"Leadenhall Market, Gracechurch St, London EC3V 1LT",
-      texto:"Um mercado coberto vitoriano de 1881, com teto pintado e arcos de ferro, que vira ponto de parada rápida antes do almoço.",
-      imperdivelTitulo:"Não saiam de lá sem ver (com um toque de Harry Potter)",
+    { tipo:"passeio", hora:"12h15", titulo:"Tower Bridge, por fora", mapa:"Tower Bridge, Tower Bridge Rd, London SE1 2UP",
+      texto:"A ponte mais fotografada de Londres, vista de fora, com a travessia a pé de graça.",
       imperdivel:[
-        "A Bull's Head Passage, dentro do mercado, onde uma loja de óptica real serviu de entrada para o Caldeirão Furado em Harry Potter e a Pedra Filosofal.",
-        "O mercado também foi usado como a rua Charing Cross Road do primeiro filme.",
-        "O teto de ferro pintado e as fachadas vitorianas, boas para fotos mesmo sem procurar referência de filme nenhuma."
+        "A foto da ponte do lado norte, perto da Torre de Londres.",
+        "A travessia a pé de uma ponta à outra, para chegar ao lado sul."
       ],
-      trajeto:{ modo:"metro", linha:"Circle/District", texto:"Da Tower Bridge até Leadenhall Market: estação Tower Hill, linha Circle ou District, sentido oeste, 2 paradas até Monument, depois cerca de 8 minutos a pé." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da Torre de Londres até a Tower Bridge, 5 minutos; da ponte até o almoço, mais 5 minutos pelo lado sul." }
+      ] } },
 
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço em Leadenhall Market",
-      nota:"Opções dentro do próprio mercado coberto, todas sem camarão nos pratos citados.",
+    { tipo:"refeicao", hora:"12h45", titulo:"Almoço no Tower Bridge Collective",
+      nota:"O Tower Bridge Collective é um salão de comida com 13 cozinhas diferentes, vista para a Tower Bridge no andar de cima, e uma área infantil com caixa de areia, aberto das 8h às 22h30 (crianças são bem-vindas até as 22h). Confirmem sempre a ausência de camarão.",
       opcoes:[
-        { nome:"Boom Bap Burger", detalhe:"dentro do Leadenhall Market · 4,8 estrelas com mais de 1,6 mil avaliações · hambúrguer artesanal, mesas do lado de fora do mercado", preco:"££" },
-        { nome:"Osteria Del Mercato", detalhe:"13-15 Leadenhall Market · 4,4 estrelas com 135 avaliações · italiano, andar de cima com vista para o mercado", preco:"££" },
-        { nome:"Lamb Tavern", detalhe:"10-12 Leadenhall Market · 4,5 estrelas com mais de 2,3 mil avaliações · clássico pub inglês, fish and chips", preco:"££" }
+        { nome:"Tower Bridge Collective", detalhe:"1 Horselydown Ln · 4,6 estrelas com mais de 1,1 mil avaliações · salão de comida com 13 cozinhas e área infantil", preco:"££" },
+        { nome:"Browns Butlers Wharf", detalhe:"26 Shad Thames · 4,4 estrelas com mais de 2,9 mil avaliações · cozinha britânica, vista do Tâmisa", preco:"£££" },
+        { nome:"Tower Bridge Kitchen", detalhe:"224A Tower Bridge Rd · 4,4 estrelas com mais de 800 avaliações · mediterrâneo, pizza e pratos simples", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas dentro do próprio Leadenhall Market." } },
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do Tower Bridge Collective até o Tower Pier, onde sai o barco, 10 minutos atravessando a Tower Bridge de volta ao lado norte." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      ] } },
 
-    { tipo:"passeio", hora:"14h00", titulo:"Compras em Oxford Street e Regent Street", mapa:"Oxford Circus, London W1",
-      texto:"A tarde fica para lojas, no coração do comércio de Londres: Oxford Street, Regent Street e as ruas em volta de Oxford Circus, com marcas grandes e lojas de departamento.",
+    { tipo:"passeio", hora:"14h15", titulo:"Barco Uber Boat até North Greenwich", mapa:"Tower Millennium Pier, Lower Thames St, London EC3N 4DT",
+      texto:"O barco rápido do Tâmisa, com cabine fechada e aquecida e deck aberto, passa por baixo da Tower Bridge, por Canary Wharf e Greenwich e chega a North Greenwich em cerca de 30 minutos.",
       imperdivel:[
-        "A fachada iluminada de Natal de Regent Street, decorada todo ano.",
-        "A Hamleys, a maior loja de brinquedos de Londres, boa parada com a filha de vocês."
+        "A passagem por baixo da Tower Bridge.",
+        "Os prédios de Canary Wharf, vistos da água."
       ],
-      trajeto:{ modo:"metro", linha:"Central", texto:"De Monument até Oxford Circus: estação Bank (6 minutos a pé de Leadenhall Market), linha Central, sentido West Ruislip, direto até Oxford Circus, sem baldeação." } },
+      dica:"O ingresso combinado, com barco de ida e teleférico de ida e volta, sai a partir de £ 22,80 por adulto e está à venda no site oficial, na opção de bilhete conjunto. Crianças menores de 5 anos viajam de graça, e os píeres de Tower e de North Greenwich aceitam carrinho.",
+      ingresso:{ url:"https://booking.thamesclippers.com/explore-london/best-tickets", texto:"Comprar ingresso combinado, Uber Boat e Cable Car" },
+      trajeto:{ opcoes:[
+        { modo:"onibus", texto:"Barco: Tower Pier até North Greenwich Pier, cerca de 30 minutos; do píer, o teleférico fica a 3 minutos a pé." },
+        { modo:"metro", linha:"Jubilee", texto:"Metrô, se preferirem: estação London Bridge, linha Jubilee, sentido Stratford, 4 paradas (Bermondsey, Canada Water, Canary Wharf, North Greenwich) até North Greenwich; de Tower Hill, a conexão para London Bridge leva 12 minutos a pé." }
+      ] } },
 
-    { tipo:"passeio", hora:"16h30", titulo:"Continuação das compras e Piccadilly Circus", mapa:"Piccadilly Circus, London W1J 9HS",
-      texto:"Tempo livre para seguir nas lojas até o fim da tarde, descendo aos poucos por Regent Street, que termina bem na Piccadilly Circus, outro ponto clássico de Londres, com os painéis de neon e a estátua do Eros no meio da praça.",
+    { tipo:"passeio", hora:"15h00", titulo:"Teleférico sobre o Tâmisa (IFS Cloud Cable Car)", mapa:"IFS Cloud Cable Car, Edmund Halley Way, London SE10 0FR",
+      texto:"A travessia de 10 minutos, a 90 metros de altura, sobre o Tâmisa até o Royal Docks, com vista do Canary Wharf e da O2 Arena. Perto das 15h50 o sol se põe, então o horário das 15h00 pega a luz do fim da tarde e o começo da noite.",
       imperdivel:[
-        "Os painéis de LED iluminados, um dos cartões-postais mais fotografados de Londres, ainda mais bonitos depois que escurece.",
-        "A Lillywhites e a Regent Street, logo ali, para fechar as compras."
+        "A vista do rio e do Canary Wharf do alto.",
+        "A O2 Arena, o domo branco ao lado do terminal, visto de cima."
       ],
-      trajeto:{ modo:"pe", texto:"De Regent Street até a Piccadilly Circus: é a própria avenida, a pé, terminando na praça." } },
+      dica:"O teleférico funciona das 7h às 21h às terças. Com a ida e a volta incluídas no ingresso combinado, o passeio leva cerca de 30 minutos no total. Crianças menores de 5 anos viajam de graça, acompanhadas de um adulto.",
+      trajeto:{ opcoes:[
+        { modo:"metro", linha:"Jubilee", texto:"Metrô de volta ao hotel: estação North Greenwich (tem elevador), linha Jubilee, sentido Stanmore, 5 paradas até Southwark; do metrô, 10 minutos a pé até o hotel." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 25 minutos até o hotel." }
+      ] } },
 
-    { tipo:"refeicao", hora:"19h30", titulo:"Último jantar em Londres, perto do hotel",
-      nota:"Como amanhã é dia de Eurostar bem cedo, o jantar fica de novo perto do hotel, para dormir cedo.",
+    { tipo:"refeicao", hora:"18h30", titulo:"Jantar perto do hotel",
+      nota:"Último jantar em Londres, perto do hotel, para dormir cedo antes do Eurostar. Confirmem sempre a ausência de camarão.",
       opcoes:[
-        { nome:"Flat Iron Southbank", detalhe:"especialista em bife, sorvete grátis de sobremesa", preco:"££" },
-        { nome:"La Cucina Di Mamma", detalhe:"italiano, ambiente tranquilo", preco:"££" },
-        { nome:"Locale Southbank", detalhe:"italiano, perto do London Eye", preco:"££" }
+        { nome:"Bala Baya", detalhe:"Arch 25, Old Union Yard Arches, 229 Union St · 4,6 estrelas com mais de 4 mil avaliações · mediterrâneo e do Oriente Médio, muitas opções vegetarianas", preco:"££" },
+        { nome:"Art Yard Bar & Kitchen", detalhe:"2 Blackfriars Rd · 4,2 estrelas com 381 avaliações · cozinha europeia, a 3 minutos a pé do hotel", preco:"££" },
+        { nome:"Caravan London Bridge", detalhe:"30 Great Guildford St · 4,5 estrelas com mais de 3 mil avaliações · cardápio variado, bom para criança", preco:"££" }
       ],
-      trajeto:{ modo:"pe", texto:"A pé, dentro da própria Southbank." } }
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: do hotel até o restaurante, de 5 a 15 minutos." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      ] } }
   ],
-  seChover:"A exposição da Tower Bridge e o Leadenhall Market são cobertos. Oxford Street e Regent Street têm lojas cobertas o caminho todo, fácil de se abrigar.",
-  seSobrarEnergia:"Carnaby Street, logo atrás de Regent Street, tem lojas mais alternativas, caso ainda sobre fôlego."
+  seChover:"A Torre de Londres tem as Joias da Coroa e a Torre Branca cobertas; o barco tem cabines fechadas com aquecimento. Na fila da Torre e no teleférico (que fecha com vento muito forte), levem guarda-chuva.",
+  seSobrarEnergia:"A Tower Bridge acesa à noite, vista do lado sul do rio, rende uma caminhada curta e boas fotos antes do jantar."
 },
 
 {
   data:"Quarta, 16 de dezembro",
-  titulo:"Eurostar até Paris e transfer para a Disney",
-  bairro:"Londres a Serris",
-  saida:"Saída do hotel às 10h30, Eurostar às 12h31",
+  titulo:"Platform 9¾ e Eurostar até Paris",
+  bairro:"King's Cross, St Pancras e Serris",
+  saida:"Saída do hotel às 8h30, Eurostar às 12h31",
   paradas:[
-    { tipo:"passeio", hora:"10h30", titulo:"Checkout e ida até St Pancras", mapa:"London St Pancras International, Euston Rd, London N1C 4QP",
-      texto:"O Eurostar sai às 12h31. Como é viagem internacional, a recomendação é chegar à estação com 1h30 de antecedência, por volta das 11h. É ali mesmo, dentro de St Pancras, que passa o controle de fronteira francês (não em Paris), então reservem tempo para essa fila também.",
+    { tipo:"passeio", hora:"09h00", titulo:"Platform 9¾, em King's Cross", mapa:"King's Cross Station, Euston Rd, London N1 9AP",
+      texto:"A foto clássica de Harry Potter, com o carrinho de bagagem entrando na parede. A loja funciona de segunda a sábado das 8h às 22h, e a foto fecha uma hora antes da loja. Reservem 1 hora para a fila e a foto.",
       imperdivelTitulo:"Um último toque de Harry Potter, de saída",
       imperdivel:[
-        "A fachada gótica da própria estação, do St Pancras Renaissance Hotel: foi ela, e não a estação King's Cross ao lado, que serviu de exterior de 'King's Cross' no primeiro filme e na cena em que Rony e Harry fogem voando no Ford Anglia da família Weasley em Harry Potter e a Câmara Secreta."
+        "A foto com o carrinho, tirada por fotógrafo da loja: a foto é gratuita para entrar na fila, e a compra das imagens é opcional.",
+        "A fachada gótica de St Pancras, ao lado: foi ela, e não a estação King's Cross, que serviu de exterior de 'King's Cross' no primeiro filme e na cena do Ford Anglia voador em Harry Potter e a Câmara Secreta."
       ],
-      dica:"A bagagem despachada de verdade não existe no Eurostar: cada um leva as próprias malas até o assento, então é bom já estar com tudo organizado antes de sair do hotel.",
-      trajeto:{ modo:"carro", texto:"Do hotel até St Pancras, de van ou táxi: cerca de 20 a 25 minutos, mais prático que o metrô com toda a bagagem." } },
+      dica:"A van do transfer, reservada com 1 hora de espera, aguarda em King's Cross com as malas dentro, enquanto o grupo faz a foto: assim ninguém carrega bagagem na fila.",
+      trajeto:{ opcoes:[
+        { modo:"taxi", texto:"Van do transfer: do hotel até King's Cross, cerca de 25 minutos." },
+        { modo:"metro", linha:"Northern", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stratford, 1 parada até London Bridge; baldeação para a linha Northern, ramal Bank, sentido High Barnet, até Euston; King's Cross fica a 12 minutos a pé. Com 3 malas grandes e o carrinho, a van é a opção mais simples." }
+      ] } },
+
+    { tipo:"passeio", hora:"10h15", titulo:"Ida até a estação St Pancras", mapa:"London St Pancras International, Euston Rd, London N1C 4QP",
+      texto:"O Eurostar sai às 12h31. Como é viagem internacional, a recomendação é chegar à estação com 1h30 de antecedência, por volta das 11h. É ali mesmo, dentro de St Pancras, que passa o controle de fronteira francês (não em Paris), então reservem tempo para essa fila também.",
+      dica:"Não existe despacho de bagagem no Eurostar: cada um leva as próprias malas até o assento.",
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: de King's Cross até St Pancras, 4 minutos, na rua em frente." },
+        { modo:"taxi", texto:"Van do transfer: 3 minutos, com as malas." }
+      ] } },
+
+    { tipo:"refeicao", hora:"10h45", titulo:"Almoço antes do embarque, em St Pancras",
+      nota:"Opções dentro da própria estação, antes ou depois do controle de fronteira. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"bread&truffle St Pancras", detalhe:"Unit 3 West St · 4,7 estrelas com mais de 400 avaliações · sanduíches quentes, bom para levar", preco:"£" },
+        { nome:"Le Pain Quotidien", detalhe:"Unit 4, St Pancras International · 4,2 estrelas com mais de 2,8 mil avaliações · padaria e brunch", preco:"££" },
+        { nome:"St Pancras Bar & Brasserie", detalhe:"St Pancras International, um andar acima do controle de fronteira do Eurostar · 4,3 estrelas com mais de 1,6 mil avaliações · cozinha francesa, ambiente calmo", preco:"£££" }
+      ] },
 
     { tipo:"passeio", hora:"12h31", titulo:"Eurostar até Paris Gare du Nord", mapa:"Paris Gare du Nord, 18 Rue de Dunkerque, 75010 Paris",
-      texto:"Viagem de trem de cerca de 2h30, sem precisar passar por mais nenhum controle de fronteira na chegada, já que ele acontece antes de embarcar. Chegada prevista às 15h59, no horário de Paris (uma hora à frente do horário de Londres).",
-      dica:"Como não há mais controle na chegada, o desembarque em Gare du Nord é rápido: é só seguir as placas de saída direto para o ponto de encontro do transfer." },
+      texto:"Viagem de trem de cerca de 2h30, sem precisar passar por mais nenhum controle de fronteira na chegada, já que ele acontece antes de embarcar. Chegada prevista às 15h59, no horário de Paris (uma hora à frente de Londres).",
+      dica:"Como não há mais controle na chegada, o desembarque na Gare du Nord é rápido: é só seguir as placas de saída direto para o ponto de encontro do transfer." },
 
     { tipo:"passeio", hora:"15h59", titulo:"Transfer de carro direto até a hospedagem em Serris", mapa:"5bis Cours de l'Elbe, Serris, 77700",
       texto:"Transfer privado já reservado, saindo direto da Gare du Nord até a hospedagem perto da Disney, sem passar pelo centro de Paris.",
       dica:"Como vocês chegam já no fim da tarde, o resto do dia fica livre para se instalar e descansar, sem programação de parque hoje.",
-      trajeto:{ modo:"carro", texto:"De Gare du Nord até Serris, de van: cerca de 50 a 60 minutos conforme o trânsito." } },
+      trajeto:{ opcoes:[
+        { modo:"taxi", texto:"Van do transfer: de Gare du Nord até Serris, cerca de 50 a 60 minutos conforme o trânsito." },
+        { modo:"trem", linha:"RER A", texto:"RER (só como referência, o transfer já está reservado): da Gare du Nord, RER B ou D até Châtelet–Les Halles (1 parada, 4 minutos); ali, RER A sentido Marne-la-Vallée–Chessy até Val d'Europe, cerca de 40 minutos." }
+      ] } },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Primeiro jantar perto de Serris",
       nota:"Primeira noite na região da Disney, com opções no shopping Val d'Europe, a poucos minutos da hospedagem. Confirmem sempre a ausência de camarão.",
       opcoes:[
-        { nome:"Indiana Café, Val d'Europe", detalhe:"14 Cours du Danube · 4,2 estrelas com quase 2,6 mil avaliações · ambiente bem familiar, inclusive com artista de balão para criança", preco:"££" },
+        { nome:"Indiana Café, Val d'Europe", detalhe:"14 Cours du Danube · 4,2 estrelas com quase 2,6 mil avaliações · ambiente bem familiar, inclusive com artista de balão para criança", preco:"€€" },
         { nome:"Italian Queen, Val d'Europe", detalhe:"3 Place de Toscane · 4,5 estrelas com mais de 4 mil avaliações · buffet italiano, rápido e em conta", preco:"€€" },
         { nome:"Factory & Co, Val d'Europe", detalhe:"14 Cours du Danube · 4,4 estrelas com mais de 8,5 mil avaliações · hambúrguer artesanal, serviço por totem", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Da hospedagem até o Val d'Europe, a pé, cerca de 10 a 15 minutos." } }
+      trajeto:{ opcoes:[
+        { modo:"pe", texto:"A pé: da hospedagem até o Val d'Europe, cerca de 10 a 15 minutos." },
+        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      ] } }
   ],
-  seChover:"O Eurostar e o transfer são todos por dentro, sem exposição à chuva.",
+  seChover:"A estação King's Cross, a loja Harry Potter, St Pancras e o Eurostar são todos cobertos, sem exposição à chuva.",
   seSobrarEnergia:"O shopping Val d'Europe fica aberto até à noite, caso sobre energia para passear pelas lojas depois do jantar."
 },
 
@@ -939,19 +1158,19 @@ dias: [
         "Peter Pan's Flight, uma das atrações mais charmosas para a família toda.",
         "It's a Small World, suave e certeira para a criança de 3 anos."
       ],
-      dica:"As filas mais longas de manhã costumam ser Big Thunder Mountain e Peter Pan's Flight; se puderem, façam essas duas primeiro." },
+      dica:"Comecem por Big Thunder Mountain e Peter Pan's Flight, logo na abertura do parque, e deixem as atrações com menos espera para o fim da tarde." },
 
     { tipo:"refeicao", hora:"12h30", titulo:"Almoço dentro do parque",
       nota:"Dentro do parque, a sugestão é um serviço rápido, sem reserva, para não perder tempo de fila. Avisem sempre sobre a alergia a camarão ao pedir.",
       opcoes:[
         { nome:"Restaurant Agrabah Café", detalhe:"serviço rápido, tema de Aladdin, pratos variados incluindo opções para criança", preco:"€€" },
-        { nome:"Casey's Corner", detalhe:"serviço rápido, hot dogs e clássicos americanos, fila costuma andar rápido", preco:"€" },
+        { nome:"Casey's Corner", detalhe:"serviço rápido, hot dogs e clássicos americanos", preco:"€" },
         { nome:"Colonel Hathi's Pizza Outpost", detalhe:"serviço rápido, pizza, boa opção para quem prefere algo mais familiar", preco:"€€" }
       ] },
 
     { tipo:"passeio", hora:"14h00", titulo:"Tarde no parque, parada de personagens e atrações restantes", mapa:"Disneyland Park, 77700 Chessy",
-      texto:"Tarde livre para o que faltar: desfile de personagens (geralmente no fim da tarde), mais uma volta nas atrações favoritas, ou uma pausa no hotel/Disney Village para a filha de vocês descansar.",
-      dica:"O show de fogos 'Disney Tales of Magic' costuma ser 10 minutos antes do fechamento, às 21h50; vale guardar lugar na Main Street com antecedência se quiserem ver." },
+      texto:"Tarde livre para o que faltar: desfile de personagens (o horário do dia aparece no aplicativo da Disneyland Paris), mais uma volta nas atrações favoritas, ou uma pausa no hotel/Disney Village para a filha de vocês descansar.",
+      dica:"Para o show de fogos, guardem lugar na Main Street com antecedência; o horário do dia aparece no aplicativo da Disneyland Paris." },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Jantar dentro ou perto do parque",
       nota:"Jantar mais tranquilo para fechar o primeiro dia de Disney.",
@@ -1039,11 +1258,10 @@ dias: [
   seChover:"O shopping é todo coberto, dia tranquilo mesmo com chuva.",
   seSobrarEnergia:"O Disney Village fica a poucos minutos e continua com lojas e música até mais tarde."
 },
-
 {
   data:"Domingo, 20 de dezembro",
-  titulo:"Transfer de Serris para Paris",
-  bairro:"Serris a Paris, 15º arrondissement",
+  titulo:"Chegada em Paris e cruzeiro no Sena com a família toda",
+  bairro:"15º arrondissement e Torre Eiffel",
   saida:"Malas prontas pela manhã, transfer às 10h15",
   paradas:[
     { tipo:"passeio", hora:"10h15", titulo:"Transfer direto até o hotel em Paris", mapa:"Aparthotel Adagio Paris Centre Tour Eiffel, 14 Rue du Théâtre, 75015 Paris",
@@ -1051,65 +1269,90 @@ dias: [
       dica:"O check-in do Adagio é a partir das 15h. Como a viagem de carro é de cerca de uma hora, sobra a manhã e o início da tarde livres, bom para malas e um lanche antes de sair.",
       trajeto:{ modo:"carro", texto:"De Serris até o hotel em Paris, de van: cerca de 50 a 60 minutos conforme o trânsito." } },
 
-    { tipo:"passeio", hora:"15h00", titulo:"Compras no Beaugrenelle", mapa:"Centre Commercial Beaugrenelle, 12 Rue Linois, 75015 Paris",
-      texto:"Depois do check-in, uma tarde leve de loja num shopping à beira do Sena, a poucos minutos do hotel: mais de 100 lojas, do Apple Store a marcas de roupa francesas, sem o esforço de ir ao centro no primeiro dia depois da Disney.",
+    { tipo:"passeio", hora:"15h30", titulo:"Cruzeiro no Sena, Vedettes de Paris, com todo mundo junto", mapa:"Port de Suffren, 75007 Paris",
+      texto:"Depois do check-in, a família toda embarca junto no cruzeiro clássico pela Vedettes de Paris: uma hora navegando pelo Sena, passando pelos principais monumentos, com guia bilíngue francês/inglês a bordo (o aplicativo gratuito da empresa também tem comentários em espanhol, italiano, alemão e holandês).",
       imperdivel:[
-        "O terraço do último andar, com vista para a Torre Eiffel, um gostinho antes de subir nela de verdade amanhã.",
-        "Na época de Natal, o shopping costuma decorar as vitrines em parceria com a Disney, uma despedida simpática do tema do resort."
+        "A passagem bem de perto pela Torre Eiffel, logo na saída do embarque.",
+        "Notre-Dame, o Louvre e a Ponte Alexandre III, vistos da água."
       ],
-      dica:"Aberto todos os dias: de segunda a sábado das 10h às 20h, e domingo das 11h às 19h.",
-      trajeto:{ modo:"metro", linha:"10", texto:"Do hotel até o Beaugrenelle: estação Avenue Émile Zola, linha 10, sentido Boulogne-Pont de Saint-Cloud, até Charles Michels, sem baldeação. Do metrô, o próprio shopping fica na saída." } },
+      dica:"Ingresso: € 18 por adulto (12 anos ou mais) comprado pelo site, € 9 criança de 4 a 11 anos, grátis até 3 anos (a Laura entra de graça). Saídas todos os dias, das 11h às 21h, comprado em vedettesdeparis.fr.",
+      ingresso:{ url:"https://www.vedettesdeparis.fr", texto:"Comprar ingresso, Vedettes de Paris" },
+      trajeto:{ modo:"metro", linha:"10 + 6", texto:"Do hotel até o embarque: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 6, sentido Charles de Gaulle Étoile, até Bir-Hakeim. Do metrô, o Port de Suffren fica a cerca de 5 minutos a pé." } },
 
-    { tipo:"refeicao", hora:"19h30", titulo:"Primeiro jantar em Paris",
-      nota:"Jantar bem perto do hotel, todas as opções na própria Rue du Théâtre.",
-      opcoes:[
-        { nome:"Restaurant Végé", detalhe:"122 Rue du Théâtre · 4,7 estrelas com mais de 1,8 mil avaliações · totalmente vegetariano, sem risco de camarão em nenhum prato", preco:"€€" },
-        { nome:"Brasserie Lola", detalhe:"99 Rue du Théâtre · 4,4 estrelas com mais de 1 mil avaliações · brasserie francesa simples, serviço rápido", preco:"€€" },
-        { nome:"L'artisan napolitain", detalhe:"117 Rue du Théâtre · 4,5 estrelas com 901 avaliações · pizza napolitana e sanduíches", preco:"€€" }
+    { tipo:"passeio", hora:"16h45", titulo:"Mercado de Natal ao pé da Torre Eiffel", mapa:"Village de Noël Eiffel on Ice, Quai Jacques Chirac, 75007 Paris",
+      texto:"Logo depois do cruzeiro, o desembarque já é praticamente dentro do mercado de Natal da Torre Eiffel, com pista de gelo ao lado (de 20 de dezembro a 5 de janeiro de 2027, abrindo bem nessa data).",
+      imperdivel:[
+        "A pista de gelo e o carrossel, ótimos para a filha de vocês.",
+        "A Torre Eiffel cintilando, vista de dentro do próprio mercado, a cada hora cheia depois do anoitecer."
       ],
-      trajeto:{ modo:"pe", texto:"Todas na própria Rue du Théâtre, a poucos minutos do hotel." } }
+      trajeto:{ modo:"pe", texto:"Do embarque das Vedettes de Paris até o mercado: a pé, poucos minutos, a pista e as barracas ficam literalmente ao lado do Port de Suffren." } },
+
+    { tipo:"refeicao", hora:"19h00", titulo:"Primeiro jantar em Paris, em terra, perto da Torre Eiffel",
+      nota:"Depois do cruzeiro e do mercado, jantar ali mesmo perto, sem precisar se deslocar de novo. Confirmem sempre a ausência de camarão por causa da alergia do seu marido.",
+      opcoes:[
+        { nome:"Café du Trocadéro", detalhe:"8 Pl. du Trocadéro · 4,0 estrelas com quase 8 mil avaliações · vista direto para a Torre Eiffel", preco:"€€" },
+        { nome:"Le Café du Commerce", detalhe:"51 Rue du Commerce, 15º arrondissement · 4,5 estrelas com 8,6 mil avaliações · bistrô clássico", preco:"€€" },
+        { nome:"L'Abreuvoir", detalhe:"24 Rue du Dr Finlay, 15º arrondissement · 4,6 estrelas com 4,4 mil avaliações · bistrô de bairro, clima bem família", preco:"€€" }
+      ],
+      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé da região da Torre Eiffel, ou um Bolt curto de volta ao hotel depois." } }
   ],
-  seChover:"O transfer é por dentro. A caminhada da tarde pode ser encurtada se chover.",
-  seSobrarEnergia:"O Parc André Citroën, não muito longe do hotel, é uma boa volta de ar livre se ainda houver disposição."
+  seChover:"O cruzeiro é por dentro do barco, coberto. O mercado de Natal é ao ar livre; levem guarda-chuva e casaco.",
+  seSobrarEnergia:"Se sobrar energia depois do jantar, uma volta pela Ponte de Bir-Hakeim, a poucos minutos do Port de Suffren, rende fotos da Torre Eiffel iluminada, que cintila a cada hora cheia depois do anoitecer."
 },
 
 {
   data:"Segunda, 21 de dezembro",
-  titulo:"Torre Eiffel e sessão de fotos no Trocadéro",
-  bairro:"7º e 16º arrondissement",
-  saida:"Saída às 10h30",
+  titulo:"Ensaio fotográfico, Ópera Garnier ou Lafayette, e mercado das Tulherias",
+  bairro:"Torre Eiffel, Louvre e Ópera",
+  saida:"Saída às 9h30",
   paradas:[
-    { tipo:"passeio", hora:"10h30", titulo:"Ida até a Torre Eiffel", mapa:"Tour Eiffel, 5 Avenue Anatole France, 75007 Paris",
-      texto:"Chegada com 25 a 30 minutos de antecedência do horário marcado no ingresso, para passar pela segurança.",
-      trajeto:{ modo:"metro", linha:"10 + 6", texto:"Do hotel até a Torre Eiffel: estação Avenue Émile Zola, linha 10, sentido Boulogne-Pont de Saint-Cloud, até La Motte-Picquet-Grenelle, baldeação para a linha 6, sentido Charles de Gaulle Étoile, até Bir-Hakeim. Da estação, cerca de 8 minutos a pé." } },
-
-    { tipo:"passeio", hora:"11h15", titulo:"Torre Eiffel, acesso até o 3º andar", mapa:"Tour Eiffel, Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
-      texto:"A subida de vocês é até o 3º andar, o mais alto da Torre, de elevador.",
-      imperdivel:[
-        "A vista mais alta possível da Torre, do 3º andar, com Paris inteira visível em volta.",
-        "O escritório de Gustave Eiffel, recriado no 3º andar.",
-        "O Trocadéro e o Sena vistos de cima, de onde vocês vão descer para a sessão de fotos."
-      ],
-      dica:"Ingresso de elevador até o topo: € 36,70 por adulto (25 anos ou mais), com faixas de preço menores para jovens e crianças, e gratuito para a filha de vocês (menor de 4 anos). Comprado com horário marcado no site oficial, toureiffel.paris. Levem uma camada a mais na bolsa, porque lá em cima venta bastante.",
-      ingresso:{ url:"https://www.toureiffel.paris", texto:"Comprar ingresso, Torre Eiffel" },
-      trajeto:{ modo:"pe", texto:"Até o Trocadéro, para a sessão de fotos: a pé, atravessando a Pont d'Iéna, cerca de 15 minutos." } },
-
-    { tipo:"refeicao", hora:"13h30", titulo:"Almoço antes da sessão de fotos",
-      nota:"Almoço leve, perto do Trocadéro, antes do horário combinado com o fotógrafo.",
-      opcoes:[
-        { nome:"Café du Trocadéro", detalhe:"8 Pl. du Trocadéro · 4,0 estrelas com quase 8 mil avaliações · vista direto para a Torre Eiffel", preco:"€€" },
-        { nome:"Casa Trocadero x Village du Trocadero", detalhe:"5 Av. Albert de Mun · 3,7 estrelas com mais de 1,8 mil avaliações · food court informal, bom para criança pequena", preco:"€" },
-        { nome:"Le Wilson", detalhe:"2 Pl. du Trocadéro · 3,7 estrelas com mais de 2,3 mil avaliações · brasserie clássica", preco:"€€" }
-      ],
-      trajeto:{ modo:"pe", texto:"Tudo a poucos passos da Place du Trocadéro." } },
-
-    { tipo:"passeio", hora:"15h30", titulo:"Sessão de fotos da família toda, no Trocadéro", mapa:"Esplanade du Trocadéro, 75016 Paris",
-      texto:"As seis pessoas juntas, no horário escolhido para pegar a luz dourada do fim da tarde, com a Torre Eiffel ao fundo, no mirante mais fotografado de Paris.",
+    { tipo:"passeio", hora:"10h00", titulo:"Ensaio fotográfico: Torre Eiffel", mapa:"Esplanade du Trocadéro, 75016 Paris",
+      texto:"Primeira parte do ensaio fotográfico da família toda, com a Torre Eiffel ao fundo, no mirante mais fotografado de Paris. Já reservado com o fotógrafo.",
       imperdivel:[
         "A vista de frente da Torre Eiffel, da esplanada do Trocadéro, o ângulo mais clássico de Paris."
       ],
-      dica:"O pôr do sol em dezembro é cedo, por volta das 16h55: o horário foi pensado para pegar a luz baixa antes disso.",
-      trajeto:{ modo:"metro", linha:"6 + 10", texto:"Do Trocadéro de volta à região do hotel: estação Trocadéro, linha 6, sentido Nation, até La Motte-Picquet-Grenelle (sem baldeação, a linha passa por Bir-Hakeim e Dupleix no caminho), depois linha 10, sentido Boulogne-Pont de Saint-Cloud, até Avenue Émile Zola." } },
+      trajeto:{ modo:"metro", linha:"6 + 1", texto:"Do Trocadéro até o Louvre, para a segunda parte do ensaio: estação Trocadéro, linha 6, sentido Nation, até Charles de Gaulle-Étoile, baldeação para a linha 1, sentido Château de Vincennes, até Palais Royal - Musée du Louvre." } },
+
+    { tipo:"passeio", hora:"11h00", titulo:"Ensaio fotográfico: Pirâmide do Louvre", mapa:"Musée du Louvre, Rue de Rivoli, 75001 Paris",
+      texto:"Segunda parte do ensaio, com a Pirâmide de vidro do Louvre como plano de fundo, um dos cartões-postais mais reconhecíveis de Paris.",
+      imperdivel:[
+        "A Pirâmide do Louvre, por fora, ótima para fotos de família em qualquer horário do dia."
+      ],
+      dica:"Sem visita ao museu em si hoje: o ensaio é só na área externa da Pirâmide." },
+
+    { tipo:"refeicao", hora:"12h30", titulo:"Almoço perto do Louvre",
+      nota:"Antes de seguir para a Ópera, um almoço rápido na região, sem camarão nos pratos citados.",
+      opcoes:[
+        { nome:"Café Richelieu", detalhe:"dentro do próprio Louvre, Richelieu passage · ambiente tranquilo, boa opção sem sair da área", preco:"€€" },
+        { nome:"Claus", detalhe:"14 Rue Jean-Jacques Rousseau, perto do Louvre · café da manhã e brunch o dia todo, ótimo para criança pequena", preco:"€€" },
+        { nome:"Kunitoraya", detalhe:"1 Rue Villedo, perto da Ópera · udon japonês, opção leve e rápida", preco:"€€" }
+      ] },
+
+    { tipo:"passeio", hora:"14h00", titulo:"Ópera Garnier (visita autoguiada) ou Galeries Lafayette", mapa:"Place de l'Opéra, 75009 Paris",
+      texto:"O grupo se divide por uma hora, os dois pontos ficam a poucos minutos um do outro: Aline, Rafael e Laura fazem a visita autoguiada da Ópera Garnier, enquanto Fatima, Alexandre e Vinicius aproveitam para fazer compras nas Galeries Lafayette, incluindo a cúpula de vitral por dentro da loja, que é de graça e vale a pena ver mesmo sem comprar nada.",
+      imperdivel:[
+        "O Grande Escadaria e o Grande Foyer da Ópera Garnier, cheios de dourado estilo Segundo Império.",
+        "A cúpula de vitral Art Nouveau das Galeries Lafayette, por dentro da loja, de graça."
+      ],
+      dica:"Ópera Garnier: ingresso de € 25 por adulto, grátis até 12 anos (retirado na bilheteria). Aberta das 10h às 16h, última entrada às 15h, por isso o horário das 14h ainda dá folga. Comprado no site oficial, operadeparis.fr.",
+      ingresso:{ url:"https://www.operadeparis.fr", texto:"Comprar ingresso, Ópera Garnier" },
+      trajeto:{ modo:"metro", linha:"1 + 8", texto:"Do Louvre até a Ópera: estação Palais Royal - Musée du Louvre, linha 1, sentido La Défense, até Concorde, baldeação para a linha 8, sentido Créteil - Pointe du Lac, até Opéra. Ou, mais direto: estação Pyramides, linha 7, sentido La Courneuve, até Opéra." } },
+
+    { tipo:"passeio", hora:"15h00", titulo:"Madeleine", mapa:"Église de la Madeleine, Pl. de la Madeleine, 75008 Paris",
+      texto:"Depois de reencontrar o grupo, uma parada rápida na igreja da Madeleine, com sua fachada de colunas gregas, bem diferente de qualquer outra igreja de Paris.",
+      imperdivel:[
+        "A fachada neoclássica, parecendo um templo grego, por fora."
+      ],
+      trajeto:{ modo:"pe", texto:"Da Ópera até a Madeleine: a pé pela Rue de la Paix e Rue Tronchet, cerca de 10 minutos." } },
+
+    { tipo:"passeio", hora:"15h30", titulo:"Place de la Concorde e mercado de Natal das Tulherias", mapa:"Jardin des Tuileries, 75001 Paris",
+      texto:"Seguindo a pé até a Place de la Concorde, com o Obelisco egípcio no meio, e dali direto para o Jardin des Tuileries, onde fica a Magie de Noël, o mercado de Natal mais tradicional de Paris (de 14 de novembro de 2026 a 3 de janeiro de 2027), entre o Louvre e a Concorde.",
+      imperdivel:[
+        "O Obelisco de Luxor, no meio da Place de la Concorde.",
+        "A roda-gigante do mercado de Natal das Tulherias, uma das maiores da Europa.",
+        "Os cerca de 95 chalés de madeira maciça do mercado, com comida e artesanato."
+      ],
+      trajeto:{ modo:"pe", texto:"Da Madeleine até a Concorde: cerca de 10 minutos a pé. Da Concorde até o Jardin des Tuileries: a entrada é logo ali." } },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Jantar perto do hotel",
       nota:"De volta ao 15º arrondissement para o jantar, fechando o dia perto do hotel.",
@@ -1118,148 +1361,186 @@ dias: [
         { nome:"L'Atypic", detalhe:"51 Rue du Théâtre · 4,6 estrelas com 556 avaliações · francês, filé com foie gras", preco:"€€€" },
         { nome:"Au Rendez-vous des Amis", detalhe:"135 Rue du Théâtre · 4,5 estrelas com 161 avaliações · bairro, couscous bem servido", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé do hotel." } }
+      trajeto:{ modo:"metro", linha:"1 + 10", texto:"Das Tulherias de volta ao hotel: estação Tuileries, linha 1, sentido La Défense, até Charles de Gaulle-Étoile, baldeação para a linha 6, sentido Nation, até La Motte-Picquet-Grenelle, baldeação para a linha 10, sentido Boulogne-Pont de Saint-Cloud, até Avenue Émile Zola." } }
   ],
-  seChover:"A Torre Eiffel funciona com qualquer clima, só fecha em caso de vento muito forte. A sessão de fotos pode precisar de um guarda-chuva como acessório, se o fotógrafo topar.",
-  seSobrarEnergia:"O Champ de Mars, aos pés da Torre, é um bom lugar para sentar e ver a Torre cintilar ao anoitecer, a cada hora cheia."
+  seChover:"A Ópera Garnier e as Galeries Lafayette são por dentro. O mercado das Tulherias é ao ar livre; levem guarda-chuva.",
+  seSobrarEnergia:"Se o grupo estiver animado depois do mercado das Tulherias, a Grande Roda de Paris, montada no próprio mercado, a quase 80 metros de altura, fecha o dia com a vista da cidade iluminada."
 },
 
 {
   data:"Terça, 22 de dezembro",
-  titulo:"Notre-Dame de dia; aniversário de casamento à noite",
-  bairro:"Île de la Cité e Torre Eiffel",
+  titulo:"Montmartre de trenzinho e tarde no Marais",
+  bairro:"Montmartre e Le Marais",
   saida:"Saída às 9h30",
   paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Catedral de Notre-Dame", mapa:"Cathédrale Notre-Dame de Paris, 6 Parvis Notre-Dame, 75004 Paris",
+    { tipo:"passeio", hora:"09h30", titulo:"Ida até a Place Blanche", mapa:"Place Blanche, 75018 Paris",
+      texto:"Chegada bem em frente ao Moulin Rouge, ponto de partida do Petit Train de Montmartre.",
+      trajeto:{ modo:"metro", linha:"10 + 2", texto:"Do hotel até Place Blanche: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 8, sentido Créteil, até Concorde, baldeação para a linha 12, sentido Front Populaire, até Pigalle, mais 5 minutos a pé até Place Blanche (ou, da estação Pigalle, a linha 2 sentido Porte Dauphine também chega em Blanche, uma parada)." } },
+
+    { tipo:"passeio", hora:"10h00", titulo:"Petit Train de Montmartre até Sacré-Cœur", mapa:"Place Blanche e/ou Place du Tertre, 75018 Paris",
+      texto:"Trenzinho turístico subindo a Butte de Montmartre, parando ao pé da Basílica de Sacré-Cœur. A subida leva cerca de 15 minutos.",
+      imperdivel:[
+        "A vista de Paris do alto da escadaria da Sacré-Cœur, antes mesmo de entrar na basílica.",
+        "A cúpula branca da basílica, visível de muitos pontos da cidade."
+      ],
+      dica:"Ingresso: € 8 por adulto, € 4,50 criança de 3 a 11 anos. Todo dia, das 10h às 18h, saídas a cada 30 minutos, embarque em Place Blanche ou Place du Tertre.",
+      trajeto:{ modo:"trem", texto:"Trenzinho turístico, cerca de 15 minutos de Place Blanche até perto da Place du Tertre." } },
+
+    { tipo:"passeio", hora:"10h30", titulo:"Sacré-Cœur e Place du Tertre", mapa:"Place du Tertre, 75018 Paris",
+      texto:"Tempo livre para visitar a basílica por dentro (entrada gratuita na nave) e passear pela Place du Tertre, a praça dos pintores de rua de Montmartre.",
+      imperdivel:[
+        "O interior da basílica, com o grande mosaico de Cristo no teto do abside.",
+        "Os pintores e caricaturistas trabalhando ao vivo na Place du Tertre."
+      ],
+      dica:"A cúpula da basílica tem subida paga à parte (escadaria estreita, sem elevador); dado o ritmo do grupo, o roteiro não inclui essa subida, só a visita à nave." },
+
+    { tipo:"refeicao", hora:"12h00", titulo:"Almoço em Montmartre",
+      nota:"Direto na Place du Tertre, sem precisar andar mais. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"La Crémaillère 1900", detalhe:"15 Pl. du Tertre · 4,5 estrelas com mais de 9 mil avaliações · clássicos franceses, sopa de cebola e boeuf bourguignon muito elogiados", preco:"€€€" },
+        { nome:"Chez Eugène", detalhe:"17 Pl. du Tertre · 4,5 estrelas com 2,5 mil avaliações · restaurante francês, clima de bairro", preco:"€€€" },
+        { nome:"La Mère Catherine", detalhe:"6 Pl. du Tertre · 4,1 estrelas com 3,6 mil avaliações · restaurante histórico, onde nasceu a palavra 'bistrô'", preco:"€€€" }
+      ],
+      trajeto:{ modo:"pe", texto:"Todas na própria Place du Tertre." } },
+
+    { tipo:"passeio", hora:"13h30", titulo:"Descida de trenzinho e deslocamento para Le Marais", mapa:"Place des Vosges, 75004 Paris",
+      texto:"Trenzinho de volta até Place Blanche (cerca de 25 a 30 minutos, mais devagar que a subida), e dali de metrô até Le Marais.",
+      trajeto:{ modo:"metro", linha:"2 + 4", texto:"De Place Blanche até Le Marais: estação Blanche, linha 2, sentido Nation, 3 paradas até Barbès-Rochechouart; baldeação para a linha 4, sentido Montrouge, 5 paradas até Saint-Paul. Da estação, o coração do Marais fica a 3 minutos a pé." } },
+
+    { tipo:"passeio", hora:"14h30", titulo:"Place des Vosges, Rue des Francs-Bourgeois e Jardin Anne Frank", mapa:"Place des Vosges, 75004 Paris",
+      texto:"A praça mais antiga planejada de Paris, cercada de arcadas, seguida de uma caminhada pela Rue des Francs-Bourgeois, cheia de lojas e cafés, terminando no pequeno e tranquilo Jardin Anne Frank.",
+      imperdivel:[
+        "As arcadas e o jardim central da Place des Vosges, onde Victor Hugo morou.",
+        "O Jardin Anne Frank, um jardim pequeno e menos conhecido, bom para a filha de vocês correr um pouco."
+      ],
+      trajeto:{ modo:"pe", texto:"Tudo a pé, dentro do próprio Marais: Place des Vosges, Rue des Francs-Bourgeois e o jardim ficam a poucos minutos uns dos outros." } },
+
+    { tipo:"refeicao", hora:"19h30", titulo:"Jantar em Le Marais",
+      nota:"Fechando o dia ali mesmo no Marais, sem precisar voltar ao hotel para jantar. Confirmem sempre a ausência de camarão.",
+      opcoes:[
+        { nome:"Le Colimaçon", detalhe:"44 Rue Vieille du Temple · 4,7 estrelas com 3,4 mil avaliações · francês, pato confit muito elogiado, reservar com antecedência", preco:"€€€" },
+        { nome:"Camille", detalhe:"24 Rue des Francs Bourgeois · 4,3 estrelas com mais de 2,2 mil avaliações · bistrô de bairro", preco:"€€€" },
+        { nome:"Joli", detalhe:"16 Rue des Francs Bourgeois, no jardim do Museu Carnavalet · 4,6 estrelas com 2,4 mil avaliações · ambiente ao ar livre no jardim do museu", preco:"€€€" }
+      ],
+      trajeto:{ modo:"pe", texto:"Todas dentro do próprio Marais, a poucos minutos umas das outras." } }
+  ],
+  seChover:"A basílica e o interior das Galeries são cobertos. No Marais, a Rue des Francs-Bourgeois tem trechos com arcadas para se abrigar.",
+  seSobrarEnergia:"Como o passeio de barco já reuniu todo mundo no dia 20, hoje não ficou nada marcado à noite para o aniversário de vocês dois. Se sobrar uma horinha depois do jantar, a Place des Vosges à noite, com as arcadas iluminadas, é um passeio tranquilo só para vocês três, Aline, Rafael e Laura, antes de voltar ao hotel."
+},
+
+{
+  data:"Quarta, 23 de dezembro",
+  titulo:"Petit Palais, patinação no Grand Palais e Champs-Élysées",
+  bairro:"8º arrondissement",
+  saida:"Saída às 10h00",
+  paradas:[
+    { tipo:"passeio", hora:"10h00", titulo:"Petit Palais", mapa:"Petit Palais, Av. Winston Churchill, 75008 Paris",
+      texto:"Museu de belas-artes da cidade de Paris, com entrada gratuita na coleção permanente, bem menos cheio que os museus grandes.",
+      imperdivel:[
+        "O pátio interno com jardim, um respiro tranquilo no meio da visita.",
+        "A cúpula e a fachada Art Nouveau do prédio, construído para a Exposição Universal de 1900."
+      ],
+      dica:"Aberto de terça a domingo, 10h às 18h (sexta e sábado até 20h), fechado às segundas. Entrada gratuita na coleção permanente.",
+      trajeto:{ modo:"metro", linha:"10 + 1", texto:"Do hotel até o Petit Palais: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 8, sentido Créteil, até Concorde, baldeação para a linha 1, sentido Château de Vincennes, até Champs-Élysées - Clemenceau." } },
+
+    { tipo:"passeio", hora:"11h30", titulo:"Pont Alexandre III", mapa:"Pont Alexandre III, 75008 Paris",
+      texto:"A ponte mais ornamentada de Paris, com estátuas douradas e candelabros Art Nouveau, literalmente entre o Petit Palais e o Grand Palais.",
+      imperdivel:[
+        "As estátuas douradas no alto dos quatro pilares da ponte.",
+        "A vista dos Inválidos de um lado e dos Champs-Élysées do outro."
+      ],
+      trajeto:{ modo:"pe", texto:"Do Petit Palais até a ponte: a pé, menos de 5 minutos." } },
+
+    { tipo:"refeicao", hora:"12h30", titulo:"Almoço perto do Grand Palais",
+      nota:"Antes da patinação, um almoço na região, sem camarão nos pratos citados.",
+      opcoes:[
+        { nome:"Mini Palais", detalhe:"3 Av. Winston Churchill, dentro do Grand Palais · ambiente elegante, terraço com vista", preco:"€€€" },
+        { nome:"Café Lenôtre - Pavillon Elysée", detalhe:"10 Av. des Champs-Élysées · doce e salgado, boa opção para criança pequena", preco:"€€" },
+        { nome:"L'Alsace", detalhe:"39 Av. des Champs-Élysées · aberto o dia todo, cardápio bem variado", preco:"€€€" }
+      ] },
+
+    { tipo:"passeio", hora:"14h00", titulo:"Patinação no Grand Palais des Glaces", mapa:"Grand Palais, 9 Avenue du Général Eisenhower, 75008 Paris",
+      texto:"A maior pista de gelo coberta do mundo, montada embaixo da nave de vidro do Grand Palais, de 12 de dezembro de 2026 a 6 de janeiro de 2027.",
+      imperdivel:[
+        "A nave de vidro e aço do Grand Palais vista de dentro da pista, um cenário que não existe em nenhuma outra pista de gelo.",
+        "A decoração temática do ano (em edições recentes, uma lua gigante suspensa sobre a pista)."
+      ],
+      dica:"Sessão da tarde (14h às 19h): € 32 por adulto, € 18 criança. Ingresso com horário marcado, obrigatório comprar com antecedência no site oficial, grandpalais.fr.",
+      ingresso:{ url:"https://www.grandpalais.fr", texto:"Comprar ingresso, Grand Palais des Glaces" },
+      trajeto:{ modo:"pe", texto:"Do Petit Palais/Pont Alexandre III até o Grand Palais: a pé, cerca de 5 minutos." } },
+
+    { tipo:"passeio", hora:"17h00", titulo:"Mercado de Natal dos Champs-Élysées e Arco do Triunfo", mapa:"Avenue des Champs-Élysées, 75008 Paris",
+      texto:"Dali, uma caminhada pela avenida mais famosa de Paris, com o mercado de Natal oficial (de 22 de novembro de 2026 a 4 de janeiro de 2027) na parte mais baixa, perto da Concorde, até o Arco do Triunfo no topo. Se preferirem, dá para inverter: ir de metrô direto até o Arco e descer a pé até o mercado, encerrando mais perto do Grand Palais.",
+      imperdivel:[
+        "As barracas do mercado de Natal e as vitrines decoradas das lojas grandes ao longo da avenida.",
+        "A vista de cima do Arco do Triunfo, com as 12 avenidas que saem da Place Charles de Gaulle."
+      ],
+      dica:"Subida ao topo do Arco: € 16 por adulto, grátis para menores de 18 anos (a filha de vocês entra de graça). Aberto das 10h às 23h, última entrada às 22h45. Comprado no site oficial do Centre des Monuments Nationaux, paris-arc-de-triomphe.fr.",
+      ingresso:{ url:"https://www.paris-arc-de-triomphe.fr", texto:"Comprar ingresso, Arco do Triunfo" },
+      trajeto:{ modo:"pe", texto:"Do Grand Palais até o início do mercado, perto da Concorde: cerca de 10 minutos a pé. Dali, a pé pela própria avenida, subindo até o Arco, cerca de 25 a 30 minutos no ritmo do grupo (ou de metrô, se preferirem poupar essa caminhada)." } },
+
+    { tipo:"refeicao", hora:"20h00", titulo:"Jantar perto do hotel",
+      nota:"De volta ao 15º arrondissement para fechar o dia.",
+      opcoes:[
+        { nome:"La famille & cie", detalhe:"6 Rue Fourcade · 4,8 estrelas com 404 avaliações · hambúrguer artesanal muito bem avaliado", preco:"€€" },
+        { nome:"Restaurant Végé", detalhe:"122 Rue du Théâtre · 4,7 estrelas · totalmente vegetariano, sem risco de camarão", preco:"€€" },
+        { nome:"Brasserie Lola", detalhe:"99 Rue du Théâtre · 4,4 estrelas · restaurante francês simples", preco:"€€" }
+      ],
+      trajeto:{ modo:"metro", linha:"6 + 10", texto:"Do Arco de volta ao hotel: estação Charles de Gaulle - Étoile, linha 6, sentido Nation, até La Motte-Picquet-Grenelle, baldeação para a linha 10, sentido Boulogne-Pont de Saint-Cloud, até Avenue Émile Zola." } }
+  ],
+  seChover:"O Petit Palais e a patinação são cobertos. O mercado e a caminhada pelos Champs-Élysées são ao ar livre; levem guarda-chuva e casaco.",
+  seSobrarEnergia:"Se sobrar energia, a sessão noturna do Grand Palais des Glaces, das 20h às 2h, tem música e luzes na pista, com ingresso separado do horário da tarde."
+},
+
+{
+  data:"Quinta, 24 de dezembro",
+  titulo:"Notre-Dame, Rue de l'Université e Torre Eiffel",
+  bairro:"Île de la Cité e 7º arrondissement",
+  saida:"Saída às 9h30",
+  paradas:[
+    { tipo:"passeio", hora:"09h30", titulo:"Ida até Notre-Dame", mapa:"Cathédrale Notre-Dame de Paris, 6 Parvis Notre-Dame, 75004 Paris",
+      texto:"Mesmo na véspera de Natal, a catedral abre pela manhã para visita, com a programação especial de celebração só à noite. Então o horário das 10h não tem conflito com nenhuma missa.",
+      trajeto:{ modo:"metro", linha:"10 + 4", texto:"Do hotel até Notre-Dame: estação Avenue Émile Zola, linha 10, sentido Gare d'Austerlitz, direto até Cluny - La Sorbonne (sem baldeação). Da estação, cerca de 10 minutos a pé até o Parvis Notre-Dame." } },
+
+    { tipo:"passeio", hora:"10h00", titulo:"Catedral de Notre-Dame", mapa:"Cathédrale Notre-Dame de Paris, 6 Parvis Notre-Dame, 75004 Paris",
       texto:"A catedral reaberta depois da restauração, com a nave central e os vitrais recuperados. A entrada na nave é gratuita.",
       imperdivel:[
         "A nave central e os vitrais restaurados, muito mais claros do que antes do incêndio.",
         "A fachada vista de frente, no Parvis Notre-Dame."
       ],
-      dica:"Mesmo sem ingresso pago, costuma haver fila na porta; cheguem cedo para entrar com mais tranquilidade.",
-      trajeto:{ modo:"metro", linha:"10 + 4", texto:"Do hotel até Notre-Dame: estação Avenue Émile Zola, linha 10, sentido Gare d'Austerlitz, direto até Cluny - La Sorbonne (sem baldeação). Da estação, cerca de 10 minutos a pé até o Parvis Notre-Dame." } },
+      dica:"A entrada na nave é gratuita, sem ingresso." },
 
-    { tipo:"refeicao", hora:"12h30", titulo:"Almoço na Île de la Cité",
-      nota:"Opções a poucos minutos de Notre-Dame, todas sem camarão nos pratos citados.",
+    { tipo:"passeio", hora:"12h00", titulo:"Rue de l'Université", mapa:"Rue de l'Université, 75007 Paris",
+      texto:"Uma rua tranquila do 7º arrondissement, com galerias de antiguidades e arte, de passagem a caminho da Torre Eiffel, antes da subida da tarde.",
+      trajeto:{ modo:"metro", linha:"4 + 12", texto:"De Notre-Dame até a Rue de l'Université: estação Cité, linha 4, sentido Porte d'Orléans, até Saint-Germain-des-Prés, baldeação para a linha 12, sentido Mairie d'Issy, até Solférino. Da estação, a Rue de l'Université fica a poucos passos." } },
+
+    { tipo:"refeicao", hora:"12h30", titulo:"Almoço na Rue de l'Université",
+      nota:"Direto na própria rua, antes de seguir para a Torre Eiffel. Confirmem sempre a ausência de camarão.",
       opcoes:[
-        { nome:"Au Bougnat", detalhe:"26 Rue Chanoinesse · 4,4 estrelas com 1,4 mil avaliações · bistrô clássico, sopa de cebola muito elogiada", preco:"€€" },
-        { nome:"Les Deux Colombes", detalhe:"4 Rue de la Colombe · 4,7 estrelas com 1,6 mil avaliações · bistrô de bairro, pato confit", preco:"€€" },
-        { nome:"La Dame de Paris", detalhe:"11 Rue d'Arcole · 4,2 estrelas com 1,8 mil avaliações · decoração vintage, a 5 minutos de Notre-Dame", preco:"€€" }
+        { nome:"Café des Ministères", detalhe:"83 Rue de l'Université · 4,6 estrelas com 618 avaliações · bistrô clássico francês, reservar com antecedência", preco:"€€€" },
+        { nome:"Rosemarie", detalhe:"149 Rue de l'Université · 4,6 estrelas com 683 avaliações · bistrô gourmet, cordeiro para dividir muito elogiado", preco:"€€€" },
+        { nome:"Elle&Dee's - Université", detalhe:"67 Rue de l'Université · 4,9 estrelas · saladas frescas, opção mais leve e rápida", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé de Notre-Dame." } },
+      trajeto:{ modo:"pe", texto:"Todas na própria Rue de l'Université." } },
 
-    { tipo:"passeio", hora:"14h30", titulo:"Tarde livre pela Île de la Cité e margens do Sena", mapa:"Île de la Cité, 75004 Paris",
-      texto:"Tarde tranquila para caminhar pela ilha e pelas margens do rio, sem compromisso de horário, aproveitando para descansar antes da noite especial.",
-      trajeto:{ modo:"metro", linha:"4 + 10", texto:"De volta ao hotel, para descansar antes da noite: estação Cité, linha 4, sentido Porte d'Orléans, até Montparnasse-Bienvenüe, baldeação para a linha 10, sentido Boulogne-Pont de Saint-Cloud, até Avenue Émile Zola." } },
+    { tipo:"passeio", hora:"14h15", titulo:"Ida até a Torre Eiffel", mapa:"Tour Eiffel, 5 Avenue Anatole France, 75007 Paris",
+      texto:"Chegada com 25 a 30 minutos de antecedência do horário marcado no ingresso, para passar pela segurança.",
+      trajeto:{ modo:"pe", texto:"Da Rue de l'Université até a Torre Eiffel: cerca de 20 minutos a pé, ou de metrô, estação Solférino, linha 12, sentido Mairie d'Issy, até La Tour-Maubourg, mais 10 minutos a pé." } },
 
-    { tipo:"passeio", hora:"18h45", titulo:"Aniversário de casamento: cruzeiro no Sena com jantar, só para o casal", mapa:"Port de Solférino, Promenade Édouard Glissant, 75007 Paris",
-      texto:"Essa noite é só de vocês dois, e o barco é bem diferente do passeio turístico de uma hora com centenas de pessoas: a Paris Seine opera barcaças pequenas, com mesa individual garantida e janela de vidro, não o tipo de embarcação grande dos Bateaux Mouches ou Bateaux Parisiens. O pacote 'Le Romantique' inclui jantar bistronômico de 3 pratos, uma taça de champanhe, mesa garantida junto à janela e pétalas de flor na mesa.",
+    { tipo:"passeio", hora:"15h00", titulo:"Torre Eiffel, acesso até o 3º andar", mapa:"Tour Eiffel, Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+      texto:"A subida de vocês é até o 3º andar, o mais alto da Torre, de elevador. Já reservado.",
       imperdivel:[
-        "A Torre Eiffel iluminada, vista do rio, o barco passa bem perto dela no trajeto.",
-        "O Museu d'Orsay, a Assembleia Nacional e o Louvre vistos da água, iluminados."
+        "A vista mais alta possível da Torre, do 3º andar, com Paris inteira visível em volta.",
+        "O escritório de Gustave Eiffel, recriado no 3º andar."
       ],
-      dica:"Embarque às 18h30, saída 18h45, retorno 20h00 (1h15 de cruzeiro). Pacote 'Le Romantique', € 135 por pessoa. Avisem a alergia a camarão do seu marido na hora de reservar.",
-      ingresso:{ url:"https://www.parisseine.com/en/product/romantic-dinner-cruise", texto:"Reservar, Paris Seine, Le Romantique" },
-      trajeto:{ modo:"carro", texto:"Do hotel até o Port de Solférino, de táxi ou Uber: cerca de 15 a 20 minutos. Depois do jantar, de volta ao hotel do mesmo jeito." } },
+      dica:"Ingresso de elevador até o topo: € 36,70 por adulto (25 anos ou mais), € 9,20 criança de 4 a 11 anos, gratuito para a Laura (menor de 4 anos). Levem uma camada a mais na bolsa, porque lá em cima venta bastante." },
 
-    { tipo:"passeio", hora:"19h00", titulo:"O resto da família: mercado de Natal e pista de gelo na Torre Eiffel", mapa:"Village de Noël Eiffel on Ice, Quai Jacques Chirac, 75007 Paris",
-      texto:"Enquanto o casal está no cruzeiro, a mãe, o padrasto, o irmão e a filha seguem para o mercado de Natal ao pé da Torre Eiffel, o 'Eiffel on Ice', com pista de gelo ao lado (de 20 de dezembro a 5 de janeiro de 2027, cobrindo certinho essa data).",
+    { tipo:"passeio", hora:"17h00", titulo:"Aux Merveilleux de Fred, doce para levar", mapa:"Aux Merveilleux de Fred, 129 bis Rue Saint-Charles, 75015 Paris",
+      texto:"Na volta para o hotel, uma parada na confeitaria que só vende um produto, o Merveilleux (merengue, chantili e raspas de chocolate), para experimentar ou levar de sobremesa.",
       imperdivel:[
-        "A pista de gelo e o carrossel, ótimos para a filha de vocês.",
-        "A Torre Eiffel cintilando, vista de dentro do próprio mercado, a cada hora cheia."
+        "O Merveilleux clássico, a especialidade da casa desde 1997, criada em Lille."
       ],
-      trajeto:{ modo:"metro", linha:"10 + 6", texto:"Do hotel até a Torre Eiffel: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 6, sentido Charles de Gaulle Étoile, até Bir-Hakeim." } },
-
-    { tipo:"refeicao", hora:"20h30", titulo:"Jantar do resto da família, perto da Torre Eiffel",
-      nota:"Jantar logo depois do mercado, ainda na mesma região, sem precisar de mais deslocamento.",
-      opcoes:[
-        { nome:"Café du Trocadéro", detalhe:"de frente para a Torre Eiffel, dá para ver a cintilação da mesa", preco:"€€" },
-        { nome:"Le Café du Commerce", detalhe:"51 Rue du Commerce, 15º arrondissement · 4,5 estrelas com 8,6 mil avaliações · bistrô clássico", preco:"€€" },
-        { nome:"L'Abreuvoir", detalhe:"24 Rue du Dr Finlay, 15º arrondissement · 4,6 estrelas com 4,4 mil avaliações · bistrô de bairro, clima bem família", preco:"€€" }
-      ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé da região da Torre Eiffel." } }
-  ],
-  seChover:"Notre-Dame e o cruzeiro são por dentro. O mercado de Natal e a pista de gelo são ao ar livre; levem guarda-chuva e casaco."
-},
-
-{
-  data:"Quarta, 23 de dezembro",
-  titulo:"Champs-Élysées, Arco do Triunfo e Pirâmide do Louvre",
-  bairro:"8º e 1º arrondissement",
-  saida:"Saída às 9h30",
-  paradas:[
-    { tipo:"passeio", hora:"09h30", titulo:"Arco do Triunfo, por fora", mapa:"Arc de Triomphe, Place Charles de Gaulle, 75008 Paris",
-      texto:"O roteiro considera a visita por fora, com fotos na praça. A travessia até o Arco é pela passagem subterrânea, já que a praça tem tráfego intenso ao redor, sem faixa de pedestre.",
-      imperdivel:[
-        "O Arco visto de frente, no meio da Place Charles de Gaulle.",
-        "A vista da avenida inteira, da base do Arco."
-      ],
-      trajeto:{ modo:"metro", linha:"10 + 6", texto:"Do hotel até o Arco: estação Avenue Émile Zola, linha 10, sentido Gare d'Austerlitz, até La Motte-Picquet-Grenelle, baldeação para a linha 6, sentido Charles de Gaulle Étoile, até a estação final, Charles de Gaulle - Étoile." } },
-
-    { tipo:"passeio", hora:"10h30", titulo:"Champs-Élysées, lojas, vitrines e mercado de Natal", mapa:"Avenue des Champs-Élysées, 75008 Paris",
-      texto:"A avenida mais famosa de Paris, decorada de Natal, com lojas grandes misturadas às vitrines. Na parte mais baixa da avenida, do lado da Place de la Concorde, fica o mercado de Natal oficial dos Champs-Élysées, com data confirmada pela Prefeitura de Paris: de 22 de novembro de 2026 a 4 de janeiro de 2027, então cobre o dia certinho.",
-      imperdivel:[
-        "As barracas do mercado de Natal, na descida da avenida, perto da Concorde.",
-        "As vitrines decoradas das lojas grandes, tradição todo ano em Paris."
-      ],
-      trajeto:{ modo:"pe", texto:"Descendo a pé pela própria avenida, no ritmo do grupo, até o almoço." } },
-
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço nos Champs-Élysées",
-      nota:"Opções na própria avenida, todas sem camarão nos pratos citados.",
-      opcoes:[
-        { nome:"Le Carré Élysée", detalhe:"49 Av. Franklin D. Roosevelt · 4,8 estrelas com 8,7 mil avaliações · brasserie clássica", preco:"€€€" },
-        { nome:"L'Alsace", detalhe:"39 Av. des Champs-Élysées · 4,6 estrelas com mais de 25 mil avaliações · aberto o dia todo, cardápio bem variado", preco:"€€€" },
-        { nome:"Café Di Roma", detalhe:"35 Av. des Champs-Élysées · 4,1 estrelas com 5,7 mil avaliações · italiano, pizza e massas, mais informal", preco:"€€" }
-      ],
-      trajeto:{ modo:"pe", texto:"Todas na própria Avenue des Champs-Élysées." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Pirâmide do Louvre, por fora", mapa:"Musée du Louvre, Rue de Rivoli, 75001 Paris",
-      texto:"Em vez da visita completa ao museu, que exige muitas horas e não costuma agradar quem não gosta de passeio cultural longo, o roteiro passa pela Pirâmide de vidro por fora, um dos cartões-postais de Paris, com o Jardin des Tuileries logo ao lado para esticar as pernas.",
-      imperdivel:[
-        "A Pirâmide do Louvre, por dentro e por fora, ótima para fotos.",
-        "O Jardin des Tuileries, com decoração de Natal e carrossel."
-      ],
-      trajeto:{ modo:"metro", linha:"1", texto:"Dos Champs-Élysées até o Louvre: estação Champs-Élysées - Clemenceau, linha 1, sentido Château de Vincennes, 2 paradas até Palais Royal - Musée du Louvre, sem baldeação." } },
-
-    { tipo:"refeicao", hora:"19h30", titulo:"Jantar perto do hotel",
-      nota:"De volta ao 15º arrondissement para encerrar o dia.",
-      opcoes:[
-        { nome:"La famille & cie", detalhe:"6 Rue Fourcade · 4,8 estrelas com 404 avaliações · hambúrguer artesanal muito bem avaliado", preco:"€€" },
-        { nome:"Restaurant Végé", detalhe:"totalmente vegetariano, sem risco de camarão", preco:"€€" },
-        { nome:"Brasserie Lola", detalhe:"brasserie francesa simples", preco:"€€" }
-      ],
-      trajeto:{ modo:"pe", texto:"A pé ou de metrô curto, de volta ao hotel." } }
-  ],
-  seChover:"O Jardin des Tuileries fica exposto; levem guarda-chuva. A Pirâmide do Louvre pode ser vista rapidamente até de dentro da entrada subterrânea do museu, coberta."
-},
-
-{
-  data:"Quinta, 24 de dezembro",
-  titulo:"Véspera de Natal",
-  bairro:"15º arrondissement",
-  saida:"Manhã livre, atenção aos horários reduzidos do dia",
-  paradas:[
-    { tipo:"passeio", hora:"10h00", titulo:"Últimas compras: farmácia francesa, roupas e comidinhas", mapa:"Pharmacie Eiffel Commerce, 13 Rue du Commerce, 75015 Paris",
-      texto:"Muitas lojas fecham mais cedo na véspera de Natal, por isso a manhã é o melhor horário. Três paradas pensadas no que vocês mais querem levar: produtos de farmácia e cosmético francês, roupa e lembrancinha simples, e comidinha de mercado.",
-      imperdivel:[
-        "Pharmacie Eiffel Commerce (13 Rue du Commerce): farmácia grande, com boa variedade de cosmético francês (La Roche-Posay, Avène, Nuxe) e equipe acostumada a ajudar estrangeiro com o tax free. Se preferirem a mais famosa de Paris para esse tipo de compra, é a City Pharma (26 Rue du Four, 75006), só que fica a uns 20 minutos de metrô daqui, em Saint-Germain.",
-        "Monoprix (2 Rue du Commerce): além de roupa e item do dia a dia, tem boa seção de mercearia fina para levar de comidinha (chocolate, geleia, mostarda, biscoito).",
-        "Centre Commercial Beaugrenelle (12 Rue Linois): se sobrar tempo e quiserem mais opção de loja de roupa e lembrancinha, fica a poucos minutos dali."
-      ],
-      dica:"A Pharmacie Eiffel Commerce e o Monoprix abrem normal nessa manhã; confirmem o horário reduzido de cada loja mais perto da data, porque no fim da tarde de 24/12 muita coisa fecha mais cedo.",
-      trajeto:{ modo:"pe", texto:"As três paradas ficam a poucos minutos a pé umas das outras, na região da Rue du Commerce." } },
-
-    { tipo:"refeicao", hora:"13h00", titulo:"Almoço leve perto do hotel",
-      nota:"Almoço simples, sem reserva, já que muitos lugares reduzem o horário hoje.",
-      opcoes:[
-        { nome:"L'artisan napolitain", detalhe:"pizza napolitana e sanduíches, serviço rápido", preco:"€€" },
-        { nome:"Brasserie Lola", detalhe:"brasserie francesa simples", preco:"€€" },
-        { nome:"Restaurant Végé", detalhe:"vegetariano, sem risco de camarão", preco:"€€" }
-      ],
-      trajeto:{ modo:"pe", texto:"Todas na própria Rue du Théâtre." } },
-
-    { tipo:"passeio", hora:"15h00", titulo:"Tarde tranquila, descanso antes do jantar especial", mapa:"15º arrondissement, Paris",
-      texto:"Tarde livre para descansar no hotel ou passear sem pressa pelo bairro, guardando energia para o jantar de Natal à noite. Se ainda quiserem sentir o clima de Natal numa última vez antes do jantar, a Torre Eiffel cintilando ao anoitecer, vista da Avenue Émile Zola mesmo sem se deslocar muito, já fecha bem a tarde." },
+      trajeto:{ modo:"metro", linha:"6 + 10", texto:"Da Torre Eiffel até a loja: estação Bir-Hakeim, linha 6, sentido Nation, até La Motte-Picquet-Grenelle, baldeação para a linha 10, sentido Boulogne-Pont de Saint-Cloud, uma parada até Avenue Émile Zola, depois cerca de 10 minutos a pé até a Rue Saint-Charles." } },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Jantar especial de véspera de Natal",
       nota:"Jantar em família para a noite de Natal, reservado com pelo menos um mês de antecedência: restaurantes em Paris lotam a agenda de 24/12 rápido, e deixar pra última semana é arriscado. Confirmem sempre a ausência de camarão.",
@@ -1270,7 +1551,8 @@ dias: [
       ],
       trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé do hotel." } }
   ],
-  seChover:"Dia mais tranquilo e sem programação ao ar livre essencial, a chuva não atrapalha."
+  seChover:"Notre-Dame e a Torre Eiffel funcionam com qualquer clima (a Torre só fecha em caso de vento muito forte). Levem guarda-chuva para os trechos a pé.",
+  seSobrarEnergia:"Se sobrar energia depois do jantar de Natal, a Ponte de Bir-Hakeim fica a 15 minutos a pé do hotel, com a Torre Eiffel cintilando ao fundo a cada hora cheia depois do anoitecer."
 },
 
 {
@@ -1281,7 +1563,7 @@ dias: [
   paradas:[
     { tipo:"passeio", hora:"08h00", titulo:"Checkout, tax free e transfer até o CDG", mapa:"Aparthotel Adagio Paris Centre Tour Eiffel, 14 Rue du Théâtre, 75015 Paris",
       texto:"Dia de Natal e de saída de Paris. Com o voo às 12h05, o transfer sai às 8h para dar folga suficiente até o aeroporto, incluindo a parada no totem PABLO para o tax free das compras feitas na França.",
-      dica:"Peçam para o hotel deixar algo pronto para o café da manhã, tipo um saquinho com pão e fruta, já que a essa hora e nesse feriado o restaurante do hotel pode não estar funcionando normalmente.",
+      dica:"Peçam para o hotel deixar algo pronto para o café da manhã, tipo um saquinho com pão e fruta, já que o restaurante do hotel não abre tão cedo no feriado de Natal.",
       trajeto:{ modo:"carro", texto:"Do hotel até o CDG, de van: cerca de 40 a 60 minutos a essa hora, com pouco trânsito de feriado." } }
   ],
   seChover:"", seSobrarEnergia:""
@@ -1292,66 +1574,74 @@ dias: [
 reservas: {
   texto: "O que já está comprado não precisa de mais nada. O que falta, deixei em ordem de urgência.",
   linhas: [
-    { nome:"ETA do Reino Unido, para as 6 pessoas, inclusive a filha", quando:"Agora, antes de qualquer outra coisa desta lista", preco:"£ 20 por pessoa", site:"gov.uk", url:"https://www.gov.uk/eta" },
-    { nome:"Westminster Abbey", quando:"Com horário marcado, para segunda, dia 14/12", preco:"a partir de £ 27 por adulto, online", site:"westminster-abbey.org", url:"https://www.westminster-abbey.org" },
-    { nome:"St Paul's Cathedral", quando:"Para sábado, dia 12/12", preco:"£ 27 por adulto", site:"stpauls.co.uk", url:"https://www.stpauls.co.uk" },
-    { nome:"Winter Wonderland, Hyde Park", quando:"Com horário marcado, para domingo, dia 13/12", preco:"£ 1 a £ 8,25 por pessoa, inclusive a filha", site:"hydeparkwinterwonderland.com", url:"https://hydeparkwinterwonderland.com" },
-    { nome:"Torre Eiffel, acesso ao 3º andar", quando:"Com horário marcado, para segunda, dia 21/12, no fim da manhã", preco:"€ 36,70 por adulto", site:"toureiffel.paris", url:"https://www.toureiffel.paris" },
-    { nome:"Cruzeiro no Sena com jantar, para o casal (Paris Seine, Le Romantique)", quando:"Com antecedência, para terça, dia 22/12 às 18h45 (aniversário de casamento)", preco:"€ 135 por pessoa", site:"parisseine.com", url:"https://www.parisseine.com/en/product/romantic-dinner-cruise" },
-    { nome:"Jantar especial de véspera de Natal", quando:"Pelo menos 1 mês de antecedência, para quinta, dia 24/12", preco:"pago no local", site:"reserva direta no restaurante escolhido", url:"" },
-    { nome:"Transfers de van (Heathrow, St Pancras a Serris, Serris a Paris, Paris ao CDG)", quando:"Com antecedência, para garantir veículo grande o suficiente para 6 pessoas e a bagagem", preco:"conforme a empresa escolhida", site:"a definir com a Gabriela", url:"" }
+    { nome:"🇬🇧 ETA do Reino Unido, para as 6 pessoas, inclusive a filha", quando:"Agora, antes de qualquer outra coisa desta lista", preco:"£ 20 por pessoa", site:"gov.uk", url:"https://www.gov.uk/eta" },
+    { nome:"🇬🇧 Sky Garden, ingresso gratuito com horário marcado", quando:"Para sábado, 12/12, por volta das 15h15; as vagas de 7 a 13/12 são liberadas na segunda, 16/11, de manhã, e esgotam rápido", preco:"gratuito, 6 ingressos", site:"skygarden.london", url:"https://skygarden.london/booking/" },
+    { nome:"🇬🇧 Museu de História Natural, entrada gratuita com horário", quando:"Para domingo, 13/12, às 10h", preco:"gratuito", site:"nhm.ac.uk", url:"https://www.nhm.ac.uk/visit" },
+    { nome:"🇬🇧 Abadia de Westminster", quando:"Com horário marcado, para segunda, 14/12, às 13h45", preco:"£ 32 por adulto, £ 14 de 6 a 17 anos, grátis até 5 anos", site:"westminster-abbey.org", url:"https://tickets.westminster-abbey.org/" },
+    { nome:"🇬🇧 Torre de Londres e Joias da Coroa", quando:"Para terça, 15/12, às 9h", preco:"£ 38 por adulto, grátis até 4 anos", site:"hrp.org.uk", url:"https://www.hrp.org.uk/tower-of-london/visit-us/" },
+    { nome:"🇬🇧 Uber Boat e teleférico, ingresso combinado", quando:"Para terça, 15/12, às 14h15", preco:"a partir de £ 22,80 por adulto", site:"booking.thamesclippers.com", url:"https://booking.thamesclippers.com/explore-london/best-tickets" },
+    { nome:"🇬🇧 Transfers de van em Londres: Heathrow ao hotel (11/12) e hotel a King's Cross, com 1 hora de espera (16/12)", quando:"Com antecedência, num veículo para 6 pessoas, malas e carrinho", preco:"conforme a empresa escolhida", site:"addisonlee.com ou blacklane.com", url:"https://www.blacklane.com" },
+    { nome:"🇫🇷 Torre Eiffel, acesso ao 3º andar", quando:"Com horário marcado, para quinta, 24/12, às 15h (já reservado)", preco:"€ 36,70 por adulto", site:"toureiffel.paris", url:"https://www.toureiffel.paris" },
+    { nome:"🇫🇷 Cruzeiro no Sena, Vedettes de Paris, com a família toda", quando:"Com antecedência, para domingo, 20/12, às 15h30", preco:"€ 18 adulto (online), € 9 criança, grátis até 3 anos", site:"vedettesdeparis.fr", url:"https://www.vedettesdeparis.fr" },
+    { nome:"🇫🇷 Ópera Garnier, visita autoguiada", quando:"Com horário marcado, para segunda, 21/12, às 14h", preco:"€ 25 por adulto, grátis até 12 anos", site:"operadeparis.fr", url:"https://www.operadeparis.fr" },
+    { nome:"🇫🇷 Grand Palais des Glaces (patinação)", quando:"Com horário marcado, para quarta, 23/12, sessão das 14h às 19h (já é possível reservar)", preco:"€ 32 por adulto, € 18 criança", site:"grandpalais.fr", url:"https://www.grandpalais.fr" },
+    { nome:"🇫🇷 Arco do Triunfo, subida ao topo", quando:"Para quarta, 23/12, no fim da tarde", preco:"€ 16 por adulto, grátis até 18 anos", site:"paris-arc-de-triomphe.fr", url:"https://www.paris-arc-de-triomphe.fr" },
+    { nome:"🇫🇷 Jantar especial de véspera de Natal", quando:"Pelo menos 1 mês de antecedência, para quinta, 24/12", preco:"pago no local", site:"reserva direta no restaurante escolhido", url:"" }
   ],
-  aviso:"O Eurostar, os voos e os ingressos da Disney para 17 e 18/12 já estão comprados, sem nada a fazer. A troca da guarda não precisa de ingresso, só reconfirmar a escala mais perto da data."
+  aviso:"O Eurostar, os voos, os ingressos da Disney para 17 e 18/12 e os transfers de Paris já estão comprados ou reservados, sem nada a fazer. A Torre Eiffel do dia 24 e o ensaio fotográfico do dia 21 também já estão reservados. A troca da guarda, a National Gallery, a House of MinaLima, a Platform 9¾ e a Harry Potter Shop da Oxford Street não exigem ingresso."
 },
 
 orcamento: {
   texto: "Valores por pessoa, já que são 6 viajantes.",
   linhas: [
     { item:"Transfers de van (Heathrow, St Pancras–Serris, Serris–Paris, Paris–CDG), dividido entre os 6", valor:"€ 70 a € 90" },
-    { item:"Transporte público em Londres (contactless, 5 dias)", valor:"£ 35 a £ 45" },
+    { item:"Transporte em Londres (pagamento por aproximação, 6 dias, com teto de £ 8,90 por dia)", valor:"£ 35 a £ 50" },
     { item:"Transporte público em Paris, bilhete avulso (toda a estadia)", valor:"€ 25 a € 35" },
-    { item:"Westminster Abbey", valor:"£ 27 a £ 31" },
-    { item:"St Paul's Cathedral", valor:"£ 27" },
-    { item:"Tower Bridge Exhibition", valor:"a partir de £ 15,80" },
-    { item:"Winter Wonderland, Hyde Park (entrada, inclusive a filha)", valor:"£ 1 a £ 8,25" },
+    { item:"Abadia de Westminster (adulto)", valor:"£ 32" },
+    { item:"Torre de Londres e Joias da Coroa (adulto)", valor:"£ 38" },
+    { item:"Uber Boat e teleférico, ingresso combinado (adulto)", valor:"a partir de £ 22,80" },
+    { item:"National Gallery, Museu de História Natural, Sky Garden, House of MinaLima e mercados de Natal", valor:"gratuitos" },
+    { item:"Cruzeiro no Sena, Vedettes de Paris (adulto)", valor:"€ 18 online" },
+    { item:"Petit Train de Montmartre (adulto)", valor:"€ 8" },
+    { item:"Ópera Garnier, visita autoguiada (quem for: Aline, Rafael e Laura)", valor:"€ 25 por adulto, grátis para a Laura" },
+    { item:"Grand Palais des Glaces, patinação (adulto)", valor:"€ 32" },
+    { item:"Arco do Triunfo, subida ao topo (adulto)", valor:"€ 16" },
     { item:"Torre Eiffel, 3º andar", valor:"€ 36,70" },
-    { item:"Mercado de Natal da Torre Eiffel (entrada no mercado)", valor:"gratuito; patinação na pista, à parte, valor a confirmar" },
+    { item:"Mercados de Natal (Torre Eiffel, Tulherias, Champs-Élysées)", valor:"entrada gratuita nos três" },
     { item:"Refeições, café, almoço e jantar, nos 15 dias", valor:"€ 420 a € 600" },
     { item:"Jantar especial de véspera de Natal (por pessoa)", valor:"€ 60 a € 90" },
-    { item:"Cruzeiro no Sena com jantar, Paris Seine (só o casal, por pessoa)", valor:"€ 135" },
-    { item:"Compras em Londres e no Val d'Europe", valor:"variável, conforme o gasto do grupo" }
+    { item:"Compras em Londres, no Val d'Europe e nas Galeries Lafayette", valor:"variável, conforme o gasto do grupo" }
   ],
-  total: "Cerca de € 700 a € 950 por pessoa, sem contar compras e o cruzeiro, que é só para o casal (€ 135 cada um deles)"
+  total: "Cerca de € 850 a € 1.150 por pessoa adulta, sem contar compras; a Laura entra de graça na maioria das atrações"
 },
 
 cuidados: {
   texto: "Londres e Paris são cidades seguras para quem anda atento. São cuidados simples que resolvem quase tudo.",
-  emergencia: "No Reino Unido, o número de emergência é o 999 (ou o 112, que também funciona). Na França, o 112 é o número europeu de emergência, o 15 é o SAMU (urgências médicas), o 17 é a polícia e o 18 são os bombeiros, todos gratuitos.",
+  emergencia: "🇬🇧 O número de emergência é o 999 (ou o 112, que também funciona). 🇫🇷 O 112 é o número europeu de emergência, o 15 é o SAMU (urgências médicas), o 17 é a polícia e o 18 são os bombeiros, todos gratuitos.",
   golpes: [
-    { t:"Pulseira, no Trocadéro e na Torre Eiffel", d:"Alguém amarra uma pulseira no pulso e depois cobra. Cruzem os braços, digam non, merci, e sigam andando." },
-    { t:"Petição com prancheta", d:"Jovens pedem assinatura para uma causa enquanto outra pessoa mexe na bolsa. Ignorem e sigam andando, tanto em Londres quanto em Paris." },
-    { t:"Bilhete falso", d:"Venda de ingresso na rua, perto de atrações e estações. Comprem só pelos sites oficiais." },
-    { t:"Transfer ou táxi irregular no aeroporto", d:"Quem aborda dentro do terminal oferecendo corrida é irregular, tanto em Heathrow quanto no CDG. Usem só o transfer já reservado ou a fila oficial de táxi sinalizada." }
+    { t:"🇫🇷 Pulseira, no Trocadéro e na Torre Eiffel", d:"Alguém amarra uma pulseira no pulso e depois cobra. Cruzem os braços, digam non, merci, e sigam andando." },
+    { t:"🇬🇧 🇫🇷 Petição com prancheta", d:"Jovens pedem assinatura para uma causa enquanto outra pessoa mexe na bolsa. Ignorem e sigam andando." },
+    { t:"🇬🇧 🇫🇷 Bilhete falso", d:"Venda de ingresso na rua, perto de atrações e estações. Comprem só pelos sites oficiais." },
+    { t:"🇬🇧 🇫🇷 Transfer ou táxi irregular no aeroporto", d:"Quem aborda dentro do terminal oferecendo corrida é irregular, em Heathrow e no CDG. Usem só o transfer reservado ou a fila oficial de táxi sinalizada." }
   ],
   habitos: [
-    { i:"mochila", t:"No metrô e no RER", d:"Bolsa e mochila na frente do corpo em vagão cheio, principalmente em horário de pico, nas duas cidades." },
-    { i:"celular", t:"Com o celular", d:"Não usem o celular na mão junto à porta do vagão pouco antes de fechar. É o momento clássico do furto." },
-    { i:"euro", t:"Dinheiro e cartões divididos", d:"Não levem tudo junto. Deixem parte do dinheiro e um cartão reserva no cofre do hotel." },
-    { i:"pessoas", t:"Combinado entre os seis", d:"Definam um ponto de encontro por dia, caso se percam na multidão dos mercados de Natal ou do metrô." }
+    { i:"mochila", t:"🇬🇧 🇫🇷 No metrô e no RER", d:"Bolsa e mochila na frente do corpo em vagão cheio, principalmente em horário de pico." },
+    { i:"celular", t:"🇬🇧 🇫🇷 Com o celular", d:"Não usem o celular na mão junto à porta do vagão pouco antes de fechar. É o momento clássico do furto." },
+    { i:"euro", t:"🇬🇧 🇫🇷 Dinheiro e cartões divididos", d:"Não levem tudo junto. Deixem parte do dinheiro e um cartão reserva no cofre do hotel." },
+    { i:"pessoas", t:"🇬🇧 🇫🇷 Combinado entre os seis", d:"Definam um ponto de encontro por dia, caso se percam na multidão dos mercados de Natal ou do metrô. No domingo, 13/12, quando o grupo se divide por causa do jogo, combinem também o horário de reencontro no hotel." }
   ],
   passaporte: [
-    "Antes de viajar, cada um leva uma cópia do passaporte guardada separada do original, e fotos dele no celular.",
-    "Em caso de perda ou furto no Reino Unido, registrem numa delegacia de polícia local e guardem o boletim de ocorrência.",
-    "Em caso de perda ou furto na França, o caminho é o mesmo: registro na polícia local, e depois o atendimento pelo sistema e-consular do Consulado-Geral do Brasil em Paris, em ec-paris.itamaraty.gov.br.",
-    "O consulado em Paris fica na 65 Avenue Franklin D. Roosevelt, 75008, perto do metrô Saint-Philippe du Roule, linha 9.",
-    "Em emergência grave, a central de emergência consular do Itamaraty atende 24 horas, pelo +55 61 98260-0610."
+    "🇬🇧 🇫🇷 Antes de viajar, cada um leva uma cópia do passaporte guardada separada do original, e fotos dele no celular.",
+    "🇬🇧 Em caso de perda ou furto, registrem o boletim numa delegacia de polícia local e depois procurem o Consulado-Geral do Brasil em Londres, no 3 Vere Street, em Marylebone, com agendamento pelo sistema e-consular (ec-londres.itamaraty.gov.br). A Embaixada do Brasil fica no 14-16 Cockspur Street, perto da Trafalgar Square.",
+    "🇫🇷 Em caso de perda ou furto, o caminho é o mesmo: boletim na polícia local, e depois o Consulado-Geral do Brasil em Paris, na 65 Avenue Franklin Delano Roosevelt, 75008, perto do metrô Saint-Philippe-du-Roule (linha 9), com atendimento pelo sistema e-consular.",
+    "🇬🇧 🇫🇷 Em emergência grave, o Plantão Consular do Itamaraty atende 24 horas, todos os dias, pelo +55 61 98260-0610."
   ]
 },
 
 depois: {
   texto: "Algumas pendências ficam para depois de deixar a Europa. Dá para resolver a maioria ainda no aeroporto ou numa tarde.",
   itens: [
-    { i:"etiqueta", t:"Tax free, antes de sair de Paris", d:"Feito no CDG, no totem PABLO, antes de despachar as malas, para as compras feitas na França acima de € 100 na mesma rede." },
+    { i:"etiqueta", t:"🇫🇷 Tax free, antes de sair de Paris", d:"Feito no CDG, no totem PABLO, antes de despachar as malas, para as compras feitas na França acima de € 100 na mesma rede." },
     { i:"euro", t:"Avisem o banco", d:"Reduzam o limite internacional ampliado de volta ao normal pelo aplicativo, assim que a viagem terminar." }
   ]
 },
@@ -1359,28 +1649,28 @@ depois: {
 etiqueta: {
   texto: "Como pedir, pagar e se entender nas placas e nos cardápios, em inglês e em francês. As frases mais úteis estão logo abaixo.",
   itens: [
-    { i:"garfo", t:"No Reino Unido, cardápio e gorjeta", d:"O serviço raramente vem incluído na conta; 10 a 12,5% de gorjeta é comum em restaurante com mesa, mas não em serviço rápido." },
-    { i:"euro", t:"Na França, a ordem do cardápio", d:"Entrée = entrada, não o prato principal.<br>Plat = prato principal.<br>Dessert = sobremesa.<br>Menu ou formule = combo, costuma sair mais barato que pedir cada coisa separada." },
-    { i:"coracao", t:"Para o seu marido, alergia a camarão", d:"Em inglês: 'My husband is allergic to shellfish, does this dish contain any?' Em francês: 'Mon mari est allergique aux crustacés, ce plat en contient-il ?'" },
-    { i:"relogio", t:"Horário das refeições na França", d:"O almoço costuma ser das 12h às 14h, e o jantar, a partir das 19h. Alguns bistrôs fecham a cozinha entre o almoço e o jantar." },
-    { i:"estrela", t:"Placas mais comuns em Londres", d:"Way out = saída<br>Mind the gap = cuidado com o vão entre o trem e a plataforma<br>Queue here = fila aqui" },
-    { i:"estrela", t:"Placas mais comuns em Paris", d:"Sortie = saída<br>Correspondance = baldeação<br>Direction = sentido<br>Quai = plataforma" }
+    { i:"garfo", t:"🇬🇧 Cardápio e gorjeta", d:"O serviço raramente vem incluído na conta; 10 a 12,5% de gorjeta é comum em restaurante com mesa, mas não em serviço rápido." },
+    { i:"euro", t:"🇫🇷 A ordem do cardápio", d:"Entrée = entrada, não o prato principal.<br>Plat = prato principal.<br>Dessert = sobremesa.<br>Menu ou formule = combo, costuma sair mais barato que pedir cada coisa separada." },
+    { i:"coracao", t:"🇬🇧 🇫🇷 Para o seu marido, alergia a camarão", d:"Em inglês: 'My husband is allergic to shellfish, does this dish contain any?' Em francês: 'Mon mari est allergique aux crustacés, ce plat en contient-il ?'" },
+    { i:"relogio", t:"🇫🇷 Horário das refeições", d:"O almoço é servido das 12h às 14h, e o jantar, a partir das 19h. Muitos bistrôs fecham a cozinha entre o almoço e o jantar." },
+    { i:"estrela", t:"🇬🇧 Placas mais comuns", d:"Way out = saída<br>Mind the gap = cuidado com o vão entre o trem e a plataforma<br>Queue here = fila aqui" },
+    { i:"estrela", t:"🇫🇷 Placas mais comuns", d:"Sortie = saída<br>Correspondance = baldeação<br>Direction = sentido<br>Quai = plataforma" }
   ]
 },
 
 frases: [
-  { fr:"Hello, good morning", pt:"Olá, bom dia. Fala-se: rrêlôu, gud MOR-nin." },
-  { fr:"Thank you very much", pt:"Muito obrigado. Fala-se: TENK-iu VÉ-ri match." },
-  { fr:"A table for six, please", pt:"Uma mesa para seis, por favor. Fala-se: â TÊI-bol for SIX, plíz." },
-  { fr:"Does this contain shellfish?", pt:"Isso contém frutos do mar? Fala-se: dâz dis con-TÊIN XÉL-fish." },
-  { fr:"Where is the nearest tube station?", pt:"Onde fica a estação de metrô mais perto? Fala-se: uér iz dâ NÍ-rest tiub STÊI-xon." },
-  { fr:"Bonjour", pt:"Bom dia, olá. Fala-se: bon-ZHUR." },
-  { fr:"Merci beaucoup", pt:"Muito obrigado. Fala-se: mer-SI bô-KU." },
-  { fr:"Une table pour six, s'il vous plaît", pt:"Uma mesa para seis, por favor. Fala-se: un TA-bl pur SIS, sil vu PLÊ." },
-  { fr:"Mon mari est allergique aux crustacés", pt:"Meu marido é alérgico a frutos do mar. Fala-se: mon ma-RI ê ta-ler-ZHIK ô crus-ta-SÊ." },
-  { fr:"Où est la station de métro ?", pt:"Onde fica a estação de metrô? Fala-se: u ê la sta-SION de me-TRÔ." },
-  { fr:"L'addition, s'il vous plaît", pt:"A conta, por favor. Fala-se: la-di-SION, sil vu PLÊ." },
-  { fr:"Nous sommes brésiliens", pt:"Somos brasileiros. Fala-se: nu som bre-zi-LIAN." }
+  { fr:"🇬🇧 Hello, good morning", pt:"Olá, bom dia. Fala-se: rrêlôu, gud MOR-nin." },
+  { fr:"🇬🇧 Thank you very much", pt:"Muito obrigado. Fala-se: TENK-iu VÉ-ri match." },
+  { fr:"🇬🇧 A table for six, please", pt:"Uma mesa para seis, por favor. Fala-se: â TÊI-bol for SIX, plíz." },
+  { fr:"🇬🇧 Does this contain shellfish?", pt:"Isso contém frutos do mar? Fala-se: dâz dis con-TÊIN XÉL-fish." },
+  { fr:"🇬🇧 Where is the nearest tube station?", pt:"Onde fica a estação de metrô mais perto? Fala-se: uér iz dâ NÍ-rest tiub STÊI-xon." },
+  { fr:"🇫🇷 Bonjour", pt:"Bom dia, olá. Fala-se: bon-ZHUR." },
+  { fr:"🇫🇷 Merci beaucoup", pt:"Muito obrigado. Fala-se: mer-SI bô-KU." },
+  { fr:"🇫🇷 Une table pour six, s'il vous plaît", pt:"Uma mesa para seis, por favor. Fala-se: un TA-bl pur SIS, sil vu PLÊ." },
+  { fr:"🇫🇷 Mon mari est allergique aux crustacés", pt:"Meu marido é alérgico a frutos do mar. Fala-se: mon ma-RI ê ta-ler-ZHIK ô crus-ta-SÊ." },
+  { fr:"🇫🇷 Où est la station de métro ?", pt:"Onde fica a estação de metrô? Fala-se: u ê la sta-SION de me-TRÔ." },
+  { fr:"🇫🇷 L'addition, s'il vous plaît", pt:"A conta, por favor. Fala-se: la-di-SION, sil vu PLÊ." },
+  { fr:"🇫🇷 Nous sommes brésiliens", pt:"Somos brasileiros. Fala-se: nu som bre-zi-LIAN." }
 ],
 
 fim: {
@@ -1396,8 +1686,7 @@ contato: {
   apoio:"Dúvida antes da viagem?"
 }
 
-};
-/* ==========================================================================
+};/* ==========================================================================
    DAQUI PRA BAIXO É O MOTOR. NÃO PRECISA MEXER.
    ========================================================================== */
 const R = ROTEIRO;
@@ -1470,7 +1759,7 @@ function cron(iso){
 const C=R.capa;
 const datasBox = tem(C.chegada)
   ? `<div class="capa-datas vidro-esc">
-      <div><span>ida</span><b>${C.chegada}</b></div>
+      <div><span>chegada</span><b>${C.chegada}</b></div>
       <div class="sep">${ic('setaDir',20)}</div>
       <div><span>volta</span><b>${C.saida}</b></div>
     </div>
@@ -1592,9 +1881,9 @@ if(tem(R.aeroportos)){
 
 /* ---------- hospedagem ---------- */
 if(R.hospedagem){
-  const lista = Array.isArray(R.hospedagem) ? R.hospedagem : [R.hospedagem];
-  const cartaoH = h => `
-    ${tem(h.cidade)?`<div class="eyebrow" style="margin-top:22px">${ic('pin',13)}${h.cidade}</div>`:''}
+  const h=R.hospedagem;
+  H.push(`<section class="sec wrap" id="base">
+    ${cab('Base','cama','Onde vocês ficam',h.nota||'')}
     <div class="card">
       <div class="card-tit">${ic('pin',20)}${h.nome}</div>
       <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:14px">${h.endereco}</p>
@@ -1608,10 +1897,6 @@ if(R.hospedagem){
       <div class="linhas">${h.porPerto.map(p=>`
         <div class="linha"><span class="ico">${ic(p.i,17)}</span><span class="txt"><span class="rot">${p.t}</span><span class="val">${p.d}</span></span></div>`).join('')}</div>
     </div>`:''}
-    ${tem(h.endereco)?`<a class="btn-mapa" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.endereco)}" target="_blank" rel="noopener">${ic('mapa',16)}Ver ${h.nome} no mapa</a>`:''}`;
-  H.push(`<section class="sec wrap" id="base">
-    ${cab('Base','cama', lista.length>1 ? 'Onde vocês ficam em cada cidade' : 'Onde vocês ficam', (lista[0]&&lista[0].nota)||'')}
-    ${lista.map(cartaoH).join('')}
   </section>`);
 } else if (R.ondeSeHospedar) {
   const o = R.ondeSeHospedar;
