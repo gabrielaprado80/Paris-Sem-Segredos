@@ -312,6 +312,13 @@ svg.i{flex:none;vertical-align:-.16em}
 .extra p{font-size:14px;color:var(--ink-soft)}
 .extra.chuva .rot{color:#3A5A8C}
 .extra.noite .rot{color:var(--gold-deep)}
+.extra.plano-b .rot{color:#2E7D52}
+details.extra.plano-b summary{cursor:pointer;list-style:none;display:block}
+details.extra.plano-b summary::-webkit-details-marker{display:none}
+details.extra.plano-b summary::after{content:'▸ ver o dia alternativo';font-size:12px;color:#2E7D52;font-weight:700;display:block;margin-top:4px}
+details.extra.plano-b[open] summary::after{content:'▴ esconder'}
+.planob-nota{font-size:14px;color:var(--ink-soft);margin-top:6px;margin-bottom:0}
+details.extra.plano-b .trilho{margin-top:16px}
 .btn-mapa{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;text-decoration:none;
   padding:15px;border-radius:14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;
   background:linear-gradient(96deg,var(--navy),var(--navy-2));box-shadow:0 8px 22px rgba(30,42,71,.2)}
@@ -415,6 +422,7 @@ svg.i{flex:none;vertical-align:-.16em}
 <body>
 <div id="app"></div>
 <script>
+
 const ROTEIRO = {
 
 capa: {
@@ -438,7 +446,7 @@ carta: [
   "De segunda a quarta, a manhã tem um grande programa por dia. Na segunda, os Museus do Vaticano, abertos às 8h, com a lista do que ver lá dentro e a Basílica de São Pedro. Na terça, o Coliseu às 8h30, com o Fórum Romano e o Palatino logo em seguida. Na quarta, aniversário do Wallace, a Fontana di Trevi ainda vazia, o Pantheon, a Piazza Navona, o Campo de' Fiori e uma loja de bolsas de couro feitas à mão.",
   "A hora de almoço é a pausa das 16h30 às 17h30, e as opções ficam todas a poucos minutos do hotel. O jantar da quarta, dia 2, tem opções para a data especial, e a noite fecha com um passeio de bicicleta pelo centro.",
   "No dia 3, o trem Italo sai da Termini às 10h05 rumo a Milão. Tudo o que precisa ser comprado antes está na seção de reservas, com data e site oficial.",
-  "Paris entra no dia 7 de dezembro: a chegada na Gare de Lyon às 17h38, o hotel no Marais e, nos dias que seguem, a Torre Eiffel de baixo para a foto que vocês sonharam, o cruzeiro no Sena ao pôr do sol, Disneyland Paris com decoração de Natal, o Louvre, Notre-Dame, Montmartre e a Ópera Garnier. O último jantar, no Marais mesmo, fecha a viagem como ela merece."
+  "Paris entra no dia 7 de dezembro: a chegada na Gare de Lyon às 17h38, o hotel no Marais e, nos dias que seguem, a Torre Eiffel de baixo para a foto que vocês sonharam, o cruzeiro no Sena ao pôr do sol, Disneyland Paris com decoração de Natal, o Louvre, Notre-Dame e Montmartre. O último jantar no Marais fecha a viagem como ela merece."
 ],
 
 assinaturaCarta: "Boa viagem, Gabriela",
@@ -1119,11 +1127,11 @@ dias: [
     },
     {
       tipo: "refeicao", hora: "20h00", titulo: "Jantar de chegada no Marais",
-      nota: "Três opções perto do hotel. Uma das mais bem avaliadas de Paris, um bistrô clássico e uma casa de cozinha provençal.",
+      nota: "Três opções perto do hotel. Uma das mais bem avaliadas de Paris, o falafel mais famoso do Marais e uma pita israelense recheada na hora.",
       opcoes: [
         { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado, abre das 7h às 2h, aceita reserva · um dos mais amados do Marais, bom para quem chega cansado de viagem", preco: "€€" },
-        { nome: "Au Bourguignon du Marais", detalhe: "52 Rue François Miron · 4,6 estrelas com 4.669 avaliações · bistrô clássico, boeuf bourguignon, bom vinho por taça · aberto todos os dias das 12h às 23h", preco: "€€€" },
-        { nome: "L'As du Fallafel", detalhe: "34 Rue des Rosiers · 4,3 estrelas com 14.769 avaliações · o falafel mais famoso de Paris, comido na mão, na rua mesmo, o clássico comida de rua do Marais · fechado aos sábados, aberto segunda a sexta e domingo das 11h às 23h30", preco: "€" }
+        { nome: "L'As du Fallafel", detalhe: "34 Rue des Rosiers · 4,3 estrelas com 14.769 avaliações · o falafel mais famoso de Paris, comido na mão na rua mesmo, o clássico comida de rua do Marais · fechado aos sábados, aberto segunda a sexta e domingo das 11h às 23h30", preco: "€" },
+        { nome: "Miznon", detalhe: "22 Rue des Écouffes · 4,4 estrelas com 3.847 avaliações · pita israelense recheada na hora, comer em pé ou sentado no balcão, estilo comida de rua coberta, bem do coração judeu do Marais · aberto de segunda a sábado das 11h às 22h, domingo das 12h às 21h", preco: "€" }
       ],
       trajeto: {
         modo: "pe",
@@ -1131,7 +1139,7 @@ dias: [
       }
     }
   ],
-  seSobrarEnergia: "O Marais à noite de segunda costuma estar tranquilo, sem fila nas lojas. Depois do jantar, uma volta a mais pela Rue des Rosiers e pela Rue Vieille du Temple mostra as vitrines iluminadas sem a multidão do dia.",
+  seSobrarEnergia: "No Marais existem duas das melhores papelarias de Paris, abertas até as 19h30. A Papier Tigre fica na Rue des Filles du Calvaire, 5, a 15 minutos a pé do hotel: cadernos personalizáveis, agenda com design francês e papel de qualidade, tudo feito em Paris. A L'Écritoire fica ainda mais perto, na Passage Molière, e tem canetas tinteiro, caderninhos e cartões fora do comum. As duas ficam no percurso da primeira caminhada e valem uma parada de 20 minutos.",
   seChover: "O Marais tem muitas galerias, lojas e cafés cobertos. Chova ou não, o passeio de chegada funciona bem, só trocam a praça pela Rue de Bretagne coberta."
 },
 
@@ -1154,7 +1162,7 @@ dias: [
       dica: "O esplanade do Trocadéro e o Jardim do Champ-de-Mars são gratuitos. Se decidirem subir, os bilhetes compram-se no site oficial ticket.toureiffel.paris ou nas bilheterias embaixo da torre. 2º andar de elevador: €23,50 por adulto. Topo (3º andar) de elevador: €36,70 por adulto. Os dois incluem acesso ao 1º e 2º andar. Levem documento, o bilhete é nominal.",
       trajeto: {
         modo: "metro", linha: "6",
-        texto: "De metrô: linha 6, sentido Nation, da estação Hôtel de Ville até Trocadéro, 5 paradas (Saint-Paul, Bastille, Gare de Lyon, Bercy, Daumesnil, Nation . Mais direto: linha 1 até Charles de Gaulle-Étoile e linha 6 até Trocadéro). Mais direto: linha 1, sentido La Défense, até Charles de Gaulle-Étoile, 6 paradas, e linha 6, sentido Nation, 2 paradas até Trocadéro. Total: cerca de 25 minutos. De Bolt: cerca de 20 minutos. A pé: cerca de 50 minutos, não compensa."
+        texto: "De metrô: linha 1, sentido La Défense, da estação Hôtel de Ville até Charles de Gaulle-Étoile, 6 paradas, e linha 6, sentido Nation, 2 paradas até Trocadéro. Total: cerca de 25 minutos. De Bolt: cerca de 20 minutos. A pé: cerca de 50 minutos, não compensa."
       }
     },
     {
@@ -1226,11 +1234,11 @@ dias: [
     },
     {
       tipo: "refeicao", hora: "20h30", titulo: "Jantar no Marais",
-      nota: "Uma das mesas mais queridas do bairro para um jantar com calma, e dois bistrôs clássicos.",
+      nota: "Três opções perto do hotel, todas sem precisar reservar.",
       opcoes: [
-        { nome: "Bistrot des Tournelles", detalhe: "6 Rue des Tournelles · 4,6 estrelas com 1.384 avaliações · cordon bleu e filé ao poivre, pequeno e charmoso, reservar com antecedência · aberto todos os dias das 19h às 23h", preco: "€€€" },
-        { nome: "Le temps des cerises", detalhe: "31 Rue de la Cerisaie · 4,6 estrelas com 2.313 avaliações · pato ao molho de framboesa, clima de bairro, mesas na calçada · aberto todos os dias até 1h", preco: "€€" },
-        { nome: "Le P'tit Bistrot", detalhe: "8 Rue Saint-Martin · 4,6 estrelas com 1.615 avaliações · bistrô animado perto do Centro Pompidou, sopa de cebola e steak frites · aberto das 7h às 23h de segunda a sábado", preco: "€€" }
+        { nome: "Miznon", detalhe: "22 Rue des Écouffes · 4,4 estrelas com 3.847 avaliações · pita israelense recheada na hora, comer em pé ou no balcão, bem do coração judeu do Marais · aberto de segunda a sábado das 11h às 22h, domingo das 12h às 21h", preco: "€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos e preços baixos · aberto todos os dias das 11h30 à meia-noite", preco: "€€" },
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado até as 2h, bom custo-benefício · aberto todos os dias das 7h às 2h", preco: "€€" }
       ],
       trajeto: {
         modo: "pe",
@@ -1238,7 +1246,7 @@ dias: [
       }
     }
   ],
-  seSobrarEnergia: "Depois do jantar no Marais, a Place des Vosges e a Rue des Rosiers iluminadas fazem uma volta tranquila para fechar o dia, sem precisar de mais planejamento.",
+  seSobrarEnergia: "O Marché d'Aligre abre de terça a domingo das 8h às 13h30, perto da Bastille: um mercado de pulgas pequeno mas cheio de caráter, com bancas de vinil, louças antigas e roupa vintage, bem mais local e menos turístico que o de Saint-Ouen. Vale como primeira parada do dia, antes da Torre Eiffel. De Bolt do Marais, uns 15 minutos. A Rue de la Roquette, nos arredores, tem várias lojas de brechó abertas até as 20h.",
   seChover: "Trocadéro e Champ-de-Mars são ao ar livre. Com chuva, comecem pelo cruzeiro coberto (que funciona com chuva), almocem depois e deixem a torre para a tarde, quando a chuva costuma aliviar em dezembro. Pont des Arts e Saint-Germain têm muitos trechos cobertos."
 },
 
@@ -1298,7 +1306,99 @@ dias: [
     }
   ],
   seSobrarEnergia: "Se ainda tiverem fôlego depois do espetáculo de luzes, a Main Street costuma ficar aberta até meia hora depois do fechamento oficial do parque, boa hora para fotos sem fila em frente ao castelo.",
-  seChover: "A Disney funciona com chuva e a maioria das atrações é coberta. O espetáculo de luzes costuma acontecer mesmo com chuva leve. Levem uma capa de chuva leve na mochila."
+  seChover: "A Disney funciona com chuva e a maioria das atrações é coberta. O espetáculo de luzes costuma acontecer mesmo com chuva leve. Levem uma capa de chuva leve na mochila.",
+
+  planoBTitulo: "Plano B: um dia diferente em Paris",
+  planoBNota: "Se a Disney não estiver nos planos, esta quarta tem um roteiro completo para aproveitar o dia livre de outra forma. Quarta é o dia da noturna do Louvre e do Musée d'Orsay, duas entradas raras que ficam fora do roteiro de quinta.",
+  planoBParadas: [
+    {
+      tipo: "passeio", hora: "09h00", titulo: "Passage des Panoramas e Grands Boulevards",
+      mapa: "Passage des Panoramas, 11 Boulevard Montmartre, 75002 Paris",
+      texto: "A Passage des Panoramas é a galeria coberta mais antiga de Paris, inaugurada em 1799. O teto de vidro, o piso de mosaico e as lojas de selos, moedas antigas e quadrinhos raros criam um cenário diferente de qualquer coisa vista até agora. Funciona todos os dias das 6h à meia-noite. No mesmo quarteirão ficam as Passages Jouffroy e Verdeau, que se acessam pela Rue de la Grange Batelière: as três juntas formam um circuito de uns 40 minutos, com livrarias de segunda mão, bonecas antigas e lojas de cartão postal.",
+      imperdivel: [
+        "O teto de ferro e vidro da Passage des Panoramas, que ilumina o corredor com luz natural.",
+        "As lojas de selos e cartões postais antigos, algumas abertas há décadas no mesmo lugar.",
+        "O Café Stern, dentro da galeria, decorado com entalhes do século 19.",
+        "A Passage Jouffroy ao lado, com o Musée Grévin (museu de cera) na entrada e uma livraria especializada em viagens no fundo."
+      ],
+      trajeto: {
+        modo: "metro", linha: "8 e 9",
+        texto: "De metrô: linha 1 sentido La Défense da estação Hôtel de Ville até Châtelet, troca para linha 8 ou 9 sentido Opéra, até Grands Boulevards, 3 paradas. Saída pela Rue du Faubourg Montmartre. De Bolt, cerca de 15 minutos. A pé: 30 minutos pelo Marais e Châtelet."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "12h00", titulo: "Almoço nos Grands Boulevards",
+      nota: "O bouillon clássico de Paris fica aqui, a 5 minutos a pé da Passage des Panoramas.",
+      opcoes: [
+        { nome: "Bouillon Chartier Grands Boulevards", detalhe: "7 Rue du Faubourg Montmartre · 4,1 estrelas com 34.019 avaliações · o bouillon histórico de Paris desde 1896, fila que anda, pratos de €4 a €12 · aberto das 11h30 à meia-noite todos os dias", preco: "€€" },
+        { nome: "Bouillon Pigalle", detalhe: "22 Bd de Clichy · 4,1 estrelas com 25.000+ avaliações · o bouillon do 9e, mesma tradição do Chartier mas menor e um pouco menos lotado de manhã · aberto das 11h30 à meia-noite todos os dias", preco: "€€" },
+        { nome: "Le Bouillon Racine", detalhe: "3 Rue Racine · 4,3 estrelas com 2.831 avaliações · ambiente Art Nouveau em azulejo, perto de Saint-Germain, o mais bonito dos bouillons de Paris · aberto das 12h às 15h e das 19h às 23h", preco: "€€" }
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "O Bouillon Chartier fica a 5 minutos a pé da Passage des Panoramas, na mesma rua."
+      }
+    },
+    {
+      tipo: "passeio", hora: "14h00", titulo: "Marais: Rue de Bretagne, Marché des Enfants Rouges e ruas locais",
+      mapa: "Marché des Enfants Rouges, 39 Rue de Bretagne, 75003 Paris",
+      texto: "O Marché des Enfants Rouges é o mercado coberto mais antigo de Paris, de 1615, com bancas de comida de rua: marroquina, japonesa, italiana e francesa, misturadas num espaço de poucos metros. Funciona de terça a domingo. A Rue de Bretagne que liga o mercado até a Rue de Charlot é a mais local do Marais: açougues, fromageries, ateliês de artesãos e nenhum souvenir de Torre Eiffel. A Rue Charlot fica um quarteirão ao lado, com as galerias de arte jovem do bairro.",
+      imperdivel: [
+        "O Marché des Enfants Rouges, com as bancas de comida de rua lado a lado debaixo do teto de ferro.",
+        "A Rue de Bretagne fora do horário de pico, com os moradores do bairro fazendo compras.",
+        "As galerias de arte da Rue de Poitou e da Rue Charlot, algumas com entrada livre.",
+        "A Rue des Archives, que conecta tudo isso ao hotel em 10 minutos a pé."
+      ],
+      trajeto: {
+        modo: "metro", linha: "8",
+        texto: "Dos Grands Boulevards até o Marais: linha 8 sentido Créteil-Pointe du Lac até Saint-Sébastien-Froissart, e 5 minutos a pé até a Rue de Bretagne. De Bolt, cerca de 15 minutos. A pé: 25 minutos pelo Canal Saint-Martin ou pelo Haut-Marais."
+      }
+    },
+    {
+      tipo: "passeio", hora: "16h00", titulo: "Papier Tigre e L'Écritoire: as papelarias do Marais",
+      mapa: "Papier Tigre, 5 Rue des Filles du Calvaire, 75003 Paris",
+      texto: "A Papier Tigre é uma das papelarias mais famosas de Paris, com cadernos personalizáveis, agenda de design francês e papel de qualidade. A L'Écritoire fica na Passage Molière, perto da Rue Saint-Martin, e tem canetas tinteiro, cartões ilustrados e caderninhos feitos à mão. As duas ficam a 10 minutos a pé uma da outra e abrem até as 19h30.",
+      imperdivel: [
+        "O caderno personalizável da Papier Tigre: escolha a capa, o miolo e a cor da espiral na hora.",
+        "As canetas tinteiro Kaweco e as caixas de papéis italianos da L'Écritoire.",
+        "A Passage Molière em si, uma galeria coberta menor e menos conhecida que as dos Grands Boulevards."
+      ],
+      trajeto: {
+        modo: "pe",
+        texto: "Do Marché des Enfants Rouges até a Papier Tigre, a pé, 7 minutos pela Rue de Bretagne. Da Papier Tigre até a L'Écritoire, a pé, 12 minutos pela Rue du Temple."
+      }
+    },
+    {
+      tipo: "passeio", hora: "18h00", titulo: "Musée d'Orsay: noturna de quarta",
+      mapa: "Musée d'Orsay, 1 Rue de la Légion d'Honneur, 75007 Paris",
+      texto: "Às quartas o Musée d'Orsay fica aberto até as 21h45, com a última entrada às 21h. É o único dia da semana com esse horário. O museu tem os impressionistas do século 19: Monet, Renoir, Van Gogh, Degas e Toulouse-Lautrec, num prédio que era estação de trem. Com a noturna, a iluminação é diferente, há menos gente e dá para ver a sala dos Van Gogh com calma.",
+      imperdivel: [
+        "A Sala dos Impressionistas no 5º andar, com a coleção inteira de Monet e Renoir.",
+        "O Quarto em Arles de Van Gogh e a Noite Estrelada sobre o Ródano.",
+        "O relógio de ferro do 5º andar, com vista para o Sena e as Tuileries através do mostrador.",
+        "O teto de ferro e as estruturas da antiga estação d'Orsay, visíveis das galerias superiores."
+      ],
+      dica: "Ingresso: €16 por pessoa, comprar online em musee-orsay.fr. Com o Navigo Semaine, a entrada pela linha RER C estação Musée d'Orsay sai na porta. Ou de Bolt do hotel em 15 minutos.",
+      ingresso: { url: "https://www.musee-orsay.fr", texto: "Comprar ingresso, Musée d'Orsay" },
+      trajeto: {
+        modo: "metro", linha: "1 e RER C",
+        texto: "De metrô: linha 1 sentido La Défense até Châtelet, e RER C sentido Versailles até Musée d'Orsay, 2 paradas. De Bolt, cerca de 15 minutos. A pé da Papier Tigre: 30 minutos pelo Marais, Châtelet e Quai de la Mégisserie, não compensa."
+      }
+    },
+    {
+      tipo: "refeicao", hora: "21h00", titulo: "Jantar depois do museu, Saint-Germain ou Marais",
+      nota: "Saindo do d'Orsay às 21h, Saint-Germain fica a 10 minutos. Ou de volta ao Marais.",
+      opcoes: [
+        { nome: "Bouillon Racine", detalhe: "3 Rue Racine, Saint-Germain · 4,3 estrelas com 2.831 avaliações · Art Nouveau em azulejo, prato do dia com entrada e sobremesa por €20, o mais bonito dos bouillons · aberto das 19h às 23h", preco: "€€" },
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives, Marais · 4,8 estrelas com 13.444 avaliações · cardápio variado, abre até as 2h, aceita sem reserva em semana · aberto todos os dias das 7h às 2h", preco: "€€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico, pratos clássicos, fila que anda · aberto todos os dias das 11h30 à meia-noite", preco: "€€" }
+      ],
+      trajeto: {
+        modo: "metro", linha: "1 e RER C",
+        texto: "Do d'Orsay até o Marais: RER C sentido Paris-Gare de Lyon até Châtelet, e linha 1 sentido Château de Vincennes até Hôtel de Ville, 3 paradas. De Bolt, cerca de 15 minutos."
+      }
+    }
+  ]
 },
 
 {
@@ -1329,15 +1429,15 @@ dias: [
     },
     {
       tipo: "refeicao", hora: "13h00", titulo: "Almoço perto do Louvre",
-      nota: "Três opções próximas. Um bouillon histórico, um bistrô dos locais e um café mais leve.",
+      nota: "Três opções próximas. Um bouillon histórico, um bistrô dos locais e uma crêperie grega na Rue Mouffetard, que fica no caminho da tarde.",
       opcoes: [
         { nome: "Bouillon Chartier Grands Boulevards", detalhe: "7 Rue du Faubourg Montmartre · 4,1 estrelas com 34.019 avaliações · o bouillon histórico de Paris desde 1896, fila que anda, preços baixíssimos · aberto das 11h30 à meia-noite todos os dias", preco: "€€" },
         { nome: "Le Louvre Ripaille", detalhe: "10 Rue Jean-Jacques Rousseau · 4,4 estrelas com 1.890 avaliações · bistrô dos locais do bairro, perto da entrada do Louvre · aberto das 12h às 15h e das 19h às 22h", preco: "€€" },
-        { nome: "Le Loir dans La Théière", detalhe: "3 Rue des Rosiers, Marais · 4,3 estrelas com 3.389 avaliações · salon de thé charmoso, tortas salgadas e a tarte au citron merengada mais famosa do Marais · aberto todos os dias das 9h às 19h30", preco: "€€" }
+        { nome: "Au Petit Grec", detalhe: "68 Rue Mouffetard · 4,5 estrelas com 7.981 avaliações · crêperie grega, as crepes salgadas e doces mais famosas de Paris, sempre com fila na porta, comer na mão pela rua · aberto todos os dias das 10h à meia-noite", preco: "€" }
       ],
       trajeto: {
         modo: "metro", linha: "1",
-        texto: "Le Loir fica no Marais, de volta ao hotel: linha 1 até Hôtel de Ville, 2 paradas. Os outros dois ficam perto do Louvre, a 10 a 15 minutos a pé."
+        texto: "Au Petit Grec fica na Rue Mouffetard, no caminho da tarde. Bouillon Chartier e Le Louvre Ripaille ficam perto do Louvre, a 10 a 15 minutos a pé."
       }
     },
     {
@@ -1372,11 +1472,11 @@ dias: [
     },
     {
       tipo: "refeicao", hora: "20h00", titulo: "Jantar no Marais",
-      nota: "Hoje o Louvre fecha às 18h (quinta é dia de horário normal, sem noturna), então o jantar é só para relaxar, sem pressa de voltar ao museu. Três casas do bairro.",
+      nota: "Hoje o Louvre fecha às 18h (quinta é dia de horário normal, sem noturna), então o jantar é só para relaxar, sem pressa de voltar ao museu. Três casas perto do Marais e do Quartier Latin.",
       opcoes: [
-        { nome: "La Terrasse des Archives", detalhe: "51 Rue des Archives · 4,2 estrelas com 1.745 avaliações · esquina charmosa com mesas na rua, cardápio variado e bom para o último jantar tranquilo · aberto todos os dias até a meia-noite", preco: "€€" },
-        { nome: "Au Cœur du Marais", detalhe: "56 Rue des Archives · 4,2 estrelas com 1.102 avaliações · bistrô de esquina com área interna e externa, pet-friendly · aberto todos os dias até as 2h", preco: "€€" },
-        { nome: "LE COYOTE PARIS", detalhe: "86 Rue des Archives · 4,5 estrelas com 80 avaliações · petiscos para compartilhar e vinhos naturais, clima intimista · aberto todos os dias das 17h30 à meia-noite", preco: "€€" }
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado até as 2h, bom custo-benefício, sem precisar reservar · aberto todos os dias das 7h às 2h", preco: "€€" },
+        { nome: "Miznon", detalhe: "22 Rue des Écouffes · 4,4 estrelas com 3.847 avaliações · pita israelense recheada na hora, comer em pé ou no balcão, bem do coração judeu do Marais · aberto de segunda a sábado das 11h às 22h, domingo das 12h às 21h", preco: "€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos e preços baixos · aberto todos os dias das 11h30 à meia-noite", preco: "€€" }
       ],
       trajeto: {
         modo: "metro", linha: "7",
@@ -1384,15 +1484,15 @@ dias: [
       }
     }
   ],
-  seSobrarEnergia: "Para quem ainda quiser andar depois do jantar, o Canal Saint-Martin fica a uns 20 minutos de Bolt do Marais: as pontes de ferro, as margens arborizadas e os barzinhos do Quai de Valmy e do Quai de Jemmapes dão um clima bem diferente do centro turístico, com menos gente e mais locais.",
+  seSobrarEnergia: "Para quem ainda quiser andar depois do jantar, o Canal Saint-Martin fica a uns 20 minutos de Bolt do Marais: as pontes de ferro, as margens arborizadas e os barzinhos do Quai de Valmy e do Quai de Jemmapes dão um clima bem diferente do centro turístico, com menos gente e mais locais. Outra opção é a Rue de la Verrerie, bem perto do hotel, com dois brechós bem avaliados: Vintage by Ramin (nº 64) e FREE P STAR (nº 61), ambos com jaquetas, camisetas e acessórios vintage a preços baixos.",
   seChover: "Louvre e Sainte-Chapelle são totalmente cobertos. Notre-Dame tem cobertura parcial na fila. A Rue Mouffetard é ao ar livre mas tem trechos cobertos pelos toldos das lojas. Com chuva, comecem pelo Louvre e deixem os passeios externos para a tarde."
 },
 
 {
   data: "Sexta, 11 de dezembro",
   diaLabel: "Dia 13",
-  titulo: "Montmartre, Sacré-Coeur e Ópera Garnier",
-  bairro: "Montmartre e Sena",
+  titulo: "Montmartre, Sacré-Coeur e último jantar",
+  bairro: "Montmartre e Marais",
   saida: "Dia livre, último dia inteiro em Paris",
   paradas: [
     {
@@ -1404,12 +1504,13 @@ dias: [
         "A Place du Tertre, com os retratistas e os pintores ao ar livre.",
         "As grades e corrimãos perto do Sacré-Coeur, cobertos de cadeados deixados por casais, no mesmo espírito da Pont des Arts. Costuma ter ambulante vendendo cadeado ali mesmo, para quem quiser pendurar o seu na hora.",
         "A Rue Lepic, a principal rua do bairro, com as padarias e os cafés dos locais.",
-        "O Moulin de la Galette, o moinho que deu nome ao quadro de Renoir."
+        "O Moulin de la Galette, o moinho que deu nome ao quadro de Renoir.",
+        "A Rue des Abbesses, paralela à Rue Lepic, com as cafeinas de bairro e as vitrines das lojas de artesanato."
       ],
       dica: "Sacré-Coeur: gratuito, entrada pela frente. Para subir o morro, o funicular custa 1 bilhete do Navigo (mesma catraca do metrô) ou sobe a pé pelas escadarias em cerca de 8 minutos.",
       trajeto: {
         modo: "metro", linha: "2",
-        texto: "De metrô: linha 1 sentido La Défense até Châtelet, linha 11 sentido Les Lilas até Rambuteau e linha 2 até Anvers, e 7 minutos a pé até o Sacré-Coeur pela Rue de Steinkerque. Mais simples: linha 1 até Châtelet, linha 4 sentido Clignancourt até Château-Rouge, e 10 minutos a pé. Cerca de 30 minutos no total. De Bolt: cerca de 20 minutos."
+        texto: "De metrô: linha 1 sentido La Défense até Châtelet, e linha 4 sentido Clignancourt até Château-Rouge, e 10 minutos a pé até o Sacré-Coeur. Cerca de 25 minutos no total. De Bolt: cerca de 20 minutos."
       }
     },
     {
@@ -1422,25 +1523,9 @@ dias: [
       ]
     },
     {
-      tipo: "passeio", hora: "14h30", titulo: "Ópera Garnier",
-      mapa: "Palais Garnier, Place de l'Opéra, 75009 Paris",
-      texto: "O Palais Garnier é um dos interiores mais suntuosos de Paris, com a Grande Escadaria de mármore, o Grand Foyer coberto de dourado e o teto pintado por Chagall no auditório, quando aberto à visita. A entrada livre funciona das 10h às 16h, última entrada, então chegar às 14h30 dá tempo de ver tudo com calma antes de seguir para as compras.",
-      imperdivel: [
-        "A Grande Escadaria de mármore, o cartão-postal do prédio.",
-        "O Grand Foyer, um salão coberto de dourado e espelhos, inspirado no Salão dos Espelhos de Versalhes.",
-        "O teto do auditório pintado por Marc Chagall em 1964, visível quando não há ensaio."
-      ],
-      dica: "O ingresso de visita livre custa €25 por pessoa para visitantes de fora do Espaço Econômico Europeu, comprado em operadeparis.fr. Ensaios podem fechar o auditório sem aviso prévio, nenhum ingresso garante esse acesso específico.",
-      ingresso: { url: "https://www.operadeparis.fr", texto: "Comprar ingresso, Opéra Garnier" },
-      trajeto: {
-        modo: "metro", linha: "2",
-        texto: "De Montmartre até a Ópera: de Pigalle, linha 2 sentido Nation, 3 paradas até Opéra. De Bolt, cerca de 12 minutos. A pé, cerca de 25 minutos pela Rue Pigalle."
-      }
-    },
-    {
-      tipo: "passeio", hora: "15h45", titulo: "Galeries Lafayette",
+      tipo: "passeio", hora: "14h30", titulo: "Galeries Lafayette e Opéra",
       mapa: "Galeries Lafayette, 40 Bd Haussmann, 75009 Paris",
-      texto: "As Galeries Lafayette ficam a 3 minutos a pé da Ópera e têm uma das maiores vitrines de Natal de Paris, além do terraço gratuito com vista para o telhado de Paris. Para as compras de farmácia e cosméticos, a farmácia no próprio Lafayette ou as farmácias no bairro da Opéra têm os produtos mais baratos.",
+      texto: "As Galeries Lafayette ficam a 15 minutos de Montmartre e têm uma das maiores vitrines de Natal de Paris, além do terraço gratuito com vista para o telhado de Paris. Para as compras de farmácia e cosméticos, a farmácia no próprio Lafayette ou as farmácias no bairro da Opéra têm os produtos mais baratos.",
       imperdivel: [
         "O terraço das Galeries Lafayette, gratuito, com a vista da cúpula e dos telhados de Paris.",
         "As vitrines de Natal animadas na fachada da loja.",
@@ -1449,26 +1534,26 @@ dias: [
       ],
       dica: "Para o tax free, guardem os recibos de cada compra acima de €100 feita na mesma rede em até 3 dias. No Lafayette, perguntem no caixa pelo formulário de détaxe. O processo no aeroporto de Orly fica na seção Depois da viagem.",
       trajeto: {
-        modo: "pe",
-        texto: "Da Ópera até as Galeries Lafayette, a pé, cerca de 3 minutos pela Rue Scribe. De Bolt ou metrô não compensa, é perto."
+        modo: "metro", linha: "2",
+        texto: "De Montmartre até as Galeries Lafayette: de Pigalle, linha 2 sentido Nation até Blanche, e linha 9 sentido Mairie de Montreuil até Chaussée d'Antin-La Fayette. De Bolt, cerca de 10 minutos. A pé, cerca de 20 minutos pela Rue Pigalle."
       }
     },
     {
       tipo: "refeicao", hora: "19h30", titulo: "Jantar de despedida em Paris",
-      nota: "Último jantar antes de voltar. Uma mesa especial no Marais, que é o bairro do hotel e faz sentido encerrar por aqui.",
+      nota: "Último jantar antes de voltar. Duas opções descontraídas perto das Galeries Lafayette, e o Bouillon République no Marais para fechar a viagem no bairro do hotel.",
       opcoes: [
-        { nome: "Le Colimaçon", detalhe: "44 Rue Vieille du Temple · 4,7 estrelas com 3.423 avaliações · confit de canard e escargot imperdíveis, o preferido do Marais para uma noite especial · aberto das 18h às 22h30 de terça a sábado · reservar com antecedência pelo telefone ou site", preco: "€€€" },
-        { nome: "Septime", detalhe: "80 Rue de Charonne · 4,6 estrelas com 7.891 avaliações · bistrô contemporâneo, menu degustação curto, reserva obrigatória com semanas de antecedência · aberto de terça a sábado, jantar a partir das 19h30", preco: "€€€€" },
-        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos a preço baixo, sem reserva necessária · aberto todos os dias das 11h30 à meia-noite", preco: "€€" }
+        { nome: "Mangez et Cassez-Vous", detalhe: "39 Rue Taitbout · hambúrguer artesanal por menos de €4, frites e soda, o lugar mais descontraído e barato de Paris para uma última refeição antes do voo · aberto de segunda a sábado das 11h30 às 14h30 e das 19h às 22h", preco: "€" },
+        { nome: "Bouillon République", detalhe: "39 Bd du Temple · 4,6 estrelas com 41.356 avaliações · bistrô histórico com fila que anda rápido, pratos clássicos a preço baixo, sem reserva necessária · aberto todos os dias das 11h30 à meia-noite", preco: "€€" },
+        { nome: "Le Ju'", detalhe: "16 Rue des Archives · 4,8 estrelas com 13.444 avaliações · cardápio variado até as 2h, bom custo-benefício, sem precisar reservar · aberto todos os dias das 7h às 2h", preco: "€€" }
       ],
-      dica: "O Le Colimaçon e o Septime exigem reserva com antecedência. Para o último dia sem planejamento, o Bouillon République é o mais seguro, sem esperar reserva.",
+      dica: "O Mangez et Cassez-Vous fecha às 22h, então é melhor saírem das Galeries Lafayette até as 19h para não correr. O Bouillon République e o Le Ju' ficam no Marais, perto do hotel, e funcionam sem reserva.",
       trajeto: {
         modo: "pe",
         texto: "Das Galeries Lafayette até o Marais, de metrô: linha 9 até Oberkampf, e linha 5 até Bastille ou Richard Lenoir, e a pé até o hotel, cerca de 20 minutos. De Bolt, cerca de 15 minutos. As três opções de jantar ficam a 10 a 20 minutos a pé do hotel."
       }
     }
   ],
-  seSobrarEnergia: "Depois do jantar de despedida, uma última volta pela Place des Vosges ou pela Rue des Rosiers no Marais é um jeito tranquilo de fechar a viagem, sem pressa para o dia de voo amanhã.",
+  seSobrarEnergia: "No caminho das Galeries Lafayette de volta ao hotel, vale um desvio pela Rue Montorgueil: é a rua de mercado mais animada do centro de Paris, ainda aberta à noite, com queijeiros, padarias, bares e restaurantes lado a lado, sem ser uma atração turística. Fica perto do Châtelet e dá para incluir no trajeto de volta de metrô. Depois do jantar de despedida, uma última volta pela Place des Vosges ou pela Rue des Rosiers no Marais é um jeito tranquilo de fechar a viagem.",
   seChover: "Sacré-Coeur e Montmartre são ao ar livre, mas o bairro tem muitos cafés e lojas para se abrigar. As Galeries Lafayette são cobertas. Se chover muito de manhã, inverta: comece pelas Galeries Lafayette e vá a Montmartre à tarde."
 },
 
@@ -1519,9 +1604,9 @@ reservas: {
     { nome: "Trem Italo 9976, Roma para Milão", quando: "Já comprado, para a quinta, dia 3, às 10h05. Guardem a passagem no celular", preco: "pago", site: "italotreno.it", url: "https://www.italotreno.it" },
     { nome: "Navigo Semaine toutes zones", quando: "Comprar na máquina da Gare de Lyon assim que chegarem em Paris, no dia 7", preco: "€ 32,40 por pessoa", site: "ile-de-france-mobilites.fr", url: "https://www.iledefrance-mobilites.fr" },
     { nome: "Disneyland Paris, ingresso 1 jour / 1 parque, dia 09/12", quando: "Comprar agora em disneylandparis.com. O preço sobe conforme a data se aproxima. €111 por pessoa para 09/12 (verificado em 10/11/2026, preço dinâmico)", preco: "variável", site: "disneylandparis.com", url: "https://www.disneylandparis.com" },
-    { nome: "Cruzeiro no Sena, dia 8/12, Bateaux Parisiens", quando: "Reservar online para o horário das 16h, ou comprar no cais no dia", preco: "em torno de € 17 a 19 por pessoa", site: "bateauxparisiens.com", url: "https://www.bateauxparisiens.com" },
     { nome: "Museu do Louvre, dia 10/12", quando: "Comprar antes, em ticket.louvre.fr, com horário reservado das 9h", preco: "€ 32 por pessoa", site: "ticket.louvre.fr", url: "https://ticket.louvre.fr" },
-    { nome: "Ópera Garnier, dia 11/12", quando: "Comprar antes em operadeparis.fr, para o horário das 14h30", preco: "€ 25 por pessoa", site: "operadeparis.fr", url: "https://www.operadeparis.fr" }
+    { nome: "Cruzeiro com jantar, Bateaux Parisiens ou Mouches, dia 11/12", quando: "Reservar com pelo menos 1 semana de antecedência. Cruzeiro das 20h30 pega a iluminação da torre", preco: "a partir de € 65 por pessoa", site: "bateauxparisiens.com", url: "https://www.bateauxparisiens.com" },
+    { nome: "Cruzeiro simples, dia 8/12, Bateaux Parisiens", quando: "Reservar online ou comprar no cais no dia", preco: "em torno de € 17 a 19 por pessoa", site: "bateauxparisiens.com", url: "https://www.bateauxparisiens.com" }
   ],
   aviso: "Escolham primeiro o Coliseu, que tem o horário mais disputado, e depois o Vaticano, com o horário das 8h. Os dois ingressos são nominais e precisam do documento de cada pessoa na entrada."
 },
@@ -1562,6 +1647,7 @@ frases: [
   { fr: "🇫🇷 Je voudrais un café, s'il vous plaît.", pt: "Eu gostaria de um café, por favor." },
   { fr: "🇫🇷 C'est combien ?", pt: "Quanto custa?" },
   { fr: "🇫🇷 Pouvez-vous prendre une photo ?", pt: "Pode tirar uma foto de nós?" },
+  { fr: "🇫🇷 C'est l'anniversaire de mon copain.", pt: "É o aniversário do meu namorado." },
   { fr: "🇫🇷 Merci beaucoup !", pt: "Muito obrigado!" },
 
   { fr: "🇫🇷 Sortie", pt: "Saída (em estações de metrô, shoppings, museus)" },
@@ -1636,6 +1722,7 @@ contato: {
 }
 
 };
+
 /* ==========================================================================
    DAQUI PRA BAIXO É O MOTOR. NÃO PRECISA MEXER.
    ========================================================================== */
@@ -2002,6 +2089,7 @@ if(tem(R.dias)){
       <div class="extras">
         ${tem(d.seChover)?`<div class="extra chuva vidro"><div class="rot">${ic('chuva',15)}Se chover</div><p>${d.seChover}</p></div>`:''}
         ${tem(d.seSobrarEnergia)?`<div class="extra noite vidro"><div class="rot">${ic('lua',15)}Se sobrar energia</div><p>${d.seSobrarEnergia}</p></div>`:''}
+        ${tem(d.planoBParadas)?`<details class="extra plano-b vidro"><summary><div class="rot">${ic('mapa',15)}${d.planoBTitulo||'Plano B'}</div>${d.planoBNota?`<p class="planob-nota">${d.planoBNota}</p>`:''}</summary><div class="trilho">${d.planoBParadas.map(parada).join('')}</div></details>`:''}
       </div>
       ${rotasDoDia(d).map(r=>`<a class="btn-mapa" href="${r.url}" target="_blank" rel="noopener">${ic('mapa',16)}${r.rot}</a>`).join('')}
     </div>`).join('');
