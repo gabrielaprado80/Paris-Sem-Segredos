@@ -485,7 +485,7 @@ aeroportos: [
       { nome:"RER B direto", icone:"trem", selo:"Só como referência: o transfer já está reservado para este trecho",
         preco:"€ 14", precoNota:"por pessoa, bilhete de aeroporto Paris Região, carregado antes no aplicativo Île-de-France Mobilités ou no guichê", tempo:"cerca de 45 min, sem baldeação a partir da região do hotel",
         itens:[
-          ["O caminho","Da estação mais próxima do hotel, RER B sentido Aéroport Charles de Gaulle 2, direto até a estação Aéroport CDG2 TGV-RER, sem baldeação."],
+          ["O caminho","Da estação La Motte-Picquet-Grenelle, linha 6, sentido Nation, até Denfert-Rochereau; baldeação para a RER B, sentido Aéroport Charles de Gaulle 2, até a estação Aéroport CDG2 TGV-RER."],
           ["Quando usar essa opção","Só é necessário se por algum motivo vocês decidirem ir de trem por conta própria; com o transfer de van já reservado para o dia 25, não é um gasto obrigatório."]
         ]}
     ]
@@ -648,10 +648,9 @@ dias: [
     { tipo:"passeio", hora:"14h05", titulo:"Pouso em Heathrow e transfer até o hotel", mapa:"Novotel London Blackfriars, 46 Blackfriars Rd, London SE1 8NZ",
       texto:"Depois da imigração (primeiro carimbo da viagem) e da bagagem, a van do transfer leva o grupo inteiro direto até o hotel, sem trocar de linha de metrô com as malas.",
       dica:"O check-in do hotel é a partir das 15h. Com o transfer levando cerca de uma hora, vocês chegam perto desse horário.",
-      trajeto:{ opcoes:[
-        { modo:"taxi", texto:"Van do transfer: de Heathrow até o hotel, cerca de 50 a 70 minutos, com as malas e o carrinho da Laura no mesmo carro." },
+      trajeto:{ modo:"taxi", linha:"Carro", texto:"Van do transfer: de Heathrow até o hotel, cerca de 50 a 70 minutos, com as malas e o carrinho da Laura no mesmo carro.", opcoes:[ { modo:"taxi", linha:"Carro", texto:"Van do transfer: de Heathrow até o hotel, cerca de 50 a 70 minutos, com as malas e o carrinho da Laura no mesmo carro." },
         { modo:"trem", linha:"Elizabeth", texto:"Metrô e trem: estação Heathrow Terminal 5 (ou Terminais 2 e 3), Elizabeth line sentido Abbey Wood, direto até Farringdon; ali, trem Thameslink sentido sul, 2 paradas até Blackfriars; do metrô Blackfriars, 8 minutos a pé até o hotel. Tarifa de £ 15,50 por adulto, paga por aproximação do cartão; a Laura viaja de graça." },
-        { modo:"taxi", texto:"Bolt ou Uber, no tamanho para 6 passageiros: cerca de 50 a 70 minutos conforme o trânsito." }
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber, no tamanho para 6 passageiros: cerca de 50 a 70 minutos conforme o trânsito." }
       ] } },
 
     { tipo:"passeio", hora:"16h30", titulo:"Caminhada leve pela beira do Tâmisa", mapa:"Golden Jubilee Bridges, London SE1 7PB",
@@ -661,9 +660,8 @@ dias: [
         "O Mercado de Natal do Southbank Centre, montado em cabanas de madeira à beira do rio, aberto desde 2 de novembro."
       ],
       dica:"Um passeio de 30 a 40 minutos é suficiente; voltem no ritmo da Laura, sem pressa nenhuma.",
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do hotel até os Golden Jubilee Bridges pela própria Southbank, cerca de 15 minutos." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos, se preferirem poupar as pernas." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do hotel até os Golden Jubilee Bridges pela própria Southbank, cerca de 15 minutos.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do hotel até os Golden Jubilee Bridges pela própria Southbank, cerca de 15 minutos." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos, se preferirem poupar as pernas." }
       ] } },
 
     { tipo:"refeicao", hora:"19h00", titulo:"Primeiro jantar, perto do hotel",
@@ -673,9 +671,8 @@ dias: [
         { nome:"Strada Southbank", detalhe:"337-338 Belvedere Rd · 4,4 estrelas com mais de 4 mil avaliações · italiano simples, massas e pizza", preco:"££" },
         { nome:"Troia Southbank", detalhe:"Belvedere Rd · 4,4 estrelas com quase 4 mil avaliações · mediterrâneo e turco, pratos para dividir", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do hotel até o restaurante, de 5 a 10 minutos pela Belvedere Road." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do hotel até o restaurante, de 5 a 10 minutos pela Belvedere Road.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do hotel até o restaurante, de 5 a 10 minutos pela Belvedere Road." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos." }
       ] } }
   ],
   seChover:"A caminhada pode virar um passeio curto até o Royal Festival Hall, que tem cobertura e cafés dentro do próprio prédio, a poucos minutos do hotel.",
@@ -698,19 +695,17 @@ dias: [
       ],
       dica:"Entrada gratuita, todos os dias das 10h às 18h (sextas até 21h). O café Muriel's Kitchen fica dentro da galeria, para uma pausa com a Laura.",
       ingresso:{ url:"https://www.nationalgallery.org.uk", texto:"Ver horários, National Gallery" },
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District, sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 2 paradas até Embankment; de lá, 7 minutos a pé até a Trafalgar Square." },
+      trajeto:{ modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District, sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 2 paradas até Embankment; de lá, 7 minutos a pé até a Trafalgar Square.", opcoes:[ { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District, sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 2 paradas até Embankment; de lá, 7 minutos a pé até a Trafalgar Square." },
         { modo:"metro", linha:"Jubilee", texto:"Metrô com baldeação: estação Southwark, linha Jubilee, sentido Stanmore, 1 parada até Waterloo; baldeação para a linha Bakerloo, sentido Harrow & Wealdstone, 2 paradas até Charing Cross; a galeria fica a 3 minutos a pé." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos, a opção mais fácil com o carrinho da Laura." }
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 15 minutos, a opção mais fácil com o carrinho da Laura." }
       ] } },
 
     { tipo:"passeio", hora:"11h45", titulo:"De ônibus vermelho até a St Paul's Cathedral", mapa:"Trafalgar Square, London WC2N 5DN",
       texto:"A viagem de ônibus faz parte do passeio: sentem no andar de cima, na frente, e vejam a Strand e a Fleet Street passando pela janela. Os dois ônibus de dois andares que fazem o trajeto são o 11 (sentido Liverpool Street) e o 15 (sentido Blackwall); descem no ponto St Paul's Cathedral, cerca de 25 minutos depois.",
       dica:"Pagamento por aproximação do cartão: £ 1,85 por adulto, e a Laura viaja de graça. Todos os ônibus de Londres têm espaço no andar de baixo para o carrinho.",
-      trajeto:{ opcoes:[
-        { modo:"onibus", texto:"Ônibus 11 ou 15 na Trafalgar Square (ponto perto da estação Charing Cross), sentido leste, até St Paul's Cathedral." },
-        { modo:"metro", linha:"District", texto:"Metrô: estação Embankment, linha District, sentido leste (Upminster ou Tower Hill), 4 paradas até Mansion House; de lá, 8 minutos a pé até a catedral." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      trajeto:{ modo:"onibus", linha:"Ônibus", texto:"Ônibus 11 ou 15 na Trafalgar Square (ponto perto da estação Charing Cross), sentido leste, até St Paul's Cathedral.", opcoes:[ { modo:"onibus", linha:"Ônibus", texto:"Ônibus 11 ou 15 na Trafalgar Square (ponto perto da estação Charing Cross), sentido leste, até St Paul's Cathedral." },
+        { modo:"metro", linha:"District", texto:"Metrô: estação Embankment, linha District, sentido leste (Upminster ou Tower Hill), 3 paradas até Mansion House; de lá, 8 minutos a pé até a catedral." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 15 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"12h15", titulo:"St Paul's Cathedral, só por fora", mapa:"St Paul's Cathedral, St Paul's Churchyard, London EC4M 8AD",
@@ -720,8 +715,7 @@ dias: [
         "A cúpula e a escadaria da fachada, os melhores ângulos para foto.",
         "A escada em espiral de pedra, por dentro da catedral, virou a escada da Torre de Adivinhação em Harry Potter e o Prisioneiro de Azkaban e em Harry Potter e o Cálice de Fogo."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da catedral até a Millennium Bridge, 6 minutos, descendo pela Peter's Hill." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da catedral até a Millennium Bridge, 6 minutos, descendo pela Peter's Hill.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da catedral até a Millennium Bridge, 6 minutos, descendo pela Peter's Hill." }
       ] } },
 
     { tipo:"passeio", hora:"12h30", titulo:"Millennium Bridge", mapa:"Millennium Bridge, London SE1 9JE",
@@ -731,9 +725,8 @@ dias: [
         "A vista de St Paul's do meio da ponte.",
         "É a ponte que os Comensais da Morte destroem na cena de abertura de Harry Potter e o Enigma do Príncipe."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do lado sul da ponte até o Borough Market, 15 minutos pela Bankside, passando pelo Shakespeare's Globe." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do lado sul da ponte até o Borough Market, 15 minutos pela Bankside, passando pelo Shakespeare's Globe.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do lado sul da ponte até o Borough Market, 15 minutos pela Bankside, passando pelo Shakespeare's Globe." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 6 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"12h50", titulo:"Borough Market e a Stoney Street", mapa:"Borough Market, 8 Southwark St, London SE1 1TL",
@@ -751,10 +744,9 @@ dias: [
         { nome:"Bancone Borough Yards", detalhe:"Arch 213, 18 Stoney St · 4,5 estrelas com mais de 1,1 mil avaliações · massas feitas na casa", preco:"££" },
         { nome:"Arabica Borough Market", detalhe:"3 Rochester Walk · 4,4 estrelas com mais de 2,3 mil avaliações · cozinha do Oriente Médio, pratos para dividir", preco:"£££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Northern", texto:"Metrô: estação London Bridge, linha Northern (ramal Bank), sentido Edgware ou High Barnet, 1 parada até Bank; de lá, 6 minutos a pé até o Leadenhall Market." },
-        { modo:"pe", texto:"A pé: pela London Bridge, com vista para a Tower Bridge, 20 minutos até o Leadenhall Market." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 10 minutos." }
+      trajeto:{ modo:"metro", linha:"Northern", texto:"Metrô: estação London Bridge, linha Northern (ramal Bank), sentido Edgware ou High Barnet, 1 parada até Bank; de lá, 6 minutos a pé até o Leadenhall Market.", opcoes:[ { modo:"metro", linha:"Northern", texto:"Metrô: estação London Bridge, linha Northern (ramal Bank), sentido Edgware ou High Barnet, 1 parada até Bank; de lá, 6 minutos a pé até o Leadenhall Market." },
+        { modo:"pe", linha:"A pé", texto:"A pé: pela London Bridge, com vista para a Tower Bridge, 20 minutos até o Leadenhall Market." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 10 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"14h45", titulo:"Leadenhall Market e a Bull's Head Passage", mapa:"Leadenhall Market, Gracechurch St, London EC3V 1LT",
@@ -765,8 +757,7 @@ dias: [
         "O mercado também aparece como o Beco Diagonal no primeiro filme.",
         "O teto de ferro pintado e as fachadas vitorianas, lindos para fotos."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do Leadenhall Market até o Sky Garden (20 Fenchurch Street), 5 minutos pela Lime Street e pela Fenchurch Street." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do Leadenhall Market até o Sky Garden (20 Fenchurch Street), 5 minutos pela Lime Street e pela Fenchurch Street.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do Leadenhall Market até o Sky Garden (20 Fenchurch Street), 5 minutos pela Lime Street e pela Fenchurch Street." }
       ] } },
 
     { tipo:"passeio", hora:"15h15", titulo:"Sky Garden, o mirante gratuito mais alto de Londres", mapa:"Sky Garden, 1 Sky Garden Walk, London EC3M 8AF",
@@ -777,10 +768,9 @@ dias: [
       ],
       dica:"Entrada gratuita, com horário marcado de 1 hora; nos fins de semana o mirante funciona das 11h às 21h. Reservem 6 ingressos, um para cada pessoa do grupo. Menores de 16 anos entram sempre acompanhados de um adulto. As vagas gratuitas são liberadas toda segunda-feira de manhã, com 3 semanas de antecedência: as de 7 a 13 de dezembro saem na segunda, 16 de novembro, e esgotam rápido.",
       ingresso:{ url:"https://skygarden.london/booking/", texto:"Reservar ingresso gratuito, Sky Garden" },
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"District", texto:"Metrô: estação Monument, linha District (ou Circle), sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 3 paradas até Blackfriars; do metrô, 8 minutos a pé até o hotel." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos até o hotel." },
-        { modo:"pe", texto:"A pé: cerca de 35 minutos pela beira do rio, melhor só se a Laura estiver dormindo no carrinho." }
+      trajeto:{ modo:"metro", linha:"District", texto:"Metrô: estação Monument, linha District (ou Circle), sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 3 paradas até Blackfriars; do metrô, 8 minutos a pé até o hotel.", opcoes:[ { modo:"metro", linha:"District", texto:"Metrô: estação Monument, linha District (ou Circle), sentido oeste (Ealing Broadway, Richmond ou Wimbledon), 3 paradas até Blackfriars; do metrô, 8 minutos a pé até o hotel." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 15 minutos até o hotel." },
+        { modo:"pe", linha:"A pé", texto:"A pé: cerca de 35 minutos pela beira do rio, melhor só se a Laura estiver dormindo no carrinho." }
       ] } },
 
     { tipo:"refeicao", hora:"19h00", titulo:"Jantar perto do hotel",
@@ -790,9 +780,8 @@ dias: [
         { nome:"La Cucina Di Mamma", detalhe:"3J-3K Belvedere Rd · 4,3 estrelas com 2,7 mil avaliações · italiano, massas e pizza, ambiente tranquilo", preco:"££" },
         { nome:"Locale Southbank", detalhe:"County Hall, 3B Belvedere Rd · 4,1 estrelas com mais de 2 mil avaliações · italiano, perto da London Eye", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé, dentro da própria Southbank, de 5 a 10 minutos do hotel." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé, dentro da própria Southbank, de 5 a 10 minutos do hotel.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé, dentro da própria Southbank, de 5 a 10 minutos do hotel." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos." }
       ] } }
   ],
   seChover:"A National Gallery, o Sky Garden e a maior parte do Leadenhall Market são cobertos. Na travessia da Millennium Bridge e na caminhada pela Bankside, levem guarda-chuva; se a chuva apertar, peçam um Bolt entre a Millennium Bridge e o Borough Market.",
@@ -814,9 +803,8 @@ dias: [
       ],
       dica:"Duas horas bastam para os três pontos acima e uma pausa no café do museu.",
       ingresso:{ url:"https://www.nhm.ac.uk/visit", texto:"Reservar horário gratuito, Museu de História Natural" },
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido oeste, 7 paradas até South Kensington; a estação não tem elevador, então o carrinho precisa ser levado pelas escadas; do metrô, o túnel coberto de 5 minutos leva direto à entrada do museu." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 25 minutos, a opção mais fácil com o carrinho." }
+      trajeto:{ modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido oeste, 7 paradas até South Kensington; a estação não tem elevador, então o carrinho precisa ser levado pelas escadas; do metrô, o túnel coberto de 5 minutos leva direto à entrada do museu.", opcoes:[ { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido oeste, 7 paradas até South Kensington; a estação não tem elevador, então o carrinho precisa ser levado pelas escadas; do metrô, o túnel coberto de 5 minutos leva direto à entrada do museu." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 25 minutos, a opção mais fácil com o carrinho." }
       ] } },
 
     { tipo:"refeicao", hora:"13h00", titulo:"Almoço no Churchill Arms",
@@ -826,9 +814,8 @@ dias: [
         { nome:"Cherry On", detalhe:"6 Pembridge Rd · 4,6 estrelas com mais de 1,3 mil avaliações · restaurante de família, cardápio variado, 8 minutos a pé do pub", preco:"££" },
         { nome:"Old Swan", detalhe:"206 Kensington Church St · 4,4 estrelas com mais de 2 mil avaliações · pub inglês, fish and chips e tortas", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Circle", texto:"Metrô: estação South Kensington, linha Circle ou District, sentido Edgware Road ou Paddington, 3 paradas até Notting Hill Gate; do metrô, 5 minutos a pé até o pub." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 12 minutos." }
+      trajeto:{ modo:"metro", linha:"Circle", texto:"Metrô: estação South Kensington, linha Circle ou District, sentido Edgware Road ou Paddington, 3 paradas até Notting Hill Gate; do metrô, 5 minutos a pé até o pub.", opcoes:[ { modo:"metro", linha:"Circle", texto:"Metrô: estação South Kensington, linha Circle ou District, sentido Edgware Road ou Paddington, 3 paradas até Notting Hill Gate; do metrô, 5 minutos a pé até o pub." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 12 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"14h45", titulo:"Harry Potter Shop e as luzes de Natal da Oxford Street", mapa:"Harry Potter Shop, The Ribbon, 134-140 Oxford St, London",
@@ -838,17 +825,15 @@ dias: [
         "A cerveja amanteigada no Caldeirão Furado, dentro da própria loja."
       ],
       dica:"A loja fica entre as estações Oxford Circus e Tottenham Court Road. Desde 24 de outubro não passam ônibus pela Oxford Street entre a Marble Arch e a Oxford Circus, por isso o jeito mais simples de chegar é o metrô.",
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Central", texto:"Metrô: estação Notting Hill Gate, linha Central, sentido Epping, 6 paradas até Tottenham Court Road; a loja fica a 5 minutos a pé." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 20 minutos." }
+      trajeto:{ modo:"metro", linha:"Central", texto:"Metrô: estação Notting Hill Gate, linha Central, sentido Epping, 6 paradas até Tottenham Court Road; a loja fica a 5 minutos a pé.", opcoes:[ { modo:"metro", linha:"Central", texto:"Metrô: estação Notting Hill Gate, linha Central, sentido Epping, 6 paradas até Tottenham Court Road; a loja fica a 5 minutos a pé." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 20 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"16h15", titulo:"Rafael, Alexandre e Vinicius vão para o jogo: Crystal Palace x Manchester United", mapa:"Selhurst Park, Whitehorse Ln, London SE25 6PU",
       texto:"O jogo, pela Premier League, começa às 19h de domingo, em Selhurst Park. Os três saem da Oxford Street às 16h15 para chegar ao estádio com folga, e ainda dá tempo de comer algo por lá antes do apito inicial.",
       dica:"O estádio não aceita bolsas grandes, e as lanchonetes do estádio só aceitam cartão. Na volta, o caminho mais simples é o trem de Norwood Junction até London Bridge e a linha Jubilee até Southwark, a 10 minutos a pé do hotel.",
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Jubilee", texto:"Ida: da Oxford Circus, linha Central até Bond Street (1 parada), baldeação para a linha Jubilee, sentido Stratford, 5 paradas até London Bridge; de lá, trem Southern direto até Norwood Junction e uma caminhada curta até o estádio, cerca de 30 minutos de London Bridge até a porta. O percurso inteiro leva cerca de 1h15." },
-        { modo:"taxi", texto:"Bolt ou Uber da Oxford Street até o estádio: cerca de 1 hora, sujeito ao trânsito de dia de jogo." }
+      trajeto:{ modo:"metro", linha:"Jubilee", texto:"Ida: da Oxford Circus, linha Central até Bond Street (1 parada), baldeação para a linha Jubilee, sentido Stratford, 5 paradas até London Bridge; de lá, trem Southern direto até Norwood Junction e uma caminhada curta até o estádio, cerca de 30 minutos de London Bridge até a porta. O percurso inteiro leva cerca de 1h15.", opcoes:[ { modo:"metro", linha:"Jubilee", texto:"Ida: da Oxford Circus, linha Central até Bond Street (1 parada), baldeação para a linha Jubilee, sentido Stratford, 5 paradas até London Bridge; de lá, trem Southern direto até Norwood Junction e uma caminhada curta até o estádio, cerca de 30 minutos de London Bridge até a porta. O percurso inteiro leva cerca de 1h15." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber da Oxford Street até o estádio: cerca de 1 hora, sujeito ao trânsito de dia de jogo." }
       ] } },
 
     { tipo:"passeio", hora:"16h30", titulo:"Hamleys e a Regent Street iluminada", mapa:"Hamleys, 188-196 Regent St, London W1B 5BT",
@@ -857,9 +842,8 @@ dias: [
         "Os 7 andares de brinquedos, com demonstrações ao vivo em cada piso.",
         "Os anjos iluminados da Regent Street, uma das decorações de Natal mais famosas de Londres."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da loja Harry Potter até a Hamleys, 12 minutos pela Oxford Street e pela Regent Street, já no meio das luzes." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da loja Harry Potter até a Hamleys, 12 minutos pela Oxford Street e pela Regent Street, já no meio das luzes.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da loja Harry Potter até a Hamleys, 12 minutos pela Oxford Street e pela Regent Street, já no meio das luzes." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 6 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"17h45", titulo:"Piccadilly Circus, Goodwin's Court e Covent Garden",  mapa:"Goodwin's Court, St Martin's Lane, London",
@@ -869,8 +853,7 @@ dias: [
         "A Goodwin's Court, escondida em frente à rua St Martin's Lane.",
         "A árvore de Natal na praça do Covent Garden e as bolas espelhadas pendendo do mercado coberto."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da Hamleys até a Piccadilly Circus, 5 minutos; da Piccadilly Circus pela Leicester Square até a Goodwin's Court, 12 minutos; da Goodwin's Court até o Covent Garden, 5 minutos." },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da Hamleys até a Piccadilly Circus, 5 minutos; da Piccadilly Circus pela Leicester Square até a Goodwin's Court, 12 minutos; da Goodwin's Court até o Covent Garden, 5 minutos.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da Hamleys até a Piccadilly Circus, 5 minutos; da Piccadilly Circus pela Leicester Square até a Goodwin's Court, 12 minutos; da Goodwin's Court até o Covent Garden, 5 minutos." },
         { modo:"metro", linha:"Piccadilly", texto:"Metrô, se cansarem: estação Piccadilly Circus, linha Piccadilly, sentido Cockfosters, 2 paradas até Covent Garden." }
       ] } },
 
@@ -881,8 +864,7 @@ dias: [
         { nome:"Bill's Covent Garden", detalhe:"St Martin's Courtyard, Slingsby Pl · 4,6 estrelas com mais de 10 mil avaliações · cardápio variado, bom para criança", preco:"££" },
         { nome:"Banana Tree Covent Garden", detalhe:"34 Wellington St · 4,7 estrelas com mais de 3 mil avaliações · tailandês e asiático, restaurante de família", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"taxi", texto:"Bolt ou Uber de volta ao hotel: cerca de 15 minutos, a opção mais simples à noite, com a Laura no carrinho." },
+      trajeto:{ modo:"taxi", linha:"Carro", texto:"Bolt ou Uber de volta ao hotel: cerca de 15 minutos, a opção mais simples à noite, com a Laura no carrinho.", opcoes:[ { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber de volta ao hotel: cerca de 15 minutos, a opção mais simples à noite, com a Laura no carrinho." },
         { modo:"metro", linha:"Bakerloo", texto:"Metrô: do Covent Garden até a estação Charing Cross, 10 minutos a pé; ali, linha Bakerloo, sentido Elephant & Castle, 2 paradas até Waterloo; baldeação para a linha Jubilee, sentido Stratford, 1 parada até Southwark; do metrô, 10 minutos a pé até o hotel." }
       ] } }
   ],
@@ -903,9 +885,8 @@ dias: [
         "O Victoria Memorial, em frente ao portão principal."
       ],
       dica:"A cerimônia é gratuita e não precisa de ingresso.",
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Jubilee", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stanmore, 3 paradas (Waterloo, Westminster, Green Park) até Green Park; de lá, 8 minutos a pé pelo Green Park até o palácio." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      trajeto:{ modo:"metro", linha:"Jubilee", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stanmore, 3 paradas (Waterloo, Westminster, Green Park) até Green Park; de lá, 8 minutos a pé pelo Green Park até o palácio.", opcoes:[ { modo:"metro", linha:"Jubilee", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stanmore, 3 paradas (Waterloo, Westminster, Green Park) até Green Park; de lá, 8 minutos a pé pelo Green Park até o palácio." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 15 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"11h45", titulo:"St James's Park até Westminster", mapa:"St James's Park, London SW1A 2BJ",
@@ -914,9 +895,8 @@ dias: [
         "Os pelicanos do lago.",
         "A vista do Palácio de Buckingham da ponte sobre o lago."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do palácio até a Horse Guards Parade, 15 minutos pelo parque; de lá até a região de Westminster, mais 10 minutos pela Whitehall." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 8 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do palácio até a Horse Guards Parade, 15 minutos pelo parque; de lá até a região de Westminster, mais 10 minutos pela Whitehall.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do palácio até a Horse Guards Parade, 15 minutos pelo parque; de lá até a região de Westminster, mais 10 minutos pela Whitehall." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 8 minutos." }
       ] } },
 
     { tipo:"refeicao", hora:"12h45", titulo:"Almoço perto de Westminster",
@@ -926,8 +906,7 @@ dias: [
         { nome:"Sapori", detalhe:"60 Horseferry Rd · 4,6 estrelas com 1,6 mil avaliações · italiano, perto da Lambeth Bridge", preco:"££" },
         { nome:"Old Queen Street Cafe", detalhe:"6 Old Queen St · 4,5 estrelas com quase 1 mil avaliações · cardápio britânico e francês, serve o dia todo", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: todas ficam a menos de 10 minutos da Abadia de Westminster." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: todas ficam a menos de 10 minutos da Abadia de Westminster.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: todas ficam a menos de 10 minutos da Abadia de Westminster." }
       ] } },
 
     { tipo:"passeio", hora:"13h45", titulo:"Abadia de Westminster", mapa:"Westminster Abbey, 20 Deans Yd, London SW1P 3PA",
@@ -939,8 +918,7 @@ dias: [
       ],
       dica:"Ingresso de £ 32 por adulto; crianças de 6 a 17 anos pagam £ 14, e a Laura, com 3 anos, entra de graça. A entrada de visitantes vai das 9h30 às 15h30, então o horário das 13h45 ainda deixa folga. Pagamento e horário marcado pelo site oficial.",
       ingresso:{ url:"https://tickets.westminster-abbey.org/", texto:"Comprar ingresso, Westminster Abbey" },
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do almoço até a Abadia, menos de 10 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do almoço até a Abadia, menos de 10 minutos.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do almoço até a Abadia, menos de 10 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"15h20", titulo:"Big Ben, Parlamento e Westminster Bridge", mapa:"Houses of Parliament, London SW1A 0AA",
@@ -949,10 +927,9 @@ dias: [
         "A foto clássica do Big Ben da Westminster Bridge, com um ônibus vermelho passando.",
         "A estátua de Boadiceia e sua carruagem, na ponta da ponte."
       ],
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Jubilee", texto:"Metrô para a loja Fortnum & Mason: estação Westminster, linha Jubilee, sentido Stanmore, 1 parada até Green Park; de lá, 8 minutos a pé pela Piccadilly." },
-        { modo:"pe", texto:"A pé: da Westminster Bridge até a Fortnum & Mason, 25 minutos pelo St James's Park e pelo Green Park." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 10 minutos." }
+      trajeto:{ modo:"metro", linha:"Jubilee", texto:"Metrô para a loja Fortnum & Mason: estação Westminster, linha Jubilee, sentido Stanmore, 1 parada até Green Park; de lá, 8 minutos a pé pela Piccadilly.", opcoes:[ { modo:"metro", linha:"Jubilee", texto:"Metrô para a loja Fortnum & Mason: estação Westminster, linha Jubilee, sentido Stanmore, 1 parada até Green Park; de lá, 8 minutos a pé pela Piccadilly." },
+        { modo:"pe", linha:"A pé", texto:"A pé: da Westminster Bridge até a Fortnum & Mason, 25 minutos pelo St James's Park e pelo Green Park." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 10 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"16h30", titulo:"Fortnum & Mason, em Piccadilly", mapa:"Fortnum & Mason, 181 Piccadilly, London W1A 1ER",
@@ -960,9 +937,8 @@ dias: [
       imperdivel:[
         "O térreo, com chás, biscoitos, geleias e chocolates em embalagem de presente."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da Fortnum & Mason até a Carnaby Street, 12 minutos pela Piccadilly e pela Regent Street, já entre as luzes de Natal." },
-        { modo:"metro", linha:"Piccadilly", texto:"Metrô: estação Piccadilly Circus, linha Bakerloo, sentido Harrow & Wealdstone, 1 parada até Oxford Circus; a Carnaby Street fica a 3 minutos a pé." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da Fortnum & Mason até a Carnaby Street, 12 minutos pela Piccadilly e pela Regent Street, já entre as luzes de Natal.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da Fortnum & Mason até a Carnaby Street, 12 minutos pela Piccadilly e pela Regent Street, já entre as luzes de Natal." },
+        { modo:"metro", linha:"Bakerloo", texto:"Metrô: estação Piccadilly Circus, linha Bakerloo, sentido Harrow & Wealdstone, 1 parada até Oxford Circus; a Carnaby Street fica a 3 minutos a pé." }
       ] } },
 
     { tipo:"passeio", hora:"17h30", titulo:"Carnaby Street e House of MinaLima", mapa:"House of MinaLima, 157 Wardour St, London W1F 8WQ",
@@ -973,9 +949,8 @@ dias: [
         "A loja do térreo, com réplicas de cartas de Hogwarts e cadernos, boas para lembrança."
       ],
       dica:"A House of MinaLima abre todos os dias das 11h às 18h45, então o horário das 17h30 ainda deixa 1 hora de visita.",
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da Carnaby Street até a Wardour Street, 10 minutos por Ganton Street e Great Marlborough Street." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 6 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da Carnaby Street até a Wardour Street, 10 minutos por Ganton Street e Great Marlborough Street.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da Carnaby Street até a Wardour Street, 10 minutos por Ganton Street e Great Marlborough Street." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 6 minutos." }
       ] } },
 
     { tipo:"refeicao", hora:"19h00", titulo:"Jantar na Kingly Court, em Soho",
@@ -985,8 +960,7 @@ dias: [
         { nome:"Bleecker Burger Soho", detalhe:"33 Old Compton St · 4,7 estrelas com mais de 3 mil avaliações · hambúrguer, poucas mesas, pedido no balcão", preco:"££" },
         { nome:"Junk Soho", detalhe:"49 Old Compton St · 4,5 estrelas com mais de 3,3 mil avaliações · hambúrguer smash, a 10 minutos a pé da Kingly Court", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"taxi", texto:"Bolt ou Uber de volta ao hotel: cerca de 20 minutos." },
+      trajeto:{ modo:"taxi", linha:"Carro", texto:"Bolt ou Uber de volta ao hotel: cerca de 20 minutos.", opcoes:[ { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber de volta ao hotel: cerca de 20 minutos." },
         { modo:"metro", linha:"Jubilee", texto:"Metrô: estação Bond Street, linha Jubilee, sentido Stratford, 4 paradas (Green Park, Westminster, Waterloo, Southwark) até Southwark; do metrô, 10 minutos a pé até o hotel. De Soho até a Bond Street, 15 minutos a pé pela Oxford Street." }
       ] } }
   ],
@@ -1009,9 +983,8 @@ dias: [
       ],
       dica:"Ingresso de £ 38 por adulto, £ 19 para crianças de 5 a 15 anos, grátis até 4 anos (a Laura entra de graça). Aberto às terças das 9h às 16h30, última entrada às 15h. O chão da fortaleza é de pedra irregular, e há estacionamento de carrinho na entrada.",
       ingresso:{ url:"https://www.hrp.org.uk/tower-of-london/visit-us/", texto:"Comprar ingresso, Tower of London" },
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido leste (Upminster, Tower Hill ou Aldgate), 4 paradas até Tower Hill; a estação tem acesso sem escada até a rua, e a entrada da Torre fica a 5 minutos a pé." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 15 minutos." }
+      trajeto:{ modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido leste (Upminster, Tower Hill ou Aldgate), 4 paradas até Tower Hill; a estação tem acesso sem escada até a rua, e a entrada da Torre fica a 5 minutos a pé.", opcoes:[ { modo:"metro", linha:"District", texto:"Metrô: estação Blackfriars, linha District ou Circle, sentido leste (Upminster, Tower Hill ou Aldgate), 4 paradas até Tower Hill; a estação tem acesso sem escada até a rua, e a entrada da Torre fica a 5 minutos a pé." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 15 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"12h15", titulo:"Tower Bridge, por fora", mapa:"Tower Bridge, Tower Bridge Rd, London SE1 2UP",
@@ -1020,8 +993,7 @@ dias: [
         "A foto da ponte do lado norte, perto da Torre de Londres.",
         "A travessia a pé de uma ponta à outra, para chegar ao lado sul."
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da Torre de Londres até a Tower Bridge, 5 minutos; da ponte até o almoço, mais 5 minutos pelo lado sul." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da Torre de Londres até a Tower Bridge, 5 minutos; da ponte até o almoço, mais 5 minutos pelo lado sul.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da Torre de Londres até a Tower Bridge, 5 minutos; da ponte até o almoço, mais 5 minutos pelo lado sul." }
       ] } },
 
     { tipo:"refeicao", hora:"12h45", titulo:"Almoço no Tower Bridge Collective",
@@ -1031,9 +1003,8 @@ dias: [
         { nome:"Browns Butlers Wharf", detalhe:"26 Shad Thames · 4,4 estrelas com mais de 2,9 mil avaliações · cozinha britânica, vista do Tâmisa", preco:"£££" },
         { nome:"Tower Bridge Kitchen", detalhe:"224A Tower Bridge Rd · 4,4 estrelas com mais de 800 avaliações · mediterrâneo, pizza e pratos simples", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do Tower Bridge Collective até o Tower Pier, onde sai o barco, 10 minutos atravessando a Tower Bridge de volta ao lado norte." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do Tower Bridge Collective até o Tower Pier, onde sai o barco, 10 minutos atravessando a Tower Bridge de volta ao lado norte.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do Tower Bridge Collective até o Tower Pier, onde sai o barco, 10 minutos atravessando a Tower Bridge de volta ao lado norte." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos." }
       ] } },
 
     { tipo:"passeio", hora:"14h15", titulo:"Barco Uber Boat até North Greenwich", mapa:"Tower Millennium Pier, Lower Thames St, London EC3N 4DT",
@@ -1044,8 +1015,7 @@ dias: [
       ],
       dica:"O ingresso combinado, com barco de ida e teleférico de ida e volta, sai a partir de £ 22,80 por adulto e está à venda no site oficial, na opção de bilhete conjunto. Crianças menores de 5 anos viajam de graça, e os píeres de Tower e de North Greenwich aceitam carrinho.",
       ingresso:{ url:"https://booking.thamesclippers.com/explore-london/best-tickets", texto:"Comprar ingresso combinado, Uber Boat e Cable Car" },
-      trajeto:{ opcoes:[
-        { modo:"onibus", texto:"Barco: Tower Pier até North Greenwich Pier, cerca de 30 minutos; do píer, o teleférico fica a 3 minutos a pé." },
+      trajeto:{ modo:"onibus", linha:"Barco", texto:"Barco: Tower Pier até North Greenwich Pier, cerca de 30 minutos; do píer, o teleférico fica a 3 minutos a pé.", opcoes:[ { modo:"onibus", linha:"Barco", texto:"Barco: Tower Pier até North Greenwich Pier, cerca de 30 minutos; do píer, o teleférico fica a 3 minutos a pé." },
         { modo:"metro", linha:"Jubilee", texto:"Metrô, se preferirem: estação London Bridge, linha Jubilee, sentido Stratford, 4 paradas (Bermondsey, Canada Water, Canary Wharf, North Greenwich) até North Greenwich; de Tower Hill, a conexão para London Bridge leva 12 minutos a pé." }
       ] } },
 
@@ -1056,9 +1026,8 @@ dias: [
         "A O2 Arena, o domo branco ao lado do terminal, visto de cima."
       ],
       dica:"O teleférico funciona das 7h às 21h às terças. Com a ida e a volta incluídas no ingresso combinado, o passeio leva cerca de 30 minutos no total. Crianças menores de 5 anos viajam de graça, acompanhadas de um adulto.",
-      trajeto:{ opcoes:[
-        { modo:"metro", linha:"Jubilee", texto:"Metrô de volta ao hotel: estação North Greenwich (tem elevador), linha Jubilee, sentido Stanmore, 5 paradas até Southwark; do metrô, 10 minutos a pé até o hotel." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 25 minutos até o hotel." }
+      trajeto:{ modo:"metro", linha:"Jubilee", texto:"Metrô de volta ao hotel: estação North Greenwich (tem elevador), linha Jubilee, sentido Stanmore, 5 paradas até Southwark; do metrô, 10 minutos a pé até o hotel.", opcoes:[ { modo:"metro", linha:"Jubilee", texto:"Metrô de volta ao hotel: estação North Greenwich (tem elevador), linha Jubilee, sentido Stanmore, 5 paradas até Southwark; do metrô, 10 minutos a pé até o hotel." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 25 minutos até o hotel." }
       ] } },
 
     { tipo:"refeicao", hora:"18h30", titulo:"Jantar perto do hotel",
@@ -1068,9 +1037,8 @@ dias: [
         { nome:"Art Yard Bar & Kitchen", detalhe:"2 Blackfriars Rd · 4,2 estrelas com 381 avaliações · cozinha europeia, a 3 minutos a pé do hotel", preco:"££" },
         { nome:"Caravan London Bridge", detalhe:"30 Great Guildford St · 4,5 estrelas com mais de 3 mil avaliações · cardápio variado, bom para criança", preco:"££" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: do hotel até o restaurante, de 5 a 15 minutos." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: do hotel até o restaurante, de 5 a 15 minutos.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: do hotel até o restaurante, de 5 a 15 minutos." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos." }
       ] } }
   ],
   seChover:"A Torre de Londres tem as Joias da Coroa e a Torre Branca cobertas; o barco tem cabines fechadas com aquecimento. Na fila da Torre e no teleférico (que fecha com vento muito forte), levem guarda-chuva.",
@@ -1091,17 +1059,15 @@ dias: [
         "A fachada gótica de St Pancras, ao lado: foi ela, e não a estação King's Cross, que serviu de exterior de 'King's Cross' no primeiro filme e na cena do Ford Anglia voador em Harry Potter e a Câmara Secreta."
       ],
       dica:"A van do transfer, reservada com 1 hora de espera, aguarda em King's Cross com as malas dentro, enquanto o grupo faz a foto: assim ninguém carrega bagagem na fila.",
-      trajeto:{ opcoes:[
-        { modo:"taxi", texto:"Van do transfer: do hotel até King's Cross, cerca de 25 minutos." },
-        { modo:"metro", linha:"Northern", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stratford, 1 parada até London Bridge; baldeação para a linha Northern, ramal Bank, sentido High Barnet, até Euston; King's Cross fica a 12 minutos a pé. Com 3 malas grandes e o carrinho, a van é a opção mais simples." }
+      trajeto:{ modo:"taxi", linha:"Carro", texto:"Van do transfer: do hotel até King's Cross, cerca de 25 minutos.", opcoes:[ { modo:"taxi", linha:"Carro", texto:"Van do transfer: do hotel até King's Cross, cerca de 25 minutos." },
+        { modo:"metro", linha:"Northern", texto:"Metrô: estação Southwark, linha Jubilee, sentido Stratford, 1 parada até London Bridge; baldeação para a linha Northern, ramal Bank, sentido High Barnet, até King's Cross St Pancras, que já é dentro da própria estação King's Cross. Com 3 malas grandes e o carrinho, a van é a opção mais simples." }
       ] } },
 
     { tipo:"passeio", hora:"10h15", titulo:"Ida até a estação St Pancras", mapa:"London St Pancras International, Euston Rd, London N1C 4QP",
       texto:"O Eurostar sai às 12h31. Como é viagem internacional, a recomendação é chegar à estação com 1h30 de antecedência, por volta das 11h. É ali mesmo, dentro de St Pancras, que passa o controle de fronteira francês (não em Paris), então reservem tempo para essa fila também.",
       dica:"Não existe despacho de bagagem no Eurostar: cada um leva as próprias malas até o assento.",
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: de King's Cross até St Pancras, 4 minutos, na rua em frente." },
-        { modo:"taxi", texto:"Van do transfer: 3 minutos, com as malas." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: de King's Cross até St Pancras, 4 minutos, na rua em frente.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: de King's Cross até St Pancras, 4 minutos, na rua em frente." },
+        { modo:"taxi", linha:"Carro", texto:"Van do transfer: 3 minutos, com as malas." }
       ] } },
 
     { tipo:"refeicao", hora:"10h45", titulo:"Almoço antes do embarque, em St Pancras",
@@ -1119,8 +1085,7 @@ dias: [
     { tipo:"passeio", hora:"15h59", titulo:"Transfer de carro direto até a hospedagem em Serris", mapa:"5bis Cours de l'Elbe, Serris, 77700",
       texto:"Transfer privado já reservado, saindo direto da Gare du Nord até a hospedagem perto da Disney, sem passar pelo centro de Paris.",
       dica:"Como vocês chegam já no fim da tarde, o resto do dia fica livre para se instalar e descansar, sem programação de parque hoje.",
-      trajeto:{ opcoes:[
-        { modo:"taxi", texto:"Van do transfer: de Gare du Nord até Serris, cerca de 50 a 60 minutos conforme o trânsito." },
+      trajeto:{ modo:"taxi", linha:"Carro", texto:"Van do transfer: de Gare du Nord até Serris, cerca de 50 a 60 minutos conforme o trânsito.", opcoes:[ { modo:"taxi", linha:"Carro", texto:"Van do transfer: de Gare du Nord até Serris, cerca de 50 a 60 minutos conforme o trânsito." },
         { modo:"trem", linha:"RER A", texto:"RER (só como referência, o transfer já está reservado): da Gare du Nord, RER B ou D até Châtelet–Les Halles (1 parada, 4 minutos); ali, RER A sentido Marne-la-Vallée–Chessy até Val d'Europe, cerca de 40 minutos." }
       ] } },
 
@@ -1131,9 +1096,8 @@ dias: [
         { nome:"Italian Queen, Val d'Europe", detalhe:"3 Place de Toscane · 4,5 estrelas com mais de 4 mil avaliações · buffet italiano, rápido e em conta", preco:"€€" },
         { nome:"Factory & Co, Val d'Europe", detalhe:"14 Cours du Danube · 4,4 estrelas com mais de 8,5 mil avaliações · hambúrguer artesanal, serviço por totem", preco:"€€" }
       ],
-      trajeto:{ opcoes:[
-        { modo:"pe", texto:"A pé: da hospedagem até o Val d'Europe, cerca de 10 a 15 minutos." },
-        { modo:"taxi", texto:"Bolt ou Uber: cerca de 5 minutos." }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"A pé: da hospedagem até o Val d'Europe, cerca de 10 a 15 minutos.", opcoes:[ { modo:"pe", linha:"A pé", texto:"A pé: da hospedagem até o Val d'Europe, cerca de 10 a 15 minutos." },
+        { modo:"taxi", linha:"Carro", texto:"Bolt ou Uber: cerca de 5 minutos." }
       ] } }
   ],
   seChover:"A estação King's Cross, a loja Harry Potter, St Pancras e o Eurostar são todos cobertos, sem exposição à chuva.",
@@ -1149,7 +1113,7 @@ dias: [
     { tipo:"passeio", hora:"08h30", titulo:"Ida até a entrada dos parques", mapa:"Disneyland Paris, Boulevard de Parc, 77700 Chessy",
       texto:"Os dois parques abrem às 9h nesta data e fecham às 22h. O ingresso de vocês vale para os dois parques no mesmo dia (a confirmar contra o voucher real), então dá pra circular entre Disneyland Park e Disney Adventure World sem comprar nada a mais.",
       dica:"Sem hospedagem oficial da Disney, não há Extra Magic Time (entrada antecipada); cheguem perto da abertura para aproveitar o início do dia com fila menor.",
-      trajeto:{ modo:"onibus", texto:"Da hospedagem até a entrada dos parques: ônibus do Val d'Europe até Disney, ou cerca de 20 a 25 minutos a pé." } },
+      trajeto:{ modo:"onibus", linha:"Ônibus", texto:"Da hospedagem até a entrada dos parques: ônibus do Val d'Europe até Disney, ou cerca de 20 a 25 minutos a pé." } },
 
     { tipo:"passeio", hora:"09h00", titulo:"Disneyland Park: Fantasyland e as atrações clássicas", mapa:"Disneyland Park, 77700 Chessy",
       texto:"O parque mais clássico, com o castelo da Bela Adormecida, Peter Pan's Flight, It's a Small World e as atrações de família mais tranquilas, boas para o grupo todo, inclusive a filha de vocês.",
@@ -1197,7 +1161,7 @@ dias: [
         "As atrações temáticas de Universo Marvel e Pixar, se o grupo topar algo com mais adrenalina."
       ],
       dica:"Padrasto não curte atividade radical: as atrações mais intensas desse parque (tipo montanhas-russas de Marvel) são opcionais, dá pra pular sem perder o resto do parque.",
-      trajeto:{ modo:"onibus", texto:"Da hospedagem até a entrada dos parques: ônibus do Val d'Europe até Disney, ou cerca de 20 a 25 minutos a pé, do mesmo jeito que no dia anterior." } },
+      trajeto:{ modo:"onibus", linha:"Ônibus", texto:"Da hospedagem até a entrada dos parques: ônibus do Val d'Europe até Disney, ou cerca de 20 a 25 minutos a pé, do mesmo jeito que no dia anterior." } },
 
     { tipo:"refeicao", hora:"12h30", titulo:"Almoço dentro do parque",
       nota:"De novo, serviço rápido para não perder tempo de fila, avisando sobre a alergia a camarão.",
@@ -1234,7 +1198,7 @@ dias: [
       imperdivel:[
         "A La Vallée Village, o outlet de grife a poucos minutos do shopping principal, para quem gosta de comprar com desconto."
       ],
-      trajeto:{ modo:"pe", texto:"Da hospedagem até o shopping, a pé, cerca de 10 a 15 minutos." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Da hospedagem até o shopping, a pé, cerca de 10 a 15 minutos." } },
 
     { tipo:"refeicao", hora:"13h00", titulo:"Almoço no Val d'Europe",
       nota:"Praça de alimentação do próprio shopping, com várias opções lado a lado.",
@@ -1267,7 +1231,7 @@ dias: [
     { tipo:"passeio", hora:"10h15", titulo:"Transfer direto até o hotel em Paris", mapa:"Aparthotel Adagio Paris Centre Tour Eiffel, 14 Rue du Théâtre, 75015 Paris",
       texto:"Transfer privado já reservado, saindo da hospedagem em Serris direto até o hotel em Paris, sem precisar passar pelo centro primeiro.",
       dica:"O check-in do Adagio é a partir das 15h. Como a viagem de carro é de cerca de uma hora, sobra a manhã e o início da tarde livres, bom para malas e um lanche antes de sair.",
-      trajeto:{ modo:"carro", texto:"De Serris até o hotel em Paris, de van: cerca de 50 a 60 minutos conforme o trânsito." } },
+      trajeto:{ modo:"carro", linha:"Van", texto:"De Serris até o hotel em Paris, de van: cerca de 50 a 60 minutos conforme o trânsito." } },
 
     { tipo:"passeio", hora:"15h30", titulo:"Cruzeiro no Sena, Vedettes de Paris, com todo mundo junto", mapa:"Port de Suffren, 75007 Paris",
       texto:"Depois do check-in, a família toda embarca junto no cruzeiro clássico pela Vedettes de Paris: uma hora navegando pelo Sena, passando pelos principais monumentos, com guia bilíngue francês/inglês a bordo (o aplicativo gratuito da empresa também tem comentários em espanhol, italiano, alemão e holandês).",
@@ -1285,7 +1249,7 @@ dias: [
         "A pista de gelo e o carrossel, ótimos para a filha de vocês.",
         "A Torre Eiffel cintilando, vista de dentro do próprio mercado, a cada hora cheia depois do anoitecer."
       ],
-      trajeto:{ modo:"pe", texto:"Do embarque das Vedettes de Paris até o mercado: a pé, poucos minutos, a pista e as barracas ficam literalmente ao lado do Port de Suffren." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Do embarque das Vedettes de Paris até o mercado: a pé, poucos minutos, a pista e as barracas ficam literalmente ao lado do Port de Suffren." } },
 
     { tipo:"refeicao", hora:"19h00", titulo:"Primeiro jantar em Paris, em terra, perto da Torre Eiffel",
       nota:"Depois do cruzeiro e do mercado, jantar ali mesmo perto, sem precisar se deslocar de novo. Confirmem sempre a ausência de camarão por causa da alergia do seu marido.",
@@ -1294,7 +1258,7 @@ dias: [
         { nome:"Le Café du Commerce", detalhe:"51 Rue du Commerce, 15º arrondissement · 4,5 estrelas com 8,6 mil avaliações · bistrô clássico", preco:"€€" },
         { nome:"L'Abreuvoir", detalhe:"24 Rue du Dr Finlay, 15º arrondissement · 4,6 estrelas com 4,4 mil avaliações · bistrô de bairro, clima bem família", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé da região da Torre Eiffel, ou um Bolt curto de volta ao hotel depois." } }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Todas a poucos minutos a pé da região da Torre Eiffel, ou um Bolt curto de volta ao hotel depois." } }
   ],
   seChover:"O cruzeiro é por dentro do barco, coberto. O mercado de Natal é ao ar livre; levem guarda-chuva e casaco.",
   seSobrarEnergia:"Se sobrar energia depois do jantar, uma volta pela Ponte de Bir-Hakeim, a poucos minutos do Port de Suffren, rende fotos da Torre Eiffel iluminada, que cintila a cada hora cheia depois do anoitecer."
@@ -1311,7 +1275,7 @@ dias: [
       imperdivel:[
         "A vista de frente da Torre Eiffel, da esplanada do Trocadéro, o ângulo mais clássico de Paris."
       ],
-      trajeto:{ modo:"metro", linha:"6 + 1", texto:"Do Trocadéro até o Louvre, para a segunda parte do ensaio: estação Trocadéro, linha 6, sentido Nation, até Charles de Gaulle-Étoile, baldeação para a linha 1, sentido Château de Vincennes, até Palais Royal - Musée du Louvre." } },
+      trajeto:{ modo:"metro", linha:"6 + 1", texto:"Do Trocadéro até o Louvre, para a segunda parte do ensaio: estação Trocadéro, linha 6, sentido Charles de Gaulle-Étoile, 3 paradas até o final da linha; baldeação para a linha 1, sentido Château de Vincennes, até Palais Royal - Musée du Louvre." } },
 
     { tipo:"passeio", hora:"11h00", titulo:"Ensaio fotográfico: Pirâmide do Louvre", mapa:"Musée du Louvre, Rue de Rivoli, 75001 Paris",
       texto:"Segunda parte do ensaio, com a Pirâmide de vidro do Louvre como plano de fundo, um dos cartões-postais mais reconhecíveis de Paris.",
@@ -1343,7 +1307,7 @@ dias: [
       imperdivel:[
         "A fachada neoclássica, parecendo um templo grego, por fora."
       ],
-      trajeto:{ modo:"pe", texto:"Da Ópera até a Madeleine: a pé pela Rue de la Paix e Rue Tronchet, cerca de 10 minutos." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Da Ópera até a Madeleine: a pé pela Rue de la Paix e Rue Tronchet, cerca de 10 minutos." } },
 
     { tipo:"passeio", hora:"15h30", titulo:"Place de la Concorde e mercado de Natal das Tulherias", mapa:"Jardin des Tuileries, 75001 Paris",
       texto:"Seguindo a pé até a Place de la Concorde, com o Obelisco egípcio no meio, e dali direto para o Jardin des Tuileries, onde fica a Magie de Noël, o mercado de Natal mais tradicional de Paris (de 14 de novembro de 2026 a 3 de janeiro de 2027), entre o Louvre e a Concorde.",
@@ -1352,7 +1316,7 @@ dias: [
         "A roda-gigante do mercado de Natal das Tulherias, uma das maiores da Europa.",
         "Os cerca de 95 chalés de madeira maciça do mercado, com comida e artesanato."
       ],
-      trajeto:{ modo:"pe", texto:"Da Madeleine até a Concorde: cerca de 10 minutos a pé. Da Concorde até o Jardin des Tuileries: a entrada é logo ali." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Da Madeleine até a Concorde: cerca de 10 minutos a pé. Da Concorde até o Jardin des Tuileries: a entrada é logo ali." } },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Jantar perto do hotel",
       nota:"De volta ao 15º arrondissement para o jantar, fechando o dia perto do hotel.",
@@ -1384,7 +1348,7 @@ dias: [
         "A cúpula branca da basílica, visível de muitos pontos da cidade."
       ],
       dica:"Ingresso: € 8 por adulto, € 4,50 criança de 3 a 11 anos. Todo dia, das 10h às 18h, saídas a cada 30 minutos, embarque em Place Blanche ou Place du Tertre.",
-      trajeto:{ modo:"trem", texto:"Trenzinho turístico, cerca de 15 minutos de Place Blanche até perto da Place du Tertre." } },
+      trajeto:{ modo:"trem", linha:"Trem", texto:"Trenzinho turístico, cerca de 15 minutos de Place Blanche até perto da Place du Tertre." } },
 
     { tipo:"passeio", hora:"10h30", titulo:"Sacré-Cœur e Place du Tertre", mapa:"Place du Tertre, 75018 Paris",
       texto:"Tempo livre para visitar a basílica por dentro (entrada gratuita na nave) e passear pela Place du Tertre, a praça dos pintores de rua de Montmartre.",
@@ -1401,11 +1365,11 @@ dias: [
         { nome:"Chez Eugène", detalhe:"17 Pl. du Tertre · 4,5 estrelas com 2,5 mil avaliações · restaurante francês, clima de bairro", preco:"€€€" },
         { nome:"La Mère Catherine", detalhe:"6 Pl. du Tertre · 4,1 estrelas com 3,6 mil avaliações · restaurante histórico, onde nasceu a palavra 'bistrô'", preco:"€€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas na própria Place du Tertre." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Todas na própria Place du Tertre." } },
 
     { tipo:"passeio", hora:"13h30", titulo:"Descida de trenzinho e deslocamento para Le Marais", mapa:"Place des Vosges, 75004 Paris",
       texto:"Trenzinho de volta até Place Blanche (cerca de 25 a 30 minutos, mais devagar que a subida), e dali de metrô até Le Marais.",
-      trajeto:{ modo:"metro", linha:"2 + 4", texto:"De Place Blanche até Le Marais: estação Blanche, linha 2, sentido Nation, 3 paradas até Barbès-Rochechouart; baldeação para a linha 4, sentido Montrouge, 5 paradas até Saint-Paul. Da estação, o coração do Marais fica a 3 minutos a pé." } },
+      trajeto:{ modo:"metro", linha:"2 + 4", texto:"De Place Blanche até Le Marais: estação Blanche, linha 2, sentido Nation, 3 paradas até Barbès-Rochechouart; baldeação para a linha 4, sentido Montrouge, 8 paradas até Châtelet; baldeação para a linha 1, sentido Château de Vincennes, 2 paradas até Saint-Paul. Da estação, o coração do Marais fica a 3 minutos a pé." } },
 
     { tipo:"passeio", hora:"14h30", titulo:"Place des Vosges, Rue des Francs-Bourgeois e Jardin Anne Frank", mapa:"Place des Vosges, 75004 Paris",
       texto:"A praça mais antiga planejada de Paris, cercada de arcadas, seguida de uma caminhada pela Rue des Francs-Bourgeois, cheia de lojas e cafés, terminando no pequeno e tranquilo Jardin Anne Frank.",
@@ -1413,7 +1377,7 @@ dias: [
         "As arcadas e o jardim central da Place des Vosges, onde Victor Hugo morou.",
         "O Jardin Anne Frank, um jardim pequeno e menos conhecido, bom para a filha de vocês correr um pouco."
       ],
-      trajeto:{ modo:"pe", texto:"Tudo a pé, dentro do próprio Marais: Place des Vosges, Rue des Francs-Bourgeois e o jardim ficam a poucos minutos uns dos outros." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Tudo a pé, dentro do próprio Marais: Place des Vosges, Rue des Francs-Bourgeois e o jardim ficam a poucos minutos uns dos outros." } },
 
     { tipo:"refeicao", hora:"19h30", titulo:"Jantar em Le Marais",
       nota:"Fechando o dia ali mesmo no Marais, sem precisar voltar ao hotel para jantar. Confirmem sempre a ausência de camarão.",
@@ -1422,10 +1386,10 @@ dias: [
         { nome:"Camille", detalhe:"24 Rue des Francs Bourgeois · 4,3 estrelas com mais de 2,2 mil avaliações · bistrô de bairro", preco:"€€€" },
         { nome:"Joli", detalhe:"16 Rue des Francs Bourgeois, no jardim do Museu Carnavalet · 4,6 estrelas com 2,4 mil avaliações · ambiente ao ar livre no jardim do museu", preco:"€€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas dentro do próprio Marais, a poucos minutos umas das outras." } }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Todas dentro do próprio Marais, a poucos minutos umas das outras." } }
   ],
   seChover:"A basílica e o interior das Galeries são cobertos. No Marais, a Rue des Francs-Bourgeois tem trechos com arcadas para se abrigar.",
-  seSobrarEnergia:"Como o passeio de barco já reuniu todo mundo no dia 20, hoje não ficou nada marcado à noite para o aniversário de vocês dois. Se sobrar uma horinha depois do jantar, a Place des Vosges à noite, com as arcadas iluminadas, é um passeio tranquilo só para vocês três, Aline, Rafael e Laura, antes de voltar ao hotel."
+  seSobrarEnergia:"Pra fechar o aniversário de vocês dois, se sobrar uma horinha depois do jantar: atravessem a Pont Marie até a Île Saint-Louis, a poucos minutos da Place des Vosges. As ruas de paralelepípedo e os prédios do século 17 ficam praticamente vazios à noite, e a vista de Notre-Dame iluminada, do Pont Saint-Louis, fecha bem o dia antes de voltar ao hotel."
 },
 
 {
@@ -1441,7 +1405,7 @@ dias: [
         "A cúpula e a fachada Art Nouveau do prédio, construído para a Exposição Universal de 1900."
       ],
       dica:"Aberto de terça a domingo, 10h às 18h (sexta e sábado até 20h), fechado às segundas. Entrada gratuita na coleção permanente.",
-      trajeto:{ modo:"metro", linha:"10 + 1", texto:"Do hotel até o Petit Palais: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 8, sentido Créteil, até Concorde, baldeação para a linha 1, sentido Château de Vincennes, até Champs-Élysées - Clemenceau." } },
+      trajeto:{ modo:"metro", linha:"10 + 1", texto:"Do hotel até o Petit Palais: estação Avenue Émile Zola, linha 10, até La Motte-Picquet-Grenelle, baldeação para a linha 8, sentido Créteil, até Concorde, baldeação para a linha 1, sentido La Défense, até Champs-Élysées - Clemenceau." } },
 
     { tipo:"passeio", hora:"11h30", titulo:"Pont Alexandre III", mapa:"Pont Alexandre III, 75008 Paris",
       texto:"A ponte mais ornamentada de Paris, com estátuas douradas e candelabros Art Nouveau, literalmente entre o Petit Palais e o Grand Palais.",
@@ -1449,7 +1413,7 @@ dias: [
         "As estátuas douradas no alto dos quatro pilares da ponte.",
         "A vista dos Inválidos de um lado e dos Champs-Élysées do outro."
       ],
-      trajeto:{ modo:"pe", texto:"Do Petit Palais até a ponte: a pé, menos de 5 minutos." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Do Petit Palais até a ponte: a pé, menos de 5 minutos." } },
 
     { tipo:"refeicao", hora:"12h30", titulo:"Almoço perto do Grand Palais",
       nota:"Antes da patinação, um almoço na região, sem camarão nos pratos citados.",
@@ -1467,7 +1431,7 @@ dias: [
       ],
       dica:"Sessão da tarde (14h às 19h): € 32 por adulto, € 18 criança. Ingresso com horário marcado, obrigatório comprar com antecedência no site oficial, grandpalais.fr.",
       ingresso:{ url:"https://www.grandpalais.fr", texto:"Comprar ingresso, Grand Palais des Glaces" },
-      trajeto:{ modo:"pe", texto:"Do Petit Palais/Pont Alexandre III até o Grand Palais: a pé, cerca de 5 minutos." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Do Petit Palais/Pont Alexandre III até o Grand Palais: a pé, cerca de 5 minutos." } },
 
     { tipo:"passeio", hora:"17h00", titulo:"Mercado de Natal dos Champs-Élysées e Arco do Triunfo", mapa:"Avenue des Champs-Élysées, 75008 Paris",
       texto:"Dali, uma caminhada pela avenida mais famosa de Paris, com o mercado de Natal oficial (de 22 de novembro de 2026 a 4 de janeiro de 2027) na parte mais baixa, perto da Concorde, até o Arco do Triunfo no topo. Se preferirem, dá para inverter: ir de metrô direto até o Arco e descer a pé até o mercado, encerrando mais perto do Grand Palais.",
@@ -1477,7 +1441,7 @@ dias: [
       ],
       dica:"Subida ao topo do Arco: € 16 por adulto, grátis para menores de 18 anos (a filha de vocês entra de graça). Aberto das 10h às 23h, última entrada às 22h45. Comprado no site oficial do Centre des Monuments Nationaux, paris-arc-de-triomphe.fr.",
       ingresso:{ url:"https://www.paris-arc-de-triomphe.fr", texto:"Comprar ingresso, Arco do Triunfo" },
-      trajeto:{ modo:"pe", texto:"Do Grand Palais até o início do mercado, perto da Concorde: cerca de 10 minutos a pé. Dali, a pé pela própria avenida, subindo até o Arco, cerca de 25 a 30 minutos no ritmo do grupo (ou de metrô, se preferirem poupar essa caminhada)." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Do Grand Palais até o início do mercado, perto da Concorde: cerca de 10 minutos a pé. Dali, a pé pela própria avenida, subindo até o Arco, cerca de 25 a 30 minutos no ritmo do grupo (ou de metrô, se preferirem poupar essa caminhada)." } },
 
     { tipo:"refeicao", hora:"20h00", titulo:"Jantar perto do hotel",
       nota:"De volta ao 15º arrondissement para fechar o dia.",
@@ -1511,8 +1475,12 @@ dias: [
       dica:"A entrada na nave é gratuita, sem ingresso." },
 
     { tipo:"passeio", hora:"12h00", titulo:"Rue de l'Université", mapa:"Rue de l'Université, 75007 Paris",
-      texto:"Uma rua tranquila do 7º arrondissement, com galerias de antiguidades e arte, de passagem a caminho da Torre Eiffel, antes da subida da tarde.",
-      trajeto:{ modo:"metro", linha:"4 + 12", texto:"De Notre-Dame até a Rue de l'Université: estação Cité, linha 4, sentido Porte d'Orléans, até Saint-Germain-des-Prés, baldeação para a linha 12, sentido Mairie d'Issy, até Solférino. Da estação, a Rue de l'Université fica a poucos passos." } },
+      texto:"Uma rua tranquila do 7º arrondissement, com galerias de antiguidades e arte. No fim dela, a Torre Eiffel aparece emoldurada pelas árvores e pelas fachadas dos prédios dos dois lados, um dos ângulos mais bonitos e menos conhecidos da cidade para fotografar a Torre, bem diferente da vista de baixo que vocês vão ter à tarde.",
+      imperdivelTitulo:"Não saiam de lá sem ver",
+      imperdivel:[
+        "A Torre Eiffel ao fundo da rua, emoldurada pelas árvores e pela fileira de prédios dos dois lados; o ângulo é melhor caminhando pela própria rua em direção à torre."
+      ],
+      trajeto:{ modo:"metro", linha:"4 + 12", texto:"De Notre-Dame até a Rue de l'Université: a pé, 5 minutos até a estação Saint-Michel Notre-Dame; ali, RER C, sentido Versailles-Rive Gauche ou Saint-Quentin-en-Yvelines, 1 parada, sem baldeação, até Musée d'Orsay. Da estação, a Rue de l'Université fica a poucos passos." } },
 
     { tipo:"refeicao", hora:"12h30", titulo:"Almoço na Rue de l'Université",
       nota:"Direto na própria rua, antes de seguir para a Torre Eiffel. Confirmem sempre a ausência de camarão.",
@@ -1521,11 +1489,11 @@ dias: [
         { nome:"Rosemarie", detalhe:"149 Rue de l'Université · 4,6 estrelas com 683 avaliações · bistrô gourmet, cordeiro para dividir muito elogiado", preco:"€€€" },
         { nome:"Elle&Dee's - Université", detalhe:"67 Rue de l'Université · 4,9 estrelas · saladas frescas, opção mais leve e rápida", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas na própria Rue de l'Université." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Todas na própria Rue de l'Université." } },
 
     { tipo:"passeio", hora:"14h15", titulo:"Ida até a Torre Eiffel", mapa:"Tour Eiffel, 5 Avenue Anatole France, 75007 Paris",
       texto:"Chegada com 25 a 30 minutos de antecedência do horário marcado no ingresso, para passar pela segurança.",
-      trajeto:{ modo:"pe", texto:"Da Rue de l'Université até a Torre Eiffel: cerca de 20 minutos a pé, ou de metrô, estação Solférino, linha 12, sentido Mairie d'Issy, até La Tour-Maubourg, mais 10 minutos a pé." } },
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Da Rue de l'Université até a Torre Eiffel: cerca de 20 minutos a pé, ou de RER C, estação Musée d'Orsay, sentido Versailles-Rive Gauche ou Saint-Quentin-en-Yvelines, 3 paradas, sem baldeação, até Champ de Mars - Tour Eiffel." } },
 
     { tipo:"passeio", hora:"15h00", titulo:"Torre Eiffel, acesso até o 3º andar", mapa:"Tour Eiffel, Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
       texto:"A subida de vocês é até o 3º andar, o mais alto da Torre, de elevador. Já reservado.",
@@ -1549,7 +1517,7 @@ dias: [
         { nome:"La Véraison", detalhe:"64 Rue de la Croix Nivert · 4,8 estrelas com 1,3 mil avaliações · menu degustação, ótimo para ocasião especial", preco:"€€€" },
         { nome:"Le Théâtre", detalhe:"56 Pl. Saint-Charles · 4,4 estrelas com 297 avaliações · francês, mais informal que as outras duas", preco:"€€" }
       ],
-      trajeto:{ modo:"pe", texto:"Todas a poucos minutos a pé do hotel." } }
+      trajeto:{ modo:"pe", linha:"A pé", texto:"Todas a poucos minutos a pé do hotel." } }
   ],
   seChover:"Notre-Dame e a Torre Eiffel funcionam com qualquer clima (a Torre só fecha em caso de vento muito forte). Levem guarda-chuva para os trechos a pé.",
   seSobrarEnergia:"Se sobrar energia depois do jantar de Natal, a Ponte de Bir-Hakeim fica a 15 minutos a pé do hotel, com a Torre Eiffel cintilando ao fundo a cada hora cheia depois do anoitecer."
@@ -1564,7 +1532,7 @@ dias: [
     { tipo:"passeio", hora:"08h00", titulo:"Checkout, tax free e transfer até o CDG", mapa:"Aparthotel Adagio Paris Centre Tour Eiffel, 14 Rue du Théâtre, 75015 Paris",
       texto:"Dia de Natal e de saída de Paris. Com o voo às 12h05, o transfer sai às 8h para dar folga suficiente até o aeroporto, incluindo a parada no totem PABLO para o tax free das compras feitas na França.",
       dica:"Peçam para o hotel deixar algo pronto para o café da manhã, tipo um saquinho com pão e fruta, já que o restaurante do hotel não abre tão cedo no feriado de Natal.",
-      trajeto:{ modo:"carro", texto:"Do hotel até o CDG, de van: cerca de 40 a 60 minutos a essa hora, com pouco trânsito de feriado." } }
+      trajeto:{ modo:"carro", linha:"Van", texto:"Do hotel até o CDG, de van: cerca de 40 a 60 minutos a essa hora, com pouco trânsito de feriado." } }
   ],
   seChover:"", seSobrarEnergia:""
 }
