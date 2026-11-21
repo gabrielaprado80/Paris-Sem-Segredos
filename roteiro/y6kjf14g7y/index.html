@@ -734,62 +734,92 @@ const ROTEIRO = {
       seSobrarEnergia: "O Mur des Je t'aime, no Square Jehan Rictus, fica a 5 minutos a pé da Place des Abbesses, com a frase 'eu te amo' escrita em mais de 300 idiomas, incluindo português."
     },
     {
-      titulo: "Torre Eiffel, Sena e mercado dos Champs-Élysées",
+      titulo: "Galerias cobertas, Madeleine e inauguração das luzes dos Champs-Élysées",
       data: "domingo, 22/11",
-      bairro: "Torre Eiffel e Champs-Élysées (7º/8º/16º)",
+      bairro: "2º, 8º e 9º arrondissements",
       paradas: [
         {
           hora: "9h30",
-          titulo: "Trocadéro e Torre Eiffel",
-          texto: "A vista clássica do Trocadéro antes de descer até a torre, bem perto do hotel.",
-          mapa: "Jardins du Trocadéro, Paris",
-          trajeto: { modo: "pe", texto: "Do Adagio até os Jardins do Trocadéro, cerca de 20 minutos a pé. Ou de metrô, linha 6 (direção Charles de Gaulle-Étoile) até Trocadéro, 2 paradas." }
+          titulo: "Galerie Vivienne",
+          texto: "O passage coberto mais charmoso de Paris, construído sobre um antigo cemitério, com piso em mosaico e teto de vidro. Entrada livre.",
+          mapa: "Galerie Vivienne, Paris",
+          trajeto: { modo: "metro", linha: "6", texto: "Do Adagio, metrô linha 6, sentido Charles de Gaulle-Étoile, até o fim da linha, depois linha 3, sentido Gallieni, até Bourse. Uns 35 minutos com uma baldeação, saída já na Rue Vivienne." }
+        },
+        {
+          hora: "10h15",
+          titulo: "Basílica Notre-Dame-des-Victoires",
+          texto: "A igreja coberta, do lado de fora da galeria, com milhares de placas de ex-voto nas paredes, uma atrás da outra até o teto. Entrada livre.",
+          mapa: "Basilique Notre-Dame-des-Victoires, 7 Place des Petits-Pères, Paris",
+          trajeto: { modo: "pe", texto: "Saindo da Galerie Vivienne, a Place des Petits-Pères é a primeira esquina, menos de 5 minutos a pé." }
+        },
+        {
+          hora: "10h45",
+          titulo: "Galerie Colbert",
+          texto: "Ligada à Vivienne por uma passagem interna coberta, com uma rotunda de cúpula de vidro bem mais imponente que o resto do passage.",
+          mapa: "Galerie Colbert, Paris",
+          trajeto: { modo: "pe", texto: "De volta à Vivienne, a ligação com a Colbert é interna, sem precisar sair à rua." }
+        },
+        {
+          hora: "11h15",
+          titulo: "Passage des Panoramas",
+          texto: "O passage coberto mais antigo de Paris, de 1800, com lojas de selos antigos e um corredor cheio de restaurantes.",
+          mapa: "Passage des Panoramas, Paris",
+          trajeto: { modo: "pe", texto: "Da Galerie Colbert até o Passage des Panoramas, cerca de 10 minutos a pé pela Rue Vivienne e a Bourse." }
         },
         {
           tipo: "refeicao",
-          hora: "12h30",
-          titulo: "Almoço perto do Trocadéro",
-          nota: "Três opções na própria Place du Trocadéro ou a poucos minutos dela, antes do cruzeiro da tarde.",
+          hora: "13h",
+          titulo: "Almoço dentro do Passage des Panoramas",
+          nota: "Três opções bem avaliadas dentro do próprio passage coberto, sem precisar sair pra rua.",
           opcoes: [
-            { nome: "Chez Emile Bistro", detalhe: "14 Rue Galilée · 4,6 estrelas com 332 avaliações · bistrô francês com vista de rua para a Torre", preco: "€€" },
-            { nome: "Lulu's", detalhe: "93 Av. Kléber · 4,8 estrelas com mais de 6.700 avaliações · café e brunch bem avaliado", preco: "€€" },
-            { nome: "Bistrot Le Poincaré", detalhe: "22 Av. Raymond Poincaré · 4,3 estrelas com mais de 2.000 avaliações · bistrô de bairro", preco: "€€" }
-          ],
-          trajeto: { modo: "pe", texto: "A pé desde o Trocadéro, de 3 a 8 minutos conforme a opção." }
+            { nome: "One & One Paris", detalhe: "7 Pass. des Panoramas · 4,7 estrelas com mais de 2.500 avaliações · hambúrguer e brunch", preco: "€€" },
+            { nome: "Les Saveurs de l'Orient", detalhe: "43 Pass. des Panoramas · 4,6 estrelas com mais de 4.100 avaliações · marroquino e libanês", preco: "€€" },
+            { nome: "Astair", detalhe: "19 Pass. des Panoramas · 4,5 estrelas com mais de 1.000 avaliações · bistrô francês", preco: "€€" }
+          ]
         },
         {
-          hora: "14h30",
-          titulo: "Cruzeiro no Sena",
-          sub: "Embarque Port de la Bourdonnais",
-          texto: "Bateaux Parisiens, a 10 minutos a pé do hotel. Reservar o horário com antecedência para garantir vaga e luz boa pra gravação.",
-          ingresso: { texto: "Site oficial Bateaux Parisiens", url: "https://www.bateauxparisiens.com" },
-          mapa: "Bateaux Parisiens, Port de la Bourdonnais, Paris",
-          trajeto: { modo: "pe", texto: "Do almoço até o Port de la Bourdonnais, cerca de 15 minutos a pé." }
+          hora: "15h",
+          titulo: "Église de la Madeleine",
+          texto: "A igreja com fachada de templo grego, colunas corinthias e um teto em cúpula dourada por dentro. Entrada livre.",
+          mapa: "Église de la Madeleine, Place de la Madeleine, Paris",
+          trajeto: { modo: "metro", linha: "8", texto: "Da Passage des Panoramas, a pé até Grands Boulevards, depois linha 8, sentido Balard, direto até Madeleine, sem baldeação." }
+        },
+        {
+          hora: "16h",
+          titulo: "Printemps Haussmann",
+          texto: "A loja de departamento com a cúpula de vidro colorido no último andar, perto da Galeries Lafayette. Dá pra subir só pra ver a cúpula, sem precisar comprar nada.",
+          mapa: "Printemps Haussmann, 64 Boulevard Haussmann, Paris",
+          trajeto: { modo: "pe", texto: "Da Madeleine até a Printemps, cerca de 10 minutos a pé." }
         },
         {
           hora: "17h",
-          titulo: "Mercado de Natal dos Champs-Élysées",
-          texto: "O maior mercado de Natal de Paris, nos jardins da avenida, com mais de 150 barracas de artesanato e comida entre o Grand Palais e a Place de la Concorde. Funciona de 22 de novembro a 4 de janeiro.",
+          titulo: "Chegada na Avenue des Champs-Élysées",
+          texto: "Ir com antecedência pra já estar na avenida quando ela fechar para o trânsito, antes da inauguração das luzes.",
+          mapa: "Avenue des Champs-Élysées, Paris",
+          trajeto: { modo: "metro", linha: "8", texto: "Voltando até a Madeleine, metrô linha 8, sentido Balard, ou linha 12, sentido Mairie d'Issy, até Concorde, sem baldeação." }
+        },
+        {
+          hora: "18h30",
+          titulo: "Inauguração das luzes de Natal",
+          texto: "Acendimento oficial das cerca de 400 árvores da avenida, com show de som e luz ao som das Quatro Estações de Vivaldi, apresentação da Feu! Chatterton e cerimônia com a atriz Cate Blanchett. A avenida fecha para o trânsito nesse horário.",
           imperdivel: [
-            "A roda-gigante no fim da avenida, perto da Concorde.",
-            "O vinho quente (vin chaud) e as castanhas assadas direto da barraca."
+            "Depois da inauguração, o show de som e luz nas árvores se repete a cada 15 minutos, das 17h à 1h, até o início de janeiro."
           ],
-          mapa: "Marché de Noël des Champs-Élysées, Paris",
-          trajeto: { modo: "metro", linha: "9", texto: "Do desembarque do cruzeiro (Port de la Bourdonnais), a pé até a estação Trocadéro, depois linha 9 no sentido Mairie de Montreuil até Franklin D. Roosevelt, na própria avenida. Cerca de 20 minutos no total." }
+          mapa: "Avenue des Champs-Élysées, Paris"
         },
         {
           tipo: "refeicao",
           hora: "20h",
-          titulo: "Jantar perto dos Champs-Élysées",
-          nota: "Três brasseries na área, para fechar o dia depois do mercado.",
+          titulo: "Jantar depois do show, perto dos Champs-Élysées",
+          nota: "Três opções na própria região da avenida, para depois da inauguração das luzes.",
           opcoes: [
-            { nome: "L'Alsace", detalhe: "39 Av. des Champs-Élysées · 4,6 estrelas com mais de 25 mil avaliações · brasserie clássica, aberta direto na avenida", preco: "€€€" },
-            { nome: "Le Carré Élysée", detalhe: "49 Av. Franklin D. Roosevelt · 4,8 estrelas com quase 9 mil avaliações · brasserie francesa", preco: "€€€" },
-            { nome: "Ma Dame", detalhe: "14 Rue de Marignan · 4,7 estrelas com 464 avaliações · bistrô francês, rua tranquila a 2 minutos da avenida", preco: "€€€" }
+            { nome: "Le Carré Élysée", detalhe: "49 Av. Franklin D. Roosevelt · 4,8 estrelas com quase 9 mil avaliações · brasserie francesa", preco: "€€" },
+            { nome: "Café Di Roma", detalhe: "35 Av. des Champs-Élysées · 4,1 estrelas com mais de 5.700 avaliações · italiano, direto na avenida", preco: "€€" },
+            { nome: "Chez André", detalhe: "12 Rue Marbeuf · 4,3 estrelas com mais de 2.400 avaliações · bistrô clássico, a uma rua da avenida", preco: "€€€" }
           ]
         }
       ],
-      seChover: "O cruzeiro é em barco envidraçado, então a chuva não atrapalha. No mercado dos Champs-Élysées, boa parte das barracas tem cobertura."
+      seChover: "Dia pensado pra chuva: galerias, igrejas e loja são todos cobertos. Só a inauguração das luzes à noite é ao ar livre e acontece mesmo assim, então vale levar um guarda-chuva compacto só para esse trecho."
     },
     {
       titulo: "Louvre, Rivoli e mercado das Tuileries à noite",
