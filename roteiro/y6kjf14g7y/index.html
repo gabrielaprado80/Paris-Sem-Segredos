@@ -785,13 +785,6 @@ const ROTEIRO = {
           trajeto: { modo: "metro", linha: "8", texto: "Da Passage des Panoramas, a pé até Grands Boulevards, depois linha 8, sentido Balard, direto até Madeleine, sem baldeação." }
         },
         {
-          hora: "16h",
-          titulo: "Printemps Haussmann",
-          texto: "A loja de departamento com a cúpula de vidro colorido no último andar, perto da Galeries Lafayette. Dá pra subir só pra ver a cúpula, sem precisar comprar nada.",
-          mapa: "Printemps Haussmann, 64 Boulevard Haussmann, Paris",
-          trajeto: { modo: "pe", texto: "Da Madeleine até a Printemps, cerca de 10 minutos a pé." }
-        },
-        {
           hora: "17h",
           titulo: "Chegada na Avenue des Champs-Élysées",
           texto: "Ir com antecedência pra já estar na avenida quando ela fechar para o trânsito, antes da inauguração das luzes.",
@@ -819,52 +812,69 @@ const ROTEIRO = {
           ]
         }
       ],
-      seChover: "Dia pensado pra chuva: galerias, igrejas e loja são todos cobertos. Só a inauguração das luzes à noite é ao ar livre e acontece mesmo assim, então vale levar um guarda-chuva compacto só para esse trecho."
+      seChover: "Dia pensado pra chuva: galerias e igrejas são cobertas. Só a inauguração das luzes à noite é ao ar livre e acontece mesmo assim, então vale levar um guarda-chuva compacto só para esse trecho."
     },
     {
-      titulo: "Louvre, Rivoli e mercado das Tuileries à noite",
+      titulo: "Torre Eiffel, cruzeiro ao pôr do sol e mercado das Tuileries",
       data: "segunda, 23/11",
-      bairro: "1º arrondissement",
+      bairro: "7º, 16º e 1º arrondissements",
       paradas: [
         {
-          hora: "10h",
-          titulo: "Pirâmide do Louvre",
-          texto: "Só foto, sem entrar no museu (já conhecem o acervo de visitas anteriores).",
-          mapa: "Pyramide du Louvre, Paris",
-          trajeto: { modo: "metro", linha: "6 e 1", texto: "Do Adagio até o Louvre: linha 6 (direção Charles de Gaulle-Étoile) até Charles de Gaulle-Étoile, baldeação para a linha 1 (direção Château de Vincennes) até Palais Royal-Musée du Louvre. Cerca de 30 minutos." }
+          hora: "11h",
+          titulo: "Square Rapp",
+          texto: "Um dos cantos mais fotogênicos da região, com a Torre aparecendo entre os prédios Art Nouveau da Avenue Rapp.",
+          mapa: "Square Rapp, Paris"
         },
         {
           tipo: "refeicao",
           hora: "12h30",
-          titulo: "Almoço perto da Rivoli",
-          nota: "Três bistrôs clássicos entre o Louvre e o Palais Royal.",
+          titulo: "Almoço na Rue Cler",
+          nota: "Três opções na região da Rue Cler, a poucos minutos do Square Rapp.",
           opcoes: [
-            { nome: "Bistrot Richelieu", detalhe: "45 Rue de Richelieu · 4,4 estrelas com mais de 4.400 avaliações · bistrô francês tradicional", preco: "€€" },
-            { nome: "Comptoir Rivoli", detalhe: "24 Rue de Rivoli · 4,6 estrelas com 306 avaliações · cozinha de bistrô, porções generosas", preco: "€€" },
-            { nome: "Café Auguste Rivoli", detalhe: "154 Rue de Rivoli · 4,1 estrelas com 380 avaliações · café com refeições leves", preco: "€€" }
+            { nome: "Le Petit Cler", detalhe: "29 Rue Cler · 4,3 estrelas com mais de 2.200 avaliações · bistrô francês clássico", preco: "€€" },
+            { nome: "L'Éclair", detalhe: "32 Rue Cler · 4,4 estrelas com mais de 1.100 avaliações · bistrô e brunch", preco: "€€" },
+            { nome: "Le Campanella", detalhe: "18 Av. Bosquet · 4,5 estrelas com mais de 3.800 avaliações · bistrô francês", preco: "€€€" }
           ]
         },
         {
-          hora: "15h",
-          titulo: "Angelina",
-          sub: "226 Rue de Rivoli, 75001 Paris",
-          texto: "Famoso pelo chocolate quente (L'Africain). Nota 4,3 com quase 19 mil avaliações, preço médio (€9 a €16 por item, bebida e doce). Costuma ter fila, melhor ir fora do horário de almoço.",
-          dica: "Gravar o chocolate sendo servido na mesa, é o momento mais pedido pelos seguidores.",
-          mapa: "Angelina, 226 Rue de Rivoli, Paris",
-          trajeto: { modo: "pe", texto: "A pé pela própria Rue de Rivoli, poucos minutos." }
+          hora: "14h",
+          titulo: "Jardins do Trocadéro",
+          texto: "Fotos e vídeos com a Torre de frente, ainda com luz de dia.",
+          dica: "Os jardins têm vários ângulos diferentes da Torre, vale caminhar um pouco para variar o enquadramento.",
+          mapa: "Jardins du Trocadéro, Paris",
+          trajeto: { modo: "pe", texto: "Da Rue Cler até o Trocadéro, cerca de 25 minutos a pé, atravessando o Champ de Mars e a Pont d'Iéna." }
         },
-        { hora: "16h30", titulo: "Tax free nas lojas da Rivoli", texto: "Bom momento pra gravar o passo a passo do tax free: loja, passaporte, recibo e formulário (o resgate em si só acontece no aeroporto, no último país da União Europeia antes de embarcar)." },
         {
-          hora: "18h",
+          hora: "15h30",
+          titulo: "Pont de Bir-Hakeim",
+          texto: "A ponte de dois níveis com a Torre ao fundo, boa para fotos com o metrô passando por cima.",
+          mapa: "Pont de Bir-Hakeim, Paris",
+          trajeto: { modo: "metro", linha: "6", texto: "Do Trocadéro até Bir-Hakeim: linha 6 (direção Nation), duas paradas, sem baldeação." }
+        },
+        {
+          hora: "16h30",
+          titulo: "Cruzeiro Vedettes de Paris ao pôr do sol",
+          texto: "Barco elétrico de dois andares, com o convés principal fechado e envidraçado e o convés superior aberto. Sai do Port de Suffren, aos pés da Torre, e sobe o Sena até o Institut du Monde Arabe. O passeio guiado custa cerca de €21 e o bilhete tem horário marcado. Chegar 20 minutos antes da saída para embarcar.",
+          imperdivel: [
+            "Subir ao convés superior e se virar para a Torre ao passar por baixo da Pont d'Iéna, nos primeiros minutos.",
+            "O pôr do sol hoje fica por volta das 17h, então o barco das 16h30 pega a luz dourada na ida.",
+            "A Torre brilha por 5 minutos a cada hora cheia depois que escurece."
+          ],
+          imperdivelTitulo: "Para aproveitar o passeio",
+          mapa: "Vedettes de Paris, Port de Suffren, Paris",
+          trajeto: { modo: "pe", texto: "De Bir-Hakeim até o Port de Suffren, cerca de 12 minutos a pé pelo Quai Branly." }
+        },
+        {
+          hora: "18h45",
           titulo: "Mercado de Natal do Jardin des Tuileries à noite",
-          texto: "O mesmo jardim do dia 4/12, mas de noite: as luzes da roda-gigante e das barracas ficam bem diferentes depois que escurece. Funciona de 14 de novembro a 3 de janeiro.",
-          dica: "Boa hora pra gravar as luzes do mercado com a roda-gigante ao fundo.",
+          texto: "Cerca de 95 chalés, com as luzes da roda-gigante depois que escurece. Funciona de 14 de novembro a 3 de janeiro, das 11h às 23h45.",
+          dica: "O mercado de Natal da Torre Eiffel só abre em 5 de dezembro (data provisória), então os de Notre-Dame, Saint-Germain e Tuileries são os que cabem nesta viagem. Com energia sobrando, a Pirâmide do Louvre iluminada fica a 10 minutos a pé do jardim.",
           mapa: "Jardin des Tuileries, Paris",
-          trajeto: { modo: "pe", texto: "Da Rue de Rivoli até o jardim, 5 minutos a pé." }
+          trajeto: { modo: "metro", linha: "8", texto: "Do Port de Suffren até La Motte-Picquet-Grenelle, 10 minutos a pé, depois linha 8 (direção Créteil-Pointe du Lac) até Concorde. Da estação, 5 minutos a pé até a entrada do jardim." }
         },
         {
           tipo: "refeicao",
-          hora: "20h",
+          hora: "20h45",
           titulo: "Jantar perto das Tuileries",
           nota: "Três opções no 1º arrondissement, a poucos minutos do jardim.",
           opcoes: [
@@ -874,8 +884,8 @@ const ROTEIRO = {
           ]
         }
       ],
-      seChover: "O Louvre é coberto por fora nas arcadas da Rivoli, e o próprio museu está ali ao lado como plano B. No mercado das Tuileries, boa parte das barracas tem cobertura."
-    },
+      seChover: "O barco tem convés principal fechado e envidraçado, e boa parte das barracas das Tuileries tem cobertura."
+    },,
     {
       titulo: "Disneyland Paris",
       data: "terça, 24/11",
@@ -904,16 +914,25 @@ const ROTEIRO = {
       seSobrarEnergia: "Se sobrar energia depois do segundo dia, vale caminhar pela Disney Village antes de pegar o trem de volta, com lojas e restaurantes abertos até mais tarde."
     },
     {
-      titulo: "Canal Saint-Martin",
+      titulo: "Croissant premiado, Canal Saint-Martin e Marais",
       data: "quinta, 26/11",
-      bairro: "10º arrondissement",
+      bairro: "2º, 10º e 3º arrondissements",
       paradas: [
+        {
+          hora: "7h30",
+          titulo: "Boulangerie du Sentier",
+          sub: "47 Rue du Caire, 75002 Paris",
+          texto: "Primeiro lugar entre os croissants de manteiga AOP Charentes-Poitou da Grande Paris em 2026. Nota 4,6 com 659 avaliações e preços baixos. Abre às 7h e costuma esgotar cedo, por isso vale ir logo na abertura. Fecha aos sábados.",
+          dica: "O espaço é pequeno, o jeito mais fácil é comprar e comer na rua.",
+          mapa: "Boulangerie du Sentier, 47 Rue du Caire, Paris",
+          trajeto: { modo: "metro", linha: "6 e 4", texto: "Da estação de linha 6 mais perto do hotel: linha 6 (direção Nation) até Montparnasse-Bienvenüe, baldeação para a linha 4 (direção Porte de Clignancourt) até Réaumur-Sébastopol. Da estação, 5 minutos a pé até a Rue du Caire." }
+        },
         {
           hora: "10h",
           titulo: "Canal Saint-Martin",
           texto: "Passeio pelas pontes de ferro e as eclusas do canal, bairro mais local e menos turístico.",
           mapa: "Canal Saint-Martin, Paris",
-          trajeto: { modo: "metro", linha: "6, 2", texto: "Do Adagio até o canal: linha 6 (direção Nation) até Barbès-Rochechouart, baldeação para a linha 2 (direção Nation) até Jacques Bonsergent. Cerca de 30 minutos." }
+          trajeto: { modo: "pe", texto: "Da Rue du Caire até o canal, cerca de 25 minutos a pé, subindo pela Rue Saint-Denis e seguindo pelo Faubourg Saint-Martin." }
         },
         {
           hora: "11h",
@@ -925,21 +944,35 @@ const ROTEIRO = {
         {
           tipo: "refeicao",
           hora: "12h30",
-          titulo: "Almoço no Canal Saint-Martin",
-          nota: "A recomendada é o Bouillon Chartier, um pouco mais longe (Grands Boulevards), mas vale a visita pelo salão histórico tombado desde 1896. As outras duas ficam na própria margem do canal.",
+          titulo: "Almoço no Marais",
+          nota: "A recomendada é o Junk, que vende hambúrguer pra levar, já no Marais. As outras duas ficam perto do canal, para quem preferir almoçar antes de sair de lá.",
           opcoes: [
-            { nome: "Bouillon Chartier Grands Boulevards", detalhe: "7 Rue du Faubourg Montmartre · 4,1 estrelas com mais de 34 mil avaliações · salão histórico de 1896, muito barato", preco: "€" },
+            { nome: "Junk", detalhe: "38 Rue de Saintonge · 4,8 estrelas com 378 avaliações · hambúrguer, funciona pra levar", preco: "€€" },
             { nome: "Maison Saint Martin", detalhe: "33 Rue du Château d'Eau · 4,8 estrelas com 378 avaliações · bistrô de bairro", preco: "€€" },
             { nome: "Immersion République - Brunch & Coffee", detalhe: "8 Rue Lucien Sampaix · 4,7 estrelas com quase 10 mil avaliações · brunch e café", preco: "€€" }
           ],
-          dica: "O salão do Chartier é cenográfico por si só (espelhos, luminárias de latão), vale um plano aberto antes de sentar. Fila comum, chegar antes das 12h ou depois das 14h."
+          trajeto: { modo: "metro", linha: "8", texto: "Do canal até a Rue de Saintonge: a pé até République (uns 5 minutos), linha 8 (direção Créteil-Pointe du Lac) até Filles du Calvaire, e mais 5 minutos a pé." }
         },
         {
-          hora: "15h",
-          titulo: "Tarde livre na Rue de Lancry e Rue Beaurepaire",
-          texto: "As ruas de lojas independentes e brechós que saem do canal, boas pra uma caminhada sem pressa à tarde.",
-          mapa: "Rue Beaurepaire, Paris",
-          trajeto: { modo: "pe", texto: "Voltando para o canal, poucos minutos a pé." }
+          hora: "14h30",
+          titulo: "Marais a pé",
+          texto: "Caminhada livre pelas ruas do bairro, entre a Rue de Saintonge e a Place des Vosges.",
+          mapa: "Le Marais, Paris"
+        },
+        {
+          hora: "16h",
+          titulo: "Place des Vosges",
+          texto: "Praça de arcadas de tijolo vermelho e jardim no centro, o ponto mais calmo do Marais.",
+          mapa: "Place des Vosges, Paris",
+          trajeto: { modo: "pe", texto: "Da Rue de Saintonge até a praça, cerca de 10 minutos a pé." }
+        },
+        {
+          hora: "17h",
+          titulo: "Chez Janou",
+          sub: "2 Rue Roger Verlomme, 75003 Paris",
+          texto: "Parada para a sobremesa no fim da tarde. Nota 4,3 com mais de 9.400 avaliações. A mousse au chocolat é a sobremesa mais pedida da casa.",
+          mapa: "Chez Janou, 2 Rue Roger Verlomme, Paris",
+          trajeto: { modo: "pe", texto: "Da Place des Vosges até a Chez Janou, cerca de 5 minutos a pé." }
         },
         {
           tipo: "refeicao",
@@ -954,12 +987,28 @@ const ROTEIRO = {
         }
       ],
       seSobrarEnergia: "O canal fica bonito à noite, com as luzes refletidas na água: vale uma volta curta depois do jantar antes de voltar pro hotel."
-    },
+    },,
     {
-      titulo: "Bairro Latino, Saint-Germain e dois mercados de Natal",
+      titulo: "Croissant premiado, Bairro Latino, Saint-Germain e dois mercados de Natal",
       data: "sexta, 27/11",
       bairro: "5º e 6º arrondissements",
       paradas: [
+        {
+          hora: "9h",
+          titulo: "La Maison d'Isabelle",
+          sub: "47ter Boulevard Saint-Germain, 75005 Paris",
+          texto: "Uma das padarias mais premiadas de Paris pelo croissant. Nota 4,5 com quase 6 mil avaliações e preços baixos. Costuma ter fila, mas ela anda rápido. Fecha às segundas.",
+          mapa: "La Maison d'Isabelle, 47ter Boulevard Saint-Germain, Paris",
+          trajeto: { modo: "metro", linha: "6 e 10", texto: "Da estação de linha 6 mais perto do hotel: linha 6 (direção Nation) até La Motte-Picquet-Grenelle, baldeação para a linha 10 (direção Gare d'Austerlitz) até Maubert-Mutualité. Cerca de 30 minutos." }
+        },
+        {
+          hora: "10h30",
+          titulo: "Parfumerie Burdin",
+          sub: "79 Rue Monge, 75005 Paris",
+          texto: "Perfumaria independente com preços competitivos. Nota 4,3 com 161 avaliações. A loja emite o formulário de tax free no balcão. Abre das 10h às 13h30 e das 14h30 às 19h, e fecha aos domingos e segundas.",
+          mapa: "Parfumerie Burdin, 79 Rue Monge, Paris",
+          trajeto: { modo: "pe", texto: "Da Maison d'Isabelle até a Rue Monge, subindo pela própria Rue Monge, cerca de 10 minutos a pé." }
+        },
         {
           tipo: "refeicao",
           hora: "12h",
@@ -972,26 +1021,49 @@ const ROTEIRO = {
           ],
           dica: "A fila do Au P'tit Grec costuma ser rápida e o movimento em volta da Rue Mouffetard já rende bastante imagem.",
           mapa: "Au P'tit Grec, 68 Rue Mouffetard, Paris",
-          trajeto: { modo: "metro", linha: "6", texto: "Do Adagio até a Rue Mouffetard: linha 6 (direção Nation) até Place Monge, 10 paradas direto. Cerca de 10 minutos a pé da estação até a rua." }
+          trajeto: { modo: "pe", texto: "Da Rue Monge até a Rue Mouffetard, cerca de 10 minutos a pé." }
         },
         {
-          hora: "14h30",
+          hora: "14h",
+          titulo: "Île Saint-Louis",
+          texto: "A ilha mais calma de Paris, de ruas estreitas e casas antigas. O Quai d'Orléans tem uma das melhores vistas da parte de trás da catedral de Notre-Dame.",
+          mapa: "Île Saint-Louis, Paris",
+          trajeto: { modo: "pe", texto: "Da Rue Mouffetard até a ilha, cerca de 25 minutos a pé, descendo até o Sena e atravessando a Pont de la Tournelle." }
+        },
+        {
+          hora: "15h",
           titulo: "Mercado de Natal de Notre-Dame",
-          texto: "No Square René Viviani, de frente para a catedral, com vista da fachada e das torres. Funciona de 26 de novembro a 27 de dezembro, então é o primeiro dia da temporada.",
+          texto: "No Square René Viviani, de frente para a catedral, com vista da fachada e das torres. Funciona de 26 de novembro a 27 de dezembro.",
           mapa: "Square René Viviani, Paris",
-          trajeto: { modo: "pe", texto: "Da Rue Mouffetard até o Square René Viviani, cerca de 15 minutos a pé, descendo em direção ao Sena." }
+          trajeto: { modo: "pe", texto: "Da Île Saint-Louis até o Square René Viviani, cerca de 15 minutos a pé, passando pela Île de la Cité." }
         },
         {
-          hora: "15h30",
+          hora: "16h",
+          titulo: "Patate",
+          sub: "36 Rue Saint-André des Arts, 75006 Paris",
+          texto: "Parada rápida para um lanche. Nota 4,4 com mais de 1.300 avaliações.",
+          mapa: "Patate, 36 Rue Saint-André des Arts, Paris",
+          trajeto: { modo: "pe", texto: "Do Square René Viviani até a Rue Saint-André des Arts, cerca de 12 minutos a pé, atravessando a Pont Saint-Michel." }
+        },
+        {
+          hora: "16h45",
+          titulo: "Le Procope",
+          sub: "13 Rue de l'Ancienne Comédie, 75006 Paris",
+          texto: "Café e restaurante histórico, aberto desde 1686. Nota 4,5 com quase 30 mil avaliações. Boa parada para um café ou uma sobremesa, com o salão antigo como cenário.",
+          mapa: "Le Procope, 13 Rue de l'Ancienne Comédie, Paris",
+          trajeto: { modo: "pe", texto: "Da Patate até o Le Procope, cerca de 5 minutos a pé." }
+        },
+        {
+          hora: "17h45",
           titulo: "Citypharma",
           sub: "26 Rue du Four, 75006 Paris",
-          texto: "A farmácia mais famosa de Paris entre turistas, preços mais baixos em dermocosméticos (La Roche-Posay, CeraVe, Avène, Nuxe). Fecha às 20h (21h às segundas e terças), evitar sábado de manhã por causa do movimento.",
+          texto: "A farmácia mais famosa de Paris entre turistas, preços mais baixos em dermocosméticos (La Roche-Posay, CeraVe, Avène, Nuxe). Fecha às 20h (21h às segundas e terças).",
           dica: "Bom gancho de conteúdo: 'os produtos de farmácia que toda brasileira compra em Paris'.",
           mapa: "Citypharma, 26 Rue du Four, Paris",
-          trajeto: { modo: "pe", texto: "Do Square René Viviani até a Citypharma, cerca de 20 minutos a pé, atravessando o Sena." }
+          trajeto: { modo: "pe", texto: "Do Le Procope até a Citypharma, cerca de 8 minutos a pé." }
         },
         {
-          hora: "18h",
+          hora: "18h30",
           titulo: "Mercado de Natal de Saint-Germain-des-Prés",
           texto: "No Boulevard Saint-Germain, bem perto da Citypharma. É o primeiro dia da temporada: funciona de 27 de novembro a 6 de janeiro.",
           mapa: "Boulevard Saint-Germain, Paris",
@@ -1009,51 +1081,87 @@ const ROTEIRO = {
           ]
         }
       ]
-    },
+    },,
     {
-      titulo: "Validar bilhete e sessão de fotos",
+      titulo: "Printemps, Galeries Lafayette e compras na Champs-Élysées",
       data: "sábado, 28/11",
-      bairro: "Trocadéro (16º)",
+      bairro: "9º e 8º arrondissements",
       paradas: [
         { hora: "9h30", titulo: "Tutorial: como validar o bilhete de transporte", texto: "Gravar o passo a passo no totem da estação (mesmo sem catraca, a validação é obrigatória, fiscalização multa quem não validar)." },
         {
+          hora: "10h",
+          titulo: "Printemps Haussmann",
+          sub: "64 Boulevard Haussmann, 75009 Paris",
+          texto: "A loja de departamento com a cúpula de vidro colorido no último andar. Dá pra subir só pra ver a cúpula, sem precisar comprar nada.",
+          dica: "Boa hora pra gravar o passo a passo do tax free: pedir o formulário no balcão com o passaporte (mínimo de €100,01 por loja no mesmo dia).",
+          mapa: "Printemps Haussmann, 64 Boulevard Haussmann, Paris",
+          trajeto: { modo: "metro", linha: "6 e RER A", texto: "Da estação de linha 6 mais perto do hotel: linha 6 (direção Charles de Gaulle-Étoile) até o fim da linha, baldeação para o RER A (direção Marne-la-Vallée-Chessy) até Auber, uma parada. Da estação, 6 minutos a pé até a Printemps. O RER A usa o mesmo bilhete de €2,55." }
+        },
+        {
+          hora: "11h30",
+          titulo: "Galeries Lafayette Haussmann",
+          sub: "40 Boulevard Haussmann, 75009 Paris",
+          texto: "A cúpula de vidro e ferro do hall central, com as vitrines e a árvore de Natal montada embaixo dela. O terraço do último andar tem vista da cidade e é gratuito.",
+          mapa: "Galeries Lafayette Haussmann, 40 Boulevard Haussmann, Paris",
+          trajeto: { modo: "pe", texto: "Da Printemps até a Galeries Lafayette, a loja do lado, 2 minutos a pé." }
+        },
+        {
+          hora: "12h",
+          titulo: "Normal",
+          sub: "109 Rue Saint-Lazare, 75009 Paris",
+          texto: "Loja de descontos com preços baixos, boa para lembrancinhas, cosméticos e itens de casa. Nota 4,0 com mais de 1.200 avaliações.",
+          mapa: "Normal, 109 Rue Saint-Lazare, Paris",
+          trajeto: { modo: "pe", texto: "Da Galeries Lafayette até a Rue Saint-Lazare, cerca de 8 minutos a pé." }
+        },
+        {
           tipo: "refeicao",
-          hora: "12h30",
-          titulo: "Almoço perto do Trocadéro",
-          nota: "Três bistrôs de bairro na Avenue Kléber, diferentes dos usados no domingo 22/11.",
+          hora: "12h45",
+          titulo: "Almoço entre a Printemps e a Gare Saint-Lazare",
+          nota: "Três opções na região das lojas, sem precisar se afastar do trajeto.",
           opcoes: [
-            { nome: "Le Scheffer", detalhe: "22 Rue Scheffer · 4,5 estrelas com 776 avaliações · bistrô de bairro, clima tranquilo", preco: "€€" },
-            { nome: "Fleurus", detalhe: "39 Av. Kléber · 4,4 estrelas com mais de 1.500 avaliações · café e bistrô", preco: "€€" },
-            { nome: "Café Belloy", detalhe: "37 Av. Kléber · 4,2 estrelas com mais de 2.500 avaliações · café com cardápio completo", preco: "€€" }
+            { nome: "Brasserie Pastis", detalhe: "87 Bd Haussmann · 4,5 estrelas com mais de 4.800 avaliações · brasserie francesa", preco: "€€" },
+            { nome: "Lazare Paris", detalhe: "Rue Intérieure, dentro da Gare Saint-Lazare · 4,1 estrelas com mais de 3.100 avaliações · brasserie, abre às 11h45 aos sábados", preco: "€€" },
+            { nome: "Bleu Coupole - Printemps", detalhe: "56 Bd Haussmann, dentro da Printemps · 4,2 estrelas com 870 avaliações · restaurante sob a cúpula da loja", preco: "€€" }
           ]
         },
         {
-          hora: "15h30",
-          titulo: "Sessão de fotos no Trocadéro",
-          texto: "Tarde reservada pra sessão de fotos, com a Torre Eiffel de fundo. O fim de tarde costuma ter luz mais suave pra foto; perto do pôr do sol a torre também já começa a ficar iluminada.",
-          dica: "Os jardins do Trocadéro têm vários ângulos diferentes da torre, vale caminhar um pouco pra variar o enquadramento antes de fixar o ponto da sessão.",
-          mapa: "Jardins du Trocadéro, Paris"
+          hora: "14h",
+          titulo: "Lojas de bolsas na Champs-Élysées",
+          texto: "Passeio pela avenida com as lojas de bolsas, aproveitando para ver as luzes de dia.",
+          mapa: "Avenue des Champs-Élysées, Paris",
+          trajeto: { modo: "metro", linha: "13", texto: "Da Gare Saint-Lazare: linha 13 (direção Châtillon-Montrouge) até Champs-Élysées-Clemenceau, duas paradas, sem baldeação." }
         },
         {
-          hora: "18h",
-          titulo: "Pont d'Iéna ao entardecer",
-          texto: "Descendo do Trocadéro até a ponte, com a Torre já iluminada e o movimento do início da noite.",
-          mapa: "Pont d'Iéna, Paris",
-          trajeto: { modo: "pe", texto: "Dos jardins do Trocadéro até a ponte, cerca de 10 minutos a pé, descendo." }
+          hora: "15h",
+          titulo: "Avenue Montaigne",
+          texto: "A avenida das grandes grifes, com as vitrines de Natal mais elaboradas de Paris. Boa para gravar mesmo sem comprar.",
+          mapa: "Avenue Montaigne, Paris",
+          trajeto: { modo: "pe", texto: "Da Champs-Élysées até a Avenue Montaigne, cerca de 10 minutos a pé." }
+        },
+        {
+          hora: "16h",
+          titulo: "Angelina",
+          sub: "226 Rue de Rivoli, 75001 Paris",
+          texto: "Famoso pelo chocolate quente (L'Africain). Nota 4,3 com quase 19 mil avaliações, preço médio (€9 a €16 por item, bebida e doce). Costuma ter fila.",
+          dica: "Gravar o chocolate sendo servido na mesa, é o momento mais pedido pelos seguidores.",
+          mapa: "Angelina, 226 Rue de Rivoli, Paris",
+          trajeto: { modo: "metro", linha: "1", texto: "Da Avenue Montaigne, 5 minutos a pé até Franklin D. Roosevelt, linha 1 (direção Château de Vincennes) até Tuileries. Da estação, 2 minutos a pé." }
         },
         {
           tipo: "refeicao",
           hora: "20h",
-          titulo: "Jantar perto do Trocadéro",
-          nota: "Três opções pra fechar o dia da sessão de fotos, uma delas flutuando no Sena com a torre de frente.",
+          titulo: "Jantar em Les Halles",
+          nota: "A recomendada é o Au Pied de Cochon, brasserie clássica aberta até as 5h da manhã. As outras duas ficam na Rue Montorgueil, a poucos minutos.",
           opcoes: [
-            { nome: "Bistro Blandine", detalhe: "45 Av. Kléber · 4,7 estrelas com 1.350 avaliações · bistrô francês", preco: "€€€" },
-            { nome: "Francette", detalhe: "1 Port de Suffren · 4,6 estrelas com quase 9.730 avaliações · restaurante flutuante no Sena, vista direta para a Torre Eiffel", preco: "€€€" },
-            { nome: "L'Etoile Vénitienne", detalhe: "20 Av. Kléber · 4,2 estrelas com 535 avaliações · café com cardápio completo, perto do Arco do Triunfo", preco: "€€" }
-          ]
+            { nome: "Au Pied de Cochon", detalhe: "6 Rue Coquillière · 4,4 estrelas com mais de 25 mil avaliações · brasserie clássica, famosa pela sopa de cebola", preco: "€€€" },
+            { nome: "Bistro les Artizans", detalhe: "30 Rue Montorgueil · 4,5 estrelas com mais de 2.900 avaliações · bistrô francês", preco: "€€€" },
+            { nome: "Le Bistrot des Halles", detalhe: "15 Rue des Halles · 4,5 estrelas com 872 avaliações · bistrô tradicional", preco: "€€" }
+          ],
+          trajeto: { modo: "metro", linha: "1", texto: "Da Angelina até Les Halles: linha 1 (direção Château de Vincennes) de Tuileries até Louvre-Rivoli ou Châtelet, e dali cerca de 10 minutos a pé até a Rue Coquillière." }
         }
-      ]
-    },
+      ],
+      seChover: "Printemps, Galeries Lafayette, Normal e os restaurantes são cobertos, e o trecho de rua entre as lojas é curto."
+    },,
     {
       titulo: "Jantar especial e despedida de Paris",
       data: "domingo, 29/11",
@@ -1086,13 +1194,13 @@ const ROTEIRO = {
           hora: "noite",
           titulo: "Le Train Bleu",
           sub: "Gare de Lyon, Place Louis Armand, 75012 Paris",
-          texto: "Restaurante histórico de 1901 dentro da própria estação, tombado como monumento, estilo Belle Époque. Nota 4,4 com quase 20 mil avaliações. É o jantar especial do roteiro: reservar com antecedência.",
+          texto: "Restaurante histórico de 1901 dentro da própria estação, tombado como monumento, estilo Belle Époque. Nota 4,4 com quase 20 mil avaliações. É o jantar especial do roteiro: reservar com antecedência. O jantar vai das 19h às 22h15.",
           ingresso: { texto: "Reservar pelo site do restaurante", url: "https://www.le-train-bleu.com" },
           dica: "O teto do salão principal é pintado à mão, vale chegar um pouco antes só pra gravar o espaço vazio.",
           mapa: "Le Train Bleu, Gare de Lyon, Paris"
         }
       ],
-      seSobrarEnergia: "Arrumar as malas com calma essa noite, já que amanhã é dia de check-out e trem para Estrasburgo."
+      seSobrarEnergia: "Dia reserva: se alguma parada dos dias anteriores ficou pra trás, boa parte do dia fica flexível para recuperar. A Burdin da Rue Monge fecha aos domingos. Arrumar as malas com calma essa noite, já que amanhã é dia de check-out e trem para Estrasburgo."
     },
     {
       titulo: "Paris → Estrasburgo",
