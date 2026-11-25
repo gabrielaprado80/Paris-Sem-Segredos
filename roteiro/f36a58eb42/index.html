@@ -527,15 +527,17 @@ hospedagem: [
     cidade: "Paris, 20 a 25 de dezembro",
     nome: "Aparthotel Adagio Paris Centre Tour Eiffel",
     endereco: "14 Rue du Théâtre, 75015 Paris",
-    metro: "Charles Michels e Avenue Émile Zola (linha 10), e La Motte-Picquet-Grenelle (linhas 6, 8 e 10), todas a cerca de 8 a 10 minutos a pé.",
+    metro: "Dupleix e Bir-Hakeim (linha 6), além de Charles Michels e Avenue Émile Zola (linha 10) e La Motte-Picquet-Grenelle (linhas 6, 8 e 10), todas a cerca de 5 a 10 minutos a pé.",
     checkin: "A partir das 15h", checkout: "Até as 11h",
+    nota: "A Rue Linois e a Avenue Émile Zola são as duas ruas de mais comércio da região, com farmácia, mercado, banco e restaurante a poucos passos, além do shopping Beaugrenelle, bem ao lado do hotel.",
     porPerto: [
-      { i:"farmacia", t:"Farmácia", d:"Pharmacie Eiffel Commerce, 13 Rue du Commerce, 75015 Paris, a cerca de 7 minutos a pé." },
-      { i:"pao", t:"Padaria", d:"Padaria dentro do próprio Monoprix, 2 Rue du Commerce, 75015 Paris, a cerca de 7 minutos a pé." },
-      { i:"mercado", t:"Mercado, para comida pronta e levar pro hotel", d:"Monoprix, 2 Rue du Commerce, 75015 Paris, a cerca de 7 minutos a pé. U Express Zola, 130 Avenue Émile Zola, 75015 Paris, a cerca de 5 minutos a pé." },
-      { i:"euro", t:"Caixa eletrônico", d:"BNP Paribas, 76 Avenue Émile Zola, 75015 Paris, a cerca de 5 minutos a pé." },
-      { i:"garfo", t:"Restaurante", d:"Restaurant Végé, 122 Rue du Théâtre, 75015 Paris, a poucos passos do hotel (mais opções no dia a dia deste roteiro)." },
-      { i:"metro", t:"Metrô", d:"Charles Michels e Avenue Émile Zola (linha 10), La Motte-Picquet-Grenelle (linhas 6, 8 e 10)." }
+      { i:"farmacia", t:"Farmácia", d:"Pharmacie du Centre Beaugrenelle, dentro do próprio shopping Beaugrenelle, 12 Rue Linois, 75015 Paris, a cerca de 3 minutos a pé." },
+      { i:"pao", t:"Padaria", d:"Padaria dentro do próprio Monoprix, 19 Rue Linois, 75015 Paris, na esquina com a Rue Émeriau, a cerca de 3 minutos a pé." },
+      { i:"mercado", t:"Mercado, para comida pronta e levar pro hotel", d:"Monoprix, 19 Rue Linois, 75015 Paris, a cerca de 3 minutos a pé. Carrefour City, 62-64 Avenue Émile Zola, 75015 Paris, a cerca de 5 minutos a pé." },
+      { i:"euro", t:"Caixa eletrônico", d:"LCL Banque, 11 Place Charles Michels, 75015 Paris, a cerca de 5 minutos a pé. Evitem o caixa de câmbio dentro do shopping Beaugrenelle: a taxa cobrada fica bem acima do mercado." },
+      { i:"garfo", t:"Restaurante", d:"Lylee, 4-8 Rue Beaugrenelle, 75015 Paris, a cerca de 3 minutos a pé (mais opções no dia a dia deste roteiro)." },
+      { i:"loja", t:"Shopping", d:"Centre Commercial Beaugrenelle, 12 Rue Linois, 75015 Paris, a cerca de 3 minutos a pé, com dezenas de lojas, cinema e praça de alimentação." },
+      { i:"metro", t:"Metrô", d:"Dupleix e Bir-Hakeim (linha 6), Charles Michels e Avenue Émile Zola (linha 10), La Motte-Picquet-Grenelle (linhas 6, 8 e 10)." }
     ]
   }
 ],
@@ -1849,9 +1851,11 @@ if(tem(R.aeroportos)){
 
 /* ---------- hospedagem ---------- */
 if(R.hospedagem){
-  const h=R.hospedagem;
+  const hospedagens = Array.isArray(R.hospedagem) ? R.hospedagem : [R.hospedagem];
   H.push(`<section class="sec wrap" id="base">
-    ${cab('Base','cama','Onde vocês ficam',h.nota||'')}
+    ${cab('Base','cama','Onde vocês ficam', hospedagens.length===1?(hospedagens[0].nota||''):'')}
+    ${hospedagens.map((h,i)=>`
+    ${hospedagens.length>1?`<div class="eyebrow"${i>0?' style="margin-top:28px"':''}>${ic('pin',13)}${h.cidade}</div>`:''}
     <div class="card">
       <div class="card-tit">${ic('pin',20)}${h.nome}</div>
       <p style="color:var(--ink-soft);font-size:14.5px;margin-bottom:14px">${h.endereco}</p>
@@ -1859,12 +1863,14 @@ if(R.hospedagem){
         <div class="linha"><span class="ico">${ic('metro',17)}</span><span class="txt"><span class="rot">Metrô</span><span class="val">${h.metro}</span></span></div>
         <div class="linha"><span class="ico">${ic('relogio',17)}</span><span class="txt"><span class="rot">Check-in e check-out</span><span class="val">${h.checkin} · ${h.checkout}</span></span></div>
       </div>
+      ${hospedagens.length>1&&h.nota?`<p style="color:var(--ink-soft);font-size:13.5px;margin-top:12px">${h.nota}</p>`:''}
     </div>
     ${tem(h.porPerto)?`<div class="card">
       <div class="eyebrow">${ic('mapa',13)}O que tem em volta</div>
       <div class="linhas">${h.porPerto.map(p=>`
         <div class="linha"><span class="ico">${ic(p.i,17)}</span><span class="txt"><span class="rot">${p.t}</span><span class="val">${p.d}</span></span></div>`).join('')}</div>
     </div>`:''}
+    `).join('')}
   </section>`);
 } else if (R.ondeSeHospedar) {
   const o = R.ondeSeHospedar;
