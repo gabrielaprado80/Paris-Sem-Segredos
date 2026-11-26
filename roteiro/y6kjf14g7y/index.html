@@ -958,20 +958,43 @@ const ROTEIRO = {
           trajeto: { modo: "metro", linha: "5", texto: "Da padaria até Jacques Bonsergent, poucos minutos a pé, depois linha 5 (direção Bobigny-Pablo Picasso) até Jaurès ou Stalingrad. Cerca de 15 minutos no total." }
         },
         {
-          hora: "15h",
-          titulo: "Tarde livre na Rue de Lancry e Rue Beaurepaire",
-          texto: "As ruas de lojas independentes e brechós que saem do canal, boas pra uma caminhada sem pressa à tarde.",
-          mapa: "Rue Beaurepaire, Paris",
-          trajeto: { modo: "metro", linha: "5", texto: "Do Bassin de la Villette de volta: linha 5 (direção Place d'Italie) até Jacques Bonsergent. Cerca de 10 minutos." }
+          hora: "14h30",
+          titulo: "Pirâmide do Louvre",
+          texto: "Volta ao hotel e saída de novo em direção ao 1º arrondissement, pra aproveitar que o Au Pied de Cochon fica bem ali perto. Só foto na pirâmide, sem entrar no museu.",
+          mapa: "Pyramide du Louvre, Paris",
+          trajeto: { modo: "metro", linha: "6, 1", texto: "Do Adagio até o Louvre: linha 6 (direção Charles de Gaulle-Étoile) até Charles de Gaulle-Étoile, baldeação para a linha 1 (direção Château de Vincennes) até Palais Royal-Musée du Louvre. Cerca de 30 minutos." }
         },
         {
-          hora: "17h",
+          hora: "15h",
+          titulo: "Jardin des Tuileries e Musée de l'Orangerie",
+          texto: "Caminhada pelo jardim até a ponta que dá pro Sena, onde fica a Orangerie (só passar em frente, sem entrar, é onde ficam os Nenúfares de Monet).",
+          mapa: "Musée de l'Orangerie, Paris",
+          trajeto: { modo: "pe", texto: "Do Louvre, atravessando as Tuileries, cerca de 15 minutos a pé." }
+        },
+        {
+          hora: "15h45",
+          titulo: "Place Vendôme",
+          texto: "A praça das joalherias de luxo (Cartier, Chaumet, Boucheron) ao redor da coluna central. Vale mais pela arquitetura e as vitrines do que pra entrar nas lojas.",
+          mapa: "Place Vendôme, Paris",
+          trajeto: { modo: "pe", texto: "Da Orangerie até a Place Vendôme, cerca de 12 minutos a pé." }
+        },
+        {
+          hora: "16h30",
+          titulo: "Sopa de cebola: Au Pied de Cochon",
+          sub: "6 Rue Coquillière, 75001 Paris",
+          texto: "Brasserie de 1947 aberta 24 horas, famosa pela sopa de cebola gratinada. Nota 4,4 com mais de 25 mil avaliações. Dá pra pedir só a sopa como um lanche da tarde adiantado, já que o jantar de verdade é mais tarde no Marais.",
+          dica: "A sopa de cebola gratinada é o prato mais citado nas avaliações.",
+          mapa: "Au Pied de Cochon, 6 Rue Coquillière, Paris",
+          trajeto: { modo: "pe", texto: "Da Place Vendôme até o restaurante, cerca de 12 minutos a pé." }
+        },
+        {
+          hora: "17h45",
           titulo: "Officine Universelle Buly 1803",
           sub: "45 Rue de Saintonge, 75003 Paris",
-          texto: "Perfumaria parisiense de 1803, a loja original fica no coração do Haut Marais. Pentes e escovas gravados, óleos e cremes vendidos como em 1900, embrulho e caligrafia na hora. Nota 4,2 com 466 avaliações. Costuma ter um café dentro da própria loja.",
+          texto: "Perfumaria parisiense de 1803, a loja original fica no coração do Haut Marais. Pentes e escovas gravados, óleos e cremes vendidos como em 1900, embrulho e caligrafia na hora. Nota 4,2 com 466 avaliações. Costuma ter um café dentro da própria loja. Fecha às 19h, então melhor não atrasar.",
           dica: "Bom gancho de conteúdo: o embrulho e a caligrafia feitos na hora no balcão.",
           mapa: "Officine Universelle Buly 1803, 45 Rue de Saintonge, Paris",
-          trajeto: { modo: "metro", linha: "2, 8", texto: "Do canal até o Marais: de Jacques Bonsergent, linha 5 (direção Place d'Italie) até République, baldeação para a linha 8 (direção Balard) até Filles du Calvaire. Dali, 8 minutos a pé até a Rue de Saintonge. Cerca de 25 minutos no total." }
+          trajeto: { modo: "metro", linha: "11", texto: "Do restaurante até o Marais: a pé até Châtelet-Les Halles, linha 11 (direção Mairie des Lilas) até Rambuteau. Dali, 5 minutos a pé até a Rue de Saintonge. Cerca de 25 minutos no total." }
         },
         {
           hora: "20h",
@@ -1027,20 +1050,24 @@ const ROTEIRO = {
           trajeto: { modo: "pe", texto: "Do Sentier até a Rue Montorgueil, cerca de 8 minutos a pé." }
         },
         {
+          tipo: "refeicao",
           hora: "12h",
-          titulo: "Almoço: Au Pied de Cochon",
-          sub: "6 Rue Coquillière, 75001 Paris",
-          texto: "Brasserie de 1947 aberta 24 horas, famosa pela sopa de cebola gratinada. Nota 4,4 com mais de 25 mil avaliações.",
-          dica: "A sopa de cebola gratinada é o prato mais citado nas avaliações, mesmo pra quem não gosta de porco dá pra pedir só ela e outro prato de frango ou boi do cardápio.",
-          mapa: "Au Pied de Cochon, 6 Rue Coquillière, Paris",
-          trajeto: { modo: "pe", texto: "Da Rue Montorgueil até o restaurante, cerca de 6 minutos a pé." }
+          titulo: "Almoço na Rue Montorgueil",
+          nota: "Três opções na própria rua de pedestres onde vocês já estão.",
+          opcoes: [
+            { nome: "LE MONTORGUEIL", detalhe: "57 Rue Montorgueil · 4,8 estrelas com 541 avaliações · bistrô francês, polvo e hambúrguer bem avaliados", preco: "€€€" },
+            { nome: "Le Compas", detalhe: "62 Rue Montorgueil · 4,4 estrelas com 3.750 avaliações · bistrô clássico francês", preco: "€€" },
+            { nome: "La Grille Montorgueil", detalhe: "50 Rue Montorgueil · 4,3 estrelas com quase 1.500 avaliações · sopa de cebola e bife à moda francesa", preco: "€€" }
+          ],
+          mapa: "Rue Montorgueil, Paris",
+          trajeto: { modo: "pe", texto: "Na própria Rue Montorgueil, poucos passos." }
         },
         {
           hora: "14h",
           titulo: "Marais a pé",
           texto: "Caminhada pelas ruelas estreitas do bairro, com os prédios de pedra e as lojas de grife pequenas que ocupam térreos históricos.",
           mapa: "Le Marais, Paris",
-          trajeto: { modo: "pe", texto: "Do restaurante até o Marais, cerca de 15 minutos a pé." }
+          trajeto: { modo: "pe", texto: "Da Rue Montorgueil até o Marais, cerca de 20 minutos a pé." }
         },
         {
           hora: "15h30",
@@ -1077,49 +1104,20 @@ const ROTEIRO = {
       ]
     },
     {
-      titulo: "Louvre, Arco do Triunfo, Torre Eiffel e mercado das Tuileries à noite",
+      titulo: "Arco do Triunfo, Torre Eiffel e mercado das Tuileries à noite",
       data: "sábado, 28/11",
-      bairro: "1º e 7º arrondissements",
+      bairro: "8º, 16º e 7º arrondissements",
       paradas: [
         {
-          hora: "9h",
-          titulo: "Café da manhã: Bo&Mie Louvre-Rivoli",
-          sub: "91 Rue de Rivoli, 75001 Paris",
-          texto: "Padaria e café bem avaliado, de frente para o Louvre. Nota 4,2 com mais de 7.700 avaliações. Croissants, quiches e docinhos variados, pedido por tela de autoatendimento.",
-          mapa: "Bo&Mie Louvre-Rivoli, 91 Rue de Rivoli, Paris",
-          trajeto: { modo: "metro", linha: "6, 1", texto: "Do Adagio até o Louvre: linha 6 (direção Charles de Gaulle-Étoile) até Charles de Gaulle-Étoile, baldeação para a linha 1 (direção Château de Vincennes) até Palais Royal-Musée du Louvre. Cerca de 30 minutos." }
-        },
-        {
-          hora: "10h",
-          titulo: "Pirâmide do Louvre (de novo)",
-          texto: "A visita que não deu tempo de fazer com calma no dia 23/11. Só foto, sem entrar no museu.",
-          mapa: "Pyramide du Louvre, Paris",
-          trajeto: { modo: "pe", texto: "Do café até a pirâmide, poucos minutos a pé." }
-        },
-        {
-          hora: "10h45",
-          titulo: "Place Vendôme",
-          texto: "A praça das joalherias de luxo (Cartier, Chaumet, Boucheron) ao redor da coluna central. Vale mais pela arquitetura e as vitrines do que pra entrar nas lojas.",
-          mapa: "Place Vendôme, Paris",
-          trajeto: { modo: "pe", texto: "Do Louvre até a Place Vendôme, cerca de 12 minutos a pé." }
-        },
-        {
-          hora: "11h30",
-          titulo: "Musée de l'Orangerie",
-          texto: "Só passar em frente, na ponta do Jardin des Tuileries que dá pro Sena. É onde ficam os Nenúfares de Monet, mas sem entrar dessa vez.",
-          mapa: "Musée de l'Orangerie, Paris",
-          trajeto: { modo: "pe", texto: "Da Place Vendôme, atravessando as Tuileries, cerca de 15 minutos a pé." }
-        },
-        {
-          hora: "12h15",
+          hora: "11h",
           titulo: "Arco do Triunfo",
-          texto: "Gravar o vídeo com o arco de fundo e a vista dos 12 bulevares que saem da Place Charles de Gaulle.",
+          texto: "Manhã mais tranquila depois do passeio noturno de ontem no Marais. Gravar o vídeo com o arco de fundo e a vista dos 12 bulevares que saem da Place Charles de Gaulle.",
           mapa: "Arc de Triomphe, Paris",
-          trajeto: { modo: "metro", linha: "1", texto: "Do Orangerie até o Arco: a pé até a estação Tuileries, linha 1 (direção La Défense) direto até Charles de Gaulle-Étoile. Cerca de 20 minutos no total." }
+          trajeto: { modo: "metro", linha: "6", texto: "Do Adagio até o Arco: linha 6 (direção Charles de Gaulle-Étoile) direto até Charles de Gaulle-Étoile. Cerca de 25 minutos." }
         },
         {
           tipo: "refeicao",
-          hora: "13h30",
+          hora: "13h",
           titulo: "Almoço na Rue Cler",
           nota: "Três opções na rua de mercado mais charmosa do 7º arrondissement, perto da Torre Eiffel.",
           opcoes: [
@@ -1172,7 +1170,7 @@ const ROTEIRO = {
           ]
         }
       ],
-      seChover: "O Louvre, a Place Vendôme e a Orangerie são plano B fácil nesse dia: ficam ali ao lado um do outro, cobertos ou bem rápidos entre uma arcada e outra."
+      seChover: "Se chover, dá pra inverter a ordem: fazer o cruzeiro e o mercado das Tuileries primeiro, ainda com uma pausa coberta no meio, e deixar a Torre Eiffel e o Arco para um momento de pausa na chuva."
     },
     {
       titulo: "Rue Crémieux, Saint-Germain e despedida de Paris",
