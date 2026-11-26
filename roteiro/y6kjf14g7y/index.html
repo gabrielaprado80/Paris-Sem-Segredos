@@ -987,13 +987,21 @@ const ROTEIRO = {
       bairro: "1º, 2º, 3º e 4º arrondissements",
       paradas: [
         {
-          hora: "9h",
+          hora: "8h30",
+          titulo: "Normal",
+          sub: "109 Rue Saint-Lazare Unit 1, 75009 Paris",
+          texto: "Loja de variedades com preços bem baixos. Essa unidade, perto da Gare Saint-Lazare, é a com maior quantidade de avaliações no Google: nota 4,0 com mais de 1.200 avaliações.",
+          mapa: "Normal, 109 Rue Saint-Lazare, Paris",
+          trajeto: { modo: "metro", linha: "6, 2", texto: "Do Adagio até a loja: linha 6 (direção Charles de Gaulle-Étoile) até Charles de Gaulle-Étoile, baldeação para a linha 2 (direção Nation) até Liège. Dali, poucos minutos a pé até a Rue Saint-Lazare. Cerca de 35 minutos no total." }
+        },
+        {
+          hora: "9h30",
           titulo: "Boulangerie du Sentier",
           sub: "47 Rue du Caire, 75002 Paris",
           texto: "Croissant premiado, primeiro lugar de melhor croissant amanteigado da Grande Paris em 2026. Nota 4,6 com 663 avaliações, preço bem baixo. Fecha mais cedo às sextas (18h) e não abre aos sábados.",
-          dica: "Os croissants mais pedidos costumam esgotar de manhã, melhor ir logo na abertura (7h).",
+          dica: "Os croissants mais pedidos costumam esgotar de manhã, melhor ir logo na abertura (7h), mas como o dia já começa na Normal, chegar por volta das 9h30 ainda pega boa parte da fornada.",
           mapa: "Boulangerie du Sentier, 47 Rue du Caire, Paris",
-          trajeto: { modo: "metro", linha: "5, 3", texto: "Do Adagio até o Sentier: linha 5 (direção Bobigny-Pablo Picasso) até République, baldeação para a linha 3 (direção Pont de Levallois-Bécon) até Sentier. Cerca de 20 minutos." }
+          trajeto: { modo: "pe", texto: "Da loja até o Sentier, cerca de 20 minutos a pé, descendo em direção aos Grands Boulevards." }
         },
         {
           hora: "9h45",
@@ -1012,19 +1020,11 @@ const ROTEIRO = {
           trajeto: { modo: "pe", texto: "Da Rue Montorgueil até o restaurante, cerca de 6 minutos a pé." }
         },
         {
-          hora: "13h30",
-          titulo: "Normal",
-          sub: "74 Rue de Rivoli, 75004 Paris",
-          texto: "Loja de variedades com preços bem baixos, boa pra achar besteirinhas e lembrancinhas baratas no caminho para o Marais.",
-          mapa: "Normal, 74 Rue de Rivoli, Paris",
-          trajeto: { modo: "pe", texto: "Do restaurante até a loja, cerca de 10 minutos a pé." }
-        },
-        {
-          hora: "14h30",
+          hora: "14h",
           titulo: "Marais a pé",
           texto: "Caminhada pelas ruelas estreitas do bairro, com os prédios de pedra e as lojas de grife pequenas que ocupam térreos históricos.",
           mapa: "Le Marais, Paris",
-          trajeto: { modo: "pe", texto: "Da Rue de Rivoli até o Marais, cerca de 10 minutos a pé." }
+          trajeto: { modo: "pe", texto: "Do restaurante até o Marais, cerca de 15 minutos a pé." }
         },
         {
           hora: "15h30",
