@@ -1021,58 +1021,27 @@ const ROTEIRO = {
       seSobrarEnergia: "O canal fica bonito à noite, com as luzes refletidas na água: se der tempo antes de ir para o Marais, vale uma volta curta depois do almoço."
     },
     {
-      titulo: "Canal Saint-Martin, Montorgueil e Marais",
+      titulo: "Marais, Île Saint-Louis e cruzeiro noturno",
       data: "sexta, 27/11",
-      bairro: "10º, 2º, 3º e 4º arrondissements",
+      bairro: "2º, 3º, 4º e 7º arrondissements",
       paradas: [
         {
-          hora: "11h",
-          titulo: "Canal Saint-Martin",
-          texto: "Passeio pelas pontes de ferro e as eclusas do canal, bairro mais local e menos turístico.",
-          mapa: "Canal Saint-Martin, Paris",
-          trajeto: { modo: "metro", linha: "6, 2", texto: "Do Adagio até o canal: linha 6 (direção Nation) até Barbès-Rochechouart, baldeação para a linha 2 (direção Nation) até Jacques Bonsergent. Cerca de 30 minutos." }
-        },
-        {
-          hora: "11h45",
-          titulo: "Rue Montorgueil",
-          texto: "Rua de pedestres com mercearias, queijarias e padarias tradicionais, um dos trechos mais fotogênicos do 1º e 2º arrondissements.",
-          mapa: "Rue Montorgueil, Paris",
-          trajeto: { modo: "metro", linha: "5, 4", texto: "Do canal até o Sentier: de Jacques Bonsergent, linha 5 (direção Place d'Italie) até Gare de l'Est, baldeação para a linha 4 (direção Mairie de Montrouge) até Réaumur-Sébastopol. Dali, poucos minutos a pé até a Rue Montorgueil. Cerca de 30 minutos." }
-        },
-        {
-          hora: "12h15",
+          hora: "12h30",
           titulo: "Boulangerie du Sentier",
           sub: "47 Rue du Caire, 75002 Paris",
-          texto: "Croissant premiado, primeiro lugar de melhor croissant amanteigado da Grande Paris em 2026. Nota 4,6 com 663 avaliações, preço bem baixo.",
-          dica: "Bom pra um lanche rápido antes do almoço mais pesado no Au Pied de Cochon.",
+          texto: "Croissant premiado, primeiro lugar de melhor croissant amanteigado da Grande Paris em 2026. Nota 4,6 com 663 avaliações, preço bem baixo. Fecha mais cedo às sextas (18h).",
           mapa: "Boulangerie du Sentier, 47 Rue du Caire, Paris",
-          trajeto: { modo: "pe", texto: "Da Rue Montorgueil até a padaria, cerca de 8 minutos a pé." }
+          trajeto: { modo: "metro", linha: "6, 4", texto: "Do Adagio até o Sentier: linha 6 (direção Charles de Gaulle-Étoile) até Montparnasse-Bienvenüe, baldeação para a linha 4 (direção Porte de Clignancourt) até Réaumur-Sébastopol. Dali, poucos minutos a pé. Cerca de 35 minutos no total." }
         },
         {
-          hora: "13h",
-          titulo: "Almoço: Au Pied de Cochon",
-          sub: "6 Rue Coquillière, 75001 Paris",
-          texto: "Brasserie de 1947 aberta 24 horas, famosa pela sopa de cebola gratinada. Nota 4,4 com mais de 25 mil avaliações.",
-          dica: "A sopa de cebola gratinada é o prato mais citado nas avaliações.",
-          mapa: "Au Pied de Cochon, 6 Rue Coquillière, Paris",
-          trajeto: { modo: "pe", texto: "Da padaria até o restaurante, cerca de 8 minutos a pé." }
-        },
-        {
-          hora: "14h30",
+          hora: "13h15",
           titulo: "Place des Vosges",
           texto: "A praça mais antiga de Paris, com os pórticos simétricos de tijolo e pedra, no coração do Marais.",
           mapa: "Place des Vosges, Paris",
-          trajeto: { modo: "metro", linha: "11, 1", texto: "Do restaurante até o Marais: a pé até Châtelet-Les Halles, linha 11 (direção Mairie des Lilas) até Hôtel de Ville, baldeação para a linha 1 (direção Château de Vincennes) até Saint-Paul. Cerca de 25 minutos no total." }
+          trajeto: { modo: "metro", linha: "11, 1", texto: "Da padaria até o Marais: a pé até Châtelet-Les Halles, linha 11 (direção Mairie des Lilas) até Hôtel de Ville, baldeação para a linha 1 (direção Château de Vincennes) até Saint-Paul. Cerca de 25 minutos no total." }
         },
         {
-          hora: "15h",
-          titulo: "Marais a pé",
-          texto: "Caminhada pelas ruelas estreitas do bairro, com os prédios de pedra e as lojas de grife pequenas que ocupam térreos históricos.",
-          mapa: "Le Marais, Paris",
-          trajeto: { modo: "pe", texto: "Na própria Place des Vosges e ao redor, sem pressa." }
-        },
-        {
-          hora: "15h45",
+          hora: "13h45",
           titulo: "Carette",
           sub: "25 Pl. des Vosges, 75003 Paris",
           texto: "Salão de chá clássico do bairro, de frente para a Place des Vosges: croissant, mil-folhas e o chocolate quente da casa. Nota 3,9 com 3.579 avaliações, mais pela fama e localização do que pela nota.",
@@ -1081,48 +1050,62 @@ const ROTEIRO = {
           trajeto: { modo: "pe", texto: "Na própria Place des Vosges." }
         },
         {
-          hora: "16h30",
-          titulo: "Officine Universelle Buly 1803",
-          sub: "45 Rue de Saintonge, 75003 Paris",
-          texto: "Perfumaria parisiense de 1803, a loja original fica no coração do Haut Marais. Pentes e escovas gravados, óleos e cremes vendidos como em 1900, embrulho e caligrafia na hora. Nota 4,2 com 466 avaliações. Fecha às 19h.",
-          dica: "Bom gancho de conteúdo: o embrulho e a caligrafia feitos na hora no balcão.",
-          mapa: "Officine Universelle Buly 1803, 45 Rue de Saintonge, Paris",
-          trajeto: { modo: "pe", texto: "Da Place des Vosges até a loja, cerca de 12 minutos a pé." }
+          hora: "14h30",
+          titulo: "Marais a pé",
+          texto: "Roteiro de ruas: da Place des Vosges, seguir pela Rue des Francs-Bourgeois até a Rue Vieille du Temple, depois descer pela Rue des Rosiers (o coração do bairro judeu, com as falafelarias) até a Rue de Rivoli. Dali, atravessar para a Place Saint-Gervais, uma praça pequena e pouco turística com uma igreja do século 16 na própria praça.",
+          mapa: "Rue des Francs-Bourgeois, Paris",
+          trajeto: { modo: "pe", texto: "Saindo direto da Place des Vosges, sem pressa, cerca de 40 minutos de caminhada no total até a Place Saint-Gervais." }
         },
         {
-          hora: "17h15",
+          hora: "15h30",
           titulo: "Île Saint-Louis",
-          texto: "A ilha mais tranquila do Sena, com prédios do século 17 e a Rue Saint-Louis en l'Île cheia de sorveterias (a mais famosa é a Berthillon).",
+          texto: "A ilha mais tranquila do Sena, com prédios do século 17. Seguir pela Rue Saint-Louis en l'Île, a rua principal cheia de sorveterias (a mais famosa é a Berthillon) e lojinhas de queijo e chocolate.",
           mapa: "Île Saint-Louis, Paris",
-          trajeto: { modo: "pe", texto: "Da loja até a ilha, cerca de 20 minutos a pé." }
+          trajeto: { modo: "pe", texto: "Da Place Saint-Gervais até a ilha, atravessando a ponte Saint-Louis ou a ponte Marie, cerca de 10 minutos a pé." }
         },
         {
-          hora: "17h45",
+          hora: "16h15",
           titulo: "Notre-Dame",
-          texto: "A fachada da catedral, reaberta desde dezembro de 2024 depois da restauração pós-incêndio. Boa luz de fim de tarde para foto de frente, do outro lado do Sena.",
+          texto: "Atravessar a ponte Saint-Louis até a Île de la Cité e ver a fachada da catedral, reaberta desde dezembro de 2024 depois da restauração pós-incêndio. Dá pra contornar pelo jardim lateral (Square Jean XXIII) pra ver a parte de trás, com os arcobotantes.",
           mapa: "Cathédrale Notre-Dame de Paris, Paris",
           trajeto: { modo: "pe", texto: "Da Île Saint-Louis, atravessando a ponte Saint-Louis, cerca de 5 minutos a pé." }
         },
         {
-          hora: "19h",
-          titulo: "Jantar: Junk",
-          sub: "38 Rue de Saintonge, 75003 Paris",
-          texto: "Hambúrguer smash, nota 4,8 com 378 avaliações, um dos mais bem avaliados do Marais. Não tem mesas para sentar dentro, pede pra viagem e come num banco por perto ou na praça mais próxima.",
-          dica: "Pedir o cheeseburger clássico com o molho da casa, é o mais pedido nas avaliações.",
-          mapa: "Junk, 38 Rue de Saintonge, Paris",
-          trajeto: { modo: "pe", texto: "De Notre-Dame de volta ao Marais, cerca de 20 minutos a pé." }
+          hora: "17h",
+          titulo: "Pausa livre",
+          texto: "Tempo livre pra descansar antes da segunda metade da noite, que ainda tem jantar, sobremesa e cruzeiro.",
+          mapa: "Notre-Dame de Paris, Paris"
         },
         {
-          hora: "20h",
+          hora: "19h",
+          titulo: "Jantar: sopa de cebola no Au Pied de Cochon",
+          sub: "6 Rue Coquillière, 75001 Paris",
+          texto: "Brasserie de 1947 aberta 24 horas, famosa pela sopa de cebola gratinada. Nota 4,4 com mais de 25 mil avaliações.",
+          dica: "A sopa de cebola gratinada é o prato mais citado nas avaliações.",
+          mapa: "Au Pied de Cochon, 6 Rue Coquillière, Paris",
+          trajeto: { modo: "metro", linha: "4", texto: "De Notre-Dame até o restaurante: da estação Cité, linha 4 (direção Porte de Clignancourt) até Les Halles. Dali, poucos minutos a pé. Cerca de 20 minutos no total." }
+        },
+        {
+          hora: "20h30",
           titulo: "Sobremesa: Chez Janou",
           sub: "2 Rue Roger Verlomme, 75003 Paris",
-          texto: "Só a sobremesa mesmo, já que o jantar foi no Junk: a mousse de chocolate servida numa panela enorme e repetida à vontade, o prato mais pedido da casa. Nota 4,3 com mais de 9.500 avaliações.",
+          texto: "A mousse de chocolate servida numa panela enorme e repetida à vontade, o prato mais pedido da casa. Nota 4,3 com mais de 9.500 avaliações.",
           dica: "Dá pra pedir só a sobremesa no balcão/bar, sem reservar mesa de jantar completo.",
           mapa: "Chez Janou, 2 Rue Roger Verlomme, Paris",
-          trajeto: { modo: "pe", texto: "Na mesma rua do Junk, poucos minutos a pé." }
+          trajeto: { modo: "pe", texto: "Do restaurante até o Marais, cerca de 15 minutos a pé." }
+        },
+        {
+          hora: "22h",
+          titulo: "Cruzeiro noturno no Sena",
+          sub: "Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris",
+          texto: "O embarque é no Port de la Bourdonnais, literalmente ao lado do Pont d'Iéna (a ponte bem na frente da Torre Eiffel, entre o embarque e o Trocadéro). Pra filmar a trend passando por baixo da ponte, o ideal é pedir lugar no pont supérieur, o convés superior aberto do barco (equivalente ao 'segundo andar'). Como a ponte fica a poucos metros do embarque, vale já estar de câmera na mão assim que o barco sair do cais, porque o barco passa por baixo dela logo nos primeiros minutos do passeio, na ida ou na volta dependendo do sentido do circuito. Nota 4,3 com mais de 31 mil avaliações.",
+          ingresso: { texto: "Reservar pelo site da Bateaux Parisiens", url: "https://www.bateauxparisiens.com" },
+          dica: "Confirmar no embarque de qual lado o barco sai primeiro, pra já se posicionar no lado certo do convés antes de passar pela ponte.",
+          mapa: "Bateaux Parisiens, Port de la Bourdonnais, Paris",
+          trajeto: { modo: "metro", linha: "8, 6", texto: "Do Chez Janou até o embarque: da estação Chemin Vert, linha 8 (direção Balard) até Invalides, baldeação para a linha 6 (direção Charles de Gaulle-Étoile) direto até Bir-Hakeim. Dali, poucos minutos a pé até o Port de la Bourdonnais. Cerca de 30 minutos no total." }
         }
       ],
-      seSobrarEnergia: "É um dia cheio: se o cansaço bater, a sobremesa no Chez Janou é a primeira coisa fácil de deixar pra outro momento, já que a mousse também aparece em outros bistrôs do bairro."
+      seSobrarEnergia: "É uma noite cheia: se o cansaço bater antes do cruzeiro, a pausa livre das 17h pode esticar mais, já que o barco funciona até tarde (última saída por volta das 22h)."
     },
     {
       titulo: "Printemps, Arco do Triunfo, Torre Eiffel e mercado das Tuileries à noite",
@@ -1180,20 +1163,11 @@ const ROTEIRO = {
           trajeto: { modo: "pe", texto: "Do Square Rapp até a torre, cerca de 12 minutos a pé." }
         },
         {
-          hora: "17h",
-          titulo: "Cruzeiro no Sena ao pôr do sol",
-          sub: "Bateaux Parisiens, Port de la Bourdonnais, 75007 Paris",
-          texto: "Embarque pertinho da Torre Eiffel, cerca de 1 hora de passeio pelo Sena. Nota 4,3 com mais de 31 mil avaliações. Reservar o horário mais próximo do pôr do sol (por volta das 17h05 no fim de novembro) pra pegar a luz baixando e a torre já se iluminando na volta.",
-          ingresso: { texto: "Reservar pelo site da Bateaux Parisiens", url: "https://www.bateauxparisiens.com" },
-          mapa: "Bateaux Parisiens, Port de la Bourdonnais, Paris",
-          trajeto: { modo: "pe", texto: "Da Torre Eiffel até o embarque, cerca de 10 minutos a pé." }
-        },
-        {
-          hora: "18h15",
+          hora: "17h15",
           titulo: "Musée de l'Orangerie",
           texto: "Só passar em frente, na ponta do Jardin des Tuileries que dá pro Sena. É onde ficam os Nenúfares de Monet, mas sem entrar dessa vez.",
           mapa: "Musée de l'Orangerie, Paris",
-          trajeto: { modo: "misto", texto: "Do desembarque do cruzeiro até a Orangerie: RER C (sentido centro) da estação Champ de Mars-Tour Eiffel até Invalides, baldeação para a linha 1 (direção Château de Vincennes) até Tuileries. Cerca de 25 minutos." }
+          trajeto: { modo: "misto", texto: "Da Torre Eiffel até a Orangerie: RER C (sentido centro) da estação Champ de Mars-Tour Eiffel até Invalides, baldeação para a linha 1 (direção Château de Vincennes) até Tuileries. Cerca de 25 minutos." }
         },
         {
           hora: "18h45",
@@ -1224,7 +1198,7 @@ const ROTEIRO = {
           ]
         }
       ],
-      seChover: "Se chover, dá pra inverter a ordem: fazer o Printemps e o Arco do Triunfo com calma (ambos cobertos ou rápidos), deixando a Torre Eiffel e o cruzeiro para o fim da tarde, se a chuva passar."
+      seChover: "Se chover, dá pra inverter a ordem: fazer o Printemps e o Arco do Triunfo com calma (ambos cobertos ou rápidos), deixando a Torre Eiffel para o fim da tarde, se a chuva passar."
     },
     {
       titulo: "Rue Crémieux, Saint-Germain, Latin Quarter e despedida de Paris",
